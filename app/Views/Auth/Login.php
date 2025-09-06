@@ -2,97 +2,79 @@
 
 <?= $this->section('content'); ?>
 <div class="container">
-
-    <!-- Outer Row -->
-    <div class="row justify-content-center">
-
-        <div class="col-md-6">
-
-            <div class="card o-hidden border-0 shadow-lg my-5">
-                <div class="card-body p-0">
-                    <!-- Nested Row within Card Body -->
-                    <div class="row">
-                        <div class="col-lg">
-                            <div class="p-5">
-                                <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4">LOGIN PEMINJAMAN ALAT<br>
-                                    </h1>
-                                </div>
-                                <?= view('Myth\Auth\Views\_message_block') ?>
-
-                                <form
-                                    action="<?= url_to('login') ?>"
-                                    class="user" method="post">
-                                    <?= csrf_field() ?>
-
-                                    <?php if ($config->validFields === ['email']) : ?>
-                                    <div class="form-group">
-                                        <input type="email"
-                                            class="form-control form-control-user <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>"
-                                            name="login"
-                                            placeholder="<?= lang('Auth.email') ?>">
-                                        <div class="invalid-feedback">
-                                            <?= session('errors.login') ?>
-                                        </div>
-                                    </div>
-                                    <?php else : ?>
-                                    <div class="form-group">
-                                        <input type="text"
-                                            class="form-control form-control-user <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>"
-                                            name="login"
-                                            placeholder="<?= lang('Auth.emailOrUsername') ?>">
-                                        <div class="invalid-feedback">
-                                            <?= session('errors.login') ?>
-                                        </div>
-                                    </div>
-                                    <?php endif; ?>
-                                    <div class="form-group">
-                                        <input type="password"
-                                            class="form-control form-control-user <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>"
-                                            name="password"
-                                            placeholder="<?= lang('Auth.password') ?>">
-                                    </div>
-                                    <?php if ($config->allowRemembering) : ?>
-                                    <div class="form-group">
-                                        <div class="custom-control custom-checkbox small">
-                                            <input type="checkbox" class="custom-control-input" name="remembering"
-                                                <?php if (old('remember')) : ?>
-                                            checked <?php endif ?>>
-                                            <label class="custom-control-label"
-                                                for="customCheck"><?= lang('Auth.rememberMe') ?></label>
-                                        </div>
-                                    </div>
-                                    <?php endif; ?>
-
-
-
-                                    <button type="submit" class="btn btn-primary btn-user btn-block">
-                                        <?= lang('Auth.loginAction') ?>
-                                    </button>
-                                    <hr>
-                                </form>
-
-                                <?php if ($config->activeResetter) : ?>
-                                <div class="text-center">
-                                    <a class="small"
-                                        href="<?= url_to('forgot') ?>"><?= lang('Auth.forgotYourPassword') ?></a>
-                                </div>
-                                <?php endif; ?>
-                                <?php if ($config->allowRegistration) : ?>
-                                <div class="text-center">
-                                    <a class="small"
-                                        href="<?= url_to('register') ?>"><?= lang('Auth.needAnAccount') ?></a>
+    <div class="row justify-content-center align-items-center" style="min-height: 90vh;">
+        <div class="col-md-6 col-lg-5">
+            <div class="card border-0 shadow-lg my-5">
+                <div class="card-body px-5 py-4">
+                    <div class="text-center mb-4">
+                        <!-- LOGO TKJ -->
+                        <img src="<?= base_url('assets/media/qrcode/tkj.png') ?>" alt="Logo TKJ" style="width: 85px; height: 85px; object-fit:contain; border-radius:18px; box-shadow:0 2px 8px #e0e0e0;">
+                        <h1 class="h4 text-primary font-weight-bold mt-3 mb-0">PEMINJAMAN ALAT LAB</h1>
+                        <div class="text-gray-600 mb-2" style="font-size:14px;">SMK N 1 SRAGI - TKJ</div>
+                    </div>
+                    
+                    <?= view('Myth\Auth\Views\_message_block') ?>
+                    
+                    <form action="<?= url_to('login') ?>" method="post" class="user">
+                        <?= csrf_field() ?>
+                        <?php if ($config->validFields === ['email']) : ?>
+                        <div class="form-group mb-3">
+                            <label class="form-label text-gray-700" style="font-weight:600; font-size:15px;">Email</label>
+                            <input type="email"
+                                class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>"
+                                name="login"
+                                placeholder="<?= lang('Auth.email') ?>">
+                            <div class="invalid-feedback">
+                                <?= session('errors.login') ?>
                             </div>
-                            <?php endif; ?>
                         </div>
+                        <?php else : ?>
+                        <div class="form-group mb-3">
+                            <label class="form-label text-gray-700" style="font-weight:600; font-size:15px;">Email / Username</label>
+                            <input type="text"
+                                class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>"
+                                name="login"
+                                placeholder="<?= lang('Auth.emailOrUsername') ?>">
+                            <div class="invalid-feedback">
+                                <?= session('errors.login') ?>
+                            </div>
+                        </div>
+                        <?php endif; ?>
+                        <div class="form-group mb-3">
+                            <label class="form-label text-gray-700" style="font-weight:600; font-size:15px;">Password</label>
+                            <input type="password"
+                                class="form-control <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>"
+                                name="password"
+                                placeholder="<?= lang('Auth.password') ?>">
+                        </div>
+                        <?php if ($config->allowRemembering) : ?>
+                        <div class="form-group form-check mb-3">
+                            <input type="checkbox" class="form-check-input" name="remembering" id="rememberme"
+                                <?php if (old('remember')) : ?> checked <?php endif ?>>
+                            <label class="form-check-label text-gray-700" for="rememberme" style="font-size:14px;">
+                                <?= lang('Auth.rememberMe') ?>
+                            </label>
+                        </div>
+                        <?php endif; ?>
+                        <button type="submit" class="btn btn-primary btn-block font-weight-bold" style="letter-spacing: 1px;">
+                            <i class="fa fa-sign-in-alt mr-1"></i> <?= lang('Auth.loginAction') ?>
+                        </button>
+                        <hr class="my-3">
+                    </form>
+                    <div class="d-flex justify-content-between">
+                        <?php if ($config->activeResetter) : ?>
+                            <a class="small" href="<?= url_to('forgot') ?>"><?= lang('Auth.forgotYourPassword') ?></a>
+                        <?php endif; ?>
+                        <?php if ($config->allowRegistration) : ?>
+                            <a class="small" href="<?= url_to('register') ?>"><?= lang('Auth.needAnAccount') ?></a>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
+            <div class="text-center text-muted mt-2" style="font-size:13px; letter-spacing:1px;">
+                &copy; <?= date('Y') ?> | <span class="text-primary font-weight-bold">SMK N 1 SRAGI - TKJ</span>
+            </div>
         </div>
-
     </div>
-
-</div>
-
 </div>
 <?= $this->endSection(); ?>

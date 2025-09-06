@@ -12,7 +12,7 @@
     <title>Halaman Login</title>
 
     <!-- Custom fonts for this template-->
-    <link href="<?php echo base_url() ?>/assets/img/bps.ico"
+    <link href="<?= base_url('assets/media/qrcode/tkj.png') ?>"
         rel="icon">
     <link
         href="<?= base_url() ?>/vendor/fontawesome-free/css/all.min.css"
