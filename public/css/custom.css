@@ -1,0 +1,134 @@
+h4,
+label,
+.card-detail > .card-body > .row > .col-md-8,
+.table-detail td,
+.table > thead > tr > * {
+  color: black;
+}
+
+.table-main {
+  text-align: center;
+}
+.container-fluid {
+  color: black;
+}
+.table > tbody > tr > * {
+  vertical-align: middle;
+}
+
+.table th {
+  color: #000; /* Warna teks hitam */
+}
+.table td {
+  font-size: larger;
+  color: #000; /* Warna teks hitam */
+}
+.card-header.py-3 h3 {
+  color: black; /* atau color: #000; */
+}
+.card-header h3 {
+  color: black;
+}
+.col-md-8 {
+  color: black;
+}
+h1 {
+  color: black;
+}
+.col-md-3 {
+  color: black;
+}
+/* Tambahkan aturan gaya untuk teks hitam pada elemen dengan class sessions */
+#collapseOne .sessions {
+  color: #000; /* Warna teks hitam */
+}
+
+/* Aturan gaya untuk setiap item daftar */
+#collapseOne .sessions li {
+  border-left: 2px solid #000; /* Garis kiri dengan warna hitam */
+  position: relative;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+/* Aturan gaya untuk teks pada setiap item daftar */
+#collapseOne .sessions li p {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Aturan gaya untuk waktu pada setiap item daftar */
+#collapseOne .sessions li .time {
+  font-size: 14px;
+  color: #777; /* Warna abu-abu untuk waktu */
+}
+
+/* Aturan gaya untuk item daftar dengan class li-selesai */
+
+/* Aturan gaya untuk teks status pada item daftar dengan class li-selesai */
+#collapseOne .sessions li.li-selesai p:last-child {
+  color: #28a745; /* Warna hijau untuk teks status selesai */
+}
+
+/* Aturan gaya untuk item daftar dengan class li-diproses */
+
+/* Aturan gaya untuk teks stat
+/* Gaya untuk tombol kembali */
+/* Gaya untuk tombol kembali */
+a.btn-kembali {
+  padding: 10px 20px;
+  background-color: #5aa1ec;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Gaya saat tombol kembali dihover */
+a.btn-kembali:hover {
+  background-color: #c5d8ed; /* Warna latar belakang saat hover */
+  color: #fff; /* Warna teks saat hover */
+}
+/* Add this CSS to your stylesheet */
+
+/* Sidebar text color and font size */
+#accordionSidebar .sidebar-brand-text,
+#accordionSidebar .nav-item span {
+  color: #ffffff; /* White color */
+  font-size: 14px; /* You can adjust the font size as needed */
+}
+
+/* Sidebar brand image size */
+#accordionSidebar .sidebar-brand img {
+  width: 75px;
+  height: 75px;
+}
+
+/* Divider color */
+#accordionSidebar .sidebar-divider {
+  border-top: 1px solid #ffffff; /* White color */
+}
+
+/* Heading color and font size */
+#accordionSidebar .sidebar-heading {
+  color: #ffffff; /* White color */
+  font-size: 10px; /* You can adjust the font size as needed */
+}
+
+/* Toggler button color */
+/* Tambahkan aturan gaya untuk membuat tombol lingkaran bulat */
+#sidebarToggle {
+  width: 40px; /* Sesuaikan lebar sesuai kebutuhan */
+  height: 40px; /* Sesuaikan tinggi sesuai kebutuhan */
+  border-radius: 50%; /* Membuat border-radius menjadi 50% untuk membuatnya menjadi lingkaran */
+  background-color: #ffffff; /* Warna latar belakang sesuai kebutuhan */
+  color: #000000; /* Warna teks sesuai kebutuhan */
+  border: 2px solid #ffffff; /* Ukuran dan warna border sesuai kebutuhan */
+}
+
+/* Tambahkan aturan gaya jika ingin mengubah tampilan tombol ketika dihover */
+#sidebarToggle:hover {
+  background-color: #dddddd; /* Warna latar belakang saat dihover */
+  color: #000000; /* Warna teks saat dihover */
+}

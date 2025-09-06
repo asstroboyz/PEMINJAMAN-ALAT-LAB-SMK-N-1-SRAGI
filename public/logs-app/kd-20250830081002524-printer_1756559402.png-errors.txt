@@ -1,0 +1,1 @@
+2025-08-30 20:10:02: Implicit conversion from float 0.5 to int loses precision

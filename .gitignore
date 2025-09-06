@@ -1,0 +1,5 @@
+writable/*
+.env
+env
+app/Config/App.php
+system/Commands/Server/Serve.php
