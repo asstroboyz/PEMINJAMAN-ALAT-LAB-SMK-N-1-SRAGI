@@ -112,7 +112,7 @@ hr.sidebar-divider {
                 <a class="collapse-item" href="<?php echo base_url('Admin/kategori'); ?>">
                     <i class="fas fa-ruler"></i> Master Kategori
                 </a>
-                <a class="collapse-item" href="<?php echo base_url('Admin/kategori-merk'); ?>">
+                <a class="collapse-item" href="<?php echo base_url('Admin/KategoriMerk'); ?>">
                     <i class="fas fa-ruler"></i> Master Kategori-merk
                 </a>
             </div>

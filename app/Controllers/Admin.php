@@ -2690,4 +2690,247 @@ class Admin extends BaseController
             ->with('success', 'Peminjaman berhasil disimpan!');
     }
 
+    public function merk(){
+        $data = [
+            'title' => 'merk barang' ,
+            'merk' => $this->MerkBarangModel->findAll()
+        ];
+        return view('Admin/Merk/Index',$data);
+    }
+
+        public function tambah_merk()
+    {
+        $data = [
+            'title'      => 'Tambah merk',
+            'validation' => $this->validation,
+        ];
+        return view('Admin/merk/Tambah_merk', $data);
+    }
+
+      public function simpanMerk()
+    {
+        if (! $this->validate([
+
+            'nama_merk' => [
+                'rules'  => 'required',
+                'errors' => [
+                    'required'  => 'nama merk harus diisi',
+                    // 'is_unique' => '',
+                ],
+            ],
+        ])) {
+            return redirect()->to('/admin/tambah_merk')->withInput();
+        }
+        $data = [
+            'nama_merk' => $this->request->getPost('nama_merk'),
+        ];
+        // dd($data);
+        $this->MerkBarangModel->insert($data);
+
+        session()->setFlashdata('pesan', 'Data berhasil ditambahkan');
+        return redirect()->to('/admin/merk');
+    }
+
+     public function merk_edit($id)
+    {
+        $data = [
+            'title'      => 'Ubah Merk',
+            'validation' => $this->validation,
+            'merk'     => $this->MerkBarangModel->find($id),
+        ];
+        return view('Admin/Merk/Edit_merk', $data);
+    }
+    public function updateMerk()
+    {
+        $id   = $this->request->getPost('id');
+        $data = [
+            'nama_merk' => $this->request->getPost('nama_merk'),
+        ];
+        $this->MerkBarangModel->update($id, $data);
+        session()->setFlashdata('pesan', 'Data berhasil diubah');
+        return redirect()->to('/admin/merk');
+    }
+    public function merk_delete($id)
+    {
+        $this->MerkBarangModel->delete($id);
+        session()->setFlashdata('pesan', 'Data berhasil dihapus');
+        return redirect()->to('/admin/merk');
+    }
+
+      public function kategori(){
+        $data = [
+            'title' => 'Kategori barang' ,
+            'kategori' => $this->KategoriBarangModel->findAll()
+        ];
+        return view('Admin/Kategori/Index',$data);
+    }
+
+        public function tambah_kategori()
+    {
+        $data = [
+            'title'      => 'Tambah Kategori',
+            'validation' => $this->validation,
+        ];
+        return view('Admin/kategori/Tambah_kategori', $data);
+    }
+
+      public function simpanKategori()
+    {
+        if (! $this->validate([
+
+            'nama_kategori' => [
+                'rules'  => 'required',
+                'errors' => [
+                    'required'  => 'nama kategori harus diisi',
+                    // 'is_unique' => '',
+                ],
+            ],
+        ])) {
+            return redirect()->to('/admin/tambah_kategori')->withInput();
+        }
+        $data = [
+            'nama_kategori' => $this->request->getPost('nama_kategori'),
+        ];
+        // dd($data);
+        $this->KategoriBarangModel->insert($data);
+
+        session()->setFlashdata('pesan', 'Data berhasil ditambahkan');
+        return redirect()->to('/admin/kategori');
+    }
+
+     public function kategori_edit($id)
+    {
+        $data = [
+            'title'      => 'Ubah kategori',
+            'validation' => $this->validation,
+            'kategori'     => $this->KategoriBarangModel->find($id),
+        ];
+        return view('Admin/Kategori/Edit_kategori', $data);
+    }
+    public function updateKategori()
+    {
+        $id   = $this->request->getPost('id');
+        $data = [
+            'nama_kategori' => $this->request->getPost('nama_kategori'),
+        ];
+        $this->KategoriBarangModel->update($id, $data);
+        session()->setFlashdata('pesan', 'Data berhasil diubah');
+        return redirect()->to('/admin/kategori');
+    }
+    public function kategori_delete($id)
+    {
+        $this->KategoriBarangModel->delete($id);
+        session()->setFlashdata('pesan', 'Data berhasil dihapus');
+        return redirect()->to('/admin/kategori');
+    }
+
+
+
+
+    public function KategoriMerk (){
+        $data = [
+            'title' => 'kategori Merk',
+            'KategoriMerk' => $this->MerkKategoriBarangModel->fetchAll()
+        ] ;
+
+        return view ('Admin/Kategori-merk/index', $data);
+    }
+
+// Form tambah MerkKategoriBarang
+public function tambahMerkKategori()
+{
+    $data = [
+        'title'    => 'Tambah Merk pada Kategori',
+        'kategori' => $this->KategoriBarangModel->findAll(),
+        'merk'     => $this->MerkBarangModel->findAll(),
+        'validation' => \Config\Services::validation()
+    ];
+    return view('Admin/Kategori-merk/tambah', $data);
+}
+
+// Simpan relasi baru
+public function SaveKategorimerk()
+{
+    $validation = \Config\Services::validation();
+
+    $rules = [
+        'kategori_id' => 'required',
+        'merk_id'     => 'required'
+    ];
+
+    if (!$this->validate($rules)) {
+        return redirect()->back()->withInput()->with('PesanGagal', 'Harap pilih kategori dan merk.');
+    }
+
+    $kategori_id = $this->request->getPost('kategori_id');
+    $merk_id     = $this->request->getPost('merk_id');
+
+    // Cek duplikasi
+    $exists = $this->MerkKategoriBarangModel->checkExists($kategori_id, $merk_id);
+    if ($exists) {
+        return redirect()->back()->with('PesanGagal', 'Relasi kategori–merk sudah ada.');
+    }
+
+    $this->MerkKategoriBarangModel->insert([
+        'kategori_id' => $kategori_id,
+        'merk_id'     => $merk_id
+    ]);
+
+    return redirect()->to('/admin/KategoriMerk')->with('PesanBerhasil', 'Relasi berhasil ditambahkan.');
+}
+
+
+    public function kategoriMerk_edit($id)
+    {
+        $relasi = $this->MerkKategoriBarangModel->find($id);
+        if (!$relasi) {
+            return redirect()->to('/Admin/KategoriMerk')->with('PesanGagal', 'Data relasi tidak ditemukan.');
+        }
+
+        $data = [
+            'title'     => 'Edit Relasi Kategori - Merk',
+            'relasi'    => $relasi,
+            'kategori'  => $this->KategoriBarangModel->findAll(),
+            'merk'      => $this->MerkBarangModel->findAll()
+        ];
+        return view('Admin/Kategori-merk/Edit', $data);
+    }
+
+    // 🔹 Update relasi
+    public function KategoriMerk_update($id)
+    {
+        $kategori_id = $this->request->getPost('kategori_id');
+        $merk_id     = $this->request->getPost('merk_id');
+
+        // Cek duplikasi
+        $exists = $this->MerkKategoriBarangModel
+            ->where('kategori_id', $kategori_id)
+            ->where('merk_id', $merk_id)
+            ->where('id !=', $id)
+            ->first();
+
+        if ($exists) {
+            return redirect()->back()->with('PesanGagal', 'Relasi sudah ada.');
+        }
+
+        $this->MerkKategoriBarangModel->update($id, [
+            'kategori_id' => $kategori_id,
+            'merk_id'     => $merk_id
+        ]);
+
+        return redirect()->to('/Admin/KategoriMerk')->with('PesanBerhasil', 'Relasi berhasil diperbarui.');
+    }
+
+    // 🔹 Delete relasi
+    public function KategoriMerk_delete($id)
+    {
+        $relasi = $this->MerkKategoriBarangModel->find($id);
+        if (!$relasi) {
+            return redirect()->to('/Admin/KategoriMerk')->with('PesanGagal', 'Data tidak ditemukan.');
+        }
+
+        $this->MerkKategoriBarangModel->delete($id);
+
+        return redirect()->to('/Admin/KategoriMerk')->with('PesanBerhasil', 'Relasi berhasil dihapus.');
+    }
 }
