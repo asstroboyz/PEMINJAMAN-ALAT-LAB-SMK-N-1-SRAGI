@@ -1,0 +1,11 @@
+CRITICAL - 2024-01-19 10:08:28 --> Call to undefined method CodeIgniter\Validation\Validation::hasErrors()
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Common.php(1089): CodeIgniter\View\View->render('Pegawai/Permint...', Array, true)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Pegawai.php(284): view('Pegawai/Permint...', Array)
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Pegawai->ubah('3')
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}

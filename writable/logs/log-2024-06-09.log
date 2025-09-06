@@ -1,0 +1,110 @@
+ERROR - 2024-06-09 16:44:38 --> Unknown column 'barang.id_master_barang' in 'on clause'
+CRITICAL - 2024-06-09 16:44:38 --> Unknown column 'barang.id_master_barang' in 'on clause'
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `barang`...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `barang`...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `barang`...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `barang`...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(2045): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->cetakDataBarang()
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#12 {main}
+ERROR - 2024-06-09 16:50:50 --> Unknown column 'barang.id_master_barang' in 'on clause'
+CRITICAL - 2024-06-09 16:50:50 --> Unknown column 'barang.id_master_barang' in 'on clause'
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `barang`...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `barang`...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `barang`...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `barang`...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(2045): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->cetakDataBarang()
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#12 {main}
+ERROR - 2024-06-09 16:52:54 --> Unknown column 'transaksi_barang.kode_brg' in 'on clause'
+CRITICAL - 2024-06-09 16:52:54 --> Unknown column 'transaksi_barang.kode_brg' in 'on clause'
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `barang`...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `barang`...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `barang`...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `barang`...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(2044): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->cetakDataBarang()
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#12 {main}
+ERROR - 2024-06-09 17:03:40 --> Unknown column 'transaksi_barang.kode_brg' in 'on clause'
+CRITICAL - 2024-06-09 17:03:40 --> Unknown column 'transaksi_barang.kode_brg' in 'on clause'
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `barang`...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `barang`...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `barang`...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `barang`...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(1969): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->cetakDataBarang()
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#12 {main}
+CRITICAL - 2024-06-09 17:04:00 --> Undefined variable: dateOption
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(1972): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 1972, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->cetakDataBarang()
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+CRITICAL - 2024-06-09 17:04:32 --> Undefined index: kode_brg
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Views\Admin\Laporan\Lap_barang.php(126): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\ganda\\...', 126, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Laporan/L...', Array, true)
+#4 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(1984): view('Admin/Laporan/L...', Array)
+#5 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->cetakDataBarang()
+#6 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}
+ERROR - 2024-06-09 17:17:22 --> Unknown column 'barang.id_master_barang' in 'on clause'
+CRITICAL - 2024-06-09 17:17:22 --> Unknown column 'barang.id_master_barang' in 'on clause'
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `barang`...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `barang`...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `barang`...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `barang`...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(1986): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->cetakDataBarang()
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#12 {main}
+ERROR - 2024-06-09 17:18:32 --> Unknown column 'barang.kode_brg' in 'field list'
+CRITICAL - 2024-06-09 17:18:32 --> Unknown column 'barang.kode_brg' in 'field list'
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `barang`...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `barang`...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `barang`...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `barang`...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(1985): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->cetakDataBarang()
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#12 {main}

@@ -1,0 +1,16 @@
+CRITICAL - 2024-06-12 18:44:30 --> Undefined variable: latest_kas
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(3285): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 3285, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->kas()
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+CRITICAL - 2024-06-12 18:44:54 --> Undefined variable: latest_kas
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(3285): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 3285, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->kas()
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}

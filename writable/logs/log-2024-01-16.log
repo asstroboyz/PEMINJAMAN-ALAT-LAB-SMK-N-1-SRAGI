@@ -1,0 +1,63 @@
+CRITICAL - 2024-01-16 09:27:37 --> Class 'App\Models\Pengaduan' not found
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(809): App\Controllers\User->__construct()
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-16 09:30:21 --> Call to a member function getError() on null
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\petugas_pengadaan->simpanProfile('14')
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\petugas_pengadaan))
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-16 09:30:32 --> Class 'App\Models\Pengaduan' not found
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(809): App\Controllers\User->__construct()
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-16 09:31:56 --> unlink(uploads/profile/profil.svg): No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(uploads/...', 'C:\\xampp\\htdocs...', 98, Array)
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\petugas_pengadaan.php(98): unlink('uploads/profile...')
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\petugas_pengadaan->simpanProfile('14')
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\petugas_pengadaan))
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2024-01-16 09:32:20 --> Undefined property: App\Controllers\petugas_pengadaan::$profil
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\petugas_pengadaan.php(102): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 102, Array)
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\petugas_pengadaan->simpanProfile('14')
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\petugas_pengadaan))
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-16 09:32:55 --> unlink(uploads/profile/profil.svg): No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(uploads/...', 'C:\\xampp\\htdocs...', 100, Array)
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\petugas_pengadaan.php(100): unlink('uploads/profile...')
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\petugas_pengadaan->simpanProfile('14')
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\petugas_pengadaan))
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2024-01-16 19:29:39 --> Trying to get property 'id' of non-object
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Admin.php(1529): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 1529, Array)
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->pengadaan()
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-16 20:26:35 --> Trying to get property 'id' of non-object
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Admin.php(1529): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 1529, Array)
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->pengadaan()
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

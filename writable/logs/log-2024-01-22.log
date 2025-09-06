@@ -1,0 +1,45 @@
+CRITICAL - 2024-01-22 14:49:14 --> Call to undefined method App\Models\BarangModel::restore
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Models\BarangModel.php(43): CodeIgniter\Model->__call('restore', Array)
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Admin.php(1007): App\Models\BarangModel->restoreBarang('1')
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->restore('1')
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2024-01-22 15:02:23 --> There is no data to update.
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\BaseModel.php(1574): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(NULL, 'update')
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Model.php(651): CodeIgniter\BaseModel->update(Array, NULL)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Models\BarangModel.php(43): CodeIgniter\Model->update(Array)
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Admin.php(1015): App\Models\BarangModel->restore('1')
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->restore('1')
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-01-22 15:02:59 --> There is no data to update.
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\BaseModel.php(1574): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(NULL, 'update')
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Model.php(651): CodeIgniter\BaseModel->update(Array, NULL)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Models\BarangModel.php(51): CodeIgniter\Model->update(Array)
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Admin.php(1015): App\Models\BarangModel->restore('1')
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->restore('1')
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-01-22 15:04:17 --> There is no data to update.
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\BaseModel.php(1574): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(NULL, 'update')
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Model.php(651): CodeIgniter\BaseModel->update(Array, NULL)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Models\BarangModel.php(51): CodeIgniter\Model->update(Array)
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Admin.php(1014): App\Models\BarangModel->restoreBarang('1')
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->restore('1')
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}

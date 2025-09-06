@@ -1,0 +1,112 @@
+CRITICAL - 2024-04-04 23:37:46 --> Undefined variable: totalPenerimaanPenjualan
+#0 C:\xampp\htdocs\Toko Nolo\app\Views\Admin\Laporan\Lap_analisisArusKas.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 70, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Toko Nolo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Toko Nolo\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Laporan/L...', Array, true)
+#4 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(2432): view('Admin/Laporan/L...', Array)
+#5 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->analisisArusKas()
+#6 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-04-04 23:38:30 --> Undefined variable: totalPenerimaanPenjualan
+#0 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(2428): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 2428, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->analisisArusKas()
+#2 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-04-04 23:41:07 --> Undefined variable: totalPenerimaanPenjualan
+#0 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(2428): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 2428, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->analisisArusKas()
+#2 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-04-04 23:41:10 --> Undefined variable: totalPenerimaanPenjualan
+#0 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(2428): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 2428, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->analisisArusKas()
+#2 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-04-04 23:42:04 --> Undefined variable: totalPenjualanTahunSebelumnya
+#0 C:\xampp\htdocs\Toko Nolo\app\Views\Admin\Laporan\Lap_analisisArusKas.php(74): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 74, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Toko Nolo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Toko Nolo\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Laporan/L...', Array, true)
+#4 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(2444): view('Admin/Laporan/L...', Array)
+#5 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->analisisArusKas()
+#6 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-04-04 23:45:09 --> Undefined variable: totalHargaBeliTahunSebelumnya
+#0 C:\xampp\htdocs\Toko Nolo\app\Views\Admin\Laporan\Lap_analisisArusKas.php(85): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 85, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Toko Nolo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Toko Nolo\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Laporan/L...', Array, true)
+#4 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(2444): view('Admin/Laporan/L...', Array)
+#5 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->analisisArusKas()
+#6 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-04-04 23:46:35 --> Undefined variable: totalHargaBeliTahunSebelumnya
+#0 C:\xampp\htdocs\Toko Nolo\app\Views\Admin\Laporan\Lap_analisisArusKas.php(85): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 85, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Toko Nolo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Toko Nolo\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Laporan/L...', Array, true)
+#4 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(2444): view('Admin/Laporan/L...', Array)
+#5 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->analisisArusKas()
+#6 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-04-04 23:48:23 --> Undefined variable: totalAktivitasOperasional
+#0 C:\xampp\htdocs\Toko Nolo\app\Views\Admin\Laporan\Lap_analisisArusKas.php(104): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 104, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Toko Nolo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Toko Nolo\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Laporan/L...', Array, true)
+#4 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(2462): view('Admin/Laporan/L...', Array)
+#5 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->analisisArusKas()
+#6 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-04-04 23:49:51 --> Undefined variable: totalAktivitasOperasionalTahunSebelumnya
+#0 C:\xampp\htdocs\Toko Nolo\app\Views\Admin\Laporan\Lap_analisisArusKas.php(107): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 107, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Toko Nolo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Toko Nolo\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Laporan/L...', Array, true)
+#4 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(2466): view('Admin/Laporan/L...', Array)
+#5 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->analisisArusKas()
+#6 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-04-04 23:52:51 --> Undefined variable: totalArusKasTahunSebelumnya
+#0 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(2441): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 2441, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->analisisArusKas()
+#2 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-04-04 23:59:30 --> Undefined variable: totalHargaBeliTahunSebelumnya
+#0 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(2426): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 2426, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->analisisArusKas()
+#2 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

@@ -1,0 +1,186 @@
+CRITICAL - 2024-01-21 11:13:32 --> Undefined variable: inventaris
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Views\Admin\Pengadaan\Edit_pengadaan.php(60): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 60, Array)
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Pengadaan...', Array, true)
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Admin.php(1627): view('Admin/Pengadaan...', Array)
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->editPengadaan('1')
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-01-21 11:13:57 --> Undefined variable: inventaris
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Views\Admin\Pengadaan\Edit_pengadaan.php(60): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 60, Array)
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Pengadaan...', Array, true)
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Admin.php(1627): view('Admin/Pengadaan...', Array)
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->editPengadaan('1')
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-01-21 12:50:53 --> Call to undefined method App\Models\BarangModel::onlyTrashed
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Admin.php(856): CodeIgniter\Model->__call('onlyTrashed', Array)
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->atk_trash()
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-21 13:31:08 --> Call to undefined method App\Models\BarangModel::withTrashed
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Admin.php(858): CodeIgniter\Model->__call('withTrashed', Array)
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->atk_trash()
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-21 13:32:48 --> Call to undefined method App\Models\BarangModel::withTrashed
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Admin.php(858): CodeIgniter\Model->__call('withTrashed', Array)
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->atk_trash()
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-21 13:32:50 --> Call to undefined method App\Models\BarangModel::withTrashed
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Admin.php(858): CodeIgniter\Model->__call('withTrashed', Array)
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->atk_trash()
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-21 13:34:06 --> Trait 'CodeIgniter\Database\SoftDeletes' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 13:34:41 --> Trait 'App\Models\SoftDeletes' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 13:35:57 --> Call to undefined method App\Models\BarangModel::withTrashed
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Admin.php(858): CodeIgniter\Model->__call('withTrashed', Array)
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->atk_trash()
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-21 13:36:24 --> Call to undefined method App\Models\BarangModel::withTrashed
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Admin.php(858): CodeIgniter\Model->__call('withTrashed', Array)
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->atk_trash()
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-21 13:36:25 --> Call to undefined method App\Models\BarangModel::withTrashed
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Admin.php(858): CodeIgniter\Model->__call('withTrashed', Array)
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->atk_trash()
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-21 13:37:00 --> Call to a member function findAll() on array
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->atk_trash()
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-21 13:38:06 --> Call to undefined method App\Models\BarangModel::onlyTrashed
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Models\BarangModel.php(17): CodeIgniter\Model->__call('onlyTrashed', Array)
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Admin.php(858): App\Models\BarangModel->getSoftDeleted()
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->atk_trash()
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2024-01-21 13:55:51 --> Trait 'App\Models\SoftDeletes' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 13:56:14 --> Trait 'CodeIgniter\Database\SoftDeletes' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 13:56:15 --> Trait 'CodeIgniter\Database\SoftDeletes' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 13:56:16 --> Trait 'CodeIgniter\Database\SoftDeletes' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 14:01:14 --> Trait 'App\Models\SoftDeletes' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 14:01:16 --> Trait 'App\Models\SoftDeletes' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 14:05:28 --> Trait 'App\Models\SoftDeletes' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 14:05:29 --> Trait 'App\Models\SoftDeletes' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 14:06:04 --> Trait 'CodeIgniter\Database\SoftDeletesTrait' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 14:06:06 --> Trait 'CodeIgniter\Database\SoftDeletesTrait' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 14:06:07 --> Trait 'CodeIgniter\Database\SoftDeletesTrait' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 14:08:49 --> Trait 'CodeIgniter\Database\SoftDeletesTrait' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 14:10:48 --> Trait 'CodeIgniter\Database\SoftDeletes' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 14:11:44 --> Trait 'CodeIgniter\Database\SoftDeletesTrait' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 14:11:45 --> Trait 'CodeIgniter\Database\SoftDeletesTrait' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 14:11:47 --> Trait 'CodeIgniter\Database\SoftDeletesTrait' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 14:11:49 --> Trait 'CodeIgniter\Database\SoftDeletesTrait' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 14:11:50 --> Trait 'CodeIgniter\Database\SoftDeletesTrait' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 14:12:00 --> Trait 'CodeIgniter\Database\SoftDeletesTrait' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 14:14:51 --> Trait 'CodeIgniter\Database\SoftDeletesTrait' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 14:14:52 --> Trait 'CodeIgniter\Database\SoftDeletesTrait' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 14:14:54 --> Trait 'CodeIgniter\Database\SoftDeletesTrait' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 14:14:55 --> Trait 'CodeIgniter\Database\SoftDeletesTrait' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 14:14:55 --> Trait 'CodeIgniter\Database\SoftDeletesTrait' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 14:14:55 --> Trait 'CodeIgniter\Database\SoftDeletesTrait' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 14:14:55 --> Trait 'CodeIgniter\Database\SoftDeletesTrait' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 14:14:56 --> Trait 'CodeIgniter\Database\SoftDeletesTrait' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-01-21 14:14:57 --> Trait 'CodeIgniter\Database\SoftDeletesTrait' not found
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}

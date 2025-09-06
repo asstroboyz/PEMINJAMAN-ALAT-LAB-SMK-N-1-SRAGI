@@ -1,0 +1,8 @@
+CRITICAL - 2023-04-20 22:34:07 --> Trying to get property 'username' of non-object
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\Admin.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\Users\\ganda\\...', 56, Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\Admin->tentang()
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}

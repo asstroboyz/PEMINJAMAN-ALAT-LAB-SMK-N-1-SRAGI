@@ -1,0 +1,192 @@
+ERROR - 2024-06-15 18:27:24 --> Unknown column 'id_penjualan_barang' in 'where clause'
+CRITICAL - 2024-06-15 18:27:24 --> Unknown column 'id_penjualan_barang' in 'where clause'
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `pe...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `pe...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `pe...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseConnection->query('DELETE FROM `pe...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(359): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(963): CodeIgniter\Model->doDelete(NULL, false)
+#6 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(332): CodeIgniter\BaseModel->delete()
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->delete_penjualanBarang('NHR-7956')
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#12 {main}
+ERROR - 2024-06-15 18:28:00 --> Unknown column 'id_penjualan_barang' in 'where clause'
+CRITICAL - 2024-06-15 18:28:00 --> Unknown column 'id_penjualan_barang' in 'where clause'
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `pe...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `pe...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `pe...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseConnection->query('DELETE FROM `pe...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(359): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(963): CodeIgniter\Model->doDelete(NULL, false)
+#6 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(332): CodeIgniter\BaseModel->delete()
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->delete_penjualanBarang('NHR-7956')
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#12 {main}
+CRITICAL - 2024-06-15 19:17:22 --> Undefined index: id_kas
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(218): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\ganda\\...', 218, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->simpanPenjualanBrg()
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+CRITICAL - 2024-06-15 19:17:24 --> Undefined index: id_kas
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(218): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\ganda\\...', 218, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->simpanPenjualanBrg()
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+CRITICAL - 2024-06-15 19:18:42 --> Undefined index: id_kas
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(220): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\ganda\\...', 220, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->simpanPenjualanBrg()
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+ERROR - 2024-06-15 19:20:47 --> Cannot add or update a child row: a foreign key constraint fails (`toko_hera`.`detail_penjualan_barang`, CONSTRAINT `fk_transaksi_barang` FOREIGN KEY (`kode_barang`) REFERENCES `transaksi_barang` (`kode_barang`))
+CRITICAL - 2024-06-15 19:20:47 --> Cannot add or update a child row: a foreign key constraint fails (`toko_hera`.`detail_penjualan_barang`, CONSTRAINT `fk_transaksi_barang` FOREIGN KEY (`kode_barang`) REFERENCES `transaksi_barang` (`kode_barang`))
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `de...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `de...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `de...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `de...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(253): CodeIgniter\Model->insert(Array)
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->simpanPenjualanBrg()
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#10 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#13 {main}
+ERROR - 2024-06-15 19:21:21 --> Cannot add or update a child row: a foreign key constraint fails (`toko_hera`.`detail_penjualan_barang`, CONSTRAINT `fk_transaksi_barang` FOREIGN KEY (`kode_barang`) REFERENCES `transaksi_barang` (`kode_barang`))
+CRITICAL - 2024-06-15 19:21:21 --> Cannot add or update a child row: a foreign key constraint fails (`toko_hera`.`detail_penjualan_barang`, CONSTRAINT `fk_transaksi_barang` FOREIGN KEY (`kode_barang`) REFERENCES `transaksi_barang` (`kode_barang`))
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `de...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `de...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `de...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `de...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(253): CodeIgniter\Model->insert(Array)
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->simpanPenjualanBrg()
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#10 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#13 {main}
+CRITICAL - 2024-06-15 19:32:43 --> Undefined index: id_kas
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(244): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\ganda\\...', 244, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->simpanPenjualanBrg()
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+CRITICAL - 2024-06-15 20:00:27 --> Undefined variable: id_kas
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(372): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 372, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->simpanPenjualanBrg()
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+CRITICAL - 2024-06-15 20:01:12 --> Undefined variable: dataPemasukan
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(367): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 367, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->simpanPenjualanBrg()
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+CRITICAL - 2024-06-15 20:01:32 --> Undefined variable: id_kas
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(369): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 369, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->simpanPenjualanBrg()
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+CRITICAL - 2024-06-15 20:01:36 --> Undefined variable: id_kas
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(369): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 369, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->simpanPenjualanBrg()
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+CRITICAL - 2024-06-15 20:02:08 --> Undefined variable: id_kas
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(372): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 372, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->simpanPenjualanBrg()
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+ERROR - 2024-06-15 21:12:10 --> Unknown column 'id_penjualan_barang' in 'where clause'
+ERROR - 2024-06-15 21:12:26 --> Unknown column 'id_penjualan_barang' in 'where clause'
+CRITICAL - 2024-06-15 21:15:26 --> Undefined variable: dataPemasukan
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(481): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 481, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->simpanPenjualanBrg()
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+CRITICAL - 2024-06-15 21:17:49 --> Undefined variable: jumlah_awal
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(486): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 486, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->simpanPenjualanBrg()
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+CRITICAL - 2024-06-15 21:19:43 --> Undefined variable: id_transaksi
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(494): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 494, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->simpanPenjualanBrg()
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+ERROR - 2024-06-15 21:21:12 --> Unknown column 'id_penjualan_barang' in 'where clause'
+ERROR - 2024-06-15 21:22:26 --> Unknown column 'id_penjualan_barang' in 'where clause'
+ERROR - 2024-06-15 21:24:05 --> Unknown column 'id_penjualan_barang' in 'where clause'
+ERROR - 2024-06-15 21:24:57 --> Unknown column 'penjualan_barang_id' in 'where clause'
+ERROR - 2024-06-15 21:27:18 --> Unknown column 'penjualan_barang_id' in 'where clause'
+ERROR - 2024-06-15 21:27:26 --> Unknown column 'penjualan_barang_id' in 'where clause'
+ERROR - 2024-06-15 21:28:56 --> Unknown column 'id_penjualan_barang' in 'where clause'
+CRITICAL - 2024-06-15 22:01:43 --> Trying to get property 'fullname' of non-object
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Views\Admin\Templates\Topbar.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\Users\\ganda\\...', 51, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(424): CodeIgniter\View\View->render('Admin/Templates...', NULL, true)
+#4 C:\Users\ganda\Documents\GitHub\hera\app\Views\Admin\Templates\Index.php(120): CodeIgniter\View\View->include('Admin/Templates...')
+#5 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#6 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(226): CodeIgniter\View\View->render('Admin/Templates...', Array, true)
+#8 C:\Users\ganda\Documents\GitHub\hera\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Penjualan...', Array, true)
+#9 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(81): view('Admin/Penjualan...', Array)
+#10 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->index()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#12 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#14 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#15 {main}
+CRITICAL - 2024-06-15 22:27:01 --> Undefined variable: data
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(283): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 283, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->simpanPenjualanBrg()
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}

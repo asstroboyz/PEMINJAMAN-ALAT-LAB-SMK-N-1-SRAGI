@@ -1,0 +1,76 @@
+ERROR - 2024-06-17 12:28:23 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2024-06-17 12:28:23 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `perkira...', Array, false)
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#4 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(1655): CodeIgniter\BaseModel->findAll()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->perkiraan()
+#6 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}
+ERROR - 2024-06-17 12:28:31 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2024-06-17 12:28:31 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `penjual...', Array, false)
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#4 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(74): CodeIgniter\BaseModel->findAll()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->index()
+#6 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}
+CRITICAL - 2024-06-17 12:29:13 --> Trying to get property 'fullname' of non-object
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Views\Admin\Templates\Topbar.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\Users\\ganda\\...', 51, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(424): CodeIgniter\View\View->render('Admin/Templates...', NULL, true)
+#4 C:\Users\ganda\Documents\GitHub\hera\app\Views\Admin\Templates\Index.php(129): CodeIgniter\View\View->include('Admin/Templates...')
+#5 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#6 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(226): CodeIgniter\View\View->render('Admin/Templates...', Array, true)
+#8 C:\Users\ganda\Documents\GitHub\hera\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Penjualan...', Array, true)
+#9 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(88): view('Admin/Penjualan...', Array)
+#10 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->index()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#12 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#14 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#15 {main}
+ERROR - 2024-06-17 16:03:33 --> Unknown column 'transaksi_barang.tanggal_transaksi' in 'where clause'
+CRITICAL - 2024-06-17 16:03:33 --> Unknown column 'transaksi_barang.tanggal_transaksi' in 'where clause'
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `barang`...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `barang`...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `barang`...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `barang`...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(2070): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->cetakDataBarang()
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#12 {main}
+CRITICAL - 2024-06-17 16:05:26 --> Undefined index: nama_satuan
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Views\Admin\Laporan\Lap_barang.php(131): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\ganda\\...', 131, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Laporan/L...', Array, true)
+#4 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(2077): view('Admin/Laporan/L...', Array)
+#5 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->cetakDataBarang()
+#6 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}

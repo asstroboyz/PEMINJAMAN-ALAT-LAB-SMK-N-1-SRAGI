@@ -1,0 +1,112 @@
+CRITICAL - 2024-02-29 17:58:20 --> Undefined index: kode_barang
+#0 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(708): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 708, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->simpanPenjualan()
+#2 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-02-29 17:58:51 --> count(): Parameter must be an array or an object that implements Countable
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parame...', 'C:\\xampp\\htdocs...', 708, Array)
+#1 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(708): count('2')
+#2 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->simpanPenjualan()
+#3 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#4 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+ERROR - 2024-02-29 18:25:13 --> Unknown column 'penjualan.id_penjualan' in 'where clause'
+CRITICAL - 2024-02-29 18:25:13 --> Unknown column 'penjualan.id_penjualan' in 'where clause'
+#0 C:\xampp\htdocs\Toko Nolo\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `penjual...', 0)
+#1 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `penjual...')
+#2 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `penjual...')
+#3 C:\xampp\htdocs\Toko Nolo\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `penjual...', Array, false)
+#4 C:\xampp\htdocs\Toko Nolo\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\Toko Nolo\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\Toko Nolo\system\Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\Toko Nolo\system\BaseModel.php(656): CodeIgniter\Model->update('PJ-202402290625...', Array)
+#8 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(714): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->simpanPenjualan()
+#10 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2024-02-29 18:26:23 --> count(): Parameter must be an array or an object that implements Countable
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parame...', 'C:\\xampp\\htdocs...', 719, Array)
+#1 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(719): count('2')
+#2 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->simpanPenjualan()
+#3 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#4 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2024-02-29 18:28:08 --> count(): Parameter must be an array or an object that implements Countable
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parame...', 'C:\\xampp\\htdocs...', 719, Array)
+#1 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(719): count('2')
+#2 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->simpanPenjualan()
+#3 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#4 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2024-02-29 18:34:11 --> count(): Parameter must be an array or an object that implements Countable
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parame...', 'C:\\xampp\\htdocs...', 718, Array)
+#1 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(718): count('2')
+#2 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->simpanPenjualan()
+#3 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#4 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2024-02-29 18:37:54 --> count(): Parameter must be an array or an object that implements Countable
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parame...', 'C:\\xampp\\htdocs...', 718, Array)
+#1 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(718): count('2')
+#2 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->simpanPenjualan()
+#3 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#4 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+ERROR - 2024-02-29 18:38:22 --> Cannot add or update a child row: a foreign key constraint fails (`toko_hera`.`detail_penjualan`, CONSTRAINT `detail_penjualan_ibfk_1` FOREIGN KEY (`kode_brg`) REFERENCES `master_barang` (`kode_brg`))
+CRITICAL - 2024-02-29 18:38:22 --> Cannot add or update a child row: a foreign key constraint fails (`toko_hera`.`detail_penjualan`, CONSTRAINT `detail_penjualan_ibfk_1` FOREIGN KEY (`kode_brg`) REFERENCES `master_barang` (`kode_brg`))
+#0 C:\xampp\htdocs\Toko Nolo\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `de...', 0)
+#1 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `de...')
+#2 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `de...')
+#3 C:\xampp\htdocs\Toko Nolo\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `de...', Array, false)
+#4 C:\xampp\htdocs\Toko Nolo\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Toko Nolo\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Toko Nolo\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\Toko Nolo\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(728): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->simpanPenjualan()
+#10 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2024-02-29 22:24:13 --> Undefined variable: index
+#0 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(725): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 725, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->simpanPenjualan()
+#2 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-02-29 22:52:39 --> count(): Parameter must be an array or an object that implements Countable
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parame...', 'C:\\xampp\\htdocs...', 720, Array)
+#1 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(720): count('2')
+#2 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->simpanPenjualan()
+#3 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#4 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2024-02-29 23:15:28 --> A non-numeric value encountered
+#0 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(747): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric v...', 'C:\\xampp\\htdocs...', 747, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->simpanPenjualan()
+#2 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

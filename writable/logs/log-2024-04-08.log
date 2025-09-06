@@ -1,0 +1,75 @@
+CRITICAL - 2024-04-08 23:39:43 --> Class 'App\Models\PenjualanModel' not found
+#0 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(809): App\Controllers\Admin->__construct()
+#1 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-04-08 23:41:12 --> Class 'App\Models\DetailPenjualanModel' not found
+#0 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(809): App\Controllers\Admin->__construct()
+#1 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+ERROR - 2024-04-08 23:41:52 --> Table 'toko_hera.saldo' doesn't exist
+CRITICAL - 2024-04-08 23:41:52 --> Table 'toko_hera.saldo' doesn't exist
+#0 C:\xampp\htdocs\Toko Nolo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT SUM(`sal...', 0)
+#1 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`sal...')
+#2 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`sal...')
+#3 C:\xampp\htdocs\Toko Nolo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`sal...', Array, false)
+#4 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(104): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->index()
+#6 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-04-08 23:42:27 --> Undefined variable: saldo
+#0 C:\xampp\htdocs\Toko Nolo\app\Views\Admin\Home\Index.php(79): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 79, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Toko Nolo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Toko Nolo\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Home/Inde...', Array, true)
+#4 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(117): view('Admin/Home/Inde...', Array)
+#5 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->index()
+#6 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-04-08 23:42:51 --> Undefined variable: saldo
+#0 C:\xampp\htdocs\Toko Nolo\app\Views\Admin\Home\Index.php(79): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 79, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Toko Nolo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Toko Nolo\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Home/Inde...', Array, true)
+#4 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(117): view('Admin/Home/Inde...', Array)
+#5 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->index()
+#6 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-04-08 23:51:45 --> Undefined variable: totalModal
+#0 C:\xampp\htdocs\Toko Nolo\app\Views\Admin\Modal\Index.php(38): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 38, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Toko Nolo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Toko Nolo\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Modal/Ind...', Array, true)
+#4 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(2752): view('Admin/Modal/Ind...', Array)
+#5 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->modal()
+#6 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-04-08 23:52:41 --> Undefined variable: modalData
+#0 C:\xampp\htdocs\Toko Nolo\app\Views\Admin\Modal\Index.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 70, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Toko Nolo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Toko Nolo\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Modal/Ind...', Array, true)
+#4 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(2765): view('Admin/Modal/Ind...', Array)
+#5 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->modal()
+#6 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}

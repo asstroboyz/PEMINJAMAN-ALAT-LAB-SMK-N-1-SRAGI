@@ -1,0 +1,233 @@
+ERROR - 2022-11-19 02:53:24 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2022-11-19 02:53:24 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\xampp\htdocs\SIPM_polda\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\SIPM_polda\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\SIPM_polda\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\SIPM_polda\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\xampp\htdocs\SIPM_polda\vendor\myth\auth\src\Authentication\LocalAuthenticator.php(140): CodeIgniter\BaseModel->first()
+#5 C:\xampp\htdocs\SIPM_polda\vendor\myth\auth\src\Authentication\LocalAuthenticator.php(19): Myth\Auth\Authentication\LocalAuthenticator->validate(Array, true)
+#6 C:\xampp\htdocs\SIPM_polda\vendor\myth\auth\src\Controllers\AuthController.php(87): Myth\Auth\Authentication\LocalAuthenticator->attempt(Array, false)
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): Myth\Auth\Controllers\AuthController->attemptLogin()
+#8 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+#9 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-11-19 03:13:45 --> Undefined variable: hasil
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\pengaduan\detail.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 51, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(175): view('user/pengaduan/...', Array)
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->detail('15')
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-19 03:14:11 --> Trying to get property 'nama_pengadu' of non-object
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\pengaduan\detail.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 51, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(175): view('user/pengaduan/...', Array)
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->detail('15')
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-19 03:19:42 --> Undefined property: stdClass::$detal
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\pengaduan\detail.php(85): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 85, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(175): view('user/pengaduan/...', Array)
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->detail('15')
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-19 03:23:44 --> Undefined property: CodeIgniter\Database\MySQLi\Builder::$get
+#0 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(172): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 172, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->detail('15')
+#2 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2022-11-19 03:24:38 --> Table 'ci4_sipm_polda.tblbukti' doesn't exist
+CRITICAL - 2022-11-19 03:24:38 --> Table 'ci4_sipm_polda.tblbukti' doesn't exist
+#0 C:\xampp\htdocs\SIPM_polda\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\SIPM_polda\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\SIPM_polda\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\SIPM_polda\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(172): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->detail('15')
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-19 03:26:40 --> Undefined variable: bukti
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\pengaduan\detail.php(93): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 93, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(180): view('user/pengaduan/...', Array)
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->detail('15')
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-19 03:27:12 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#3 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(181): view('user/pengaduan/...', Array)
+#4 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->detail('15')
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-11-19 03:27:39 --> Undefined index: img_satu
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\pengaduan\detail.php(93): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 93, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(181): view('user/pengaduan/...', Array)
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->detail('15')
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-19 03:28:02 --> Undefined variable: Query1
+#0 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(174): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 174, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->detail('15')
+#2 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-11-19 03:41:04 --> Too few arguments to function App\Controllers\User::detail(), 0 passed in C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->detail()
+#1 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-11-19 03:42:19 --> Too few arguments to function App\Controllers\User::detail(), 0 passed in C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->detail()
+#1 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-11-19 03:42:41 --> Too few arguments to function App\Controllers\User::detail(), 0 passed in C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->detail()
+#1 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-11-19 03:44:08 --> Trying to get property 'img_satu' of non-object
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\pengaduan\detail.php(93): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 93, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(182): view('user/pengaduan/...', Array)
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->detail('15')
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-19 03:44:25 --> Trying to get property 'img_satu' of non-object
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\pengaduan\detail.php(93): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 93, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(182): view('user/pengaduan/...', Array)
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->detail('15')
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-19 03:44:37 --> Trying to get property 'img_satu' of non-object
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\pengaduan\detail.php(93): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 93, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(182): view('user/pengaduan/...', Array)
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->detail('15')
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-19 04:10:49 --> syntax error, unexpected '}', expecting end of file
+#0 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#2 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(182): view('user/pengaduan/...', Array)
+#3 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->detail('28')
+#4 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-11-19 04:11:34 --> syntax error, unexpected '}', expecting end of file
+#0 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#2 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(182): view('user/pengaduan/...', Array)
+#3 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->detail('28')
+#4 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-11-19 04:17:04 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\pengaduan\detail.php(93): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 93, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(182): view('user/pengaduan/...', Array)
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->detail('20')
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-19 20:44:47 --> Trying to get property 'username' of non-object
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Views\admin\templates\index.php(140): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\Users\\ganda\\...', 140, Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(226): CodeIgniter\View\View->render('admin/templates...', Array, true)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('admin/pengaduan...', Array, true)
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\Admin.php(116): view('admin/pengaduan...', Array)
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\Admin->pengaduan_masuk()
+#7 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#11 {main}
+CRITICAL - 2022-11-19 20:44:57 --> Trying to get property 'username' of non-object
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Views\admin\templates\index.php(140): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\Users\\ganda\\...', 140, Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(226): CodeIgniter\View\View->render('admin/templates...', Array, true)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('admin/pengaduan...', Array, true)
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\Admin.php(71): view('admin/pengaduan...', Array)
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\Admin->pengaduan()
+#7 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#11 {main}

@@ -1,0 +1,168 @@
+CRITICAL - 2024-06-21 19:23:33 --> Too few arguments to function App\Controllers\Admin::bayarPiutang(), 1 passed in C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php on line 832 and exactly 2 expected
+#0 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->bayarPiutang('12')
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#5 {main}
+CRITICAL - 2024-06-21 19:32:33 --> Undefined property: App\Controllers\Admin::$penjualanModel
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(3646): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\ganda\\...', 3646, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->bayarPiutang('12')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+CRITICAL - 2024-06-21 19:33:10 --> Undefined property: App\Controllers\Admin::$penjualanModel
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(3645): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\ganda\\...', 3645, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->bayarPiutang('12')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+CRITICAL - 2024-06-21 19:33:37 --> Undefined variable: id_penjualan
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(3645): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 3645, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->bayarPiutang('12')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+CRITICAL - 2024-06-21 19:34:01 --> Undefined variable: id_penjualan
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(3645): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 3645, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->bayarPiutang('12')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+CRITICAL - 2024-06-21 19:34:18 --> Undefined variable: id
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(3645): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 3645, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->bayarPiutang('12')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+CRITICAL - 2024-06-21 19:36:58 --> Trying to access array offset on value of type null
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(3712): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\Users\\ganda\\...', 3712, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->bayarPiutang('12')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+CRITICAL - 2024-06-21 19:48:22 --> Class 'App\Controllers\PiutangModel' not found
+#0 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->bayarPiutang('12')
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#5 {main}
+CRITICAL - 2024-06-21 19:48:35 --> Class 'App\Controllers\piutangModel' not found
+#0 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->bayarPiutang('12')
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#5 {main}
+CRITICAL - 2024-06-21 20:03:48 --> Class 'App\Controllers\PembayaranPiutangModel' not found
+#0 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->bayarPiutang('12')
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#5 {main}
+CRITICAL - 2024-06-21 20:04:07 --> Class 'App\Controllers\pembayaranPiutangModel' not found
+#0 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->bayarPiutang('12')
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#5 {main}
+CRITICAL - 2024-06-21 20:32:11 --> Undefined variable: kasModel
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(3854): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 3854, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->bayarPiutang('13')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+CRITICAL - 2024-06-21 20:32:30 --> Undefined variable: KasModel
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(3854): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 3854, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->bayarPiutang('13')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+CRITICAL - 2024-06-21 20:32:51 --> Undefined variable: KasModel
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(3855): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 3855, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->bayarPiutang('13')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+CRITICAL - 2024-06-21 20:33:28 --> Undefined variable: KasModel
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(3855): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 3855, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->bayarPiutang('13')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+CRITICAL - 2024-06-21 20:33:53 --> Undefined variable: KasModel
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(3855): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 3855, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->bayarPiutang('13')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+ERROR - 2024-06-21 23:25:07 --> Cannot delete or update a parent row: a foreign key constraint fails (`toko_hera`.`pembayaran_piutang`, CONSTRAINT `pembayaran_piutang_ibfk_1` FOREIGN KEY (`id_piutang`) REFERENCES `piutang` (`id_piutang`))
+CRITICAL - 2024-06-21 23:25:07 --> Cannot delete or update a parent row: a foreign key constraint fails (`toko_hera`.`pembayaran_piutang`, CONSTRAINT `pembayaran_piutang_ibfk_1` FOREIGN KEY (`id_piutang`) REFERENCES `piutang` (`id_piutang`))
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `pi...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `pi...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `pi...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseConnection->query('DELETE FROM `pi...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(359): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(963): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(856): CodeIgniter\BaseModel->delete(Array)
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->delete_penjualanBarang('NHR-2257')
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#12 {main}
+ERROR - 2024-06-21 23:25:16 --> Cannot delete or update a parent row: a foreign key constraint fails (`toko_hera`.`pembayaran_piutang`, CONSTRAINT `pembayaran_piutang_ibfk_1` FOREIGN KEY (`id_piutang`) REFERENCES `piutang` (`id_piutang`))
+CRITICAL - 2024-06-21 23:25:16 --> Cannot delete or update a parent row: a foreign key constraint fails (`toko_hera`.`pembayaran_piutang`, CONSTRAINT `pembayaran_piutang_ibfk_1` FOREIGN KEY (`id_piutang`) REFERENCES `piutang` (`id_piutang`))
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `pi...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `pi...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `pi...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseConnection->query('DELETE FROM `pi...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(359): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(963): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(856): CodeIgniter\BaseModel->delete(Array)
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->delete_penjualanBarang('NHR-4742')
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#12 {main}
+ERROR - 2024-06-21 23:25:26 --> Cannot delete or update a parent row: a foreign key constraint fails (`toko_hera`.`pembayaran_piutang`, CONSTRAINT `pembayaran_piutang_ibfk_1` FOREIGN KEY (`id_piutang`) REFERENCES `piutang` (`id_piutang`))
+CRITICAL - 2024-06-21 23:25:26 --> Cannot delete or update a parent row: a foreign key constraint fails (`toko_hera`.`pembayaran_piutang`, CONSTRAINT `pembayaran_piutang_ibfk_1` FOREIGN KEY (`id_piutang`) REFERENCES `piutang` (`id_piutang`))
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `pi...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `pi...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `pi...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseConnection->query('DELETE FROM `pi...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(359): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(963): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(856): CodeIgniter\BaseModel->delete(Array)
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->delete_penjualanBarang('NHR-9931')
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#12 {main}

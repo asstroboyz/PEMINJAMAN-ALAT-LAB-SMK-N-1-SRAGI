@@ -1,0 +1,37 @@
+CRITICAL - 2024-02-22 10:36:00 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-02-22 10:38:50 --> Trying to get property 'fullname' of non-object
+#0 C:\xampp\htdocs\niuw rev\app\Views\Admin\Templates\Topbar.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 27, Array)
+#1 C:\xampp\htdocs\niuw rev\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\niuw rev\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\niuw rev\system\View\View.php(424): CodeIgniter\View\View->render('Admin/Templates...', NULL, true)
+#4 C:\xampp\htdocs\niuw rev\app\Views\Admin\Templates\Index.php(55): CodeIgniter\View\View->include('Admin/Templates...')
+#5 C:\xampp\htdocs\niuw rev\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\niuw rev\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\xampp\htdocs\niuw rev\system\View\View.php(226): CodeIgniter\View\View->render('Admin/Templates...', Array, true)
+#8 C:\xampp\htdocs\niuw rev\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Inventari...', Array, true)
+#9 C:\xampp\htdocs\niuw rev\app\Controllers\Admin.php(546): view('Admin/Inventari...', Array)
+#10 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#11 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#12 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\niuw rev\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\niuw rev\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-02-22 10:39:54 --> Trying to get property 'fullname' of non-object
+#0 C:\xampp\htdocs\niuw rev\app\Views\Admin\Templates\Topbar.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 27, Array)
+#1 C:\xampp\htdocs\niuw rev\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\niuw rev\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\niuw rev\system\View\View.php(424): CodeIgniter\View\View->render('Admin/Templates...', NULL, true)
+#4 C:\xampp\htdocs\niuw rev\app\Views\Admin\Templates\Index.php(55): CodeIgniter\View\View->include('Admin/Templates...')
+#5 C:\xampp\htdocs\niuw rev\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\niuw rev\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\xampp\htdocs\niuw rev\system\View\View.php(226): CodeIgniter\View\View->render('Admin/Templates...', Array, true)
+#8 C:\xampp\htdocs\niuw rev\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Inventari...', Array, true)
+#9 C:\xampp\htdocs\niuw rev\app\Controllers\Admin.php(546): view('Admin/Inventari...', Array)
+#10 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#11 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#12 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\niuw rev\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\niuw rev\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#15 {main}

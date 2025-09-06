@@ -1,0 +1,37 @@
+CRITICAL - 2024-07-22 00:11:54 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::getRowArray()
+#0 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->bayarPiutang('29')
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#5 {main}
+CRITICAL - 2024-07-22 00:23:02 --> Undefined property: stdClass::$total_penjualan
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(4226): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\ganda\\...', 4226, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->bayarPiutang('30')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+ERROR - 2024-07-22 00:24:20 --> Expected fields not found in the data: stdClass Object
+(
+    [id_piutang] => 29
+    [id_penjualan_barang] => ,mnjkhuhu
+    [id_pelanggan] => 1
+    [tanggal_piutang] => 2900-09-12
+    [jatuh_tempo] => 2024-08-16
+    [jumlah_piutang] => 87
+    [jumlah_terbayar] => 0
+    [status_piutang] => belum_lunas
+    [created_at] => 0000-00-00 00:00:00
+)
+
+CRITICAL - 2024-07-22 00:25:30 --> Undefined property: stdClass::$total_penjualan
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(4226): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\ganda\\...', 4226, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->bayarPiutang('30')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+ERROR - 2024-07-22 00:33:35 --> No data found for id_piutang: 35

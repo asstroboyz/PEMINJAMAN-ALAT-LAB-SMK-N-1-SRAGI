@@ -1,0 +1,30 @@
+ERROR - 2024-06-10 17:53:48 --> Unknown column 'barang.id_master_barang' in 'on clause'
+CRITICAL - 2024-06-10 17:53:48 --> Unknown column 'barang.id_master_barang' in 'on clause'
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(853): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->Barang()
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#12 {main}
+ERROR - 2024-06-10 17:55:01 --> Unknown column 'barang.id_master_barang' in 'on clause'
+CRITICAL - 2024-06-10 17:55:01 --> Unknown column 'barang.id_master_barang' in 'on clause'
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(853): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->Barang()
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#12 {main}

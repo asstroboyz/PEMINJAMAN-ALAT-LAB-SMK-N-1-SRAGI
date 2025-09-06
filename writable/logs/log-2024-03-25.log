@@ -1,0 +1,201 @@
+ERROR - 2024-03-25 22:08:40 --> Table 'toko_hera.detail_permintaan_barang' doesn't exist
+CRITICAL - 2024-03-25 22:08:40 --> Table 'toko_hera.detail_permintaan_barang' doesn't exist
+#0 C:\xampp\htdocs\Toko Nolo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Toko Nolo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Toko Nolo\app\Controllers\Administrator.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Administrator->index()
+#6 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Administrator))
+#7 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2024-03-25 22:13:23 --> Unknown column 'perkiraan_penjualan.id_satuan' in 'field list'
+CRITICAL - 2024-03-25 22:13:23 --> Unknown column 'perkiraan_penjualan.id_satuan' in 'field list'
+#0 C:\xampp\htdocs\Toko Nolo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `perkira...', 0)
+#1 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `perkira...')
+#2 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `perkira...')
+#3 C:\xampp\htdocs\Toko Nolo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `perkira...', Array, false)
+#4 C:\xampp\htdocs\Toko Nolo\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Toko Nolo\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(1592): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->perkiraan()
+#8 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2024-03-25 22:13:31 --> Unknown column 'perkiraan_penjualan.id_satuan' in 'field list'
+CRITICAL - 2024-03-25 22:13:31 --> Unknown column 'perkiraan_penjualan.id_satuan' in 'field list'
+#0 C:\xampp\htdocs\Toko Nolo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `perkira...', 0)
+#1 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `perkira...')
+#2 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `perkira...')
+#3 C:\xampp\htdocs\Toko Nolo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `perkira...', Array, false)
+#4 C:\xampp\htdocs\Toko Nolo\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Toko Nolo\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(1592): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->perkiraan()
+#8 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-03-25 22:22:12 --> Division by zero
+#0 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(1742): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Division by zer...', 'C:\\xampp\\htdocs...', 1742, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->save_perkiraan()
+#2 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-03-25 22:22:31 --> Division by zero
+#0 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(1728): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Division by zer...', 'C:\\xampp\\htdocs...', 1728, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->save_perkiraan()
+#2 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-03-25 22:34:15 --> Division by zero
+#0 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(1816): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Division by zer...', 'C:\\xampp\\htdocs...', 1816, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->save_perkiraan()
+#2 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-03-25 22:34:22 --> Division by zero
+#0 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(1816): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Division by zer...', 'C:\\xampp\\htdocs...', 1816, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->save_perkiraan()
+#2 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-03-25 22:34:37 --> Division by zero
+#0 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(1830): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Division by zer...', 'C:\\xampp\\htdocs...', 1830, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->save_perkiraan()
+#2 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-03-25 22:35:44 --> Division by zero
+#0 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(1830): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Division by zer...', 'C:\\xampp\\htdocs...', 1830, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->save_perkiraan()
+#2 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-03-25 22:35:57 --> Division by zero
+#0 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(1830): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Division by zer...', 'C:\\xampp\\htdocs...', 1830, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->save_perkiraan()
+#2 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-03-25 22:45:52 --> Cannot add or update a child row: a foreign key constraint fails (`toko_hera`.`perkiraan_penjualan`, CONSTRAINT `perkiraan_penjualan_ibfk_2` FOREIGN KEY (`id_satuan`) REFERENCES `satuan` (`satuan_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+CRITICAL - 2024-03-25 22:45:52 --> Cannot add or update a child row: a foreign key constraint fails (`toko_hera`.`perkiraan_penjualan`, CONSTRAINT `perkiraan_penjualan_ibfk_2` FOREIGN KEY (`id_satuan`) REFERENCES `satuan` (`satuan_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+#0 C:\xampp\htdocs\Toko Nolo\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\Toko Nolo\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\Toko Nolo\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Toko Nolo\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Toko Nolo\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Toko Nolo\app\Models\perkiraanModel.php(41): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(1851): App\Models\perkiraanModel->savePerkiraan(Array)
+#9 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->save_perkiraan()
+#10 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+ERROR - 2024-03-25 23:06:20 --> Column 'id_satuan' cannot be null
+CRITICAL - 2024-03-25 23:06:20 --> Column 'id_satuan' cannot be null
+#0 C:\xampp\htdocs\Toko Nolo\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\Toko Nolo\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\Toko Nolo\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Toko Nolo\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Toko Nolo\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Toko Nolo\app\Models\perkiraanModel.php(41): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(1873): App\Models\perkiraanModel->savePerkiraan(Array)
+#9 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->save_perkiraan()
+#10 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+ERROR - 2024-03-25 23:10:07 --> Column 'id_satuan' cannot be null
+CRITICAL - 2024-03-25 23:10:07 --> Column 'id_satuan' cannot be null
+#0 C:\xampp\htdocs\Toko Nolo\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\Toko Nolo\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\Toko Nolo\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Toko Nolo\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Toko Nolo\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Toko Nolo\app\Models\perkiraanModel.php(41): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(1873): App\Models\perkiraanModel->savePerkiraan(Array)
+#9 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->save_perkiraan()
+#10 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+ERROR - 2024-03-25 23:10:13 --> Column 'id_satuan' cannot be null
+CRITICAL - 2024-03-25 23:10:13 --> Column 'id_satuan' cannot be null
+#0 C:\xampp\htdocs\Toko Nolo\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\Toko Nolo\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\Toko Nolo\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Toko Nolo\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Toko Nolo\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Toko Nolo\app\Models\perkiraanModel.php(41): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(1873): App\Models\perkiraanModel->savePerkiraan(Array)
+#9 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->save_perkiraan()
+#10 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+ERROR - 2024-03-25 23:10:31 --> Column 'id_satuan' cannot be null
+CRITICAL - 2024-03-25 23:10:31 --> Column 'id_satuan' cannot be null
+#0 C:\xampp\htdocs\Toko Nolo\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\Toko Nolo\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\Toko Nolo\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Toko Nolo\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Toko Nolo\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Toko Nolo\app\Models\perkiraanModel.php(41): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(1873): App\Models\perkiraanModel->savePerkiraan(Array)
+#9 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->save_perkiraan()
+#10 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+ERROR - 2024-03-25 23:12:06 --> Column 'id_satuan' cannot be null
+CRITICAL - 2024-03-25 23:12:06 --> Column 'id_satuan' cannot be null
+#0 C:\xampp\htdocs\Toko Nolo\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\Toko Nolo\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\Toko Nolo\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Toko Nolo\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Toko Nolo\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Toko Nolo\app\Models\perkiraanModel.php(41): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(1873): App\Models\perkiraanModel->savePerkiraan(Array)
+#9 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->save_perkiraan()
+#10 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}

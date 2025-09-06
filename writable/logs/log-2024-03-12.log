@@ -1,0 +1,150 @@
+ERROR - 2024-03-12 01:25:25 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2024-03-12 01:25:25 --> Duplicate entry '0' for key 'PRIMARY'
+#0 C:\xampp\htdocs\Toko Nolo\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ri...', 0)
+#1 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ri...')
+#2 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ri...')
+#3 C:\xampp\htdocs\Toko Nolo\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ri...', Array, false)
+#4 C:\xampp\htdocs\Toko Nolo\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Toko Nolo\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Toko Nolo\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(960): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->simpanPenjualanBrg()
+#9 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-12 01:30:20 --> Undefined index: perihal
+#0 C:\xampp\htdocs\Toko Nolo\app\Views\Admin\Penjualan_barang\list_permintaan.php(62): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 62, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Toko Nolo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Toko Nolo\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Penjualan...', Array, true)
+#4 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(842): view('Admin/Penjualan...', Array)
+#5 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->list_penjualan('NHR-20240312012...')
+#6 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-03-12 01:32:51 --> Undefined variable: date
+#0 C:\xampp\htdocs\Toko Nolo\app\Views\Admin\Penjualan_barang\list_penjualan.php(73): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 73, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Toko Nolo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Toko Nolo\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Penjualan...', Array, true)
+#4 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(842): view('Admin/Penjualan...', Array)
+#5 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->list_penjualan('NHR-20240312012...')
+#6 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-03-12 01:33:03 --> Undefined index: status
+#0 C:\xampp\htdocs\Toko Nolo\app\Views\Admin\Penjualan_barang\list_penjualan.php(92): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 92, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Toko Nolo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Toko Nolo\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Penjualan...', Array, true)
+#4 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(842): view('Admin/Penjualan...', Array)
+#5 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->list_penjualan('NHR-20240312012...')
+#6 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2024-03-12 02:40:23 --> Table 'toko_hera.riwayat_stok' doesn't exist
+CRITICAL - 2024-03-12 02:40:23 --> Table 'toko_hera.riwayat_stok' doesn't exist
+#0 C:\xampp\htdocs\Toko Nolo\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Toko Nolo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(1030): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->pengeluaran()
+#6 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-03-12 03:03:37 --> Invalid file: Admin/Pengeluaran/Tambah.php
+#0 C:\xampp\htdocs\Toko Nolo\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/Pengeluar...')
+#1 C:\xampp\htdocs\Toko Nolo\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Pengeluar...', Array, true)
+#2 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(1040): view('Admin/Pengeluar...')
+#3 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->tambah_pengeluaran()
+#4 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#5 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-03-12 03:07:28 --> Undefined variable: title
+#0 C:\xampp\htdocs\Toko Nolo\app\Views\Admin\Templates\Index.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 12, Array)
+#1 C:\xampp\htdocs\Toko Nolo\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\Toko Nolo\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\Toko Nolo\system\View\View.php(226): CodeIgniter\View\View->render('Admin/Templates...', Array, true)
+#4 C:\xampp\htdocs\Toko Nolo\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Pengeluar...', Array, true)
+#5 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(1040): view('Admin/Pengeluar...')
+#6 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->tambah_pengeluaran()
+#7 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2024-03-12 13:15:01 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2024-03-12 13:15:01 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\Toko Nolo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\Toko Nolo\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\Toko Nolo\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\xampp\htdocs\Toko Nolo\vendor\myth\auth\src\Authentication\LocalAuthenticator.php(140): CodeIgniter\BaseModel->first()
+#5 C:\xampp\htdocs\Toko Nolo\vendor\myth\auth\src\Authentication\LocalAuthenticator.php(19): Myth\Auth\Authentication\LocalAuthenticator->validate(Array, true)
+#6 C:\xampp\htdocs\Toko Nolo\vendor\myth\auth\src\Controllers\AuthController.php(87): Myth\Auth\Authentication\LocalAuthenticator->attempt(Array, false)
+#7 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): Myth\Auth\Controllers\AuthController->attemptLogin()
+#8 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+#9 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2024-03-12 13:16:47 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2024-03-12 13:16:47 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\Toko Nolo\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\Toko Nolo\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\Toko Nolo\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\xampp\htdocs\Toko Nolo\vendor\myth\auth\src\Authentication\LocalAuthenticator.php(140): CodeIgniter\BaseModel->first()
+#5 C:\xampp\htdocs\Toko Nolo\vendor\myth\auth\src\Authentication\LocalAuthenticator.php(19): Myth\Auth\Authentication\LocalAuthenticator->validate(Array, true)
+#6 C:\xampp\htdocs\Toko Nolo\vendor\myth\auth\src\Controllers\AuthController.php(87): Myth\Auth\Authentication\LocalAuthenticator->attempt(Array, false)
+#7 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): Myth\Auth\Controllers\AuthController->attemptLogin()
+#8 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+#9 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2024-03-12 13:40:33 --> Unknown column 'tanggal' in 'field list'
+CRITICAL - 2024-03-12 13:40:33 --> Unknown column 'tanggal' in 'field list'
+#0 C:\xampp\htdocs\Toko Nolo\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `sa...', 0)
+#1 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 C:\xampp\htdocs\Toko Nolo\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 C:\xampp\htdocs\Toko Nolo\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', Array, false)
+#4 C:\xampp\htdocs\Toko Nolo\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Toko Nolo\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Toko Nolo\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Toko Nolo\app\Controllers\Admin.php(1124): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->simpan_pengeluaran()
+#9 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-03-12 13:42:00 --> Class 'App\Controllers\RiwayatSaldoModel' not found
+#0 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(832): App\Controllers\Admin->simpan_pengeluaran()
+#1 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\Toko Nolo\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\Toko Nolo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\Toko Nolo\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-03-12 16:01:53 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}

@@ -1,0 +1,24 @@
+CRITICAL - 2024-07-05 07:39:16 --> Trying to get property 'fullname' of non-object
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Views\Admin\Templates\Topbar.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\Users\\ganda\\...', 51, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(424): CodeIgniter\View\View->render('Admin/Templates...', NULL, true)
+#4 C:\Users\ganda\Documents\GitHub\hera\app\Views\Admin\Templates\Index.php(104): CodeIgniter\View\View->include('Admin/Templates...')
+#5 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#6 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(226): CodeIgniter\View\View->render('Admin/Templates...', Array, true)
+#8 C:\Users\ganda\Documents\GitHub\hera\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Penjualan...', Array, true)
+#9 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(89): view('Admin/Penjualan...', Array)
+#10 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->index()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#12 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#14 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#15 {main}
+CRITICAL - 2024-07-05 07:42:19 --> Class 'App\Controllers\PenjualanModel' not found
+#0 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->cetakArusKas()
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#5 {main}

@@ -1,0 +1,291 @@
+ERROR - 2025-09-02 17:35:42 --> Table 'peminjaman-alat-tkj.barang' doesn't exist
+CRITICAL - 2025-09-02 17:35:42 --> Table 'peminjaman-alat-tkj.barang' doesn't exist
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\CODING-WORK\peminjaman_alat\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(893): CodeIgniter\BaseModel->findAll()
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->atk()
+#8 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#12 {main}
+CRITICAL - 2025-09-02 18:05:38 --> Undefined array key "stok_tersedia"
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Inventaris\Index.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\CODING-WORK\\...', 60)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Inventari...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(499): view('Admin/Inventari...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+ERROR - 2025-09-02 18:07:17 --> Table 'peminjaman-alat-tkj.detail_master' doesn't exist
+ERROR - 2025-09-02 18:07:17 --> Gagal menambahkan inventaris: Table 'peminjaman-alat-tkj.detail_master' doesn't exist
+ERROR - 2025-09-02 18:08:17 --> Table 'peminjaman-alat-tkj.detail_master' doesn't exist
+ERROR - 2025-09-02 18:10:52 --> Table 'peminjaman-alat-tkj.detail_master' doesn't exist
+ERROR - 2025-09-02 18:10:56 --> Table 'peminjaman-alat-tkj.detail_master' doesn't exist
+ERROR - 2025-09-02 18:12:44 --> Table 'peminjaman-alat-tkj.detail_master' doesn't exist
+ERROR - 2025-09-02 18:12:50 --> Table 'peminjaman-alat-tkj.detail_master' doesn't exist
+ERROR - 2025-09-02 18:15:16 --> Table 'peminjaman-alat-tkj.detail_master' doesn't exist
+ERROR - 2025-09-02 18:17:45 --> Unknown column 'id_master_barang' in 'field list'
+ERROR - 2025-09-02 18:18:35 --> Unknown column 'id_master_barang' in 'field list'
+ERROR - 2025-09-02 18:19:53 --> Unknown column 'user_id' in 'field list'
+CRITICAL - 2025-09-02 18:34:31 --> Undefined array key "stok_awal"
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Master_barang\Detail_brg.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\CODING-WORK\\...', 70)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Master_ba...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(377): view('Admin/Master_ba...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->detail_master_brg('CPU-001')
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-09-02 18:34:51 --> Undefined array key "stok_awal"
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Master_barang\Detail_brg.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\CODING-WORK\\...', 69)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Master_ba...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(377): view('Admin/Master_ba...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->detail_master_brg('CPU-001')
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+ERROR - 2025-09-02 19:18:33 --> Table 'peminjaman-alat-tkj.detail_master' doesn't exist
+CRITICAL - 2025-09-02 19:18:33 --> Table 'peminjaman-alat-tkj.detail_master' doesn't exist
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `inventa...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `inventa...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `inventa...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `inventa...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(838): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->detail_inv('MON-003-2025090...')
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-09-02 19:32:03 --> Undefined array key "nama_brg"
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Inventaris\Index.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\CODING-WORK\\...', 42)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Inventari...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(528): view('Admin/Inventari...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-09-02 19:32:46 --> Undefined array key "nama_brg"
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Inventaris\Index.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\CODING-WORK\\...', 42)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Inventari...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(528): view('Admin/Inventari...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-09-02 19:32:47 --> Undefined array key "nama_brg"
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Inventaris\Index.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\CODING-WORK\\...', 42)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Inventari...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(528): view('Admin/Inventari...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-09-02 19:34:31 --> Undefined array key "nama_brg"
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Inventaris\Index.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\CODING-WORK\\...', 42)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Inventari...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(528): view('Admin/Inventari...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-09-02 19:34:32 --> Undefined array key "nama_brg"
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Inventaris\Index.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\CODING-WORK\\...', 42)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Inventari...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(528): view('Admin/Inventari...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-09-02 19:40:05 --> Undefined array key "nama_brg"
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Inventaris\Index.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\CODING-WORK\\...', 42)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Inventari...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(528): view('Admin/Inventari...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+ERROR - 2025-09-02 19:45:41 --> Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'peminjaman-alat-tkj.master_barang.nama_brg' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+CRITICAL - 2025-09-02 19:45:41 --> Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'peminjaman-alat-tkj.master_barang.nama_brg' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `inventa...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `inventa...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `inventa...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `inventa...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\CODING-WORK\peminjaman_alat\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(514): CodeIgniter\BaseModel->findAll()
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#8 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#12 {main}
+ERROR - 2025-09-02 19:48:19 --> Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'peminjaman-alat-tkj.master_barang.nama_brg' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+CRITICAL - 2025-09-02 19:48:19 --> Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'peminjaman-alat-tkj.master_barang.nama_brg' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `inventa...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `inventa...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `inventa...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `inventa...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\CODING-WORK\peminjaman_alat\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(514): CodeIgniter\BaseModel->findAll()
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#8 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#12 {main}
+ERROR - 2025-09-02 19:49:26 --> Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'peminjaman-alat-tkj.master_barang.nama_brg' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+CRITICAL - 2025-09-02 19:49:26 --> Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'peminjaman-alat-tkj.master_barang.nama_brg' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `inventa...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `inventa...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `inventa...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `inventa...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\CODING-WORK\peminjaman_alat\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(514): CodeIgniter\BaseModel->findAll()
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#8 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#12 {main}
+CRITICAL - 2025-09-02 19:50:44 --> Undefined array key "merk"
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Inventaris\Index.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\CODING-WORK\\...', 47)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Inventari...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(527): view('Admin/Inventari...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+ERROR - 2025-09-02 19:51:00 --> Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'peminjaman-alat-tkj.master_barang.merk' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+CRITICAL - 2025-09-02 19:51:00 --> Expression #3 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'peminjaman-alat-tkj.master_barang.merk' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `inventa...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `inventa...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `inventa...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `inventa...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\CODING-WORK\peminjaman_alat\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(514): CodeIgniter\BaseModel->findAll()
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#8 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#12 {main}
+CRITICAL - 2025-09-02 19:51:55 --> Undefined array key "jenis_brg"
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Inventaris\Index.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\CODING-WORK\\...', 48)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Inventari...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(527): view('Admin/Inventari...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-09-02 19:52:21 --> Undefined array key "jenis_brg"
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Inventaris\Index.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\CODING-WORK\\...', 48)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Inventari...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(527): view('Admin/Inventari...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-09-02 19:52:33 --> Undefined array key "stok"
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Inventaris\Index.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\CODING-WORK\\...', 49)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Inventari...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(527): view('Admin/Inventari...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-09-02 19:53:37 --> Undefined array key "total_unit"
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Inventaris\Index.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\CODING-WORK\\...', 113)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Inventari...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(502): view('Admin/Inventari...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-09-02 19:53:47 --> Undefined array key "total_unit"
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Inventaris\Index.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\CODING-WORK\\...', 113)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Inventari...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(502): view('Admin/Inventari...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-09-02 19:54:11 --> Undefined array key "total_unit"
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Inventaris\Index.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\CODING-WORK\\...', 113)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Inventari...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(502): view('Admin/Inventari...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}

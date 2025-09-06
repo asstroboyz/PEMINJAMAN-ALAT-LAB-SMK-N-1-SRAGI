@@ -1,0 +1,221 @@
+ERROR - 2025-09-05 22:54:55 --> Unknown column 'inventaris.lokasi' in 'field list'
+CRITICAL - 2025-09-05 22:54:55 --> Unknown column 'inventaris.lokasi' in 'field list'
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `inventa...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `inventa...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `inventa...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `inventa...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\CODING-WORK\peminjaman_alat\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(495): CodeIgniter\BaseModel->findAll()
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#8 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#12 {main}
+ERROR - 2025-09-05 22:55:33 --> Unknown column 'inventaris.lokasi' in 'field list'
+CRITICAL - 2025-09-05 22:55:33 --> Unknown column 'inventaris.lokasi' in 'field list'
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `inventa...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `inventa...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `inventa...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `inventa...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\CODING-WORK\peminjaman_alat\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(495): CodeIgniter\BaseModel->findAll()
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#8 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#12 {main}
+ERROR - 2025-09-05 22:55:36 --> Unknown column 'inventaris.lokasi' in 'field list'
+CRITICAL - 2025-09-05 22:55:36 --> Unknown column 'inventaris.lokasi' in 'field list'
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `inventa...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `inventa...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `inventa...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `inventa...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\CODING-WORK\peminjaman_alat\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(495): CodeIgniter\BaseModel->findAll()
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#8 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#12 {main}
+ERROR - 2025-09-05 22:56:11 --> Unknown column 'inventaris.lokasi' in 'field list'
+CRITICAL - 2025-09-05 22:56:11 --> Unknown column 'inventaris.lokasi' in 'field list'
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `inventa...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `inventa...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `inventa...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `inventa...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\CODING-WORK\peminjaman_alat\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(495): CodeIgniter\BaseModel->findAll()
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#8 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#12 {main}
+ERROR - 2025-09-05 22:57:01 --> Unknown column 'inventaris.lokasi' in 'field list'
+CRITICAL - 2025-09-05 22:57:01 --> Unknown column 'inventaris.lokasi' in 'field list'
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `inventa...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `inventa...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `inventa...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `inventa...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\CODING-WORK\peminjaman_alat\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(495): CodeIgniter\BaseModel->findAll()
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#8 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#12 {main}
+ERROR - 2025-09-05 22:57:02 --> Unknown column 'inventaris.lokasi' in 'field list'
+CRITICAL - 2025-09-05 22:57:02 --> Unknown column 'inventaris.lokasi' in 'field list'
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `inventa...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `inventa...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `inventa...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `inventa...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\CODING-WORK\peminjaman_alat\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(495): CodeIgniter\BaseModel->findAll()
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#8 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#12 {main}
+ERROR - 2025-09-05 22:57:13 --> Unknown column 'inventaris.lokasi' in 'field list'
+CRITICAL - 2025-09-05 22:57:13 --> Unknown column 'inventaris.lokasi' in 'field list'
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `inventa...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `inventa...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `inventa...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `inventa...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\CODING-WORK\peminjaman_alat\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(495): CodeIgniter\BaseModel->findAll()
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#8 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#12 {main}
+ERROR - 2025-09-05 22:57:14 --> Unknown column 'inventaris.lokasi' in 'field list'
+CRITICAL - 2025-09-05 22:57:14 --> Unknown column 'inventaris.lokasi' in 'field list'
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `inventa...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `inventa...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `inventa...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `inventa...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\CODING-WORK\peminjaman_alat\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(495): CodeIgniter\BaseModel->findAll()
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#8 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#12 {main}
+ERROR - 2025-09-05 22:57:15 --> Unknown column 'inventaris.lokasi' in 'field list'
+CRITICAL - 2025-09-05 22:57:15 --> Unknown column 'inventaris.lokasi' in 'field list'
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `inventa...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `inventa...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `inventa...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `inventa...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\CODING-WORK\peminjaman_alat\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(495): CodeIgniter\BaseModel->findAll()
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#8 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#12 {main}
+CRITICAL - 2025-09-05 22:57:36 --> Undefined variable $rekap
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Inventaris\Index.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'E:\\CODING-WORK\\...', 42)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Inventari...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(502): view('Admin/Inventari...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+ERROR - 2025-09-05 22:58:00 --> In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'peminjaman-alat-tkj.master_barang.nama_brg'; this is incompatible with sql_mode=only_full_group_by
+CRITICAL - 2025-09-05 22:58:00 --> In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'peminjaman-alat-tkj.master_barang.nama_brg'; this is incompatible with sql_mode=only_full_group_by
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `master_...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `master_...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `master_...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `master_...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\CODING-WORK\peminjaman_alat\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(496): CodeIgniter\BaseModel->findAll()
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#8 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#12 {main}
+ERROR - 2025-09-05 22:58:02 --> In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'peminjaman-alat-tkj.master_barang.nama_brg'; this is incompatible with sql_mode=only_full_group_by
+CRITICAL - 2025-09-05 22:58:02 --> In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'peminjaman-alat-tkj.master_barang.nama_brg'; this is incompatible with sql_mode=only_full_group_by
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `master_...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `master_...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `master_...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `master_...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\CODING-WORK\peminjaman_alat\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(496): CodeIgniter\BaseModel->findAll()
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#8 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#12 {main}
+CRITICAL - 2025-09-05 23:08:58 --> ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'ucfirst(): Pass...', 'E:\\CODING-WORK\\...', 36)
+#1 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Inventaris\Tambah_barang.php(36): ucfirst(NULL)
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#3 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Inventari...', Array, true)
+#5 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(522): view('Admin/Inventari...', Array)
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->tambah_inv()
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#11 {main}
+CRITICAL - 2025-09-05 23:51:36 --> Undefined array key "merk"
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Master_barang\Index.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\CODING-WORK\\...', 49)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Master_ba...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(319): view('Admin/Master_ba...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->masterBarang()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-09-05 23:56:12 --> Class "App\Models\KategoriBarangModel" not found
+#0 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(809): App\Controllers\Admin->__construct()
+#1 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#2 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#5 {main}
+CRITICAL - 2025-09-05 23:57:36 --> Undefined array key "merk"
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Master_barang\Detail_brg.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\CODING-WORK\\...', 35)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Master_ba...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(392): view('Admin/Master_ba...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->detail_master_brg('LAP-001')
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}

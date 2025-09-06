@@ -1,0 +1,189 @@
+ERROR - 2024-06-14 20:10:05 --> Unknown column 'kode_barang' in 'where clause'
+CRITICAL - 2024-06-14 20:10:05 --> Unknown column 'kode_barang' in 'where clause'
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\Users\ganda\Documents\GitHub\hera\app\Models\PenjualanBarangModel.php(41): CodeIgniter\BaseModel->first()
+#7 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(318): App\Models\PenjualanBarangModel->find('NHR-5285')
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->delete_penjualanBarang('NHR-5285')
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#10 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#13 {main}
+ERROR - 2024-06-14 20:13:26 --> Unknown column 'kode_barang' in 'where clause'
+CRITICAL - 2024-06-14 20:13:26 --> Unknown column 'kode_barang' in 'where clause'
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\Users\ganda\Documents\GitHub\hera\app\Models\PenjualanBarangModel.php(41): CodeIgniter\BaseModel->first()
+#7 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(318): App\Models\PenjualanBarangModel->find('NHR-5285')
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->delete_penjualanBarang('NHR-5285')
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#10 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#13 {main}
+ERROR - 2024-06-14 20:15:28 --> Unknown column 'kode_barang' in 'where clause'
+CRITICAL - 2024-06-14 20:15:29 --> Unknown column 'kode_barang' in 'where clause'
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\Users\ganda\Documents\GitHub\hera\app\Models\PenjualanBarangModel.php(41): CodeIgniter\BaseModel->first()
+#7 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(318): App\Models\PenjualanBarangModel->find('NHR-5285')
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->delete_penjualanBarang('NHR-5285')
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#10 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#13 {main}
+ERROR - 2024-06-14 20:15:34 --> Unknown column 'id_penjualan_barang' in 'where clause'
+CRITICAL - 2024-06-14 20:15:34 --> Unknown column 'id_penjualan_barang' in 'where clause'
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `transak...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `transak...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `transak...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `transak...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(356): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(963): CodeIgniter\Model->doDelete(NULL, false)
+#6 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(326): CodeIgniter\BaseModel->delete()
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->delete_penjualanBarang('NHR-5285')
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#12 {main}
+ERROR - 2024-06-14 20:32:22 --> Unknown column 'id_penjualan_barang' in 'where clause'
+CRITICAL - 2024-06-14 20:32:22 --> Unknown column 'id_penjualan_barang' in 'where clause'
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `transak...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `transak...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `transak...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `transak...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(356): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(963): CodeIgniter\Model->doDelete(NULL, false)
+#6 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(326): CodeIgniter\BaseModel->delete()
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->delete_penjualanBarang('NHR-5285')
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#12 {main}
+CRITICAL - 2024-06-14 20:39:09 --> Undefined property: App\Controllers\PenjualanBarangCont::$DetailPenjualanBarangModel
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(323): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\ganda\\...', 323, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->delete_penjualanBarang('NHR-4148')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+ERROR - 2024-06-14 20:42:32 --> Unknown column 'id_penjualan_barang' in 'where clause'
+CRITICAL - 2024-06-14 20:42:32 --> Unknown column 'id_penjualan_barang' in 'where clause'
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `transak...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `transak...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `transak...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `transak...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(356): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(963): CodeIgniter\Model->doDelete(NULL, false)
+#6 C:\Users\ganda\Documents\GitHub\hera\app\Models\TransaksiBarangModel.php(18): CodeIgniter\BaseModel->delete()
+#7 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(329): App\Models\TransaksiBarangModel->deleteTransaksiByPenjualanId('NHR-4148')
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->delete_penjualanBarang('NHR-4148')
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#10 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#13 {main}
+CRITICAL - 2024-06-14 20:43:46 --> Undefined index: id
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(326): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\ganda\\...', 326, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->delete_penjualanBarang('NHR-4148')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+ERROR - 2024-06-14 20:45:00 --> Unknown column 'id_penjualan_barang' in 'where clause'
+CRITICAL - 2024-06-14 20:45:00 --> Unknown column 'id_penjualan_barang' in 'where clause'
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `tr...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `tr...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `tr...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseConnection->query('DELETE FROM `tr...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(333): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->delete_penjualanBarang('NHR-4148')
+#6 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}
+CRITICAL - 2024-06-14 20:46:38 --> Undefined index: id
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(327): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\ganda\\...', 327, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->delete_penjualanBarang('NHR-4148')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#3 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+ERROR - 2024-06-14 20:48:01 --> Unknown column 'id_penjualan_barang' in 'where clause'
+CRITICAL - 2024-06-14 20:48:01 --> Unknown column 'id_penjualan_barang' in 'where clause'
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `tr...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `tr...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `tr...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseConnection->query('DELETE FROM `tr...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(333): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->delete_penjualanBarang('NHR-4148')
+#6 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}
+ERROR - 2024-06-14 20:49:18 --> Unknown column 'id_penjualan_barang' in 'where clause'
+CRITICAL - 2024-06-14 20:49:18 --> Unknown column 'id_penjualan_barang' in 'where clause'
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `transak...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `transak...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `transak...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `transak...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(356): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(963): CodeIgniter\Model->doDelete(NULL, false)
+#6 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(329): CodeIgniter\BaseModel->delete()
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->delete_penjualanBarang('NHR-4148')
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#12 {main}
+ERROR - 2024-06-14 20:49:22 --> Unknown column 'id_penjualan_barang' in 'where clause'
+CRITICAL - 2024-06-14 20:49:22 --> Unknown column 'id_penjualan_barang' in 'where clause'
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `transak...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `transak...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `transak...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `transak...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(356): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(963): CodeIgniter\Model->doDelete(NULL, false)
+#6 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(329): CodeIgniter\BaseModel->delete()
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->delete_penjualanBarang('NHR-4148')
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#12 {main}
+ERROR - 2024-06-14 20:50:09 --> Unknown column 'id_penjualan_barang' in 'where clause'
+CRITICAL - 2024-06-14 20:50:09 --> Unknown column 'id_penjualan_barang' in 'where clause'
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `transak...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `transak...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `transak...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `transak...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(356): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(963): CodeIgniter\Model->doDelete(NULL, false)
+#6 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\PenjualanBarangCont.php(328): CodeIgniter\BaseModel->delete()
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\PenjualanBarangCont->delete_penjualanBarang('NHR-4148')
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenjualanBarangCont))
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#12 {main}

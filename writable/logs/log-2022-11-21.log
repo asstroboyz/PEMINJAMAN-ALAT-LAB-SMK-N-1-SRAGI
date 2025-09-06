@@ -1,0 +1,222 @@
+<<<<<<< Updated upstream
+CRITICAL - 2022-11-21 07:13:34 --> Too few arguments to function App\Controllers\User::detail(), 0 passed in C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->detail()
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#5 {main}
+=======
+CRITICAL - 2022-11-21 07:03:59 --> Too few arguments to function App\Controllers\User::ubahPengaduan(), 0 passed in C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->ubahPengaduan()
+#1 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-11-21 07:11:02 --> Undefined variable: validation
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\pengaduan\ubah_pengaduan.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 40, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(305): view('user/pengaduan/...')
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->ubahPengaduan()
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-21 07:12:51 --> Undefined variable: validation
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\pengaduan\ubah_pengaduan.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 40, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(305): view('user/pengaduan/...')
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->ubahPengaduan()
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-21 07:13:22 --> Undefined variable: validation
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\pengaduan\ubah_pengaduan.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 40, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(305): view('user/pengaduan/...')
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->ubahPengaduan()
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-21 07:13:29 --> Undefined variable: validation
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\pengaduan\ubah_pengaduan.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 40, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(305): view('user/pengaduan/...')
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->ubahPengaduan()
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-21 07:15:54 --> Undefined variable: validation
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\pengaduan\ubah_pengaduan.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 40, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(305): view('user/pengaduan/...')
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->ubahPengaduan()
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-21 07:16:04 --> Undefined variable: validation
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\pengaduan\ubah_pengaduan.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 40, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(305): view('user/pengaduan/...')
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->ubahPengaduan()
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-21 07:19:05 --> Too few arguments to function App\Controllers\User::ubahPengaduan(), 0 passed in C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->ubahPengaduan()
+#1 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-11-21 07:19:40 --> Too few arguments to function App\Controllers\User::ubahPengaduan(), 0 passed in C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->ubahPengaduan()
+#1 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-11-21 07:20:17 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\pengaduan\ubah_pengaduan.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 58, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(208): view('user/pengaduan/...', Array)
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->ubah('$user()->userna...')
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-21 07:20:59 --> Undefined variable: user
+#0 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(239): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 239, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->ubahPengaduan()
+#2 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-11-21 07:24:51 --> Too few arguments to function App\Controllers\User::ubah(), 0 passed in C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->ubah()
+#1 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-11-21 07:28:14 --> Undefined index: pengaduan_id
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\pengaduan\ubah_pengaduan.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(208): view('user/pengaduan/...', Array)
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->ubah('15')
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-21 07:28:18 --> Undefined index: pengaduan_id
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\pengaduan\ubah_pengaduan.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(208): view('user/pengaduan/...', Array)
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->ubah('15')
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-21 07:30:47 --> Undefined variable: data
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\pengaduan\ubah_pengaduan.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(306): view('user/pengaduan/...')
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->ubahPengaduan('15')
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-21 07:31:22 --> Undefined variable: data
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\pengaduan\ubah_pengaduan.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(306): view('user/pengaduan/...')
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->ubahPengaduan('15')
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-21 07:31:47 --> Undefined variable: user
+#0 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(240): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 240, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->ubahPengaduan('15')
+#2 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-11-21 07:32:36 --> Undefined variable: data
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\pengaduan\ubah_pengaduan.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(306): view('user/pengaduan/...')
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->ubahPengaduan('15')
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-21 07:33:54 --> Undefined variable: data
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\pengaduan\ubah_pengaduan.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(306): view('user/pengaduan/...')
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->ubahPengaduan('15')
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-21 07:34:02 --> Undefined variable: data
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\pengaduan\ubah_pengaduan.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(306): view('user/pengaduan/...')
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->ubahPengaduan('15')
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+>>>>>>> Stashed changes

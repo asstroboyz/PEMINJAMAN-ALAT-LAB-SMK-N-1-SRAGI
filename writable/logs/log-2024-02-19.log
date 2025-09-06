@@ -1,0 +1,108 @@
+CRITICAL - 2024-02-19 06:04:43 --> Undefined index: tipe_brg
+#0 C:\xampp\htdocs\niuw rev\app\Views\Admin\Inventaris\Index.php(90): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 90, Array)
+#1 C:\xampp\htdocs\niuw rev\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\niuw rev\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\niuw rev\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Inventari...', Array, true)
+#4 C:\xampp\htdocs\niuw rev\app\Controllers\Admin.php(530): view('Admin/Inventari...', Array)
+#5 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(832): App\Controllers\Admin->adm_inventaris()
+#6 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\niuw rev\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\niuw rev\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-02-19 07:00:11 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-02-19 07:03:05 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+ERROR - 2024-02-19 09:49:55 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2024-02-19 09:49:55 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\xampp\htdocs\niuw rev\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\niuw rev\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\niuw rev\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\niuw rev\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\xampp\htdocs\niuw rev\vendor\myth\auth\src\Authentication\LocalAuthenticator.php(140): CodeIgniter\BaseModel->first()
+#5 C:\xampp\htdocs\niuw rev\vendor\myth\auth\src\Authentication\LocalAuthenticator.php(19): Myth\Auth\Authentication\LocalAuthenticator->validate(Array, true)
+#6 C:\xampp\htdocs\niuw rev\vendor\myth\auth\src\Controllers\AuthController.php(87): Myth\Auth\Authentication\LocalAuthenticator->attempt(Array, false)
+#7 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(832): Myth\Auth\Controllers\AuthController->attemptLogin()
+#8 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+#9 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\niuw rev\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\niuw rev\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-02-19 13:34:00 --> Undefined index: kode_brg
+#0 C:\xampp\htdocs\niuw rev\app\Views\Admin\Laporan\Lap_Ruangan.php(64): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 64, Array)
+#1 C:\xampp\htdocs\niuw rev\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\niuw rev\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\niuw rev\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Laporan/L...', Array, true)
+#4 C:\xampp\htdocs\niuw rev\app\Controllers\Admin.php(2791): view('Admin/Laporan/L...', Array)
+#5 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(832): App\Controllers\Admin->cetak_ruangan()
+#6 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\niuw rev\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\niuw rev\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-02-19 13:39:40 --> Undefined index: tipe_barang
+#0 C:\xampp\htdocs\niuw rev\app\Views\Admin\Laporan\Lap_Ruangan.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 65, Array)
+#1 C:\xampp\htdocs\niuw rev\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\niuw rev\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\niuw rev\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Laporan/L...', Array, true)
+#4 C:\xampp\htdocs\niuw rev\app\Controllers\Admin.php(2791): view('Admin/Laporan/L...', Array)
+#5 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(832): App\Controllers\Admin->cetak_ruangan()
+#6 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\niuw rev\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\niuw rev\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-02-19 13:45:18 --> Undefined variable: row
+#0 C:\xampp\htdocs\niuw rev\app\Views\Admin\Laporan\Lap_Ruangan.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 9, Array)
+#1 C:\xampp\htdocs\niuw rev\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\niuw rev\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\niuw rev\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Laporan/L...', Array, true)
+#4 C:\xampp\htdocs\niuw rev\app\Controllers\Admin.php(2791): view('Admin/Laporan/L...', Array)
+#5 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(832): App\Controllers\Admin->cetak_ruangan()
+#6 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\niuw rev\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\niuw rev\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-02-19 13:54:47 --> Undefined variable: row
+#0 C:\xampp\htdocs\niuw rev\app\Views\Admin\Laporan\Lap_Ruangan.php(102): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 102, Array)
+#1 C:\xampp\htdocs\niuw rev\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\niuw rev\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\niuw rev\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Laporan/L...', Array, true)
+#4 C:\xampp\htdocs\niuw rev\app\Controllers\Admin.php(2791): view('Admin/Laporan/L...', Array)
+#5 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(832): App\Controllers\Admin->cetak_ruangan()
+#6 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\niuw rev\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\niuw rev\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-02-19 13:55:19 --> Undefined variable: row
+#0 C:\xampp\htdocs\niuw rev\app\Views\Admin\Laporan\Lap_Ruangan.php(102): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 102, Array)
+#1 C:\xampp\htdocs\niuw rev\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\niuw rev\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\niuw rev\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Laporan/L...', Array, true)
+#4 C:\xampp\htdocs\niuw rev\app\Controllers\Admin.php(2791): view('Admin/Laporan/L...', Array)
+#5 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(832): App\Controllers\Admin->cetak_ruangan()
+#6 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\niuw rev\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\niuw rev\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-02-19 13:55:22 --> Undefined variable: row
+#0 C:\xampp\htdocs\niuw rev\app\Views\Admin\Laporan\Lap_Ruangan.php(102): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 102, Array)
+#1 C:\xampp\htdocs\niuw rev\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\niuw rev\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\niuw rev\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Laporan/L...', Array, true)
+#4 C:\xampp\htdocs\niuw rev\app\Controllers\Admin.php(2791): view('Admin/Laporan/L...', Array)
+#5 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(832): App\Controllers\Admin->cetak_ruangan()
+#6 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\niuw rev\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\niuw rev\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\niuw rev\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}

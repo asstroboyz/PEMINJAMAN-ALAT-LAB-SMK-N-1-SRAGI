@@ -1,0 +1,26 @@
+CRITICAL - 2024-01-25 21:53:36 --> Undefined index: jenis
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Admin.php(412): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 412, Array)
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Admin.php(628): App\Controllers\Admin->generate_qrcode(Array)
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->add_data()
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2024-01-25 21:53:59 --> Undefined index: satuan
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Admin.php(413): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 413, Array)
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Admin.php(628): App\Controllers\Admin->generate_qrcode(Array)
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->add_data()
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2024-01-25 22:22:08 --> Undefined variable: userlogin
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Petugas_pengadaan.php(340): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 340, Array)
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Petugas_pengadaan->cetakDataPengadaan()
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Petugas_pengadaan))
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

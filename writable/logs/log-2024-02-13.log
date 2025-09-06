@@ -1,0 +1,12 @@
+CRITICAL - 2024-02-13 18:08:14 --> Undefined array key "nama_barang"
+#0 C:\Users\Alam\Downloads\rev\app\Views\Admin\Laporan\Lap_inventaris.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Users\\Alam\\D...', 125)
+#1 C:\Users\Alam\Downloads\rev\system\View\View.php(210): include('C:\\Users\\Alam\\D...')
+#2 C:\Users\Alam\Downloads\rev\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\Alam\Downloads\rev\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Laporan/L...', Array, true)
+#4 C:\Users\Alam\Downloads\rev\app\Controllers\Admin.php(2381): view('Admin/Laporan/L...', Array)
+#5 C:\Users\Alam\Downloads\rev\system\CodeIgniter.php(832): App\Controllers\Admin->cetak_lap_inv()
+#6 C:\Users\Alam\Downloads\rev\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\Users\Alam\Downloads\rev\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Alam\Downloads\rev\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Alam\Downloads\rev\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Alam\\D...')
+#10 {main}

@@ -1,0 +1,281 @@
+ERROR - 2022-11-15 00:04:05 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2022-11-15 00:04:05 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\xampp\htdocs\SIPM_polda\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\SIPM_polda\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\SIPM_polda\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\SIPM_polda\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\xampp\htdocs\SIPM_polda\vendor\myth\auth\src\Authentication\LocalAuthenticator.php(140): CodeIgniter\BaseModel->first()
+#5 C:\xampp\htdocs\SIPM_polda\vendor\myth\auth\src\Authentication\LocalAuthenticator.php(19): Myth\Auth\Authentication\LocalAuthenticator->validate(Array, true)
+#6 C:\xampp\htdocs\SIPM_polda\vendor\myth\auth\src\Controllers\AuthController.php(87): Myth\Auth\Authentication\LocalAuthenticator->attempt(Array, false)
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): Myth\Auth\Controllers\AuthController->attemptLogin()
+#8 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+#9 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-11-15 00:04:33 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2022-11-15 00:04:33 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 C:\xampp\htdocs\SIPM_polda\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\SIPM_polda\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\SIPM_polda\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\SIPM_polda\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\xampp\htdocs\SIPM_polda\vendor\myth\auth\src\Authentication\LocalAuthenticator.php(140): CodeIgniter\BaseModel->first()
+#5 C:\xampp\htdocs\SIPM_polda\vendor\myth\auth\src\Authentication\LocalAuthenticator.php(19): Myth\Auth\Authentication\LocalAuthenticator->validate(Array, true)
+#6 C:\xampp\htdocs\SIPM_polda\vendor\myth\auth\src\Controllers\AuthController.php(87): Myth\Auth\Authentication\LocalAuthenticator->attempt(Array, false)
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): Myth\Auth\Controllers\AuthController->attemptLogin()
+#8 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+#9 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-11-15 00:04:57 --> Undefined variable: user
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\profile.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 21, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/profile', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(34): view('user/profile')
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->tentang()
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-15 00:40:00 --> Undefined variable: validation
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\pengaduan\tambah_pengaduan.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 36, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(48): view('user/pengaduan/...')
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->tambah()
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-15 00:40:21 --> Undefined variable: validation
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\pengaduan\tambah_pengaduan.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 36, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(48): view('user/pengaduan/...')
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->tambah()
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-15 00:42:46 --> Undefined property: App\Controllers\User::$validation
+#0 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 49, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->tambah()
+#2 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-11-15 00:43:57 --> Undefined property: App\Controllers\User::$validation
+#0 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 49, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->tambah()
+#2 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-11-15 00:44:33 --> Undefined property: App\Controllers\User::$validation
+#0 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(48): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 48, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->tambah()
+#2 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-11-15 00:50:08 --> Undefined property: App\Controllers\User::$validation
+#0 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(48): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 48, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->tambah()
+#2 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-11-15 00:56:42 --> Object of class CodeIgniter\Validation\Validation could not be converted to string
+#0 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->simpanPengaduan()
+#1 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-11-15 01:10:27 --> Undefined variable: user
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\pengaduan\tambah_pengaduan.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 63, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(52): view('user/pengaduan/...', Array)
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->tambah()
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-11-15 05:08:14 --> Table 'ci4_sipm_polda.ci4_sipm_polda' doesn't exist
+CRITICAL - 2022-11-15 05:08:14 --> Table 'ci4_sipm_polda.ci4_sipm_polda' doesn't exist
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(53): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->pengaduan()
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}
+ERROR - 2022-11-15 05:08:41 --> Unknown column 'email' in 'where clause'
+CRITICAL - 2022-11-15 05:08:41 --> Unknown column 'email' in 'where clause'
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(53): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->pengaduan()
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}
+CRITICAL - 2022-11-15 05:08:56 --> Undefined variable: pengaduan
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Views\user\pengaduan\index.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 63, Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(56): view('user/pengaduan/...')
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->pengaduan()
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}
+CRITICAL - 2022-11-15 05:09:18 --> Undefined variable: pengaduan
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Views\user\pengaduan\index.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 63, Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(56): view('user/pengaduan/...')
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->pengaduan()
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}
+CRITICAL - 2022-11-15 05:09:55 --> Undefined variable: pengaduan
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Views\user\pengaduan\index.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 63, Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(56): view('user/pengaduan/...')
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->pengaduan()
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}
+CRITICAL - 2022-11-15 05:11:15 --> Undefined variable: pengaduan
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Views\user\pengaduan\index.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 63, Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(56): view('user/pengaduan/...')
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->pengaduan()
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}
+CRITICAL - 2022-11-15 05:11:57 --> Invalid argument supplied for foreach()
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Views\user\pengaduan\index.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\Users\\ganda\\...', 63, Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(56): view('user/pengaduan/...', Array)
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->pengaduan()
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}
+CRITICAL - 2022-11-15 05:13:00 --> Invalid argument supplied for foreach()
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Views\user\pengaduan\index.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\Users\\ganda\\...', 63, Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(56): view('user/pengaduan/...', Array)
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->pengaduan()
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}
+CRITICAL - 2022-11-15 05:14:05 --> Invalid argument supplied for foreach()
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Views\user\pengaduan\index.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\Users\\ganda\\...', 63, Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(56): view('user/pengaduan/...', Array)
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->pengaduan()
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}
+CRITICAL - 2022-11-15 05:16:50 --> Trying to get property 'id' of non-object
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Views\user\pengaduan\index.php(74): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\Users\\ganda\\...', 74, Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(56): view('user/pengaduan/...', Array)
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->pengaduan()
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}
+CRITICAL - 2022-11-15 05:18:05 --> Undefined variable: datePengaduan
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Views\user\pengaduan\index.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 63, Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(56): view('user/pengaduan/...', Array)
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->pengaduan()
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}
+CRITICAL - 2022-11-15 05:19:06 --> Undefined variable: datePengaduan
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Views\user\pengaduan\index.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 63, Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(57): view('user/pengaduan/...', Array)
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->pengaduan()
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}
+CRITICAL - 2022-11-15 05:19:51 --> Trying to get property 'id' of non-object
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Views\user\pengaduan\index.php(74): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\Users\\ganda\\...', 74, Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(57): view('user/pengaduan/...', Array)
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->pengaduan()
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}

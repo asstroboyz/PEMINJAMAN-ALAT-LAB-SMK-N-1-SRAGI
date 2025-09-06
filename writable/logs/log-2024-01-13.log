@@ -1,0 +1,21 @@
+CRITICAL - 2024-01-13 01:31:25 --> Invalid file: user/templates/index.php
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/templates/...')
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(226): CodeIgniter\View\View->render('user/templates/...', Array, true)
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Common.php(1089): CodeIgniter\View\View->render('admin/pengadaan...', Array, true)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Admin.php(1539): view('admin/pengadaan...', Array)
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->tambah_pengadaan()
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2024-01-13 07:09:38 --> Invalid file: petugas_Pengadaan/home/profil.php
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('petugas_Pengada...')
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Common.php(1089): CodeIgniter\View\View->render('petugas_Pengada...', Array, true)
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\petugas_pengadaan.php(76): view('petugas_Pengada...', Array)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\petugas_pengadaan->profil()
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\petugas_pengadaan))
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}

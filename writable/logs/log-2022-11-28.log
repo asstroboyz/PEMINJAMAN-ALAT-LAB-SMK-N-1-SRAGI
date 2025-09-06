@@ -1,0 +1,98 @@
+CRITICAL - 2022-11-28 00:11:53 --> Argument 1 passed to Myth\Auth\Entities\passwd::setPassword() must be of the type string, null given, called in C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php on line 65
+#0 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(65): Myth\Auth\Entities\passwd->setPassword(NULL)
+#1 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->updatePassword('2')
+#2 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-11-28 00:13:34 --> Argument 1 passed to Myth\Auth\Entities\passwd::setPassword() must be of the type string, null given, called in C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php on line 65
+#0 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(65): Myth\Auth\Entities\passwd->setPassword(NULL)
+#1 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->updatePassword('2')
+#2 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-11-28 00:24:23 --> Trying to get property 'status' of non-object
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\admin\pengaduan\detail_pengaduan.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('admin/pengaduan...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\Admin.php(157): view('admin/pengaduan...', Array)
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\Admin->detail('4')
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-28 00:29:17 --> Trying to get property 'status' of non-object
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\admin\pengaduan\detail_pengaduan.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('admin/pengaduan...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\Admin.php(157): view('admin/pengaduan...', Array)
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\Admin->detail('4')
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-28 00:29:38 --> Trying to get property 'status' of non-object
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\admin\pengaduan\detail_pengaduan.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('admin/pengaduan...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\Admin.php(157): view('admin/pengaduan...', Array)
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\Admin->detail('4')
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-28 00:36:22 --> Undefined variable: validation
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\admin\profile.php(129): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 129, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('admin/profile', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\Admin.php(72): view('admin/profile', Array)
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\Admin->tentang('4')
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-28 00:39:31 --> required  is not a valid rule.
+#0 C:\xampp\htdocs\SIPM_polda\system\Validation\Validation.php(300): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('required ')
+#1 C:\xampp\htdocs\SIPM_polda\system\Validation\Validation.php(157): CodeIgniter\Validation\Validation->processRules('konfirm', 'konfirm', 'asdas', Array, Array)
+#2 C:\xampp\htdocs\SIPM_polda\system\Controller.php(160): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\SIPM_polda\app\Controllers\Admin.php(180): CodeIgniter\Controller->validate(Array)
+#4 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\Admin->updatePassword('4')
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-11-28 00:40:07 --> required  is not a valid rule.
+#0 C:\xampp\htdocs\SIPM_polda\system\Validation\Validation.php(300): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('required ')
+#1 C:\xampp\htdocs\SIPM_polda\system\Validation\Validation.php(157): CodeIgniter\Validation\Validation->processRules('konfirm', 'konfirm', 'asdas', Array, Array)
+#2 C:\xampp\htdocs\SIPM_polda\system\Controller.php(160): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\SIPM_polda\app\Controllers\Admin.php(180): CodeIgniter\Controller->validate(Array)
+#4 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\Admin->updatePassword('4')
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-11-28 10:36:20 --> Undefined variable: validation
+#0 C:\xampp\htdocs\SIPM_polda\app\Views\user\profil\index.php(127): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 127, Array)
+#1 C:\xampp\htdocs\SIPM_polda\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/profil/ind...', Array, true)
+#4 C:\xampp\htdocs\SIPM_polda\app\Controllers\User.php(106): view('user/profil/ind...', Array)
+#5 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->tentang()
+#6 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}

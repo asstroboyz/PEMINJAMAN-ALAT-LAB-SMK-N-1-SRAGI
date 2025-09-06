@@ -1,0 +1,225 @@
+CRITICAL - 2022-11-29 16:01:50 --> unlink(uploads/profile/UserFoto_Ada.png): No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(uploads/...', 'C:\\Users\\ganda\\...', 146, Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(146): unlink('uploads/profile...')
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->simpanProfile('2')
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#7 {main}
+CRITICAL - 2022-11-29 19:06:47 --> unlink(uploads/profile/UserFoto_user.png): No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(uploads/...', 'C:\\Users\\ganda\\...', 146, Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(146): unlink('uploads/profile...')
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->simpanProfile('2')
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#7 {main}
+CRITICAL - 2022-11-29 19:08:39 --> unlink(uploads/profile/UserFoto_user.png): No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(uploads/...', 'C:\\Users\\ganda\\...', 146, Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(146): unlink('uploads/profile...')
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->simpanProfile('2')
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#7 {main}
+CRITICAL - 2022-11-29 19:26:07 --> Undefined variable: print
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Views\user\pengaduan\detail.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 41, Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(304): view('user/pengaduan/...', Array)
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->detail('59')
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}
+CRITICAL - 2022-11-29 19:27:12 --> Undefined variable: print
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Views\user\pengaduan\cetak.php(38): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 38, Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(456): view('user/pengaduan/...', Array)
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->cetakdata('59')
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}
+CRITICAL - 2022-11-29 19:27:35 --> Undefined variable: title
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Views\user\templates\index.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 12, Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(226): CodeIgniter\View\View->render('user/templates/...', Array, true)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(456): view('user/pengaduan/...', Array)
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->cetakdata('59')
+#7 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#11 {main}
+CRITICAL - 2022-11-29 19:29:20 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-11-29 19:31:24 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-11-29 19:33:11 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-11-29 19:41:08 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-11-29 19:50:32 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-11-29 19:51:30 --> Too few arguments to function App\Controllers\User::cetakdata(), 0 passed in C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->cetakdata()
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#5 {main}
+CRITICAL - 2022-11-29 19:53:14 --> Cannot use object of type stdClass as array
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(210): include()
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(305): view('user/pengaduan/...', Array)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->detail('58')
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#9 {main}
+CRITICAL - 2022-11-29 19:56:46 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-11-29 20:39:21 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-11-29 20:47:08 --> Cannot use object of type stdClass as array
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(210): include()
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(305): view('user/pengaduan/...', Array)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->detail('58')
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#9 {main}
+CRITICAL - 2022-11-29 20:52:24 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-11-29 21:31:15 --> Undefined variable: detail
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Views\user\pengaduan\index.php(38): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 38, Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(179): view('user/pengaduan/...', Array)
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->pengaduan()
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}
+CRITICAL - 2022-11-29 21:31:16 --> Undefined variable: detail
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Views\user\pengaduan\index.php(38): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 38, Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(179): view('user/pengaduan/...', Array)
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->pengaduan()
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}
+CRITICAL - 2022-11-29 21:32:28 --> Undefined variable: detail
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Views\user\pengaduan\index.php(38): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 38, Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(179): view('user/pengaduan/...', Array)
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->pengaduan()
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}
+CRITICAL - 2022-11-29 21:52:24 --> Too few arguments to function App\Controllers\User::eksport(), 0 passed in C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->eksport()
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#5 {main}
+CRITICAL - 2022-11-29 21:53:54 --> Too few arguments to function App\Controllers\User::ekspor(), 0 passed in C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->ekspor()
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#5 {main}
+CRITICAL - 2022-11-29 21:54:02 --> Undefined variable: title
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Views\user\templates\index.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 12, Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(226): CodeIgniter\View\View->render('user/templates/...', Array, true)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(453): view('user/pengaduan/...', Array)
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->ekspor('58')
+#7 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#11 {main}
+CRITICAL - 2022-11-29 21:55:54 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-11-29 21:57:33 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-11-29 22:00:23 --> Call to undefined method App\Models\Pengaduan::getAll
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(442): CodeIgniter\Model->__call('getAll', Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->print()
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+CRITICAL - 2022-11-29 22:00:35 --> Call to undefined method App\Models\Pengaduan::getAll
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(442): CodeIgniter\Model->__call('getAll', Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->print()
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+CRITICAL - 2022-11-29 22:01:14 --> Call to undefined method App\Models\Pengaduan::getAll
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(442): CodeIgniter\Model->__call('getAll', Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->print()
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#6 {main}
+CRITICAL - 2022-11-29 22:02:16 --> Undefined property: stdClass::$email
+#0 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Views\user\pengaduan\print.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\ganda\\...', 30, Array)
+#1 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Common.php(1089): CodeIgniter\View\View->render('user/pengaduan/...', Array, true)
+#4 C:\Users\ganda\Documents\GitHub\SIPM_polda\app\Controllers\User.php(444): view('user/pengaduan/...', Array)
+#5 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(832): App\Controllers\User->print()
+#6 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\SIPM_polda\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\SIPM_polda\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}
+CRITICAL - 2022-11-29 22:13:13 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}

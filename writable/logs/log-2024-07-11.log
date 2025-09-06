@@ -1,0 +1,184 @@
+ERROR - 2024-07-11 16:41:11 --> Unknown column 'barang.harga_beli * detail_penjualan_barang.jumlah' in 'field list'
+CRITICAL - 2024-07-11 16:41:11 --> Unknown column 'barang.harga_beli * detail_penjualan_barang.jumlah' in 'field list'
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `barang`...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `barang`...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `barang`...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `barang`...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(2168): CodeIgniter\BaseModel->first()
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->cetakLabaRugi()
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#12 {main}
+ERROR - 2024-07-11 16:44:15 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`detail_penjualan_barang`.`jumlah`) AS `total_hpp`
+FROM `detail_penjualan_bar...' at line 1
+CRITICAL - 2024-07-11 16:44:15 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`detail_penjualan_barang`.`jumlah`) AS `total_hpp`
+FROM `detail_penjualan_bar...' at line 1
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT SUM(`bar...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`bar...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`bar...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`bar...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(2167): CodeIgniter\BaseModel->first()
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->cetakLabaRugi()
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#12 {main}
+ERROR - 2024-07-11 16:44:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`detail_penjualan_barang`.`jumlah`) AS `total_hpp`
+FROM `detail_penjualan_bar...' at line 1
+CRITICAL - 2024-07-11 16:44:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`detail_penjualan_barang`.`jumlah`) AS `total_hpp`
+FROM `detail_penjualan_bar...' at line 1
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT SUM(`bar...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`bar...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`bar...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`bar...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(2167): CodeIgniter\BaseModel->first()
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->cetakLabaRugi()
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#12 {main}
+ERROR - 2024-07-11 16:45:22 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`detail_penjualan_barang`.`sub_total`) AS `total_hpp`
+FROM `detail_penjualan_...' at line 1
+CRITICAL - 2024-07-11 16:45:22 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`detail_penjualan_barang`.`sub_total`) AS `total_hpp`
+FROM `detail_penjualan_...' at line 1
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT SUM(`bar...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`bar...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`bar...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`bar...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(2167): CodeIgniter\BaseModel->first()
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->cetakLabaRugi()
+#8 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#12 {main}
+ERROR - 2024-07-11 16:48:02 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`detail_penjualan_barang`.`jumlah`) AS `total_hpp`
+FROM `detail_penjualan_bar...' at line 1
+CRITICAL - 2024-07-11 16:48:02 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`detail_penjualan_barang`.`jumlah`) AS `total_hpp`
+FROM `detail_penjualan_bar...' at line 1
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT SUM(`bar...', 0)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`bar...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`bar...')
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`bar...', Array, false)
+#4 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(2168): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->cetakLabaRugi()
+#6 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}
+CRITICAL - 2024-07-11 17:27:56 --> Undefined variable: labaKotor
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Views\Admin\Laporan\Lap_labaRugi.php(110): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 110, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Laporan/L...', Array, true)
+#4 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(2203): view('Admin/Laporan/L...', Array)
+#5 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->cetakLabaRugi()
+#6 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}
+CRITICAL - 2024-07-11 17:28:23 --> Undefined variable: labaKotor
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Views\Admin\Laporan\Lap_labaRugi.php(110): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 110, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Laporan/L...', Array, true)
+#4 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(2203): view('Admin/Laporan/L...', Array)
+#5 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->cetakLabaRugi()
+#6 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}
+CRITICAL - 2024-07-11 17:28:45 --> Undefined variable: labaKotor
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Views\Admin\Laporan\Lap_labaRugi.php(110): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ganda\\...', 110, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\hera\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Laporan/L...', Array, true)
+#4 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(2203): view('Admin/Laporan/L...', Array)
+#5 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->cetakLabaRugi()
+#6 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#10 {main}
+CRITICAL - 2024-07-11 18:15:26 --> Illegal offset type
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(665): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal offset ...', 'C:\\Users\\ganda\\...', 665, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(631): CodeIgniter\Database\BaseBuilder->whereHaving('QBWhere', Object(Closure), NULL, 'AND ', NULL)
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(728): CodeIgniter\Database\BaseBuilder->where(Object(Closure))
+#3 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(2212): CodeIgniter\Model->__call('where', Array)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->cetakLabaRugi()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#6 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#9 {main}
+CRITICAL - 2024-07-11 18:17:15 --> Illegal offset type
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(665): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal offset ...', 'C:\\Users\\ganda\\...', 665, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(631): CodeIgniter\Database\BaseBuilder->whereHaving('QBWhere', Object(Closure), NULL, 'AND ', NULL)
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(728): CodeIgniter\Database\BaseBuilder->where(Object(Closure))
+#3 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(2220): CodeIgniter\Model->__call('where', Array)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->cetakLabaRugi()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#6 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#9 {main}
+CRITICAL - 2024-07-11 18:18:11 --> Illegal offset type
+#0 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(665): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal offset ...', 'C:\\Users\\ganda\\...', 665, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\Database\BaseBuilder.php(631): CodeIgniter\Database\BaseBuilder->whereHaving('QBWhere', Object(Closure), NULL, 'AND ', NULL)
+#2 C:\Users\ganda\Documents\GitHub\hera\system\Model.php(728): CodeIgniter\Database\BaseBuilder->where(Object(Closure))
+#3 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(2212): CodeIgniter\Model->__call('where', Array)
+#4 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->cetakLabaRugi()
+#5 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#6 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#9 {main}
+CRITICAL - 2024-07-11 19:16:53 --> Trying to get property 'fullname' of non-object
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Views\Admin\Templates\Topbar.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\Users\\ganda\\...', 51, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(424): CodeIgniter\View\View->render('Admin/Templates...', NULL, true)
+#4 C:\Users\ganda\Documents\GitHub\hera\app\Views\Admin\Templates\Index.php(104): CodeIgniter\View\View->include('Admin/Templates...')
+#5 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#6 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(226): CodeIgniter\View\View->render('Admin/Templates...', Array, true)
+#8 C:\Users\ganda\Documents\GitHub\hera\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Laporan/H...', Array, true)
+#9 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(1971): view('Admin/Laporan/H...', Array)
+#10 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->lap_laba_rugi()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#12 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#14 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#15 {main}
+CRITICAL - 2024-07-11 19:21:39 --> Trying to get property 'fullname' of non-object
+#0 C:\Users\ganda\Documents\GitHub\hera\app\Views\Admin\Templates\Topbar.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\Users\\ganda\\...', 51, Array)
+#1 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#2 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(424): CodeIgniter\View\View->render('Admin/Templates...', NULL, true)
+#4 C:\Users\ganda\Documents\GitHub\hera\app\Views\Admin\Templates\Index.php(104): CodeIgniter\View\View->include('Admin/Templates...')
+#5 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(210): include('C:\\Users\\ganda\\...')
+#6 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\Users\ganda\Documents\GitHub\hera\system\View\View.php(226): CodeIgniter\View\View->render('Admin/Templates...', Array, true)
+#8 C:\Users\ganda\Documents\GitHub\hera\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Laporan/H...', Array, true)
+#9 C:\Users\ganda\Documents\GitHub\hera\app\Controllers\Admin.php(1971): view('Admin/Laporan/H...', Array)
+#10 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(832): App\Controllers\Admin->lap_laba_rugi()
+#11 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#12 C:\Users\ganda\Documents\GitHub\hera\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\Users\ganda\Documents\GitHub\hera\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#14 C:\Users\ganda\Documents\GitHub\hera\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\ganda\\...')
+#15 {main}

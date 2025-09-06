@@ -1,0 +1,284 @@
+CRITICAL - 2024-01-11 09:37:53 --> Class 'Mpdf\Mpdf' not found
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->cetak_lap_inv()
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-11 09:40:18 --> Class 'Mpdf\Mpdf' not found
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->cetak_lap_inv()
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-11 09:40:25 --> Class 'Mpdf\Mpdf' not found
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->cetak_lap_inv()
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-11 09:40:43 --> Class 'Mpdf\Mpdf' not found
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->cetak_lap_inv()
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-11 09:41:47 --> Class 'Mpdf\Mpdf' not found
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->cetak_lap_inv()
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-11 09:41:55 --> Class 'Mpdf\Mpdf' not found
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->cetak_lap_inv()
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-11 09:41:58 --> Class 'Mpdf\Mpdf' not found
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->cetak_lap_inv()
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-11 10:31:51 --> Class 'Mpdf\Mpdf' not found
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->cetak_lap_inv()
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-11 10:49:37 --> Class 'Mpdf\Mpdf' not found
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Admin->cetak_lap_inv()
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-11 11:27:55 --> Invalid file: user/templates/index.php
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/templates/...')
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(226): CodeIgniter\View\View->render('user/templates/...', Array, true)
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Common.php(1089): CodeIgniter\View\View->render('pegawai/profil/...', Array, true)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Pegawai.php(55): view('pegawai/profil/...', Array)
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Pegawai->index()
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2024-01-11 11:29:03 --> Invalid file: user/templates/index.php
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/templates/...')
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(226): CodeIgniter\View\View->render('user/templates/...', Array, true)
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Common.php(1089): CodeIgniter\View\View->render('pegawai/profil/...', Array, true)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Pegawai.php(55): view('pegawai/profil/...', Array)
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Pegawai->index()
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2024-01-11 11:29:28 --> Class 'App\Models\Pengaduan' not found
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(809): App\Controllers\User->__construct()
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-11 11:29:49 --> Invalid file: user/templates/index.php
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/templates/...')
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(226): CodeIgniter\View\View->render('user/templates/...', Array, true)
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Common.php(1089): CodeIgniter\View\View->render('pegawai/profil/...', Array, true)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Pegawai.php(55): view('pegawai/profil/...', Array)
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Pegawai->index()
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2024-01-11 11:31:10 --> Class 'App\Models\Pengaduan' not found
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(809): App\Controllers\User->__construct()
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-11 11:32:11 --> Class 'App\Models\Pengaduan' not found
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(809): App\Controllers\User->__construct()
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-11 11:32:58 --> Invalid file: user/inventaris/index.php
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/inventaris...')
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Common.php(1089): CodeIgniter\View\View->render('user/inventaris...', Array, true)
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Pegawai.php(393): view('user/inventaris...', Array)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Pegawai->inventaris()
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-11 11:34:57 --> Class 'App\Models\Pengaduan' not found
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(809): App\Controllers\User->__construct()
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-11 11:35:38 --> Class 'App\Models\Pengaduan' not found
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(809): App\Controllers\User->__construct()
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-11 11:35:45 --> Invalid file: user/inventaris/detail_inv.php
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/inventaris...')
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Common.php(1089): CodeIgniter\View\View->render('user/inventaris...', Array, true)
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Pegawai.php(409): view('user/inventaris...', Array)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Pegawai->detail_inv('81')
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-11 11:36:31 --> Class 'App\Models\Pengaduan' not found
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(809): App\Controllers\User->__construct()
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-11 11:37:16 --> Invalid file: user/atk/index.php
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/atk/index....')
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Common.php(1089): CodeIgniter\View\View->render('user/atk/index', Array, true)
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Pegawai.php(420): view('user/atk/index', Array)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Pegawai->ATK()
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-11 11:38:52 --> Invalid file: user/templates/index.php
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/templates/...')
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(226): CodeIgniter\View\View->render('user/templates/...', Array, true)
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Common.php(1089): CodeIgniter\View\View->render('pegawai/permint...', Array, true)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Pegawai.php(185): view('pegawai/permint...', Array)
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Pegawai->permintaan()
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2024-01-11 11:41:00 --> Invalid file: user/permintaan_barang/detail_permintaan.php
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/permintaan...')
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Common.php(1089): CodeIgniter\View\View->render('user/permintaan...', Array, true)
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Pegawai.php(319): view('user/permintaan...', Array)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Pegawai->detailpermin('59')
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-11 11:42:51 --> Class 'App\Models\Pengaduan' not found
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(809): App\Controllers\User->__construct()
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-11 11:43:17 --> Invalid file: user/permintaan_barang/cetakid.php
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/permintaan...')
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Common.php(1089): CodeIgniter\View\View->render('user/permintaan...', Array, true)
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\Pegawai.php(371): view('user/permintaan...', Array)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\Pegawai->ekspor('59')
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-11 11:56:07 --> Invalid file: sadmin/templates/index.php
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sadmin/template...')
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(226): CodeIgniter\View\View->render('sadmin/template...', Array, true)
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Common.php(1089): CodeIgniter\View\View->render('petugas/profil/...', Array, true)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\petugas_pengadaan.php(50): view('petugas/profil/...', Array)
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\petugas_pengadaan->index()
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\petugas_pengadaan))
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2024-01-11 11:57:00 --> Invalid file: petugas_pengadaan/templates/index.php
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('petugas_pengada...')
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(226): CodeIgniter\View\View->render('petugas_pengada...', Array, true)
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Common.php(1089): CodeIgniter\View\View->render('petugas/profil/...', Array, true)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\petugas_pengadaan.php(50): view('petugas/profil/...', Array)
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\petugas_pengadaan->index()
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\petugas_pengadaan))
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2024-01-11 11:57:19 --> Invalid file: petugas_pengadaan/templates/index.php
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('petugas_pengada...')
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(226): CodeIgniter\View\View->render('petugas_pengada...', Array, true)
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Common.php(1089): CodeIgniter\View\View->render('petugas/profil/...', Array, true)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\petugas_pengadaan.php(50): view('petugas/profil/...', Array)
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\petugas_pengadaan->index()
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\petugas_pengadaan))
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2024-01-11 11:57:37 --> Invalid file: petugas/profil/home.php
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('petugas/profil/...')
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Common.php(1089): CodeIgniter\View\View->render('petugas/profil/...', Array, true)
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\petugas_pengadaan.php(50): view('petugas/profil/...', Array)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\petugas_pengadaan->index()
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\petugas_pengadaan))
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-11 11:57:39 --> Invalid file: petugas/profil/home.php
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('petugas/profil/...')
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Common.php(1089): CodeIgniter\View\View->render('petugas/profil/...', Array, true)
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\petugas_pengadaan.php(50): view('petugas/profil/...', Array)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\petugas_pengadaan->index()
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\petugas_pengadaan))
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-11 12:03:06 --> Invalid file: sadmin/templates/index.php
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sadmin/template...')
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\View\View.php(226): CodeIgniter\View\View->render('sadmin/template...', Array, true)
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Common.php(1089): CodeIgniter\View\View->render('petugas_pengada...', Array, true)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\app\Controllers\petugas_pengadaan.php(159): view('petugas_pengada...', Array)
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\petugas_pengadaan->detailPengadaan('22')
+#5 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\petugas_pengadaan))
+#6 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2024-01-11 15:44:33 --> Too few arguments to function App\Controllers\petugas_pengadaan::detailPengadaan(), 0 passed in C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\petugas_pengadaan->detailPengadaan()
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\petugas_pengadaan))
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-11 15:48:58 --> Too few arguments to function App\Controllers\petugas_pengadaan::detailPengadaan(), 0 passed in C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(832): App\Controllers\petugas_pengadaan->detailPengadaan()
+#1 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\petugas_pengadaan))
+#2 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\INVENTARIS_PENGADAAN\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\INVENTARIS_PENGADAAN\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}

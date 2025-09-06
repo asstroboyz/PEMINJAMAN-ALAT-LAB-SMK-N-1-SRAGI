@@ -1,0 +1,283 @@
+CRITICAL - 2025-08-30 19:01:26 --> imagecreatefrompng(E:\CODING-WORK\peminjaman_alat\public\assets/media/qrcode/kd-20250830070126570-asdas_1756555286.png): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'imagecreatefrom...', 'E:\\CODING-WORK\\...', 642)
+#1 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(642): imagecreatefrompng('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(630): App\Controllers\Admin->add_logo_to_qr_code('E:\\CODING-WORK\\...', 'assets/media/qr...')
+#3 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(704): App\Controllers\Admin->generate_qrcode(Array)
+#4 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->add_data()
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#9 {main}
+CRITICAL - 2025-08-30 19:03:15 --> QR code file not found: E:\CODING-WORK\peminjaman_alat\public\assets/media/qrcode/kd-20250830070315656-asdas_1756555395.png
+#0 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(586): App\Controllers\Admin->add_logo_to_qr_code('E:\\CODING-WORK\\...', 'E:\\CODING-WORK\\...')
+#1 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(677): App\Controllers\Admin->generate_qrcode(Array)
+#2 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->add_data()
+#3 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#4 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#7 {main}
+CRITICAL - 2025-08-30 19:04:54 --> QR code file not found: E:\CODING-WORK\peminjaman_alat\public\assets/media/qrcode/kd-20250830070454937-asdas_1756555494.png
+#0 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(586): App\Controllers\Admin->add_logo_to_qr_code('E:\\CODING-WORK\\...', 'E:\\CODING-WORK\\...')
+#1 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(677): App\Controllers\Admin->generate_qrcode(Array)
+#2 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->add_data()
+#3 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#4 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#7 {main}
+CRITICAL - 2025-08-30 19:09:11 --> QR code file not found: E:\CODING-WORK\peminjaman_alat\public\assets/media/qrcode/kd-20250830070911651-asdas_1756555751.png
+#0 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(590): App\Controllers\Admin->add_logo_to_qr_code('E:\\CODING-WORK\\...', 'E:\\CODING-WORK\\...')
+#1 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(679): App\Controllers\Admin->generate_qrcode(Array)
+#2 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->add_data()
+#3 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#4 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#7 {main}
+CRITICAL - 2025-08-30 19:09:20 --> QR code file not found: E:\CODING-WORK\peminjaman_alat\public\assets/media/qrcode/kd-20250830070920512-asdas_1756555760.png
+#0 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(590): App\Controllers\Admin->add_logo_to_qr_code('E:\\CODING-WORK\\...', 'E:\\CODING-WORK\\...')
+#1 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(679): App\Controllers\Admin->generate_qrcode(Array)
+#2 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->add_data()
+#3 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#4 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#7 {main}
+CRITICAL - 2025-08-30 19:12:33 --> QR code file not found: E:\CODING-WORK\peminjaman_alat\public\assets/media/qrcode/kd-20250830071233119-asdas_1756555953.png
+#0 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(590): App\Controllers\Admin->add_logo_to_qr_code('E:\\CODING-WORK\\...', 'E:\\CODING-WORK\\...')
+#1 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(679): App\Controllers\Admin->generate_qrcode(Array)
+#2 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->add_data()
+#3 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#4 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#7 {main}
+CRITICAL - 2025-08-30 20:07:11 --> QR code file not found: E:\CODING-WORK\peminjaman_alat\public\assets/media/qrcode/kd-20250830080711523-asdas_1756559231.png
+#0 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(590): App\Controllers\Admin->add_logo_to_qr_code('E:\\CODING-WORK\\...', 'E:\\CODING-WORK\\...')
+#1 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(679): App\Controllers\Admin->generate_qrcode(Array)
+#2 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->add_data()
+#3 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#4 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#7 {main}
+CRITICAL - 2025-08-30 20:09:41 --> Trying to access array offset on value of type null
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Master_barang\Detail_brg.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'E:\\CODING-WORK\\...', 74)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Master_ba...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(408): view('Admin/Master_ba...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->detail_master_brg('ASD-20250830-33...')
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-08-30 20:09:48 --> Trying to access array offset on value of type null
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Master_barang\Detail_brg.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'E:\\CODING-WORK\\...', 74)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Master_ba...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(408): view('Admin/Master_ba...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->detail_master_brg('PRI-20250828-50...')
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-08-30 20:10:02 --> QR code file not found: E:\CODING-WORK\peminjaman_alat\public\assets/media/qrcode/kd-20250830081002524-printer_1756559402.png
+#0 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(590): App\Controllers\Admin->add_logo_to_qr_code('E:\\CODING-WORK\\...', 'E:\\CODING-WORK\\...')
+#1 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(679): App\Controllers\Admin->generate_qrcode(Array)
+#2 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->add_data()
+#3 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#4 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#7 {main}
+CRITICAL - 2025-08-30 20:16:26 --> QR code file not found: E:\CODING-WORK\peminjaman_alat\public\assets/media/qrcode/kd-20250830081626594-printer_1756559786.png
+#0 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(590): App\Controllers\Admin->add_logo_to_qr_code('E:\\CODING-WORK\\...', 'E:\\CODING-WORK\\...')
+#1 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(679): App\Controllers\Admin->generate_qrcode(Array)
+#2 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->add_data()
+#3 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#4 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#7 {main}
+CRITICAL - 2025-08-30 20:18:08 --> QR code gagal dibuat di: E:\CODING-WORK\peminjaman_alat\public\assets/media/qrcode/kd-20250830081808767-printer_1756559888.png
+#0 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(687): App\Controllers\Admin->generate_qrcode(Array)
+#1 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->add_data()
+#2 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#6 {main}
+CRITICAL - 2025-08-30 20:21:49 --> QR code gagal dibuat di: E:\CODING-WORK\peminjaman_alat\public\assets/media/qrcode/kd-20250830082149501-printer_1756560109.png
+#0 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(687): App\Controllers\Admin->generate_qrcode(Array)
+#1 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->add_data()
+#2 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#6 {main}
+CRITICAL - 2025-08-30 20:23:41 --> Undefined property: App\Controllers\Admin::$load
+#0 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(724): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'E:\\CODING-WORK\\...', 724)
+#1 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->test_qr()
+#2 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#6 {main}
+CRITICAL - 2025-08-30 20:23:53 --> Undefined property: App\Controllers\Admin::$load
+#0 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(724): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'E:\\CODING-WORK\\...', 724)
+#1 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->test_qr()
+#2 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#6 {main}
+CRITICAL - 2025-08-30 20:26:34 --> Constant QR_MODE_NUL already defined
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Constant QR_MOD...', 'E:\\CODING-WORK\\...', 31)
+#1 E:\CODING-WORK\peminjaman_alat\app\Libraries\qrcode\qrconst.php(31): define('QR_MODE_NUL', -1)
+#2 E:\CODING-WORK\peminjaman_alat\app\Libraries\Ciqrcode.php(40): include('E:\\CODING-WORK\\...')
+#3 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(723): App\Libraries\Ciqrcode->__construct()
+#4 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->test_qr()
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#9 {main}
+CRITICAL - 2025-08-30 20:27:18 --> Constant QR_MODE_NUL already defined
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Constant QR_MOD...', 'E:\\CODING-WORK\\...', 31)
+#1 E:\CODING-WORK\peminjaman_alat\app\Libraries\qrcode\qrconst.php(31): define('QR_MODE_NUL', -1)
+#2 E:\CODING-WORK\peminjaman_alat\app\Libraries\Ciqrcode.php(40): include('E:\\CODING-WORK\\...')
+#3 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(723): App\Libraries\Ciqrcode->__construct()
+#4 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->test_qr()
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#9 {main}
+CRITICAL - 2025-08-30 20:28:41 --> Class "Endroid\QrCode\QrCode" not found
+#0 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->test_qr()
+#1 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#2 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#5 {main}
+CRITICAL - 2025-08-30 20:33:34 --> Class "App\Controllers\Logo" not found
+#0 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(617): App\Controllers\Admin->generate_qrcode(Array)
+#1 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->add_data()
+#2 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#6 {main}
+CRITICAL - 2025-08-30 20:40:40 --> Could not read logo image data from path "E:\CODING-WORK\peminjaman_alat\public\assets/media/qrcode/tkj.png": invalid data
+#0 E:\CODING-WORK\peminjaman_alat\vendor\endroid\qr-code\src\Writer\AbstractGdWriter.php(131): Endroid\QrCode\ImageData\LogoImageData::createForLogo(Object(Endroid\QrCode\Logo\Logo))
+#1 E:\CODING-WORK\peminjaman_alat\vendor\endroid\qr-code\src\Writer\AbstractGdWriter.php(119): Endroid\QrCode\Writer\AbstractGdWriter->addLogo(Object(Endroid\QrCode\Logo\Logo), Object(Endroid\QrCode\Writer\Result\GdResult))
+#2 E:\CODING-WORK\peminjaman_alat\vendor\endroid\qr-code\src\Writer\PngWriter.php(25): Endroid\QrCode\Writer\AbstractGdWriter->write(Object(Endroid\QrCode\QrCode), Object(Endroid\QrCode\Logo\Logo), NULL, Array)
+#3 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(580): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode), Object(Endroid\QrCode\Logo\Logo))
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(619): App\Controllers\Admin->generate_qrcode(Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->add_data()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-08-30 20:55:37 --> Call to undefined method App\Models\tipeBarangModel::getMasterBarang
+#0 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(1017): CodeIgniter\Model->__call('getMasterBarang', Array)
+#1 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->tambahForm()
+#2 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#3 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#6 {main}
+CRITICAL - 2025-08-30 20:59:42 --> Undefined constant "App\Controllers\tambah_inv"
+#0 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(809): App\Controllers\Admin->__construct()
+#1 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#2 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#5 {main}
+CRITICAL - 2025-08-30 21:14:23 --> Undefined array key "tipe_barang"
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Master_barang\Index.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\CODING-WORK\\...', 53)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Master_ba...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(335): view('Admin/Master_ba...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->master_barang()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-08-30 21:14:32 --> Undefined array key "tipe_barang"
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Master_barang\Index.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\CODING-WORK\\...', 53)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Master_ba...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(335): view('Admin/Master_ba...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->master_barang()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-08-30 21:14:56 --> Undefined array key "tipe_barang"
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Master_barang\Index.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\CODING-WORK\\...', 53)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Master_ba...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(335): view('Admin/Master_ba...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->master_barang()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-08-30 21:14:57 --> Undefined array key "tipe_barang"
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Master_barang\Index.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\CODING-WORK\\...', 53)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Master_ba...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(335): view('Admin/Master_ba...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->master_barang()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+ERROR - 2025-08-30 21:17:23 --> Unknown column 'nama_barang' in 'field list'
+CRITICAL - 2025-08-30 21:17:23 --> Unknown column 'nama_barang' in 'field list'
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tr...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tr...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tr...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 E:\CODING-WORK\peminjaman_alat\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 E:\CODING-WORK\peminjaman_alat\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(697): CodeIgniter\Model->insert(Array)
+#8 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->add_data()
+#9 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#13 {main}
+ERROR - 2025-08-30 21:20:30 --> Unknown column 'jenis_barang' in 'field list'
+CRITICAL - 2025-08-30 21:20:30 --> Unknown column 'jenis_barang' in 'field list'
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tr...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tr...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tr...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 E:\CODING-WORK\peminjaman_alat\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 E:\CODING-WORK\peminjaman_alat\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(697): CodeIgniter\Model->insert(Array)
+#8 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->add_data()
+#9 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#13 {main}
