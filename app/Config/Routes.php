@@ -52,6 +52,8 @@ $routes->post('/Admin/formTambahStok/tambahStok/(:num)', 'Admin::tambahStok/$1',
 $routes->get('/Admin/formKurangStok/(:num)', 'Admin::formKurangStok/$1', ['filter' => 'role:admin']);
 $routes->post('/Admin/formKurangStok/kurangiStok/(:num)', 'Admin::kurangiStok/$1', ['filter' => 'role:admin']);
 $routes->get('Admin/softDelete/(:segment)', 'Admin::softDelete/$1');
+// $routes->get('/Admin/getMerkByKategori/(:num)', 'Admin::getMerkByKategori/$1');
+
 
 $routes->put('/Admin/detail_inv/(:num)', 'Admin::detail_inv/$1', ['filter' => 'role:admin']);
 $routes->put('/pegawai/detail_inv/(:num)', 'pegawai::detail_inv/$1', ['filter' => 'role:pegawai']);

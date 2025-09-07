@@ -1,5 +1,4 @@
 <style>
-    /* FINISHING TOUCH PROFILE DROPDOWN */
     .nav-link.dropdown-toggle:hover,
     .nav-link.dropdown-toggle:focus {
         background: #fafafc;
@@ -133,9 +132,7 @@
         <i class="fa fa-bars"></i>
     </button>
 
-    <!-- Topbar Search -->
 
-    <!-- Topbar Navbar -->
     <ul class="navbar-nav ml-auto">
 
 
@@ -145,23 +142,23 @@
         <li class="nav-item dropdown no-arrow">
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-300 small"><?= user()->fullname; ?></span>
+                <span class="mr-2 d-none d-lg-inline text-gray-300 small"><?php echo user()->fullname;?></span>
                 <img class="img-profile rounded-circle"
-                    src="<?= empty(user()->foto) ? '/sbassets/img/undraw_profile.svg' : '/uploads/profile/' . user()->foto; ?>"
+                    src="<?php echo empty(user()->foto) ? '/sbassets/img/undraw_profile.svg' : '/uploads/profile/' . user()->foto;?>"
                     style="width:32px;height:32px;object-fit:cover;border:2px solid #FFC10788;">
             </a>
             <!-- Dropdown - User Information -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in custom-dropdown-menu" aria-labelledby="userDropdown">
                 <!-- Header area -->
                 <div class="dropdown-profile-header">
-                    <img src="<?= empty(user()->foto) ? '/sbassets/img/undraw_profile.svg' : '/uploads/profile/' . user()->foto; ?>">
-                    <div class="profile-name"><?= user()->fullname; ?></div>
+                    <img src="<?php echo empty(user()->foto) ? '/sbassets/img/undraw_profile.svg' : '/uploads/profile/' . user()->foto;?>">
+                    <div class="profile-name"><?php echo user()->fullname;?></div>
                     <?php if (user()->email): ?>
-                        <div class="profile-email"><?= user()->email; ?></div>
+                        <div class="profile-email"><?php echo user()->email;?></div>
                     <?php endif; ?>
                 </div>
                 <!-- Menu -->
-                <a class="dropdown-item" href="<?= base_url('admin/profil'); ?>">
+                <a class="dropdown-item" href="<?php echo base_url('admin/profil');?>">
                     <i class="fas fa-user fa-fw"></i> Profile
                 </a>
                 <div class="dropdown-divider"></div>

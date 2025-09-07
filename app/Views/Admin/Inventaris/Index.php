@@ -45,7 +45,7 @@
                                     <td><?= $no++; ?></td>
                                     <td><?= esc($row['nama_ruangan']); ?></td>
                                     <td><?= esc($row['nama_brg']); ?></td>
-                                    <td><?= esc($row['merk']); ?></td>
+                                    <td><?= esc($row['nama_brg']); ?></td>
                                     <td><?= esc($row['jenis_brg']); ?></td>
                                     <td style="text-align:center;"><?= esc($row['stok']); ?></td>
                                     <td style="text-align:center;">
