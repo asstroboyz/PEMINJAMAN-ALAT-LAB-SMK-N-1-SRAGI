@@ -307,19 +307,18 @@ class Admin extends BaseController
         return redirect()->to('/admin/satuan');
     }
     // master barang
-public function master_barang()
-{
-    $data['title'] = 'Master Barang';
+    public function master_barang()
+    {
+        $data['title'] = 'Master Barang';
 
-    $data['master_brg'] = $this->masterBarangModel
-        ->select('master_barang.*, merk_barang.nama_merk')
-        ->join('merk_barang', 'merk_barang.id = master_barang.merk_id', 'left')
-        ->orderBy('jenis_brg', 'ASC')
-        ->findAll();
+        $data['master_brg'] = $this->masterBarangModel
+            ->select('master_barang.*, merk_barang.nama_merk')
+            ->join('merk_barang', 'merk_barang.id = master_barang.merk_id', 'left')
+            ->orderBy('jenis_brg', 'ASC')
+            ->findAll();
 
-    return view('Admin/Master_barang/Index', $data);
-}
-
+        return view('Admin/Master_barang/Index', $data);
+    }
 
     public function masterBarang()
     {
@@ -355,7 +354,7 @@ public function master_barang()
         return $this->response->setJSON($merk);
     }
 
-    public function saveBarang()
+    public function saveBarang1()
     {
         if (! $this->validate([
             'nama_barang' => [
@@ -419,6 +418,92 @@ public function master_barang()
                 'id_inventaris'      => $kode_brg, // atau sesuaikan dengan inventaris kode
                 'tanggal_pengecekan' => date('Y-m-d'),
                 'ruangan_id_lama'    => null, // Atau isi ID ruangan lama kalau ada
+                'keterangan'         => 'Barang HRD baru, pengecekan awal',
+            ];
+            $this->pengecekanModel->insert($dataPengecekan);
+        }
+
+        session()->setFlashdata('pesan', 'Data berhasil ditambahkan');
+        return redirect()->to('/admin/master_barang');
+    }
+    public function saveBarang()
+    {
+        if (! $this->validate([
+            'nama_barang' => [
+                'rules'  => 'required',
+                'errors' => ['required' => 'Nama Barang harus diisi'],
+            ],
+            'kategori_id' => [
+                'rules'  => 'required|is_not_unique[kategori_barang.id]',
+                'errors' => ['required' => 'Kategori harus diisi'],
+            ],
+            'merk_id'     => [
+                'rules'  => 'required|is_not_unique[merk_barang.id]',
+                'errors' => ['required' => 'Merk harus diisi'],
+            ],
+            'jenis_brg'   => [
+                'rules'  => 'required|in_list[hrd,sfw,tools]',
+                'errors' => ['required' => 'Jenis Barang harus diisi'],
+            ],
+            'id_satuan'   => [
+                'rules'  => 'required|is_not_unique[satuan.satuan_id]',
+                'errors' => ['required' => 'Satuan harus diisi'],
+            ],
+            'foto'        => [
+                'rules'  => 'is_image[foto]|mime_in[foto,image/jpg,image/jpeg,image/png]|max_size[foto,2048]',
+                'errors' => [
+                    'is_image' => 'File harus gambar!',
+                    'mime_in'  => 'File harus jpg/jpeg/png',
+                    'max_size' => 'Maksimal 2MB',
+                ],
+            ],
+        ])) {
+            return redirect()->to('/admin/addBarang')->withInput();
+        }
+
+        // Ambil input
+        $nama_barang = $this->request->getPost('nama_barang');
+        $kategori_id = $this->request->getPost('kategori_id');
+        $merk_id     = $this->request->getPost('merk_id');
+        $jenis_brg   = $this->request->getPost('jenis_brg');
+        $spesifikasi = $this->request->getPost('spesifikasi');
+        $id_satuan   = (int) $this->request->getPost('id_satuan');
+        $is_active   = (int) ($this->request->getPost('is_active') ?? 1);
+
+        // Foto
+        $foto         = $this->request->getFile('foto');
+        $namaFotoBaru = null;
+        if ($foto && $foto->isValid() && ! $foto->hasMoved()) {
+            $namaFotoBaru = $foto->getRandomName();
+            $foto->move(ROOTPATH . 'public/assets/barang', $namaFotoBaru);
+        }
+
+        // Generate kode unik
+        $prefix   = strtoupper(substr(preg_replace('/\s+/', '', $nama_barang), 0, 3));
+        $kode_brg = $prefix . '-' . date('Ymd') . '-' . rand(100, 999);
+
+        $data = [
+            'kode_brg'    => $kode_brg,
+            'nama_brg'    => $nama_barang,
+            'kategori_id' => $kategori_id,
+            'merk_id'     => $merk_id,
+            'jenis_brg'   => $jenis_brg,
+            'spesifikasi' => $spesifikasi,
+            'id_satuan'   => $id_satuan,
+            'is_active'   => $is_active,
+            'foto'        => $namaFotoBaru, // <<<<< field foto di sini
+            'created_at'  => date('Y-m-d H:i:s'),
+            'updated_at'  => date('Y-m-d H:i:s'),
+        ];
+
+        $this->masterBarangModel->insert($data);
+
+        // Insert pengecekan jika perlu
+        if ($jenis_brg == 'hrd') {
+            $dataPengecekan = [
+                'id_inventaris'      => $kode_brg,
+                'tanggal_pengecekan' => date('Y-m-d'),
+                'ruangan_id_lama'    => null,
                 'keterangan'         => 'Barang HRD baru, pengecekan awal',
             ];
             $this->pengecekanModel->insert($dataPengecekan);
