@@ -32,7 +32,7 @@
                             <label for="nama_barang">Merk Barang</label>
                             <input name="nama_barang" type="text" class="form-control form-control-user"
                                 id="input-nama_barang"
-                                value="<?php echo $master_brg['merk']; ?>"
+                                value="<?php echo $master_brg['nama_brg']; ?>"
                                 readonly />
                         </div>
                     </div>

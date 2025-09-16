@@ -463,6 +463,7 @@ class Admin extends BaseController
 
         // Ambil input
         $nama_barang = $this->request->getPost('nama_barang');
+        $tipe_serie  = $this->request->getPost('tipe_serie');
         $kategori_id = $this->request->getPost('kategori_id');
         $merk_id     = $this->request->getPost('merk_id');
         $jenis_brg   = $this->request->getPost('jenis_brg');
@@ -485,6 +486,7 @@ class Admin extends BaseController
         $data = [
             'kode_brg'    => $kode_brg,
             'nama_brg'    => $nama_barang,
+            'tipe_serie'  => $tipe_serie,
             'kategori_id' => $kategori_id,
             'merk_id'     => $merk_id,
             'jenis_brg'   => $jenis_brg,
@@ -623,45 +625,94 @@ class Admin extends BaseController
     }
 
     //Inventaris
-    public function adm_inventaris()
-    {
-        // Group rekap: stok per barang per ruangan
-        $rekap = $this->InventarisModel
-            ->select('ruangan.nama_ruangan, master_barang.nama_brg, merk_barang.nama_merk, master_barang.jenis_brg, COUNT(inventaris.kode_barang) as stok')
-            ->join('master_barang', 'master_barang.kode_brg = inventaris.id_master_barang')
-            ->join('merk_barang', 'merk_barang.id = master_barang.merk_id', 'left')
-            ->join('ruangan', 'ruangan.id = inventaris.ruangan_id', 'left')
-            ->where('master_barang.is_active', 1)
-            ->groupBy('ruangan.nama_ruangan, inventaris.id_master_barang')
-            ->orderBy('ruangan.nama_ruangan, master_barang.nama_brg')
-            ->findAll();
+//     public function adm_inventaris()
+//     {
+//         // Group rekap: stok per barang per ruangan
+//         $rekap = $this->InventarisModel
+//             ->select('ruangan.nama_ruangan, master_barang.nama_brg, merk_barang.nama_merk, master_barang.jenis_brg, COUNT(inventaris.kode_barang) as stok')
+//             ->join('master_barang', 'master_barang.kode_brg = inventaris.id_master_barang')
+//             ->join('merk_barang', 'merk_barang.id = master_barang.merk_id', 'left')
+//             ->join('ruangan', 'ruangan.id = inventaris.ruangan_id', 'left')
+//             ->where('master_barang.is_active', 1)
+//             ->groupBy('ruangan.nama_ruangan, inventaris.id_master_barang')
+//             ->orderBy('ruangan.nama_ruangan, master_barang.nama_brg')
+//             ->findAll();
 
-        // Detail: semua row per SN/unit
-        $inventaris = $this->InventarisModel
-            ->select('inventaris.*, master_barang.nama_brg, merk_barang.nama_merk, master_barang.jenis_brg, ruangan.nama_ruangan')
-            ->join('master_barang', 'master_barang.kode_brg = inventaris.id_master_barang')
-            ->join('merk_barang', 'merk_barang.id = master_barang.merk_id', 'left')
-            ->join('ruangan', 'ruangan.id = inventaris.ruangan_id', 'left')
-            ->where('master_barang.is_active', 1)
-            ->findAll();
+//         // Detail: semua row per SN/unit
+//         $inventaris = $this->InventarisModel
+//             ->select('inventaris.*, master_barang.nama_brg, merk_barang.nama_merk, master_barang.jenis_brg, ruangan.nama_ruangan')
+//             ->join('master_barang', 'master_barang.kode_brg = inventaris.id_master_barang')
+//             ->join('merk_barang', 'merk_barang.id = master_barang.merk_id', 'left')
+//             ->join('ruangan', 'ruangan.id = inventaris.ruangan_id', 'left')
+//             ->where('master_barang.is_active', 1)
+//             ->findAll();
 
-        $data['rekap']      = $rekap;
-        $data['inventaris'] = $inventaris;
-        $data['title']      = 'Rekap Inventaris';
+//         $data['rekap']      = $rekap;
+//         $data['inventaris'] = $inventaris;
+//         $data['title']      = 'Rekap Inventaris';
+// // dd($data);
+//         return view('Admin/Inventaris/Index', $data);
+//     }
+public function adm_inventaris()
+{
+    // Group rekap: stok per barang per ruangan (fix group by!)
+    $rekap = $this->InventarisModel
+        ->select('
+            ruangan.nama_ruangan, 
+            master_barang.nama_brg, 
+            merk_barang.nama_merk, 
+            master_barang.jenis_brg, 
+            COUNT(inventaris.kode_barang) as stok
+        ')
+        ->join('master_barang', 'master_barang.kode_brg = inventaris.id_master_barang')
+        ->join('merk_barang', 'merk_barang.id = master_barang.merk_id', 'left')
+        ->join('ruangan', 'ruangan.id = inventaris.ruangan_id', 'left')
+        ->where('master_barang.is_active', 1)
+        ->groupBy('
+            ruangan.nama_ruangan, 
+            master_barang.nama_brg, 
+            merk_barang.nama_merk, 
+            master_barang.jenis_brg
+        ')
+        ->orderBy('ruangan.nama_ruangan, master_barang.nama_brg')
+        ->findAll();
 
-        return view('Admin/Inventaris/Index', $data);
-    }
+    // Detail: semua row per SN/unit
+    $inventaris = $this->InventarisModel
+        ->select('
+            inventaris.*, 
+            master_barang.nama_brg, 
+            master_barang.tipe_serie, 
+            merk_barang.nama_merk, 
+            master_barang.jenis_brg, 
+            ruangan.nama_ruangan
+        ')
+        ->join('master_barang', 'master_barang.kode_brg = inventaris.id_master_barang')
+        ->join('merk_barang', 'merk_barang.id = master_barang.merk_id', 'left')
+        ->join('ruangan', 'ruangan.id = inventaris.ruangan_id', 'left')
+        ->where('master_barang.is_active', 1)
+        ->findAll();
+
+    $data['rekap']      = $rekap;
+    $data['inventaris'] = $inventaris;
+    $data['title']      = 'Rekap Inventaris';
+
+    return view('Admin/Inventaris/Index', $data);
+}
 
     public function tambah_inv()
     {
         $data = [
-            'validation'    => $this->validation,
-            'title'         => 'Tambah Barang',
-            'satuan'        => $this->satuanModel->findAll(),
-            'master_barang' => $this->masterBarangModel->getMasterBarang(),
-            'merk_barang'   => $this->MerkBarangModel->findAll(),
-        ];
+            'validation'      => $this->validation,
+            'title'           => 'Tambah Barang',
+            'satuan'          => $this->satuanModel->findAll(),
+            'master_barang'   => $this->masterBarangModel->getMasterBarang(),
+            // 'merk_barang'   => $this->MerkBarangModel->findAll(),
+            'daftarRuangan' => $this->RuanganModel->findAll(),
+            'kategori_barang' => $this->KategoriBarangModel->findAll(),
 
+        ];
+        // dd($data);
         return view('Admin/Inventaris/Tambah_barang', $data);
     }
     public function generate_qrcode($data_array)
@@ -734,43 +785,61 @@ class Admin extends BaseController
         $sn_counter  = 1;
 
         try {
-            for ($i = 0; $i < count($lokasi_list); $i++) {
-                $jumlah = max(1, (int) ($jumlah_list[$i] ?? 1));
-                for ($j = 1; $j <= $jumlah; $j++) {
-                    $kode_barang = "{$kode_prefix}-{$tgl}-" . str_pad($sn_counter++, 3, '0', STR_PAD_LEFT);
+         for ($i = 0; $i < count($lokasi_list); $i++) {
+    $jumlah = max(1, (int) ($jumlah_list[$i] ?? 1));
 
-                    $qr_data = [
-                        'kode_barang'      => $kode_barang,
-                        'id_master_barang' => $id_master_barang,
-                        'kondisi'          => $kondisi_list[$i] ?? 'baik',
-                        'spesifikasi'      => $spesifikasi,
-                        'id_satuan'        => $id_satuan,
-                    ];
-                    $qrcode_result = $this->generate_qrcode($qr_data);
+    // Cari SN terakhir dari kode_prefix + tanggal
+    $prefix = "{$kode_prefix}-{$tgl}-";
+    $lastSN = $this->InventarisModel
+        ->like('kode_barang', $prefix, 'after')
+        ->select('kode_barang')
+        ->orderBy('kode_barang', 'DESC')
+        ->first();
 
-                    $this->InventarisModel->insert([
-                        'kode_barang'      => $kode_barang,
-                        'id_master_barang' => $id_master_barang,
-                        'kondisi'          => $kondisi_list[$i] ?? 'baik',
-                        'spesifikasi'      => $spesifikasi,
-                        'lokasi'           => $lokasi_list[$i] ?? '',
-                        'id_satuan'        => $id_satuan,
-                        'qrcode'           => $qrcode_result['unique_barcode'] ?? null,
-                        'file'             => $qrcode_result['file'] ?? null,
-                        'created_at'       => date('Y-m-d H:i:s'),
-                        'updated_at'       => date('Y-m-d H:i:s'),
-                    ]);
-                    $this->TransaksiBarangModel->insert([
-                        'kode_barang'          => $kode_barang,
-                        'id_master_barang'     => $id_master_barang,
-                        'jumlah_perubahan'     => 1,
-                        'jenis_transaksi'      => 'masuk',
-                        'informasi_tambahan'   => 'Inventaris baru ditambahkan',
-                        'tanggal_barang_masuk' => date('Y-m-d H:i:s'),
-                        'user_id'              => $user_id,
-                    ]);
-                }
-            }
+    if ($lastSN && preg_match('/(\d{3})$/', $lastSN['kode_barang'], $matches)) {
+        $sn_counter = (int)$matches[1] + 1; // Lanjut dari yang terakhir
+    } else {
+        $sn_counter = 1; // Kalau belum ada, mulai dari 1
+    }
+
+    for ($j = 1; $j <= $jumlah; $j++) {
+        $kode_barang = "{$kode_prefix}-{$tgl}-" . str_pad($sn_counter++, 3, '0', STR_PAD_LEFT);
+
+        $qr_data = [
+            'kode_barang'      => $kode_barang,
+            'id_master_barang' => $id_master_barang,
+            'kondisi'          => $kondisi_list[$i] ?? 'baik',
+            'spesifikasi'      => $spesifikasi,
+            'id_satuan'        => $id_satuan,
+        ];
+        $qrcode_result = $this->generate_qrcode($qr_data);
+
+        $ruangan_id = ($lokasi_list[$i] ?? '') !== '' ? (int) $lokasi_list[$i] : null;
+
+        $this->InventarisModel->insert([
+            'kode_barang'      => $kode_barang,
+            'id_master_barang' => $id_master_barang,
+            'kondisi'          => $kondisi_list[$i] ?? 'baik',
+            'spesifikasi'      => $spesifikasi,
+            'ruangan_id'       => $ruangan_id,
+            'id_satuan'        => $id_satuan,
+            'qrcode'           => $qrcode_result['unique_barcode'] ?? null,
+            'file'             => $qrcode_result['file'] ?? null,
+            'created_at'       => date('Y-m-d H:i:s'),
+            'updated_at'       => date('Y-m-d H:i:s'),
+        ]);
+        $this->TransaksiBarangModel->insert([
+            'kode_barang'          => $kode_barang,
+            'id_master_barang'     => $id_master_barang,
+            'jumlah_perubahan'     => 1,
+            'jenis_transaksi'      => 'masuk',
+            'informasi_tambahan'   => 'Inventaris baru ditambahkan',
+            'tanggal_barang_masuk' => date('Y-m-d H:i:s'),
+            'user_id'              => $user_id,
+        ]);
+    }
+}
+
 
             session()->setFlashdata('PesanBerhasil', 'Penambahan Data Inventaris Berhasil!');
             return redirect()->to('/Admin/adm_inventaris');

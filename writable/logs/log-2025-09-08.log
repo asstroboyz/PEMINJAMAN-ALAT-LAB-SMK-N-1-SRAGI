@@ -117,3 +117,19 @@ CRITICAL - 2025-09-08 01:19:21 --> Undefined array key "nama_merk"
 #8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
 #10 {main}
+ERROR - 2025-09-08 20:55:01 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2025-09-08 20:55:01 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 E:\CODING-WORK\peminjaman_alat\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 E:\CODING-WORK\peminjaman_alat\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 E:\CODING-WORK\peminjaman_alat\vendor\myth\auth\src\Authentication\LocalAuthenticator.php(140): CodeIgniter\BaseModel->first()
+#5 E:\CODING-WORK\peminjaman_alat\vendor\myth\auth\src\Authentication\LocalAuthenticator.php(19): Myth\Auth\Authentication\LocalAuthenticator->validate(Array, true)
+#6 E:\CODING-WORK\peminjaman_alat\vendor\myth\auth\src\Controllers\AuthController.php(87): Myth\Auth\Authentication\LocalAuthenticator->attempt(Array, false)
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): Myth\Auth\Controllers\AuthController->attemptLogin()
+#8 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+#9 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#12 {main}

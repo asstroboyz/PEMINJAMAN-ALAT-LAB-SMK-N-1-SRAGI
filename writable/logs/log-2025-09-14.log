@@ -1,0 +1,6 @@
+ERROR - 2025-09-14 07:02:03 --> Unknown column 'created_at' in 'field list'
+ERROR - 2025-09-14 07:05:12 --> Duplicate entry 'PRI-20250914-646-20250914-001' for key 'inventaris.PRIMARY'
+ERROR - 2025-09-14 07:05:23 --> Unknown column 'created_at' in 'field list'
+ERROR - 2025-09-14 07:05:39 --> Unknown column 'created_at' in 'field list'
+ERROR - 2025-09-14 07:06:24 --> Unknown column 'created_at' in 'field list'
+ERROR - 2025-09-14 07:07:49 --> Duplicate entry 'MON-001-20250914-001' for key 'inventaris.PRIMARY'

@@ -21,6 +21,7 @@ class InventarisModel extends Model
         'status',             // tersedia/dipinjam/dll
         'qrcode',             // qr string/file
         'file',               // lampiran/file tambahan
+        'jenis_brg',
         'created_at',
         'updated_at',
         'deleted_at'
