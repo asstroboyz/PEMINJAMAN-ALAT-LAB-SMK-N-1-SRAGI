@@ -1,30 +1,29 @@
 <?php
-
 namespace App\Models;
 
 use CodeIgniter\Model;
 
 class InventarisModel extends Model
 {
-    protected $table = 'inventaris';
-    protected $primaryKey = 'kode_barang';
+    protected $table      = 'inventaris';
+    protected $primaryKey = 'id';
 
     protected $allowedFields = [
-        'kode_barang',        // PK
-        'id_master_barang',   // FK ke master_barang
-        'sn',                 // serial number
-        'foto',               // path/file gambar unit
-        'kondisi',            // baru/bekas/rusak
-        'spesifikasi',        // detail khusus per unit
-        'id_satuan',          // FK ke satuan
-        'ruangan_id',         // FK ke ruangan
-        'status',             // tersedia/dipinjam/dll
-        'qrcode',             // qr string/file
-        'file',               // lampiran/file tambahan
+        'id',      // PK
+        'id_master_barang', // FK ke master_barang
+        'sn',               // serial number
+        'foto',             // path/file gambar unit
+        'kondisi',          // baru/bekas/rusak
+        'spesifikasi',      // detail khusus per unit
+        'ruangan_id',       // FK ke ruangan
+        'status',           // tersedia/dipinjam/dll
+        'qrcode',           // qr string/file
+        'file',             // lampiran/file tambahan
         'jenis_brg',
+        'stok',   
         'created_at',
         'updated_at',
-        'deleted_at'
+        'deleted_at',
     ];
 
     // GET SEMUA inventaris + join master_barang, kategori, merk, satuan, ruangan
@@ -36,20 +35,19 @@ class InventarisModel extends Model
                 master_barang.tipe_serie,
                 master_barang.jenis_brg,
                 kategori_barang.nama_kategori,
-                merk_barang.nama_merk,
+                master_barang.merk,
                 satuan.nama_satuan,
                 ruangan.nama_ruangan
             ')
             ->join('master_barang', 'master_barang.kode_brg = inventaris.id_master_barang')
             ->join('kategori_barang', 'kategori_barang.id = master_barang.kategori_id', 'left')
-            ->join('merk_barang', 'merk_barang.id = master_barang.merk_id', 'left')
-            ->join('satuan', 'satuan.satuan_id = inventaris.id_satuan', 'left')
+            ->join('satuan', 'satuan.satuan_id = master_barang.id_satuan', 'left')
             ->join('ruangan', 'ruangan.id = inventaris.ruangan_id', 'left')
             ->findAll();
     }
 
-    // GET inventaris BY kode_barang (PK)
-    public function fetchById($kode_barang)
+    // GET inventaris BY id (PK)
+    public function fetchById($id)
     {
         return $this->select('
                 inventaris.*,
@@ -57,20 +55,19 @@ class InventarisModel extends Model
                 master_barang.tipe_serie,
                 master_barang.jenis_brg,
                 kategori_barang.nama_kategori,
-                merk_barang.nama_merk,
+                master_barang.merk,
                 satuan.nama_satuan,
                 ruangan.nama_ruangan
             ')
             ->join('master_barang', 'master_barang.kode_brg = inventaris.id_master_barang')
             ->join('kategori_barang', 'kategori_barang.id = master_barang.kategori_id', 'left')
-            ->join('merk_barang', 'merk_barang.id = master_barang.merk_id', 'left')
-            ->join('satuan', 'satuan.satuan_id = inventaris.id_satuan', 'left')
+            ->join('satuan', 'satuan.satuan_id = master_barang.id_satuan', 'left')
             ->join('ruangan', 'ruangan.id = inventaris.ruangan_id', 'left')
-            ->where('inventaris.kode_barang', $kode_barang)
+            ->where('inventaris.id', $id)
             ->first();
     }
 
-    // GET inventaris BERDASARKAN id_master_barang (semua unit dari satu tipe master_barang)
+    // GET inventaris BY id_master_barang
     public function fetchByMaster($id_master_barang)
     {
         return $this->select('
@@ -79,14 +76,13 @@ class InventarisModel extends Model
                 master_barang.tipe_serie,
                 master_barang.jenis_brg,
                 kategori_barang.nama_kategori,
-                merk_barang.nama_merk,
+                master_barang.merk,
                 satuan.nama_satuan,
                 ruangan.nama_ruangan
             ')
             ->join('master_barang', 'master_barang.kode_brg = inventaris.id_master_barang')
             ->join('kategori_barang', 'kategori_barang.id = master_barang.kategori_id', 'left')
-            ->join('merk_barang', 'merk_barang.id = master_barang.merk_id', 'left')
-            ->join('satuan', 'satuan.satuan_id = inventaris.id_satuan', 'left')
+            ->join('satuan', 'satuan.satuan_id = master_barang.id_satuan', 'left')
             ->join('ruangan', 'ruangan.id = inventaris.ruangan_id', 'left')
             ->where('inventaris.id_master_barang', $id_master_barang)
             ->findAll();

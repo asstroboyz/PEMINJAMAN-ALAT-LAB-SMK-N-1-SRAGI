@@ -106,14 +106,8 @@ hr.sidebar-divider {
                 <a class="collapse-item" href="<?php echo base_url('Admin/satuan'); ?>">
                     <i class="fas fa-ruler"></i> Master Satuan
                 </a>
-                <a class="collapse-item" href="<?php echo base_url('Admin/merk'); ?>">
-                    <i class="fas fa-ruler"></i> Master Merk
-                </a>
                 <a class="collapse-item" href="<?php echo base_url('Admin/kategori'); ?>">
                     <i class="fas fa-ruler"></i> Master Kategori
-                </a>
-                <a class="collapse-item" href="<?php echo base_url('Admin/KategoriMerk'); ?>">
-                    <i class="fas fa-ruler"></i> Master Kategori-merk
                 </a>
             </div>
         </div>
@@ -133,19 +127,23 @@ hr.sidebar-divider {
             <span>Peminjaman alat</span>
         </a>
         <div id="barang" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-            <div class="collapse-inner rounded">
-                <h6 class="collapse-header">Custom Utilities:</h6>
-                <a class="collapse-item" href="<?php echo base_url('Admin/permintaan_masuk'); ?>">
-                    <i class="fas fa-arrow-right-arrow-left"></i> Peminjaman alat
-                </a>
-                <a class="collapse-item" href="<?php echo base_url('Admin/permintaan_proses'); ?>">
-                    <i class="fas fa-spinner"></i> Diproses
-                </a>
-                <a class="collapse-item" href="<?php echo base_url('Admin/permintaan_selesai'); ?>">
-                    <i class="fas fa-check-double"></i> Selesai
-                </a>
-            </div>
-        </div>
+    <div class="collapse-inner rounded">
+        <h6 class="collapse-header">Custom Utilities:</h6>
+        <a class="collapse-item" href="<?= base_url('Admin/peminjaman?status=all'); ?>">
+            <i class="fas fa-arrow-right-arrow-left"></i> Semua Peminjaman
+        </a>
+        <a class="collapse-item" href="<?= base_url('Admin/peminjaman?status=diproses'); ?>">
+            <i class="fas fa-spinner"></i> Diproses
+        </a>
+        <a class="collapse-item" href="<?= base_url('Admin/peminjaman?status=selesai'); ?>">
+            <i class="fas fa-check-double"></i> Selesai
+        </a>
+        <a class="collapse-item" href="<?= base_url('Admin/peminjaman?status=rejected'); ?>">
+            <i class="fas fa-ban"></i> Ditolak
+        </a>
+    </div>
+</div>
+
     </li>
     <hr class="sidebar-divider">
     <div class="text-center d-none d-md-inline">

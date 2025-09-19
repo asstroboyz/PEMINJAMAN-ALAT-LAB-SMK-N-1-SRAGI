@@ -312,8 +312,7 @@ class Admin extends BaseController
         $data['title'] = 'Master Barang';
 
         $data['master_brg'] = $this->masterBarangModel
-            ->select('master_barang.*, merk_barang.nama_merk')
-            ->join('merk_barang', 'merk_barang.id = master_barang.merk_id', 'left')
+            ->select('master_barang.*')
             ->orderBy('jenis_brg', 'ASC')
             ->findAll();
 
@@ -338,8 +337,6 @@ class Admin extends BaseController
             'validation'      => $this->validation,
             'satuan'          => $this->satuanModel->findAll(),
             'kategori_barang' => $this->KategoriBarangModel->findAll(),
-            'merk_barang'     => $this->MerkBarangModel->findAll(),
-            // Kalau advance, bisa kasih data merk per kategori via AJAX (lihat sebelumnya)
         ];
         return view('Admin/Master_barang/Tambah_barang', $data);
     }
@@ -437,10 +434,6 @@ class Admin extends BaseController
                 'rules'  => 'required|is_not_unique[kategori_barang.id]',
                 'errors' => ['required' => 'Kategori harus diisi'],
             ],
-            'merk_id'     => [
-                'rules'  => 'required|is_not_unique[merk_barang.id]',
-                'errors' => ['required' => 'Merk harus diisi'],
-            ],
             'jenis_brg'   => [
                 'rules'  => 'required|in_list[hrd,sfw,tools]',
                 'errors' => ['required' => 'Jenis Barang harus diisi'],
@@ -465,7 +458,7 @@ class Admin extends BaseController
         $nama_barang = $this->request->getPost('nama_barang');
         $tipe_serie  = $this->request->getPost('tipe_serie');
         $kategori_id = $this->request->getPost('kategori_id');
-        $merk_id     = $this->request->getPost('merk_id');
+        $merk_id     = $this->request->getPost('merk');
         $jenis_brg   = $this->request->getPost('jenis_brg');
         $spesifikasi = $this->request->getPost('spesifikasi');
         $id_satuan   = (int) $this->request->getPost('id_satuan');
@@ -488,7 +481,7 @@ class Admin extends BaseController
             'nama_brg'    => $nama_barang,
             'tipe_serie'  => $tipe_serie,
             'kategori_id' => $kategori_id,
-            'merk_id'     => $merk_id,
+            'merk'        => $merk_id,
             'jenis_brg'   => $jenis_brg,
             'spesifikasi' => $spesifikasi,
             'id_satuan'   => $id_satuan,
@@ -653,52 +646,49 @@ class Admin extends BaseController
 // // dd($data);
 //         return view('Admin/Inventaris/Index', $data);
 //     }
-public function adm_inventaris()
-{
-    // Group rekap: stok per barang per ruangan (fix group by!)
-    $rekap = $this->InventarisModel
-        ->select('
-            ruangan.nama_ruangan, 
-            master_barang.nama_brg, 
-            merk_barang.nama_merk, 
-            master_barang.jenis_brg, 
-            COUNT(inventaris.kode_barang) as stok
+    public function adm_inventaris()
+    {
+        // 1. Ambil data flat: per kode_barang + ruangan, stok langsung dari field
+        $rekap = $this->InventarisModel
+            ->select('
+            master_barang.kode_brg,
+            master_barang.nama_brg,
+            master_barang.merk,
+            master_barang.tipe_serie,
+            master_barang.jenis_brg,
+            ruangan.nama_ruangan,
+            inventaris.stok
         ')
-        ->join('master_barang', 'master_barang.kode_brg = inventaris.id_master_barang')
-        ->join('merk_barang', 'merk_barang.id = master_barang.merk_id', 'left')
-        ->join('ruangan', 'ruangan.id = inventaris.ruangan_id', 'left')
-        ->where('master_barang.is_active', 1)
-        ->groupBy('
-            ruangan.nama_ruangan, 
-            master_barang.nama_brg, 
-            merk_barang.nama_merk, 
-            master_barang.jenis_brg
-        ')
-        ->orderBy('ruangan.nama_ruangan, master_barang.nama_brg')
-        ->findAll();
+            ->join('master_barang', 'master_barang.kode_brg = inventaris.id_master_barang')
+            ->join('ruangan', 'ruangan.id = inventaris.ruangan_id', 'left')
+            ->where('master_barang.is_active', 1)
+            ->orderBy('master_barang.kode_brg, ruangan.nama_ruangan')
+            ->findAll();
 
-    // Detail: semua row per SN/unit
-    $inventaris = $this->InventarisModel
-        ->select('
-            inventaris.*, 
-            master_barang.nama_brg, 
-            master_barang.tipe_serie, 
-            merk_barang.nama_merk, 
-            master_barang.jenis_brg, 
-            ruangan.nama_ruangan
-        ')
-        ->join('master_barang', 'master_barang.kode_brg = inventaris.id_master_barang')
-        ->join('merk_barang', 'merk_barang.id = master_barang.merk_id', 'left')
-        ->join('ruangan', 'ruangan.id = inventaris.ruangan_id', 'left')
-        ->where('master_barang.is_active', 1)
-        ->findAll();
+        // 2. Grouping by kode_barang (biar di view tampil sekali, lalu detail ruangan di bawahnya)
+        $grouped = [];
+        foreach ($rekap as $row) {
+            $kode_barang = $row['kode_brg'];
+            if (! isset($grouped[$kode_barang])) {
+                $grouped[$kode_barang] = [
+                    'nama_brg'   => $row['nama_brg'],
+                    'merk'       => $row['merk'],
+                    'tipe_serie' => $row['tipe_serie'] ?? '-',
+                    'jenis_brg'  => $row['jenis_brg'],
+                    'detail'     => [],
+                ];
+            }
+            $grouped[$kode_barang]['detail'][] = [
+                'ruangan' => $row['nama_ruangan'],
+                'stok'    => $row['stok'],
+            ];
+        }
 
-    $data['rekap']      = $rekap;
-    $data['inventaris'] = $inventaris;
-    $data['title']      = 'Rekap Inventaris';
+        $data['grouped_rekap'] = $grouped;
+        $data['title']         = 'Rekap Inventaris';
 
-    return view('Admin/Inventaris/Index', $data);
-}
+        return view('Admin/Inventaris/Index', $data);
+    }
 
     public function tambah_inv()
     {
@@ -708,7 +698,7 @@ public function adm_inventaris()
             'satuan'          => $this->satuanModel->findAll(),
             'master_barang'   => $this->masterBarangModel->getMasterBarang(),
             // 'merk_barang'   => $this->MerkBarangModel->findAll(),
-            'daftarRuangan' => $this->RuanganModel->findAll(),
+            'daftarRuangan'   => $this->RuanganModel->findAll(),
             'kategori_barang' => $this->KategoriBarangModel->findAll(),
 
         ];
@@ -773,79 +763,42 @@ public function adm_inventaris()
         $data             = $this->request->getPost();
         $user_id          = session()->get('user_id');
         $id_master_barang = $data['nama_barang'];
-        $id_satuan        = $data['id_satuan'];
         $spesifikasi      = $data['spesifikasi'] ?? '';
+        $id_satuan        = $data['id_satuan']; // ambil dari master_barang jika perlu
 
-        $lokasi_list  = $data['lokasi'];
-        $kondisi_list = $data['kondisi'];
-        $jumlah_list  = $data['jumlah'];
-
-        $kode_prefix = $id_master_barang;
-        $tgl         = date('Ymd');
-        $sn_counter  = 1;
+        $lokasi_list  = $data['lokasi'];  // array ruangan_id (bisa banyak row)
+        $kondisi_list = $data['kondisi']; // array kondisi
+        $jumlah_list  = $data['jumlah'];  // array jumlah
 
         try {
-         for ($i = 0; $i < count($lokasi_list); $i++) {
-    $jumlah = max(1, (int) ($jumlah_list[$i] ?? 1));
+            for ($i = 0; $i < count($lokasi_list); $i++) {
+                // Insert satu kali per kombinasi barang + lokasi + kondisi
+                $this->InventarisModel->insert([
+                    'id_master_barang' => $id_master_barang,
+                    'spesifikasi'      => $spesifikasi,
+                    'ruangan_id'       => $lokasi_list[$i],
+                    'kondisi'          => $kondisi_list[$i],
+                    'stok'             => $jumlah_list[$i],
+                    'status'           => 'tersedia',
+                    'created_at'       => date('Y-m-d H:i:s'),
+                    'updated_at'       => date('Y-m-d H:i:s'),
+                ]);
 
-    // Cari SN terakhir dari kode_prefix + tanggal
-    $prefix = "{$kode_prefix}-{$tgl}-";
-    $lastSN = $this->InventarisModel
-        ->like('kode_barang', $prefix, 'after')
-        ->select('kode_barang')
-        ->orderBy('kode_barang', 'DESC')
-        ->first();
-
-    if ($lastSN && preg_match('/(\d{3})$/', $lastSN['kode_barang'], $matches)) {
-        $sn_counter = (int)$matches[1] + 1; // Lanjut dari yang terakhir
-    } else {
-        $sn_counter = 1; // Kalau belum ada, mulai dari 1
-    }
-
-    for ($j = 1; $j <= $jumlah; $j++) {
-        $kode_barang = "{$kode_prefix}-{$tgl}-" . str_pad($sn_counter++, 3, '0', STR_PAD_LEFT);
-
-        $qr_data = [
-            'kode_barang'      => $kode_barang,
-            'id_master_barang' => $id_master_barang,
-            'kondisi'          => $kondisi_list[$i] ?? 'baik',
-            'spesifikasi'      => $spesifikasi,
-            'id_satuan'        => $id_satuan,
-        ];
-        $qrcode_result = $this->generate_qrcode($qr_data);
-
-        $ruangan_id = ($lokasi_list[$i] ?? '') !== '' ? (int) $lokasi_list[$i] : null;
-
-        $this->InventarisModel->insert([
-            'kode_barang'      => $kode_barang,
-            'id_master_barang' => $id_master_barang,
-            'kondisi'          => $kondisi_list[$i] ?? 'baik',
-            'spesifikasi'      => $spesifikasi,
-            'ruangan_id'       => $ruangan_id,
-            'id_satuan'        => $id_satuan,
-            'qrcode'           => $qrcode_result['unique_barcode'] ?? null,
-            'file'             => $qrcode_result['file'] ?? null,
-            'created_at'       => date('Y-m-d H:i:s'),
-            'updated_at'       => date('Y-m-d H:i:s'),
-        ]);
-        $this->TransaksiBarangModel->insert([
-            'kode_barang'          => $kode_barang,
-            'id_master_barang'     => $id_master_barang,
-            'jumlah_perubahan'     => 1,
-            'jenis_transaksi'      => 'masuk',
-            'informasi_tambahan'   => 'Inventaris baru ditambahkan',
-            'tanggal_barang_masuk' => date('Y-m-d H:i:s'),
-            'user_id'              => $user_id,
-        ]);
-    }
-}
-
+                // Opsional: insert ke histori transaksi (bisa diaktifkan jika perlu)
+                $this->TransaksiBarangModel->insert([
+                    'id_master_barang'   => $id_master_barang,
+                    'jumlah_perubahan'   => $jumlah_list[$i],
+                    'jenis_transaksi'    => 'masuk',
+                    'informasi_tambahan' => "Tambah {$jumlah_list[$i]} unit, kondisi: {$kondisi_list[$i]}, lokasi: {$lokasi_list[$i]}",
+                    'tanggal_transaksi' => date('Y-m-d H:i:s'),
+                    'user_id'           => $user_id,
+                ]);
+            }
 
             session()->setFlashdata('PesanBerhasil', 'Penambahan Data Inventaris Berhasil!');
             return redirect()->to('/Admin/adm_inventaris');
         } catch (\Exception $e) {
-            dd($e->getMessage());
-            session()->setFlashdata('PesanGagal', 'Penambahan Data Inventaris Gagal. Silakan coba lagi.');
+            session()->setFlashdata('PesanGagal', 'Penambahan Data Inventaris Gagal: ' . $e->getMessage());
             return redirect()->to('/Admin/adm_inventaris');
         }
     }
@@ -2656,4 +2609,115 @@ public function adm_inventaris()
 
         return redirect()->to('/Admin/KategoriMerk')->with('PesanBerhasil', 'Relasi berhasil dihapus.');
     }
+
+    // peminjaman
+    public function peminjaman_masuk()
+    {
+        $peminjaman = $this->PeminjamanDetailModel->getPeminjamanMasuk();
+        $data       = [
+            'peminjaman' => $peminjaman,
+            'title'      => 'Daftar Peminjaman Masuk',
+        ];
+        return view('Admin/Peminjaman/Index', $data);
+    }
+
+    public function peminjaman_proses()
+    {
+        $peminjaman = $this->PeminjamanDetailModel->getPeminjamanProses();
+        $data       = [
+            'peminjaman' => $peminjaman,
+            'title'      => 'Daftar Peminjaman Diproses',
+        ];
+        return view('Admin/Peminjaman/Index', $data);
+    }
+
+    public function peminjaman_selesai()
+    {
+        $peminjaman = $this->PeminjamanDetailModel->getPeminjamanSelesai();
+        $data       = [
+            'peminjaman' => $peminjaman,
+            'title'      => 'Daftar Peminjaman Selesai',
+        ];
+        return view('Admin/Peminjaman/Index', $data);
+    }
+
+    public function prosesPeminjaman($id)
+    {
+        $this->PeminjamanDetailModel->update($id, [
+            'tanggal_diproses' => date("Y-m-d H:i:s"),
+            'status'           => 'diproses',
+        ]);
+        session()->setFlashdata('msg', 'Status peminjaman berhasil diubah menjadi Diproses');
+        return redirect()->to('Admin/detailpinjam/' . $id);
+    }
+
+    public function terimaPeminjaman($id)
+    {
+        $this->PeminjamanDetailModel->update($id, [
+            'tanggal_selesai' => date("Y-m-d H:i:s"),
+            'status'          => 'selesai',
+            'status_akhir'    => 'diterima',
+        ]);
+        session()->setFlashdata('msg', 'Status peminjaman berhasil Diubah menjadi Selesai/Diterima');
+        return redirect()->to('Admin/detailpinjam/' . $id);
+    }
+
+    // public function tolakPeminjaman($id)
+    // {
+    //     $rules = [
+    //         'kategori'         => [
+    //             'rules'  => 'required',
+    //             'errors' => [
+    //                 'required' => 'Kategori wajib diisi.',
+    //             ],
+    //         ],
+    //         'alasan_penolakan' => [
+    //             'rules'  => 'required',
+    //             'errors' => [
+    //                 'required' => 'Alasan penolakan wajib diisi.',
+    //             ],
+    //         ],
+    //     ];
+
+    //     if (! $this->validate($rules)) {
+    //         $validation = \Config\Services::validation();
+    //         return redirect()->to('/Admin/detailpinjam/' . $id)->withInput('validation', $validation);
+    //     }
+    //     $this->PeminjamanDetailModel->update($id, [
+    //         'tanggal_selesai' => date("Y-m-d H:i:s"),
+    //         'status'          => 'selesai',
+    //         'status_akhir'    => 'ditolak',
+    //     ]);
+    //     $data = [
+    //         'id_peminjaman_detail' => $id,
+    //         'kategori'             => $this->request->getPost('kategori'),
+    //         'alasan_penolakan'     => $this->request->getPost('alasan_penolakan'),
+    //     ];
+    //     $this->BalasanPeminjamanModel->save($data);
+    //     session()->setFlashdata('msg', 'Status peminjaman berhasil Diubah');
+    //     return redirect()->to('Admin/detailpinjam/' . $id);
+    // }
+
+    public function detailpinjam($id)
+    {
+        $barangList = $this->BarangModel->findAll();
+        $data       = $this->PeminjamanDetailModel->getDetailPeminjaman($id);
+
+        $balasan = $this->db->table('balasan_peminjaman')
+            ->select('*')
+            ->where('id_peminjaman_detail', $id)
+            ->get()
+            ->getRow();
+
+        $ex = [
+            'detail'     => $data,
+            'title'      => 'Detail Peminjaman',
+            'balasan'    => $balasan,
+            'barangList' => $barangList,
+            'validation' => \Config\Services::validation(),
+        ];
+
+        return view('Admin/Peminjaman/Detail_peminjaman', $ex);
+    }
+
 }
