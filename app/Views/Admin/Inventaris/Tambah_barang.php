@@ -1,243 +1,128 @@
-<?php echo $this->extend('Admin/Templates/Index') ?>
-
-<?php echo $this->section('page-content'); ?>
-<!-- Begin Page Content -->
+<?= $this->extend('Admin/Templates/Index') ?>
+<?= $this->section('page-content'); ?>
 <div class="container-fluid">
-
-    <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-900">Form Tambah Barang</h1>
-
+    <h1 class="h3 mb-4 text-gray-900">Form Tambah Inventaris</h1>
     <?php if (session()->getFlashdata('msg')): ?>
-        <div class="row">
-            <div class="col-12">
-                <div class="alert alert-success" role="alert">
-                    <?php echo session()->getFlashdata('msg'); ?>
-                </div>
-            </div>
-        </div>
+        <div class="alert alert-success"><?= session()->getFlashdata('msg') ?></div>
     <?php endif; ?>
-
-    <div class="row">
-        <div class="col-12">
-
-            <div class="card shadow">
-                <div class="card-header">
-                    <a href="/Admin/adm_inventaris">&laquo; Kembali ke daftar barang inventaris</a>
+    <div class="card shadow">
+        <div class="card-header">
+            <a href="/Admin/adm_inventaris">&laquo; Kembali ke daftar barang inventaris</a>
+        </div>
+        <div class="card-body">
+            <form action="<?= base_url('/Admin/add_data') ?>" method="post">
+                <?= csrf_field(); ?>
+                <!-- Nama Barang (ambil dari master) -->
+                <div class="form-group">
+                    <label for="nama_barang">Nama Barang</label>
+                    <select name="nama_barang" class="form-control <?= $validation->hasError('nama_barang') ? 'is-invalid' : '' ?>">
+                        <option value="">Pilih Nama Barang</option>
+                        <?php foreach ($master_barang as $b): ?>
+                            <option value="<?= $b['kode_brg'] ?>" <?= old('nama_barang') == $b['kode_brg'] ? 'selected' : '' ?>>
+                                <?= $b['nama_brg'] ?> (<?= $b['kode_brg'] ?>)
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
+                    <div class="invalid-feedback"><?= $validation->getError('nama_barang') ?></div>
                 </div>
-                <div class="card-body">
-                    <form action="<?php echo base_url('/Admin/add_data') ?>" method="post" enctype="multipart/form-data">
-                        <?php echo csrf_field(); ?>
-                        <!-- Kategori Dropdown -->
-                        <div class="form-group">
-                            <label for="kategori_id">Kategori</label>
-                            <select name="kategori_id" id="kategori_id"
-                                class="form-control                                                                                                                                                                                                                                                                                                                                              <?php echo($validation->hasError('kategori_id')) ? 'is-invalid' : ''; ?>">
-                                <option value="">-- Pilih Kategori --</option>
-                                <?php foreach ($kategori_barang as $k): ?>
-                                    <option value="<?php echo $k['id'] ?>"<?php echo old('kategori_id') == $k['id'] ? 'selected' : '' ?>>
-                                        <?php echo $k['nama_kategori'] ?>
-                                    </option>
-                                <?php endforeach; ?>
-                            </select>
-                            <div class="invalid-feedback"><?php echo $validation->getError('kategori_id'); ?></div>
-                        </div>
-
-                        <!-- Nama Barang (filtered by kategori) -->
-                        <div class="form-group">
-                            <label for="nama_barang">Nama Barang</label>
-                            <select name="nama_barang" id="nama_barang"
-                                class="form-control                                                                                                                                                                                                                                                                                                                                              <?php echo($validation->hasError('nama_barang')) ? 'is-invalid' : ''; ?>">
-                                <option value="">Pilih Nama Barang</option>
-                                <!-- Akan diisi JS -->
-                            </select>
-                            <div class="invalid-feedback"><?php echo $validation->getError('nama_barang'); ?></div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="id_satuan">Satuan Barang</label>
-                            <select name="id_satuan" class="form-control                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <?php echo($validation->hasError('id_satuan')) ? 'is-invalid' : ''; ?>">
-                                <option value="">Pilih Satuan Barang</option>
-                                <?php foreach ($satuan as $s): ?>
-                                    <option value="<?php echo $s['satuan_id']; ?>"><?php echo $s['nama_satuan']; ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                            <div class="invalid-feedback"><?php echo $validation->getError('id_satuan'); ?></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="spesifikasi">Spesifikasi Barang</label>
-                            <textarea name="spesifikasi" class="form-control                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <?php echo($validation->hasError('spesifikasi')) ? 'is-invalid' : ''; ?>"
-                                placeholder="Masukkan spesifikasi Barang"><?php echo old('spesifikasi'); ?></textarea>
-                            <div class="invalid-feedback"><?php echo $validation->getError('spesifikasi'); ?></div>
-                        </div>
-
-                        <!-- TABEL INPUT DYNAMIC ROW: LOKASI, KONDISI, JUMLAH -->
-                        <div class="form-group">
-                            <label>Daftar Unit (Lokasi, Kondisi, Jumlah per Ruang)</label>
-                            <button type="button" id="addRowBtn" class="btn btn-success btn-sm">+ Tambah Unit/Row</button>
-                            <table class="table table-bordered" id="snLokasiTable">
-                                <thead>
-                                    <tr>
-                                        <th>Lokasi</th>
-                                        <th>Kondisi</th>
-                                        <th>Jumlah</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <select name="lokasi[]" class="form-control">
-        <option value="">Pilih Ruanganaa</option>
-        <?php foreach ($daftarRuangan as $r): ?>
-            <option value="<?php echo $r['id']; ?>"><?php echo $r['nama_ruangan']; ?></option>
-        <?php endforeach; ?>
-    </select>
-                                        </td>
-            <form id="form-barang" action="<?= base_url('admin/peminjaman/tambahPeminjaman') ?>" method="post">
-    <!-- Input user, tanggal, ruangan, catatan (jangan lupa tambahin sendiri) -->
-    <!-- Pilih Barang -->
-    <div class="mb-3">
-        <label for="select-barang" class="form-label">Pilih Barang</label>
-        <select id="select-barang" class="form-select">
-            <option value="">-- Pilih Barang --</option>
-            <?php foreach ($barangs as $b): ?>
-                <option
-                    value="<?= esc($b['kode_brg']) ?>"
-                    data-nama="<?= esc($b['nama_brg']) ?>"
-                    data-merk="<?= esc($b['merk']) ?>"
-                    data-kondisi="<?= esc($b['kondisi']) ?>"
-                    data-lokasi="<?= esc($b['ruangan_id']) ?>"
-                    data-nama-ruangan="<?= esc($mapRuangan[$b['ruangan_id']] ?? '') ?>">
-                    <?= esc($b['kode_brg']) ?> - <?= esc($b['nama_brg']) ?> (<?= esc($b['merk']) ?>), <?= esc($b['kondisi']) ?>, Ruangan: <?= esc($mapRuangan[$b['ruangan_id']] ?? $b['ruangan_id']) ?>
-                </option>
-
-            <?php endforeach ?>
-        </select>
-        <button type="button" class="btn btn-primary mt-2" id="tambah_barang">Tambah Barang</button>
-    </div>
-
-    <div class="table-responsive">
-        <table class="table table-bordered" id="table-barang">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Kode</th>
-                    <th>Nama</th>
-                    <th>Merk</th>
-                    <th>Kondisi</th>
-                    <th>Ruangan</th>
-                    <th>Aksi</th>
-                </tr>
-            </thead>
-            <tbody id="list-barang">
-                <tr class="text-center" id="belum_barang">
-                    <td colspan="7">Belum ada barang dipilih</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div id="input-barang-hidden"></div>
-    <button class="btn btn-success mt-3" type="submit">Simpan</button>
-</form>                            <td>
-                                            <select name="kondisi[]" class="form-control">
-                                                <option value="baru">Baru</option>
-                                                <option value="bekas">Bekas</option>
-                                                <option value="rusak">Rusak</option>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <input type="number" name="jumlah[]" class="form-control" min="1" value="1" style="width:80px;" />
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-danger btn-sm remove-row">-</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                        </div>
-                        <!-- TOMBOL SIMPAN ADA DI SINI! -->
-                        <button type="submit" class="btn btn-block btn-primary mt-4">Tambah Data</button>
-                    </form>
+                <!-- Satuan -->
+                <div class="form-group">
+                    <label for="id_satuan">Satuan</label>
+                    <select name="id_satuan" class="form-control <?= $validation->hasError('id_satuan') ? 'is-invalid' : '' ?>">
+                        <option value="">Pilih Satuan</option>
+                        <?php foreach ($satuan as $s): ?>
+                            <option value="<?= $s['satuan_id'] ?>" <?= old('id_satuan') == $s['satuan_id'] ? 'selected' : '' ?>>
+                                <?= $s['nama_satuan'] ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
+                    <div class="invalid-feedback"><?= $validation->getError('id_satuan') ?></div>
                 </div>
-            </div>
+                <!-- Spesifikasi -->
+                <div class="form-group">
+                    <label for="spesifikasi">Spesifikasi</label>
+                    <input type="text" name="spesifikasi" class="form-control <?= $validation->hasError('spesifikasi') ? 'is-invalid' : '' ?>" value="<?= old('spesifikasi') ?>" />
+                    <div class="invalid-feedback"><?= $validation->getError('spesifikasi') ?></div>
+                </div>
 
+                <!-- Dynamic Row: lokasi, kondisi, jumlah -->
+                <div class="form-group">
+                    <label>Unit Inventaris (lokasi, kondisi, jumlah)</label>
+                    <button type="button" id="addRowBtn" class="btn btn-success btn-sm ml-2">+ Tambah Row</button>
+                    <table class="table table-bordered" id="snLokasiTable">
+                        <thead>
+                            <tr>
+                                <th>Lokasi</th>
+                                <th>Kondisi</th>
+                                <th>Jumlah</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <select name="lokasi[]" class="form-control">
+                                        <option value="">Pilih Ruangan</option>
+                                        <?php foreach ($daftarRuangan as $r): ?>
+                                            <option value="<?= $r['id'] ?>"><?= $r['nama_ruangan'] ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="kondisi[]" class="form-control">
+                                        <option value="baru">Baru</option>
+                                        <option value="bekas">Bekas</option>
+                                        <option value="rusak">Rusak</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="number" name="jumlah[]" class="form-control" min="1" value="1" style="width:80px;" />
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-danger btn-sm remove-row">-</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <button type="submit" class="btn btn-block btn-primary mt-4">Tambah Data</button>
+            </form>
         </div>
     </div>
-
 </div>
-
-<?php echo $this->endSection(); ?>
-<?php echo $this->section('additional-js'); ?>
-    <script>
-        $(document).ready(function() {
-            $("#addRowBtn").click(function() {
-                var row = `<tr>
-                    <td>
-                    <select name="lokasi[]" class="form-control">
-        <option value="">Pilih Ruanganaa</option>
-        <?php foreach ($daftarRuangan as $r): ?>
-            <option value="<?php echo $r['id']; ?>"><?php echo $r['nama_ruangan']; ?></option>
-        <?php endforeach; ?>
-    </select>
-
-                    </td>
-                    <td>
-                        <select name="kondisi[]" class="form-control">
-                            <option value="baru">Baru</option>
-                            <option value="bekas">Bekas</option>
-                            <option value="rusak">Rusak</option>
-                        </select>
-                    </td>
-                    <td>
-                        <input type="number" name="jumlah[]" class="form-control" min="1" value="1" style="width:80px;" />
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-danger btn-sm remove-row">-</button>
-                    </td>
-                </tr>`;
-                $("#snLokasiTable tbody").append(row);
-            });
-            $(document).on('click', '.remove-row', function() {
-                $(this).closest('tr').remove();
-            });
-        });
-    </script>
-    <script>
-        // Inject data dari PHP ke JS
-        var masterBarang =                                                                                                                   <?php echo json_encode($master_barang); ?>;
-        // masterBarang: [{kode_brg, nama_brg, kategori_id, nama_merk, tipe_serie, spesifikasi, jenis_brg, ...}, ...]
-
-        function updateBarangDropdown(kategoriId) {
-            let $dropdown = $('#nama_barang');
-            $dropdown.html('<option value="">Pilih Nama Barang</option>');
-            if (!kategoriId) return;
-
-            // Filter barang sesuai kategori
-            let filtered = masterBarang.filter(b => b.kategori_id == kategoriId);
-
-            filtered.forEach(b => {
-                let label = b.nama_brg;
-                if (b.nama_merk) label += ' - ' + b.nama_merk;
-                if (b.tipe_serie) label += ' / ' + b.tipe_serie;
-                if (b.spesifikasi) label += ' — ' + b.spesifikasi;
-                label += ' (' + (b.jenis_brg ? b.jenis_brg.toUpperCase() : '-') + ')';
-                $dropdown.append(`<option value="${b.kode_brg}">${label}</option>`);
-            });
-        }
-
-        $(document).ready(function() {
-            $('#kategori_id').on('change', function() {
-                updateBarangDropdown($(this).val());
-            });
-
-            // Restore on reload/validation fail
-            <?php if (old('kategori_id')): ?>
-                updateBarangDropdown('<?php echo old('kategori_id') ?>');
-                <?php if (old('nama_barang')): ?>
-                    $('#nama_barang').val('<?php echo old('nama_barang') ?>');
-                <?php endif; ?>
-            <?php endif; ?>
-        });
-    </script>
-    <?php echo $this->endSection(); ?>
+<?= $this->endSection(); ?>
+<?= $this->section('additional-js'); ?>
+<script>
+$(document).ready(function() {
+    $("#addRowBtn").click(function() {
+        var row = `<tr>
+            <td>
+                <select name="lokasi[]" class="form-control">
+                    <option value="">Pilih Ruangan</option>
+                    <?php foreach ($daftarRuangan as $r): ?>
+                        <option value="<?= $r['id'] ?>"><?= $r['nama_ruangan'] ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </td>
+            <td>
+                <select name="kondisi[]" class="form-control">
+                    <option value="baru">Baru</option>
+                    <option value="bekas">Bekas</option>
+                    <option value="rusak">Rusak</option>
+                </select>
+            </td>
+            <td>
+                <input type="number" name="jumlah[]" class="form-control" min="1" value="1" style="width:80px;" />
+            </td>
+            <td>
+                <button type="button" class="btn btn-danger btn-sm remove-row">-</button>
+            </td>
+        </tr>`;
+        $("#snLokasiTable tbody").append(row);
+    });
+    $(document).on('click', '.remove-row', function() {
+        $(this).closest('tr').remove();
+    });
+});
+</script>
+<?= $this->endSection(); ?>

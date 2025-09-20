@@ -19,7 +19,9 @@ class PeminjamanHeaderModel extends Model
         'ruangan_id_pinjam', // FK ke ruangan (tujuan)
         'ruangan_id_sebelum',// FK ke ruangan (sebelum dipinjam)
         'status',            // pending, dipinjam, kembali, ditolak
-        'catatan'
+        'catatan',
+        'approved_at',
+        'tgl_proses',
     ];
 
     public function withUser($id)

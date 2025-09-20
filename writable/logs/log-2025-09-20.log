@@ -462,3 +462,247 @@ CRITICAL - 2025-09-20 20:04:55 --> Undefined variable $barangs
 #8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
 #10 {main}
+CRITICAL - 2025-09-20 20:16:34 --> Undefined variable $barangs
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Inventaris\Tambah_barang.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'E:\\CODING-WORK\\...', 103)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Inventari...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(706): view('Admin/Inventari...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->tambah_inv()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-09-20 20:20:21 --> Undefined array key "kondisi"
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Inventaris\Tambah_barang.php(107): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\CODING-WORK\\...', 107)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Inventari...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(706): view('Admin/Inventari...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->tambah_inv()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-09-20 20:20:40 --> Undefined array key "ruangan_id"
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Inventaris\Tambah_barang.php(107): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\CODING-WORK\\...', 107)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Inventari...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(706): view('Admin/Inventari...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->tambah_inv()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-09-20 20:31:17 --> syntax error, unexpected token ";"
+#0 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Peminjama...', Array, true)
+#2 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(2501): view('Admin/Peminjama...', Array)
+#3 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->detailPeminjaman('1')
+#4 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#8 {main}
+CRITICAL - 2025-09-20 20:31:45 --> syntax error, unexpected token ";"
+#0 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Peminjama...', Array, true)
+#2 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(2501): view('Admin/Peminjama...', Array)
+#3 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->detailPeminjaman('1')
+#4 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#8 {main}
+CRITICAL - 2025-09-20 20:36:55 --> syntax error, unexpected token ";"
+#0 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Peminjama...', Array, true)
+#2 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(2501): view('Admin/Peminjama...', Array)
+#3 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->detailPeminjaman('1')
+#4 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#8 {main}
+CRITICAL - 2025-09-20 20:37:03 --> syntax error, unexpected token ";"
+#0 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Peminjama...', Array, true)
+#2 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(2501): view('Admin/Peminjama...', Array)
+#3 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->detailPeminjaman('1')
+#4 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#8 {main}
+CRITICAL - 2025-09-20 20:39:46 --> syntax error, unexpected token ";"
+#0 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Peminjama...', Array, true)
+#2 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(2501): view('Admin/Peminjama...', Array)
+#3 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->detailPeminjaman('1')
+#4 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#8 {main}
+ERROR - 2025-09-20 20:43:35 --> Unknown column 'id' in 'where clause'
+CRITICAL - 2025-09-20 20:43:35 --> Unknown column 'id' in 'where clause'
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `peminja...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `peminja...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `peminja...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `peminja...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(2390): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->reject('1')
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+ERROR - 2025-09-20 20:43:50 --> Unknown column 'approved_at' in 'field list'
+CRITICAL - 2025-09-20 20:43:50 --> Unknown column 'approved_at' in 'field list'
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `peminja...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `peminja...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `peminja...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `peminja...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(2390): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->reject('1')
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+ERROR - 2025-09-20 20:49:11 --> Unknown column 'approved_at' in 'field list'
+CRITICAL - 2025-09-20 20:49:11 --> Unknown column 'approved_at' in 'field list'
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `peminja...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `peminja...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `peminja...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `peminja...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(2409): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->reject('2')
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+ERROR - 2025-09-20 20:50:02 --> Unknown column 'approved_at' in 'field list'
+CRITICAL - 2025-09-20 20:50:02 --> Unknown column 'approved_at' in 'field list'
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `peminja...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `peminja...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `peminja...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `peminja...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(2409): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->reject('2')
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+ERROR - 2025-09-20 20:50:10 --> Unknown column 'approved_at' in 'field list'
+CRITICAL - 2025-09-20 20:50:10 --> Unknown column 'approved_at' in 'field list'
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `peminja...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `peminja...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `peminja...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `peminja...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(2409): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->reject('2')
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+ERROR - 2025-09-20 20:56:44 --> Unknown column 'id' in 'where clause'
+CRITICAL - 2025-09-20 20:56:44 --> Unknown column 'id' in 'where clause'
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `peminja...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `peminja...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `peminja...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `peminja...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(2383): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->approve('3')
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+ERROR - 2025-09-20 20:57:33 --> Unknown column 'approved_at' in 'field list'
+CRITICAL - 2025-09-20 20:57:33 --> Unknown column 'approved_at' in 'field list'
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `peminja...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `peminja...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `peminja...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `peminja...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(2383): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->approve('3')
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+ERROR - 2025-09-20 21:05:46 --> Unknown column 'peminjaman_header.tanggal_permintaan' in 'order clause'
+CRITICAL - 2025-09-20 21:05:46 --> Unknown column 'peminjaman_header.tanggal_permintaan' in 'order clause'
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `peminja...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `peminja...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `peminja...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `peminja...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\CODING-WORK\peminjaman_alat\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(2227): CodeIgniter\BaseModel->findAll()
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->peminjaman()
+#8 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#12 {main}
+ERROR - 2025-09-20 21:06:30 --> Unknown column 'peminjaman_header.tanggal_permintaan' in 'order clause'
+CRITICAL - 2025-09-20 21:06:30 --> Unknown column 'peminjaman_header.tanggal_permintaan' in 'order clause'
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `peminja...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `peminja...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `peminja...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `peminja...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\CODING-WORK\peminjaman_alat\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(2227): CodeIgniter\BaseModel->findAll()
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->peminjaman()
+#8 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#12 {main}
+ERROR - 2025-09-20 21:07:43 --> Unknown column 'tanggal_permintaan' in 'field list'
+CRITICAL - 2025-09-20 21:07:43 --> Unknown column 'tanggal_permintaan' in 'field list'
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pe...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(2295): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->savePeminjaman()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-09-20 21:08:20 --> Undefined array key "tanggal_permintaan"
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Peminjaman\Detail.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\CODING-WORK\\...', 74)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Peminjama...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(2524): view('Admin/Peminjama...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->detailPeminjaman('1')
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-09-20 21:09:36 --> Undefined array key "tanggal_permintaan"
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\Admin\Peminjaman\Detail.php(173): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'E:\\CODING-WORK\\...', 173)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Peminjama...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\Admin.php(2524): view('Admin/Peminjama...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\Admin->detailPeminjaman('1')
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
