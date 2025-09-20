@@ -39,7 +39,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <?=$this->include('Pegawai/Templates/Sidebar');?>
+        <?=$this->include('User/Templates/Sidebar');?>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -49,7 +49,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <?=$this->include('Pegawai/Templates/Topbar');?>
+                <?=$this->include('User/Templates/Topbar');?>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->

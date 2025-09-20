@@ -706,3 +706,163 @@ CRITICAL - 2025-09-20 21:09:36 --> Undefined array key "tanggal_permintaan"
 #8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
 #10 {main}
+ERROR - 2025-09-20 21:30:57 --> Table 'peminjaman-alat-tkj.pengaduan' doesn't exist
+CRITICAL - 2025-09-20 21:30:57 --> Table 'peminjaman-alat-tkj.pengaduan' doesn't exist
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\User.php(90): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\User->index()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+ERROR - 2025-09-20 21:33:21 --> Table 'peminjaman-alat-tkj.pengaduan' doesn't exist
+CRITICAL - 2025-09-20 21:33:21 --> Table 'peminjaman-alat-tkj.pengaduan' doesn't exist
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\User.php(90): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\User->index()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+ERROR - 2025-09-20 21:33:23 --> Table 'peminjaman-alat-tkj.pengaduan' doesn't exist
+CRITICAL - 2025-09-20 21:33:23 --> Table 'peminjaman-alat-tkj.pengaduan' doesn't exist
+#0 E:\CODING-WORK\peminjaman_alat\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\CODING-WORK\peminjaman_alat\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\CODING-WORK\peminjaman_alat\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\User.php(90): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\User->index()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-09-20 21:33:59 --> Invalid file: user/home.php
+#0 E:\CODING-WORK\peminjaman_alat\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/home.php')
+#1 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('user/home', Array, true)
+#2 E:\CODING-WORK\peminjaman_alat\app\Controllers\User.php(90): view('user/home', Array)
+#3 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\User->index()
+#4 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#8 {main}
+CRITICAL - 2025-09-20 21:34:39 --> Invalid file: User/Home/Index.php
+#0 E:\CODING-WORK\peminjaman_alat\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/Home/Index...')
+#1 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('User/Home/Index', Array, true)
+#2 E:\CODING-WORK\peminjaman_alat\app\Controllers\User.php(90): view('User/Home/Index', Array)
+#3 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\User->index()
+#4 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#8 {main}
+CRITICAL - 2025-09-20 21:35:00 --> Invalid file: User/Home.php
+#0 E:\CODING-WORK\peminjaman_alat\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/Home.php')
+#1 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('User/Home', Array, true)
+#2 E:\CODING-WORK\peminjaman_alat\app\Controllers\User.php(90): view('User/Home', Array)
+#3 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\User->index()
+#4 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#8 {main}
+CRITICAL - 2025-09-20 21:35:01 --> Invalid file: User/Home.php
+#0 E:\CODING-WORK\peminjaman_alat\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/Home.php')
+#1 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('User/Home', Array, true)
+#2 E:\CODING-WORK\peminjaman_alat\app\Controllers\User.php(90): view('User/Home', Array)
+#3 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\User->index()
+#4 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#8 {main}
+CRITICAL - 2025-09-20 21:35:21 --> Invalid file: User/Home/index.php
+#0 E:\CODING-WORK\peminjaman_alat\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/Home/index...')
+#1 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('User/Home/index', Array, true)
+#2 E:\CODING-WORK\peminjaman_alat\app\Controllers\User.php(90): view('User/Home/index', Array)
+#3 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\User->index()
+#4 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#8 {main}
+CRITICAL - 2025-09-20 21:37:27 --> Invalid file: User/Home/index.php
+#0 E:\CODING-WORK\peminjaman_alat\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/Home/index...')
+#1 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('User/Home/index', Array, true)
+#2 E:\CODING-WORK\peminjaman_alat\app\Controllers\User.php(90): view('User/Home/index', Array)
+#3 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\User->index()
+#4 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#8 {main}
+CRITICAL - 2025-09-20 21:37:47 --> Undefined variable $role
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\User\Profil\Index.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'E:\\CODING-WORK\\...', 46)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('User/Profil/ind...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\User.php(90): view('User/Profil/ind...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\User->index()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-09-20 21:38:48 --> Undefined variable $role
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\User\Profil\Index.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'E:\\CODING-WORK\\...', 46)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('User/Profil/ind...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\User.php(90): view('User/Profil/ind...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\User->index()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-09-20 21:38:50 --> Undefined variable $role
+#0 E:\CODING-WORK\peminjaman_alat\app\Views\User\Profil\Index.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'E:\\CODING-WORK\\...', 46)
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#2 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('User/Profil/ind...', Array, true)
+#4 E:\CODING-WORK\peminjaman_alat\app\Controllers\User.php(90): view('User/Profil/ind...', Array)
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\User->index()
+#6 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#10 {main}
+CRITICAL - 2025-09-20 21:39:05 --> Invalid file: Pegawai/Templates/Sidebar.php
+#0 E:\CODING-WORK\peminjaman_alat\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Pegawai/Templat...')
+#1 E:\CODING-WORK\peminjaman_alat\system\View\View.php(424): CodeIgniter\View\View->render('Pegawai/Templat...', NULL, true)
+#2 E:\CODING-WORK\peminjaman_alat\app\Views\User\Templates\Index.php(42): CodeIgniter\View\View->include('Pegawai/Templat...')
+#3 E:\CODING-WORK\peminjaman_alat\system\View\View.php(210): include('E:\\CODING-WORK\\...')
+#4 E:\CODING-WORK\peminjaman_alat\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 E:\CODING-WORK\peminjaman_alat\system\View\View.php(226): CodeIgniter\View\View->render('User/Templates/...', Array, true)
+#6 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('User/Home/index', Array, true)
+#7 E:\CODING-WORK\peminjaman_alat\app\Controllers\User.php(90): view('User/Home/index', Array)
+#8 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\User->index()
+#9 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#10 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#13 {main}
+CRITICAL - 2025-09-20 21:46:46 --> Invalid file: User/Peminjaman/Index.php
+#0 E:\CODING-WORK\peminjaman_alat\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('User/Peminjaman...')
+#1 E:\CODING-WORK\peminjaman_alat\system\Common.php(1089): CodeIgniter\View\View->render('User/Peminjaman...', Array, true)
+#2 E:\CODING-WORK\peminjaman_alat\app\Controllers\User.php(230): view('User/Peminjaman...', Array)
+#3 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(832): App\Controllers\User->peminjaman()
+#4 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 E:\CODING-WORK\peminjaman_alat\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\CODING-WORK\peminjaman_alat\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\CODING-WORK\peminjaman_alat\system\Commands\Server\rewrite.php(43): require_once('E:\\CODING-WORK\\...')
+#8 {main}
