@@ -31,22 +31,15 @@
                             <select id="select-barang" class="form-control form-control-user ">
                                 <option value="">-- Pilih Barang --</option>
                                 <?php foreach ($barangs as $b): ?>
-                                    <!-- <option
-                                        value="<?= esc($b['kode_brg']) ?>"
-                                        data-nama="<?= esc($b['nama_brg']) ?>"
-                                        data-merk="<?= esc($b['merk']) ?>"
-                                        data-kondisi="<?= esc($b['kondisi']) ?>"
-                                        data-lokasi="<?= esc($b['ruangan_id']) ?>"
-                                        data-nama-ruangan="<?= esc($mapRuangan[$b['ruangan_id']] ?? '') ?>">
-                                        <?= esc($b['kode_brg']) ?> - <?= esc($b['nama_brg']) ?> (<?= esc($b['merk']) ?>), <?= esc($b['kondisi']) ?>, Ruangan: <?= esc($mapRuangan[$b['ruangan_id']] ?? $b['ruangan_id']) ?>
-                                    </option> -->
                                     <option value="<?= $b['id'] ?>"
                                         data-kode-brg="<?= $b['kode_brg'] ?>"
                                         data-nama="<?= $b['nama_brg'] ?>"
                                         data-merk="<?= $b['merk'] ?>"
                                         data-kondisi="<?= $b['kondisi'] ?>"
                                         data-nama-ruangan="<?= $mapRuangan[$b['ruangan_id']] ?? '' ?>"
-                                        data-ruangan-id="<?= $b['ruangan_id'] ?>">
+                                        data-nama-ruangan="<?= $mapRuangan[$b['ruangan_id']] ?? '' ?>"
+                                        data-ruangan-id="<?= $b['ruangan_id'] ?>"
+                                        data-stok="<?= $b['stok'] ?>">
                                         <?= $b['nama_brg'] ?> - <?= $b['merk'] ?> (<?= $b['kondisi'] ?>) - <?= $mapRuangan[$b['ruangan_id']] ?? '' ?>
                                     </option>
 
@@ -66,6 +59,7 @@
                                         <th>Merk</th>
                                         <th>Kondisi</th>
                                         <th>Ruangan</th>
+                                        <th>Jumlah</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -93,6 +87,9 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <link href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css" rel="stylesheet" />
 <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bootstrap-4@5/bootstrap-4.min.css" rel="stylesheet">
+
 <script>
     let dataBarangDipilih = [];
 
@@ -115,6 +112,7 @@
                 <td>${item.merk}</td>
                 <td>${item.kondisi}</td>
                 <td>${item.namaRuangan}</td>
+                 <td>${item.jumlah}</td>
                <td>
     <button type="button" 
         class="btn btn-danger btn-sm hapus-barang" 
@@ -129,40 +127,42 @@
             $('#input-barang-hidden').append(`
     <input type="hidden" name="barang[${idx}][kode]" value="${item.kode}">
     <input type="hidden" name="barang[${idx}][ruangan_id]" value="${item.ruanganId}">
+     <input type="hidden" name="barang[${idx}][jumlah]" value="${item.jumlah}"> 
 `);
 
         });
     }
+
     // $('#tambah_barang').on('click', function() {
     //     let select = $('#select-barang');
     //     let val = select.val();
     //     let option = select[0].options[select[0].selectedIndex];
-    //     console.log('VAL:', val);
-    //     console.log('OPTION:', option);
-    //     console.log('data-nama:', option.getAttribute('data-nama'));
-    //     console.log('data-merk:', option.getAttribute('data-merk'));
-    //     console.log('data-kondisi:', option.getAttribute('data-kondisi'));
-    //     console.log('data-lokasi:', option.getAttribute('data-lokasi'));
-    //     console.log('data-nama-ruangan:', option.getAttribute('data-nama-ruangan'));
     //     if (!val) {
     //         alert('Pilih barang!');
     //         return;
     //     }
-    //     if (dataBarangDipilih.some(item => item.kode === val)) {
-    //         alert('Barang sudah ada!');
+    //     // Pengecekan duplicate: kode + namaRuangan
+    //     if (dataBarangDipilih.some(item => item.kode === val && item.namaRuangan === option.getAttribute('data-nama-ruangan'))) {
+    //         alert('Barang sudah ada di ruangan ini!');
+    //         return;
+    //     }
+    //     let jumlah = prompt('Masukkan jumlah yang akan dipinjam:', 1);
+    //     jumlah = parseInt(jumlah);
+    //     if (isNaN(jumlah) || jumlah < 1) {
+    //         alert('Jumlah harus angka > 0!');
     //         return;
     //     }
     //     dataBarangDipilih.push({
-    //         kode: val, // ini ID inventaris
+    //         kode: val, // id inventaris
     //         kodeBrg: option.getAttribute('data-kode-brg'),
     //         nama: option.getAttribute('data-nama'),
     //         merk: option.getAttribute('data-merk'),
     //         kondisi: option.getAttribute('data-kondisi'),
-    //         lokasi: option.getAttribute('data-lokasi'),
-    //         namaRuangan: option.getAttribute('data-nama-ruangan')
+    //         ruanganId: option.getAttribute('data-ruangan-id'),
+    //         namaRuangan: option.getAttribute('data-nama-ruangan'),
+    //         jumlah: jumlah
     //     });
 
-    //     console.log('dataBarangDipilih:', dataBarangDipilih);
     //     renderBarangDipilih();
     //     select.val('');
     // });
@@ -170,28 +170,61 @@
         let select = $('#select-barang');
         let val = select.val();
         let option = select[0].options[select[0].selectedIndex];
+
         if (!val) {
-            alert('Pilih barang!');
+            Swal.fire({
+                icon: 'warning',
+                title: 'Oops!',
+                text: 'Pilih barang dulu!'
+            });
             return;
         }
-        // Pengecekan duplicate: kode + namaRuangan
+
         if (dataBarangDipilih.some(item => item.kode === val && item.namaRuangan === option.getAttribute('data-nama-ruangan'))) {
-            alert('Barang sudah ada di ruangan ini!');
+            Swal.fire({
+                icon: 'info',
+                title: 'Duplicate!',
+                text: 'Barang sudah ada di ruangan ini!'
+            });
             return;
         }
-        dataBarangDipilih.push({
-            kode: val, // id inventaris
-            kodeBrg: option.getAttribute('data-kode-brg'),
-            nama: option.getAttribute('data-nama'),
-            merk: option.getAttribute('data-merk'),
-            kondisi: option.getAttribute('data-kondisi'),
-            ruanganId: option.getAttribute('data-ruangan-id'),
 
-            namaRuangan: option.getAttribute('data-nama-ruangan')
+        let stokTersedia = parseInt(option.getAttribute('data-stok')) || 0;
+
+        Swal.fire({
+            title: 'Masukkan jumlah yang akan dipinjam',
+            input: 'number',
+            inputAttributes: {
+                min: 1,
+                step: 1,
+                max: stokTersedia
+            },
+            inputValue: 1,
+            showCancelButton: true,
+            confirmButtonText: 'Tambah',
+            cancelButtonText: 'Batal',
+            inputValidator: (value) => {
+                value = parseInt(value);
+                if (!value || value < 1) return 'Jumlah harus lebih besar dari 0!';
+                if (value > stokTersedia) return `Maksimal ${stokTersedia} sesuai stok tersedia!`;
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                let jumlah = parseInt(result.value);
+                dataBarangDipilih.push({
+                    kode: val,
+                    kodeBrg: option.getAttribute('data-kode-brg'),
+                    nama: option.getAttribute('data-nama'),
+                    merk: option.getAttribute('data-merk'),
+                    kondisi: option.getAttribute('data-kondisi'),
+                    ruanganId: option.getAttribute('data-ruangan-id'),
+                    namaRuangan: option.getAttribute('data-nama-ruangan'),
+                    jumlah: jumlah
+                });
+                renderBarangDipilih();
+                select.val('');
+            }
         });
-
-        renderBarangDipilih();
-        select.val('');
     });
 
     $(document).on('click', '.hapus-barang', function() {
