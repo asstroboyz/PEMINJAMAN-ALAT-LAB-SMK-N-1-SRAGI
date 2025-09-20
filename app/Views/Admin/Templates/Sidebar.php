@@ -132,7 +132,7 @@ hr.sidebar-divider {
         <a class="collapse-item" href="<?= base_url('Admin/peminjaman?status=all'); ?>">
             <i class="fas fa-arrow-right-arrow-left"></i> Semua Peminjaman
         </a>
-        <a class="collapse-item" href="<?= base_url('Admin/peminjaman?status=diproses'); ?>">
+        <a class="collapse-item" href="<?= base_url('Admin/peminjaman?status=pengajuan  '); ?>">
             <i class="fas fa-spinner"></i> Diproses
         </a>
         <a class="collapse-item" href="<?= base_url('Admin/peminjaman?status=selesai'); ?>">
