@@ -28,7 +28,7 @@
                             <th style="width:13%;">Kode Transaksi</th>
                             <th style="width:15%;">Peminjam</th>
                             <th style="width:13%;">Tanggal Pinjam</th>
-                            <th style="width:13%;">Lokasi Pinjam</th>
+                            <th style="width:13%;">Akan Di Gunakan di</th>
                             <th style="width:10%;">Status</th>
                             <th style="width:10%;">Catatan</th>
                             <th style="width:24%;">Aksi</th>

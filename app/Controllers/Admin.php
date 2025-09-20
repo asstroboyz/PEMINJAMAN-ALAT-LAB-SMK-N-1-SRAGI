@@ -2215,8 +2215,9 @@ class Admin extends BaseController
         $status = $this->request->getGet('status') ?? 'all'; // ambil dari query param
 
         $builder = $this->PeminjamanHeaderModel
-            ->select('peminjaman_header.*, users.username as peminjam')
+            ->select('peminjaman_header.*, users.username as peminjam, r.nama_ruangan as lokasi_pinjam')
             ->join('users', 'users.id = peminjaman_header.id_user', 'left')
+            ->join('ruangan r', 'r.id = peminjaman_header.ruangan_id_pinjam', 'left')
             ->orderBy('peminjaman_header.tanggal_permintaan', 'desc');
 
         if ($status && $status != 'all') {
@@ -2224,11 +2225,14 @@ class Admin extends BaseController
         }
 
         $peminjamans = $builder->findAll();
+
         $data        = [
             'title'       => 'Peminjaman Alat',
             'peminjamans' => $peminjamans,
             'status'      => $status,
         ];
+
+        // dd($data);
         return view('Admin/Peminjaman/Index', $data);
     }
 
@@ -2819,41 +2823,41 @@ class Admin extends BaseController
         return redirect()->to('Admin/detailpinjam/' . $id);
     }
 
-    // public function tolakPeminjaman($id)
-    // {
-    //     $rules = [
-    //         'kategori'         => [
-    //             'rules'  => 'required',
-    //             'errors' => [
-    //                 'required' => 'Kategori wajib diisi.',
-    //             ],
-    //         ],
-    //         'alasan_penolakan' => [
-    //             'rules'  => 'required',
-    //             'errors' => [
-    //                 'required' => 'Alasan penolakan wajib diisi.',
-    //             ],
-    //         ],
-    //     ];
+    public function tolakPeminjaman($id)
+    {
+        $rules = [
+            'kategori'         => [
+                'rules'  => 'required',
+                'errors' => [
+                    'required' => 'Kategori wajib diisi.',
+                ],
+            ],
+            'alasan_penolakan' => [
+                'rules'  => 'required',
+                'errors' => [
+                    'required' => 'Alasan penolakan wajib diisi.',
+                ],
+            ],
+        ];
 
-    //     if (! $this->validate($rules)) {
-    //         $validation = \Config\Services::validation();
-    //         return redirect()->to('/Admin/detailpinjam/' . $id)->withInput('validation', $validation);
-    //     }
-    //     $this->PeminjamanDetailModel->update($id, [
-    //         'tanggal_selesai' => date("Y-m-d H:i:s"),
-    //         'status'          => 'selesai',
-    //         'status_akhir'    => 'ditolak',
-    //     ]);
-    //     $data = [
-    //         'id_peminjaman_detail' => $id,
-    //         'kategori'             => $this->request->getPost('kategori'),
-    //         'alasan_penolakan'     => $this->request->getPost('alasan_penolakan'),
-    //     ];
-    //     $this->BalasanPeminjamanModel->save($data);
-    //     session()->setFlashdata('msg', 'Status peminjaman berhasil Diubah');
-    //     return redirect()->to('Admin/detailpinjam/' . $id);
-    // }
+        if (! $this->validate($rules)) {
+            $validation = \Config\Services::validation();
+            return redirect()->to('/Admin/detailpinjam/' . $id)->withInput('validation', $validation);
+        }
+        $this->PeminjamanDetailModel->update($id, [
+            'tanggal_selesai' => date("Y-m-d H:i:s"),
+            'status'          => 'selesai',
+            'status_akhir'    => 'ditolak',
+        ]);
+        $data = [
+            'id_peminjaman_detail' => $id,
+            'kategori'             => $this->request->getPost('kategori'),
+            'alasan_penolakan'     => $this->request->getPost('alasan_penolakan'),
+        ];
+        $this->BalasanPeminjamanModel->save($data);
+        session()->setFlashdata('msg', 'Status peminjaman berhasil Diubah');
+        return redirect()->to('Admin/detailpinjam/' . $id);
+    }
 
     public function detailpinjam($id)
     {
