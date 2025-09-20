@@ -1,0 +1,64 @@
+ERROR - 2025-09-17 11:00:08 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2025-09-17 11:00:08 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+#0 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\vendor\myth\auth\src\Authentication\LocalAuthenticator.php(140): CodeIgniter\BaseModel->first()
+#5 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\vendor\myth\auth\src\Authentication\LocalAuthenticator.php(19): Myth\Auth\Authentication\LocalAuthenticator->validate(Array, true)
+#6 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\vendor\myth\auth\src\Controllers\AuthController.php(87): Myth\Auth\Authentication\LocalAuthenticator->attempt(Array, false)
+#7 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(832): Myth\Auth\Controllers\AuthController->attemptLogin()
+#8 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+#9 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\E-RM7\\...')
+#12 {main}
+ERROR - 2025-09-17 11:00:18 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2025-09-17 11:00:18 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+#0 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\vendor\myth\auth\src\Authentication\LocalAuthenticator.php(140): CodeIgniter\BaseModel->first()
+#5 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\vendor\myth\auth\src\Authentication\LocalAuthenticator.php(19): Myth\Auth\Authentication\LocalAuthenticator->validate(Array, true)
+#6 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\vendor\myth\auth\src\Controllers\AuthController.php(87): Myth\Auth\Authentication\LocalAuthenticator->attempt(Array, false)
+#7 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(832): Myth\Auth\Controllers\AuthController->attemptLogin()
+#8 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+#9 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\E-RM7\\...')
+#12 {main}
+ERROR - 2025-09-17 11:02:11 --> Error connecting to the database: Unknown database 'peminjaman-alat-tkj'
+CRITICAL - 2025-09-17 11:02:11 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'peminjaman-alat-tkj'
+#0 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\vendor\myth\auth\src\Authentication\LocalAuthenticator.php(140): CodeIgniter\BaseModel->first()
+#5 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\vendor\myth\auth\src\Authentication\LocalAuthenticator.php(19): Myth\Auth\Authentication\LocalAuthenticator->validate(Array, true)
+#6 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\vendor\myth\auth\src\Controllers\AuthController.php(87): Myth\Auth\Authentication\LocalAuthenticator->attempt(Array, false)
+#7 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(832): Myth\Auth\Controllers\AuthController->attemptLogin()
+#8 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+#9 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\E-RM7\\...')
+#12 {main}
+ERROR - 2025-09-17 11:02:16 --> Error connecting to the database: Unknown database 'peminjaman-alat-tkj'
+CRITICAL - 2025-09-17 11:02:16 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'peminjaman-alat-tkj'
+#0 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\vendor\myth\auth\src\Authentication\LocalAuthenticator.php(140): CodeIgniter\BaseModel->first()
+#5 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\vendor\myth\auth\src\Authentication\LocalAuthenticator.php(19): Myth\Auth\Authentication\LocalAuthenticator->validate(Array, true)
+#6 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\vendor\myth\auth\src\Controllers\AuthController.php(87): Myth\Auth\Authentication\LocalAuthenticator->attempt(Array, false)
+#7 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(832): Myth\Auth\Controllers\AuthController->attemptLogin()
+#8 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+#9 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\E-RM7\\...')
+#12 {main}

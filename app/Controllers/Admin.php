@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controllers;
 
 use App\Libraries\Ciqrcode;
@@ -618,34 +619,34 @@ class Admin extends BaseController
     }
 
     //Inventaris
-//     public function adm_inventaris()
-//     {
-//         // Group rekap: stok per barang per ruangan
-//         $rekap = $this->InventarisModel
-//             ->select('ruangan.nama_ruangan, master_barang.nama_brg, merk_barang.nama_merk, master_barang.jenis_brg, COUNT(inventaris.kode_barang) as stok')
-//             ->join('master_barang', 'master_barang.kode_brg = inventaris.id_master_barang')
-//             ->join('merk_barang', 'merk_barang.id = master_barang.merk_id', 'left')
-//             ->join('ruangan', 'ruangan.id = inventaris.ruangan_id', 'left')
-//             ->where('master_barang.is_active', 1)
-//             ->groupBy('ruangan.nama_ruangan, inventaris.id_master_barang')
-//             ->orderBy('ruangan.nama_ruangan, master_barang.nama_brg')
-//             ->findAll();
+    //     public function adm_inventaris()
+    //     {
+    //         // Group rekap: stok per barang per ruangan
+    //         $rekap = $this->InventarisModel
+    //             ->select('ruangan.nama_ruangan, master_barang.nama_brg, merk_barang.nama_merk, master_barang.jenis_brg, COUNT(inventaris.kode_barang) as stok')
+    //             ->join('master_barang', 'master_barang.kode_brg = inventaris.id_master_barang')
+    //             ->join('merk_barang', 'merk_barang.id = master_barang.merk_id', 'left')
+    //             ->join('ruangan', 'ruangan.id = inventaris.ruangan_id', 'left')
+    //             ->where('master_barang.is_active', 1)
+    //             ->groupBy('ruangan.nama_ruangan, inventaris.id_master_barang')
+    //             ->orderBy('ruangan.nama_ruangan, master_barang.nama_brg')
+    //             ->findAll();
 
-//         // Detail: semua row per SN/unit
-//         $inventaris = $this->InventarisModel
-//             ->select('inventaris.*, master_barang.nama_brg, merk_barang.nama_merk, master_barang.jenis_brg, ruangan.nama_ruangan')
-//             ->join('master_barang', 'master_barang.kode_brg = inventaris.id_master_barang')
-//             ->join('merk_barang', 'merk_barang.id = master_barang.merk_id', 'left')
-//             ->join('ruangan', 'ruangan.id = inventaris.ruangan_id', 'left')
-//             ->where('master_barang.is_active', 1)
-//             ->findAll();
+    //         // Detail: semua row per SN/unit
+    //         $inventaris = $this->InventarisModel
+    //             ->select('inventaris.*, master_barang.nama_brg, merk_barang.nama_merk, master_barang.jenis_brg, ruangan.nama_ruangan')
+    //             ->join('master_barang', 'master_barang.kode_brg = inventaris.id_master_barang')
+    //             ->join('merk_barang', 'merk_barang.id = master_barang.merk_id', 'left')
+    //             ->join('ruangan', 'ruangan.id = inventaris.ruangan_id', 'left')
+    //             ->where('master_barang.is_active', 1)
+    //             ->findAll();
 
-//         $data['rekap']      = $rekap;
-//         $data['inventaris'] = $inventaris;
-//         $data['title']      = 'Rekap Inventaris';
-// // dd($data);
-//         return view('Admin/Inventaris/Index', $data);
-//     }
+    //         $data['rekap']      = $rekap;
+    //         $data['inventaris'] = $inventaris;
+    //         $data['title']      = 'Rekap Inventaris';
+    // // dd($data);
+    //         return view('Admin/Inventaris/Index', $data);
+    //     }
     public function adm_inventaris()
     {
         // 1. Ambil data flat: per kode_barang + ruangan, stok langsung dari field
@@ -1163,11 +1164,11 @@ class Admin extends BaseController
     public function prosesPermintaan($id)
     {
         $date =
-        $this->detailPermintaanModel->update($id, [
-            'tanggal_diproses' => date("Y-m-d h:i:s"),
-            'status'           => 'diproses',
+            $this->detailPermintaanModel->update($id, [
+                'tanggal_diproses' => date("Y-m-d h:i:s"),
+                'status'           => 'diproses',
 
-        ]);
+            ]);
         session()->setFlashdata('msg', 'Status permintaan berhasil Diubah');
         return redirect()->to('Admin/detailpermin/' . $id);
     }
@@ -1925,7 +1926,7 @@ class Admin extends BaseController
             // ->where('inventaris.tgl_perolehan <=', $tanggalAkhir . ' 23:59:59')
             // tangal peminjaman
             ->findAll();
-                                               // dd($data['inventaris']);
+        // dd($data['inventaris']);
         $data['tanggalMulai'] = $tanggalMulai; // Add this line
         $data['tanggalAkhir'] = $tanggalAkhir;
 
@@ -2229,85 +2230,44 @@ class Admin extends BaseController
             'status'      => $status,
         ];
         return view('Admin/Peminjaman/Index', $data);
-
     }
 
     public function tambahPeminjaman()
     {
-        helper(['form']);
-
+        $status = $this->request->getGet('status') ?? 'all';
         $users   = $this->Profil->findAll();
         $barangs = $this->InventarisModel
             ->join('master_barang', 'master_barang.kode_brg = inventaris.id_master_barang', 'left')
-        // ambil barang yang *belum* dipinjam (berdasar status/field FK atau kondisi lain)
             ->where('inventaris.status', 'tersedia')
             ->findAll();
 
-        // Ambil semua ruangan
         $ruangan = $this->RuanganModel->findAll();
-
-        if ($this->request->getMethod() === 'post') {
-            $data = $this->request->getPost();
-
-            // Validasi basic
-            if (! $data['id_user'] || ! $data['tanggal_pinjam'] || ! $data['ruangan_id_pinjam'] || empty($data['barang'])) {
-                return redirect()->back()->withInput()->with('error', 'Data wajib diisi lengkap!');
-            }
-
-            // Insert ke header pakai FK ruangan
-            $header = [
-                'kode_transaksi'    => $data['kode_transaksi'],
-                'id_user'           => $data['id_user'],
-                'tanggal_pinjam'    => $data['tanggal_pinjam'],
-                'ruangan_id_pinjam' => $data['ruangan_id_pinjam'], // FK!
-                'status'            => 'diproses',
-                'catatan'           => $data['catatan'],
-            ];
-            $this->PeminjamanHeaderModel->insert($header);
-            $headerId = $this->PeminjamanHeaderModel->getInsertID();
-
-            foreach ($data['barang'] as $kode_barang) {
-                $this->PeminjamanDetailModel->insert([
-                    'peminjaman_id'   => $headerId,
-                    'inventaris_id'   => $kode_barang,
-                    'jumlah'          => 1,
-                    'kondisi_kembali' => 'baik',
-                    'ruangan_id'      => $data['ruangan_id_pinjam'], // FK ke detail juga (bisa diubah jika perlu)
-                ]);
-                // Update FK ruangan_id di inventaris (bukan string “lokasi”)
-                $this->InventarisModel
-                    ->set('ruangan_id', $data['ruangan_id_pinjam'])
-                    ->where('kode_barang', $kode_barang)
-                    ->update();
-
-                // Optional: Update status jadi "Dipinjam" atau "Tidak Tersedia"
-                $this->InventarisModel
-                    ->set('status', 'dipinjam')
-                    ->where('kode_barang', $kode_barang)
-                    ->update();
-            }
-
-            return redirect()->to('/admin/peminjaman')->with('msg', 'Peminjaman berhasil ditambahkan!');
+        $mapRuangan = [];
+        foreach ($ruangan as $r) {
+            $mapRuangan[$r['id']] = $r['nama_ruangan'];
         }
-
         $data = [
-            'title'   => 'Tambah Peminjaman Alat',
-            'users'   => $users,
+            'users' => $users,
             'barangs' => $barangs,
+            'title' => 'Tambah Peminjaman',
             'ruangan' => $ruangan,
+            'mapRuangan' => $mapRuangan,
+            'status' => $status,
         ];
+
         // dd($data);
         return view('Admin/Peminjaman/Tambah', $data);
-
     }
+
     public function savePeminjaman()
     {
         $db = db_connect();
 
-                                                              // Ambil input
-        $barangArr       = $this->request->getPost('barang'); // array kode_barang
+        // Ambil input dari form
+        $barangArr       = $this->request->getPost('barang'); // array: barang[0][kode], barang[0][ruangan_id], dst
         $catatan         = $this->request->getPost('catatan');
         $ruanganTujuanId = $this->request->getPost('ruangan_id'); // ruangan tujuan pinjam
+        $ruanganSebelum = isset($barangArr[0]['ruangan_id']) ? $barangArr[0]['ruangan_id'] : null;
 
         if (empty($barangArr) || ! is_array($barangArr)) {
             return redirect()->back()->with('error', 'Barang belum dipilih');
@@ -2316,28 +2276,32 @@ class Admin extends BaseController
         // Mulai transaksi
         $db->transStart();
 
-        // 1️⃣ Insert Header
+     
         $headerData = [
             'kode_transaksi'          => 'PINJAM-' . date('YmdHis'),
             'tanggal_permintaan'      => date('Y-m-d H:i:s'),
-            'tanggal_pinjam'          => null, // akan diisi saat approve
-            'tanggal_kembali_rencana' => null, // optional
-            'tanggal_kembali_real'    => null, // optional
+            'tanggal_pinjam'          => date('Y-m-d'),
+            'tanggal_kembali_rencana' => date('Y-m-d', strtotime('+3 days')),
+            'tanggal_kembali_real'    => null,
             'id_user'                 => user()->id,
-            'approved_by'             => null,
+            'approved_by'             => user()->id,
             'ruangan_id_pinjam'       => $ruanganTujuanId,
-            'ruangan_id_sebelum'      => null, // optional, bisa ambil inventaris
-            'status'                  => 'pending',
+            'ruangan_id_sebelum'      => $ruanganSebelum,
+            'status'                  => 'approved',
             'catatan'                 => $catatan,
         ];
-
         $db->table('peminjaman_header')->insert($headerData);
         $peminjaman_id = $db->insertID();
 
-        // 2️⃣ Insert Detail Barang
-        foreach ($barangArr as $kode_barang) {
+        // 2️⃣ Insert Detail Barang (GA ADA field 'status')
+        foreach ($barangArr as $barang) {
+            $kode_barang = $barang['kode'];
+            $ruangan_id  = $barang['ruangan_id'];
+
+            // Optional: cek inventaris valid, status ready, dsb
             $inventaris = $db->table('inventaris')
-                ->where('kode_barang', $kode_barang)
+                ->where('id', $kode_barang)
+                ->where('ruangan_id', $ruangan_id)
                 ->get()
                 ->getRowArray();
 
@@ -2346,12 +2310,15 @@ class Admin extends BaseController
                     'id_user'         => user()->id,
                     'peminjaman_id'   => $peminjaman_id,
                     'inventaris_id'   => $kode_barang,
-                    'ruangan_id'      => $inventaris['ruangan_id'],
-                    'status'          => 'dipinjam', // enum
+                    'ruangan_id'      => $ruangan_id,
                     'jumlah'          => 1,
                     'jumlah_kembali'  => 0,
-                    'kondisi_kembali' => '',   // kosong awal
-                    'detail'          => null, // optional
+                    'kondisi_kembali' => '',
+                    'detail'          => "peminjaman dari ruangan " . $inventaris['ruangan_id'] . " ke " . $db->table('ruangan')->where('id', $ruangan_id)->get()->getRow()->nama_ruangan,
+                ]);
+                // Update status inventaris ke "dipinjam"
+                $db->table('inventaris')->where('id', $kode_barang)->where('ruangan_id', $ruangan_id)->update([
+                    'status' => 'dipinjam'
                 ]);
             }
         }
@@ -2366,6 +2333,8 @@ class Admin extends BaseController
         return redirect()->to('/admin/peminjaman')
             ->with('success', 'Peminjaman berhasil disimpan!');
     }
+
+
 
     public function merk()
     {
@@ -2513,7 +2482,7 @@ class Admin extends BaseController
         return view('Admin/Kategori-merk/index', $data);
     }
 
-// Form tambah MerkKategoriBarang
+    // Form tambah MerkKategoriBarang
     public function tambahMerkKategori()
     {
         $data = [
@@ -2525,7 +2494,7 @@ class Admin extends BaseController
         return view('Admin/Kategori-merk/tambah', $data);
     }
 
-// Simpan relasi baru
+    // Simpan relasi baru
     public function SaveKategorimerk()
     {
         $validation = \Config\Services::validation();
@@ -2719,5 +2688,4 @@ class Admin extends BaseController
 
         return view('Admin/Peminjaman/Detail_peminjaman', $ex);
     }
-
 }

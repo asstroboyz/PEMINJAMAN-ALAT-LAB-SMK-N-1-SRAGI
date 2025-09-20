@@ -1,180 +1,212 @@
-<?php echo $this->extend('Admin/Templates/Index');?>
-<?php echo $this->section('page-content');?>
+<?= $this->extend('Admin/Templates/Index'); ?>
+<?= $this->section('page-content'); ?>
 
 <div class="container-fluid">
-    <h1 class="h3 mb-4 text-gray-900">Tambah Peminjaman Alat</h1>
-    <div class="card shadow mb-4">
-        <div class="card-body">
-            <?php if (session()->getFlashdata('error')): ?>
-                <div class="alert alert-danger"><?php echo session()->getFlashdata('error')?></div>
-            <?php endif?>
-            <form action="<?php echo base_url('/Admin/savePeminjaman')?>" method="post" enctype="multipart/form-data" id="form-peminjaman">
-                <?php echo csrf_field()?>
-                <div class="row mb-3">
-                    <div class="col-md-8">
-                        <label for="select-barang">Pilih Barang</label>
-                        <?php
-                            $mapRuangan = [];
-                            foreach ($ruangan as $r) {
-                                $mapRuangan[$r['id']] = $r['nama_ruangan'];
-                            }
-                        ?>
-                        <select class="form-control" id="select-barang">
-                            <option value="">-- Pilih Barang --</option>
-                            <?php foreach ($barangs as $b): ?>
-                                <option
-                                    value="<?php echo $b['kode_barang']?>"
-                                    data-nama="<?php echo $b['nama_brg']?>"
-                                    data-merk="<?php echo $b['merk']?>"
-                                    data-kondisi="<?php echo $b['kondisi']?>"
-                                    data-lokasi="<?php echo $b['ruangan_id']?>"
-                                    data-nama-ruangan="<?php echo $mapRuangan[$b['ruangan_id']] ?? ''?>"
-                                >
-                                    <?php echo $b['kode_barang']?> - <?php echo $b['nama_brg']?> (<?php echo $b['merk']?>), <?php echo $b['kondisi']?>, Ruangan: <?php echo $mapRuangan[$b['ruangan_id']] ?? $b['ruangan_id']?>
-                                </option>
-                            <?php endforeach?>
-                        </select>
-                    </div>
-                    <div class="col-md-2 align-self-end">
-                        <button type="button" class="btn btn-primary" id="add-barang">
-                            <i class="fa fa-plus"></i> Tambah
-                        </button>
-                    </div>
-                </div>
 
-                <div class="mb-3">
-                    <label>Daftar Barang Dipinjam</label>
-                    <table class="table table-bordered" id="table-barang">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Kode Barang</th>
-                                <th>Nama Barang</th>
-                                <th>Merk</th>
-                                <th>Kondisi</th>
-                                <th>Lokasi</th>
-                                <th>Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
+    <!-- Page Heading -->
+    <h1 class="h3 mb-4 text-gray-900">Form Tambah Barang</h1>
+
+    <?php if (session()->getFlashdata('msg')): ?>
+        <div class="row">
+            <div class="col-12">
+                <div class="alert alert-success" role="alert">
+                    <?php echo session()->getFlashdata('msg'); ?>
                 </div>
-                <div id="input-barangs"></div>
-                <div class="col-12 mb-3">
-                    <label for="catatan">Catatan (opsional)</label>
-                    <textarea name="catatan" class="form-control" rows="2"></textarea>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <div class="row">
+        <div class="col-12">
+
+            <div class="card shadow">
+                <div class="card-header">
+                    <a href="/Admin/peminjaman?status=all">&laquo; Kembali ke daftar peminjaman</a>
                 </div>
-                <div class="mt-4">
-                    <button class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
-                    <a href="<?php echo base_url('admin/peminjaman')?>" class="btn btn-secondary ml-2">Batal</a>
+                <div class="card-body">
+                    <form action="<?= base_url('/Admin/savePeminjaman') ?> " method="post" enctype="multipart/form-data" id="form">
+                        <?= csrf_field(); ?>
+                        <div class="mb-3">
+                            <label for="select-barang" class="form-label">Pilih Barang</label>
+                            <select id="select-barang" class="form-control form-control-user ">
+                                <option value="">-- Pilih Barang --</option>
+                                <?php foreach ($barangs as $b): ?>
+                                    <!-- <option
+                                        value="<?= esc($b['kode_brg']) ?>"
+                                        data-nama="<?= esc($b['nama_brg']) ?>"
+                                        data-merk="<?= esc($b['merk']) ?>"
+                                        data-kondisi="<?= esc($b['kondisi']) ?>"
+                                        data-lokasi="<?= esc($b['ruangan_id']) ?>"
+                                        data-nama-ruangan="<?= esc($mapRuangan[$b['ruangan_id']] ?? '') ?>">
+                                        <?= esc($b['kode_brg']) ?> - <?= esc($b['nama_brg']) ?> (<?= esc($b['merk']) ?>), <?= esc($b['kondisi']) ?>, Ruangan: <?= esc($mapRuangan[$b['ruangan_id']] ?? $b['ruangan_id']) ?>
+                                    </option> -->
+                                    <option value="<?= $b['id'] ?>"
+                                        data-kode-brg="<?= $b['kode_brg'] ?>"
+                                        data-nama="<?= $b['nama_brg'] ?>"
+                                        data-merk="<?= $b['merk'] ?>"
+                                        data-kondisi="<?= $b['kondisi'] ?>"
+                                        data-nama-ruangan="<?= $mapRuangan[$b['ruangan_id']] ?? '' ?>"
+                                        data-ruangan-id="<?= $b['ruangan_id'] ?>">
+                                        <?= $b['nama_brg'] ?> - <?= $b['merk'] ?> (<?= $b['kondisi'] ?>) - <?= $mapRuangan[$b['ruangan_id']] ?? '' ?>
+                                    </option>
+
+
+                                <?php endforeach ?>
+                            </select>
+                            <button type="button" class="btn btn-primary mt-2" id="tambah_barang">Tambah Barang</button>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="table-barang">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Kode</th>
+                                        <th>Nama</th>
+                                        <th>Merk</th>
+                                        <th>Kondisi</th>
+                                        <th>Ruangan</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="list-barang">
+                                    <tr class="text-center" id="belum_barang">
+                                        <td colspan="7">Belum ada barang dipilih</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="input-barang-hidden"></div>
+                        <button class="btn btn-success mt-3" type="submit">Simpan</button>
+                    </form>
                 </div>
-            </form>
+            </div>
+
         </div>
     </div>
+
 </div>
 
-<?php echo $this->endSection();?>
-<?php echo $this->section('additional-js');?>
+<?= $this->endSection(); ?>
+<?= $this->section('additional-js'); ?>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css" rel="stylesheet" />
+<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
 <script>
-$(function() {
-    // GANTI INI (PASTIKAN PAKE window)
-    window.barangDipilih = window.barangDipilih || [];
-    let barangDipilih = window.barangDipilih;
+    let dataBarangDipilih = [];
 
-    function showAlert(msg) {
-        let $alert = $('<div class="alert alert-warning">'+msg+'</div>');
-        $('.card-body').prepend($alert);
-        setTimeout(() => $alert.fadeOut(400,()=>{$alert.remove()}), 2000);
+    function renderBarangDipilih() {
+        let tbody = $('#list-barang');
+        tbody.empty();
+        $('#input-barang-hidden').empty();
+        if (dataBarangDipilih.length === 0) {
+            tbody.append(`<tr class="text-center" id="belum_barang">
+            <td colspan="7">Belum ada barang dipilih</td>
+        </tr>`);
+            return;
+        }
+        dataBarangDipilih.forEach((item, idx) => {
+            tbody.append(`
+            <tr>
+                <td>${idx + 1}</td>
+                <td>${item.kode}</td>
+                <td>${item.nama}</td>
+                <td>${item.merk}</td>
+                <td>${item.kondisi}</td>
+                <td>${item.namaRuangan}</td>
+               <td>
+    <button type="button" 
+        class="btn btn-danger btn-sm hapus-barang" 
+        data-kode="${item.kode}" 
+        data-nama-ruangan="${item.namaRuangan}">
+        Hapus
+    </button>
+</td>
+
+            </tr>
+        `);
+            $('#input-barang-hidden').append(`
+    <input type="hidden" name="barang[${idx}][kode]" value="${item.kode}">
+    <input type="hidden" name="barang[${idx}][ruangan_id]" value="${item.ruanganId}">
+`);
+
+        });
     }
+    // $('#tambah_barang').on('click', function() {
+    //     let select = $('#select-barang');
+    //     let val = select.val();
+    //     let option = select[0].options[select[0].selectedIndex];
+    //     console.log('VAL:', val);
+    //     console.log('OPTION:', option);
+    //     console.log('data-nama:', option.getAttribute('data-nama'));
+    //     console.log('data-merk:', option.getAttribute('data-merk'));
+    //     console.log('data-kondisi:', option.getAttribute('data-kondisi'));
+    //     console.log('data-lokasi:', option.getAttribute('data-lokasi'));
+    //     console.log('data-nama-ruangan:', option.getAttribute('data-nama-ruangan'));
+    //     if (!val) {
+    //         alert('Pilih barang!');
+    //         return;
+    //     }
+    //     if (dataBarangDipilih.some(item => item.kode === val)) {
+    //         alert('Barang sudah ada!');
+    //         return;
+    //     }
+    //     dataBarangDipilih.push({
+    //         kode: val, // ini ID inventaris
+    //         kodeBrg: option.getAttribute('data-kode-brg'),
+    //         nama: option.getAttribute('data-nama'),
+    //         merk: option.getAttribute('data-merk'),
+    //         kondisi: option.getAttribute('data-kondisi'),
+    //         lokasi: option.getAttribute('data-lokasi'),
+    //         namaRuangan: option.getAttribute('data-nama-ruangan')
+    //     });
 
-    $('#add-barang').on('click', function() {
+    //     console.log('dataBarangDipilih:', dataBarangDipilih);
+    //     renderBarangDipilih();
+    //     select.val('');
+    // });
+    $('#tambah_barang').on('click', function() {
         let select = $('#select-barang');
         let val = select.val();
-        let data = select.find(':selected').data();
-        console.log('VAL:', val, 'DATA:', data);
-
+        let option = select[0].options[select[0].selectedIndex];
         if (!val) {
-            showAlert("Pilih barang dulu!");
+            alert('Pilih barang!');
             return;
         }
-        if (barangDipilih.some(item => item.kode === val)) {
-            showAlert("Barang sudah ada di daftar!");
-            select.val('');
+        // Pengecekan duplicate: kode + namaRuangan
+        if (dataBarangDipilih.some(item => item.kode === val && item.namaRuangan === option.getAttribute('data-nama-ruangan'))) {
+            alert('Barang sudah ada di ruangan ini!');
             return;
         }
-        let nama = data.nama;
-        let merk = data.merk;
-        let kondisi = data.kondisi;
-        let namaRuangan = data.namaRuangan !== undefined ? data.namaRuangan : data['nama-ruangan'];
+        dataBarangDipilih.push({
+            kode: val, // id inventaris
+            kodeBrg: option.getAttribute('data-kode-brg'),
+            nama: option.getAttribute('data-nama'),
+            merk: option.getAttribute('data-merk'),
+            kondisi: option.getAttribute('data-kondisi'),
+            ruanganId: option.getAttribute('data-ruangan-id'),
 
-        barangDipilih.push({
-            kode: val,
-            nama: nama,
-            merk: merk,
-            kondisi: kondisi,
-            lokasi: namaRuangan
+            namaRuangan: option.getAttribute('data-nama-ruangan')
         });
-        console.log('barangDipilih after push:', barangDipilih);
-        updateTable();
+
+        renderBarangDipilih();
         select.val('');
-        updateInputBarangs();
-        $('html, body').animate({
-            scrollTop: $("#table-barang").offset().top-60
-        }, 400);
     });
 
-    function updateTable() {
-        let tbody = $('#table-barang tbody');
-        tbody.html('');
-        if (barangDipilih.length === 0) {
-            tbody.append('<tr><td colspan="7" class="text-center text-muted">Belum ada barang dipilih.</td></tr>');
-        } else {
-            barangDipilih.forEach((item, idx) => {
-                console.log('Render Row:', idx, item);
-                tbody.append(`
-                    <tr>
-                        <td>${idx+1}</td>
-                        <td>${item.kode}</td>
-                        <td>${item.nama}</td>
-                        <td>${item.merk}</td>
-                        <td>${item.kondisi}</td>
-                        <td>${item.lokasi}</td>
-                        <td>
-                            <button type="button" class="btn btn-danger btn-sm btn-hapus-barang" data-kode="${item.kode}">Hapus</button>
-                        </td>
-                    </tr>
-                `);
-            });
-        }
-        console.log('Tbody html after update:', tbody.html());
-    }
-
-    $('#table-barang').on('click', '.btn-hapus-barang', function() {
+    $(document).on('click', '.hapus-barang', function() {
         let kode = $(this).data('kode');
-        barangDipilih = barangDipilih.filter(item => item.kode !== kode);
-        window.barangDipilih = barangDipilih; // sync global
-        updateTable();
-        updateInputBarangs();
+        let namaRuangan = $(this).data('nama-ruangan');
+        dataBarangDipilih = dataBarangDipilih.filter(item => !(item.kode === kode && item.namaRuangan === namaRuangan));
+        renderBarangDipilih();
     });
 
-    function updateInputBarangs() {
-        let div = $('#input-barangs');
-        div.html('');
-        barangDipilih.forEach(item => {
-            div.append(`<input type="hidden" name="barang[]" value="${item.kode}"/>`);
-        });
-    }
-
-    $('#form-peminjaman').on('submit', function(e) {
-        if (barangDipilih.length === 0) {
-            showAlert("Minimal pilih satu barang!");
+    $('#form-barang').on('submit', function(e) {
+        if (dataBarangDipilih.length === 0) {
+            alert('Minimal pilih satu barang!');
             e.preventDefault();
         }
     });
-
-    updateTable();
-});
+    renderBarangDipilih();
 </script>
-
-<?php echo $this->endSection();?>
+<?= $this->endSection(); ?>

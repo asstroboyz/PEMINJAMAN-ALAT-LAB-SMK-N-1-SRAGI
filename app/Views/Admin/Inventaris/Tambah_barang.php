@@ -93,7 +93,52 @@
         <?php endforeach; ?>
     </select>
                                         </td>
-                                        <td>
+            <form id="form-barang" action="<?= base_url('admin/peminjaman/tambahPeminjaman') ?>" method="post">
+    <!-- Input user, tanggal, ruangan, catatan (jangan lupa tambahin sendiri) -->
+    <!-- Pilih Barang -->
+    <div class="mb-3">
+        <label for="select-barang" class="form-label">Pilih Barang</label>
+        <select id="select-barang" class="form-select">
+            <option value="">-- Pilih Barang --</option>
+            <?php foreach ($barangs as $b): ?>
+                <option
+                    value="<?= esc($b['kode_brg']) ?>"
+                    data-nama="<?= esc($b['nama_brg']) ?>"
+                    data-merk="<?= esc($b['merk']) ?>"
+                    data-kondisi="<?= esc($b['kondisi']) ?>"
+                    data-lokasi="<?= esc($b['ruangan_id']) ?>"
+                    data-nama-ruangan="<?= esc($mapRuangan[$b['ruangan_id']] ?? '') ?>">
+                    <?= esc($b['kode_brg']) ?> - <?= esc($b['nama_brg']) ?> (<?= esc($b['merk']) ?>), <?= esc($b['kondisi']) ?>, Ruangan: <?= esc($mapRuangan[$b['ruangan_id']] ?? $b['ruangan_id']) ?>
+                </option>
+
+            <?php endforeach ?>
+        </select>
+        <button type="button" class="btn btn-primary mt-2" id="tambah_barang">Tambah Barang</button>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered" id="table-barang">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Kode</th>
+                    <th>Nama</th>
+                    <th>Merk</th>
+                    <th>Kondisi</th>
+                    <th>Ruangan</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="list-barang">
+                <tr class="text-center" id="belum_barang">
+                    <td colspan="7">Belum ada barang dipilih</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="input-barang-hidden"></div>
+    <button class="btn btn-success mt-3" type="submit">Simpan</button>
+</form>                            <td>
                                             <select name="kondisi[]" class="form-control">
                                                 <option value="baru">Baru</option>
                                                 <option value="bekas">Bekas</option>

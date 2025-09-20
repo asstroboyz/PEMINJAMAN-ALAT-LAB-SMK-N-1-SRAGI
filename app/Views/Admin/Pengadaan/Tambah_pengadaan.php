@@ -18,7 +18,7 @@
 
     <?php endif; ?>
 
-    <form action="<?= base_url('/Admin/simpanPengadaan') ?> " method="post" enctype="multipart/form-data" id="form">
+    <form action="<?= base_url('/Admin/savePeminjaman') ?> " method="post" enctype="multipart/form-data" id="form">
         <div class="row">
             <div class="col-12">
 
