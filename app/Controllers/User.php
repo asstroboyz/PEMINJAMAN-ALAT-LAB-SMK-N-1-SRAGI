@@ -2,47 +2,96 @@
 
 namespace App\Controllers;
 
-use App\Models\Pengaduan;
-use App\Models\bukti;
-use App\Models\profil;
-use CodeIgniter\Database\Query;
-use Myth\Auth\Entities\passwd;
+use App\Libraries\Ciqrcode;
+use App\Models\BalasanModel;
+use App\Models\BarangModel;
+use App\Models\detailPengadaanModel;
+use App\Models\detailPermintaanModel;
+use App\Models\InventarisModel;
+use App\Models\KategoriBarangModel;
+use App\Models\masterBarangModel;
+use App\Models\MerkBarangModel;
+use App\Models\MerkKategoriBarangModel;
+use App\Models\PeminjamanDetailModel;
+use App\Models\PeminjamanHeaderModel;
+use App\Models\PengadaanModel;
+use App\Models\pengecekanModel;
+use App\Models\PermintaanModel;
+use App\Models\Profil;
+use App\Models\RuanganModel;
+use App\Models\satuanModel;
+use App\Models\TransaksiBarangModel;
+use Endroid\QrCode\Logo\Logo;
+use Endroid\QrCode\QrCode;
+use Endroid\QrCode\Writer\PngWriter;
+use Kenjis\CI3Compatible\Core\CI_Input;
+// use Myth\Auth\Entities\User;
+use Myth\Auth\Models\GroupModel;
 use Myth\Auth\Models\UserModel;
 
+/**
+ * @property Home_model $home_model
+ * @property Ciqrcode $ciqrcode
+ * @property CI_Input $input
+ */
 class User extends BaseController
 {
-    protected $db, $builder;
+    protected $db;
+    protected $builder;
+    protected $BarangModel;
+    protected $validation;
+    protected $session;
+    protected $masterBarangModel;
+    protected $InventarisModel;
+    protected $PermintaanModel;
+    protected $PengadaanModel;
+    protected $detailPengadaanModel;
+    protected $detailPermintaanModel;
+    protected $BalasanModel;
+    protected $Profil;
+    protected $pengecekanModel;
+    protected $satuanModel;
+    protected $TransaksiBarangModel;
+    protected $PeminjamanHeaderModel;
+    protected $PeminjamanDetailModel;
+    protected $RuanganModel;
+    protected $KategoriBarangModel;
+    protected $MerkBarangModel;
+    protected $MerkKategoriBarangModel;
     public function __construct()
     {
-
-        $this->db      = \Config\Database::connect();
-        $this->builder = $this->db->table('users');
-        $this->pengaduan = new pengaduan();
-        $this->bukti = new bukti();
-        $this->profil = new profil();
-        $this->validation = \Config\Services::validation();
+        $this->InventarisModel         = new InventarisModel();
+        $this->PermintaanModel         = new PermintaanModel();
+        $this->PengadaanModel          = new PengadaanModel();
+        $this->detailPengadaanModel    = new detailPengadaanModel();
+        $this->detailPermintaanModel   = new detailPermintaanModel();
+        $this->BalasanModel            = new BalasanModel();
+        $this->Profil                  = new Profil();
+        $this->pengecekanModel         = new pengecekanModel();
+        $this->BarangModel             = new BarangModel();
+        $this->satuanModel             = new satuanModel();
+        $this->TransaksiBarangModel    = new TransaksiBarangModel();
+        $this->PeminjamanHeaderModel   = new PeminjamanHeaderModel();
+        $this->PeminjamanDetailModel   = new PeminjamanDetailModel();
+        $this->RuanganModel            = new RuanganModel();
+        $this->db                      = \Config\Database::connect();
+        $this->builder                 = $this->db->table('users');
+        $this->validation              = \Config\Services::validation();
+        $this->session                 = \Config\Services::session();
+        $this->ciqrcode                = new \App\Libraries\Ciqrcode();
+        $this->masterBarangModel       = new masterBarangModel();
+        $this->KategoriBarangModel     = new KategoriBarangModel();
+        $this->MerkBarangModel         = new MerkBarangModel();
+        $this->MerkKategoriBarangModel = new MerkKategoriBarangModel();
     }
     public function index()
     {
 
-        $userlogin = user()->id;
-
-        $data = $this->db->table('pengaduan');
-        // $builder->select('id,username,email,created_at,foto');
-
-        $query1 = $data->where('id_user', $userlogin)->get()->getResult();
-        $query2 = $data->where('id_user', $userlogin)->where('status', 'diproses')->get()->getResult();
-        $query3 = $data->where('id_user', $userlogin)->where('status', 'selesai')->get()->getResult();
-        // $query = $builder->get();
-        // $query1 = $builder->where('status', 'diproses')->get()->getResult();
-        $semua = count($query1);
 
 
 
         $data = [
-            'semua' => $semua,
-            'proses' => count($query2),
-            'selesai' => count($query3),
+
             'title' => 'Home'
         ];
         // dd($data);
@@ -55,7 +104,7 @@ class User extends BaseController
         $konfirm = $this->request->getPost('konfirm');
         if ($passwordbaru != $konfirm) {
             session()->setFlashdata('error-msg', 'Password Baru tidak sesuai');
-            return redirect()->to(base_url('admin/tentang/' . $id));
+            return redirect()->to(base_url('user/tentang/' . $id));
         }
 
         $builder = $this->db->table('users');
@@ -84,11 +133,11 @@ class User extends BaseController
         $userlogin = user()->username;
         $userid = user()->id;
         $role = $this->db->table('auth_groups_users')->where('user_id', $userid)->get()->getRow();
-        $role == '1' ? $role_echo = 'Admin' : $role_echo = 'User';
+        $role == '1' ? $role_echo = 'user' : $role_echo = 'User';
 
 
 
-        $data = $this->db->table('pengaduan');
+        $data = $this->db->table('peminjaman_header');
         $query1 = $data->where('id_user', $userid)->get()->getResult();
         $builder = $this->db->table('users');
         $builder->select('id,username,email,created_at,foto');
@@ -114,8 +163,8 @@ class User extends BaseController
         $query = $builder->where('username', $userlogin)->get()->getRowArray();
         $data = [
 
-            'user' => $query,
-            'validation' => $this->validation,
+            // 'user' => $query,
+            // 'validation' => $this->validation,
             'title' => 'Update Profile'
         ];
         // dd($data['user']);
@@ -162,320 +211,247 @@ class User extends BaseController
     {
         return view('user/pengguna');
     }
-    public function pengaduan()
-    {
 
-        // $builder    = $this->db->table('pengaduan');
-        // $builder->orderBy('id', 'ASC');
-        // $query      = $builder->get()->getResult();
-        // $data['pengaduan'] = $query;
-        $this->builder = $this->db->table('pengaduan');
-        $this->builder->select('*');
-        $this->builder->where('id_user', user()->id);
-        $this->query = $this->builder->get();
-        $data['pengaduan'] = $this->query->getResultArray();
-        // dd(  $data['pengaduan']);
-        $data['title'] = 'Pengaduan';
-        return view('user/pengaduan/index', $data);
-    }
-
-    public function tambah()
+    public function peminjaman()
     {
+        $status = $this->request->getGet('status') ?? 'all'; // ambil dari query param
+
+        $builder = $this->PeminjamanHeaderModel
+            ->select('peminjaman_header.*, users.username as peminjam, users.fullname as nama_lengkap, r.nama_ruangan as lokasi_pinjam')
+            ->join('users', 'users.id = peminjaman_header.id_user', 'left')
+            ->join('ruangan r', 'r.id = peminjaman_header.ruangan_id_pinjam', 'left')
+            ->orderBy('peminjaman_header.tanggal_pinjam', 'desc')
+            ->where('peminjaman_header.id_user', user()->id);
+
+
+        if ($status && $status != 'all') {
+            $builder->where('peminjaman_header.status', $status);
+        }
+
+        $peminjamans = $builder->findAll();
+
         $data = [
-            'validation' => $this->validation,
-            'title' => 'Tambah Pengaduan'
+            'title'       => 'Peminjaman Alat',
+            'peminjamans' => $peminjamans,
+            'status'      => $status,
         ];
 
-        return view('user/pengaduan/tambah_pengaduan', $data);
-    }
-    public function simpanPengaduan()
-    {
-        $rules = [
-            'judul_pengaduan' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Perihal pengaduan wajib diisi.'
-                ]
-            ],
-            'isi_pengaduan' => [
-                'rules' => 'required|min_length[30]',
-                'errors' => [
-                    'required' => 'Isi pengaduan wajib diisi.',
-                    'min_length' => 'Minimal 30 karakter.'
-                ]
-            ],
-            'images' => [
-                'rules' => 'uploaded[images.0]|max_size[images,1024]|is_image[images]|mime_in[images,image/jpg,image/jpeg,image/png]',
-                'errors' => [
-                    'uploaded' => 'Satu file wajib ada.',
-                    'max_size' => 'Anda mengupload file yang melebihi ukuran maksimal.',
-                    'is_image' => 'Anda mengupload file yang bukan gambar.',
-                    'mime_in' => 'Anda mengupload file yang bukan gambar.'
-                ]
-            ],
-        ];
-
-        if (!$this->validate($rules)) {
-            $validation = \Config\Services::validation();
-            return redirect()->to('/user/tambah')->withInput('validation', $validation);
-        }
-
-        $images = $this->request->getFileMultiple('images');
-        $jumlahFile = count($images);
-        if ($jumlahFile > 3) { // jika jumlah file melebihi aturan (3)
-            session()->setFlashdata('err-files', '<span class="text-danger">Jumlah file yang anda upload melebihi aturan.</span>');
-            return redirect()->to('/user/tambah');
-        }
-
-        if ($this->request->getPost('nama_pengadu') == 'anonym') {
-            $nama_pengadu = $this->request->getPost('nama_pengadu');
-        } else {
-            $nama_pengadu = $this->request->getPost('pengadu');
-        }
-        $date = date("Y/m/d h:i:s");
-        $dataPengaduan = [
-            'id_user' => user()->id,
-            'perihal' => $this->request->getPost('judul_pengaduan'),
-            'detail' => $this->request->getPost('isi_pengaduan'),
-            'nama_pengadu' => $nama_pengadu,
-            'tanggal_pengaduan' => $date,
-            'status' => 'belum diproses',
-
-        ];
-        $this->pengaduan->save($dataPengaduan);
-
-        foreach ($images as $i => $img) {
-            if ($img->isValid() && !$img->hasMoved()) {
-                $files[$i] = 'bukti' . $i . '-' . user()->id . '.' . $img->guessExtension();
-            }
-        }
-        $pengaduan_id = $this->pengaduan->insertID(); // last insert id
-        $img_dua = (array_key_exists(1, $files) ? $files[1] : 'null');
-        $img_tiga = (array_key_exists(2, $files) ? $files[2] : 'null');
-        foreach ($images as $i => $img) {
-            if ($img->isValid() && !$img->hasMoved()) {
-                $files[$i] = 'bukti' . $i . '-' . $pengaduan_id . user()->username . '.' . $img->guessExtension();
-            }
-        }
-        $this->bukti->save([
-            'pengaduan_id' => $pengaduan_id,
-            'img_satu' => $files[0],
-            'img_dua' => $img_dua,
-            'img_tiga' => $img_tiga,
-        ]);
-
-        foreach ($images as $i => $img) {
-            if ($img->isValid() && !$img->hasMoved()) {
-                $img->move('uploads', $files[$i]);
-            }
-        }
-        session()->setFlashdata('msg', 'Pengaduan berhasil ditambah, silahkan menunggu untuk proses approval.');
-        return redirect()->to('user/pengaduan/tambah_pengaduan');
+        // dd($data);
+        return view('user/Peminjaman/Index', $data);
     }
 
-
-
-    public function detail($id)
+    public function tambahPeminjaman()
     {
-        $data = $this->db->table('pengaduan');
-        $data->select('*');
-        $data->where('id', $id);
-        $query = $data->get();
+        $status  = $this->request->getGet('status') ?? 'all';
+        $users   = $this->Profil->findAll();
+        $barangs = $this->InventarisModel
+            ->join('master_barang', 'master_barang.kode_brg = inventaris.id_master_barang', 'left')
+            ->where('inventaris.stok >', 0)
+            ->findAll();
 
-        $d = $this->db->table('balasan');
-        $d->select('*');
-        $d->where('id_pengaduan', $id);
-        $balasan = $d->get()->getRow();
-
-        $bukti = $this->db->table('tbl_bukti');
-        $bukti->select('*');
-        $bukti->where('pengaduan_id', $id);
-        $query1 = $bukti->get()->getRowArray();
-        // dd($query1);
-        $ex = [
-            'bukti' => $query1,
-            'detail' => $hasil = $query->getRow(),
-            'title' => 'Detail Pengaduan',
-            'balasan' => $balasan
-
-        ];
-
-
-        return view('user/pengaduan/detail', $ex);
-    }
-    public function ubah($id)
-    {
-
-        $data = $this->db->table('pengaduan');
-        $data->select('*');
-        $data->where('id', $id);
-        $query = $data->get();
-
-        $bukti = $this->db->table('tbl_bukti');
-        $bukti->select('*');
-        $bukti->where('pengaduan_id', $id);
-        $query1 = $bukti->get()->getRowArray();
+        $ruangan    = $this->RuanganModel->findAll();
+        $mapRuangan = [];
+        foreach ($ruangan as $r) {
+            $mapRuangan[$r['id']] = $r['nama_ruangan'];
+        }
         $data = [
-            'bukti' => $query1,
-            'data' => $hasil = $query->getRowArray(),
-            'validation' => $this->validation,
-            'title' => 'Ubah Pengaduan'
-
+            'users'      => $users,
+            'barangs'    => $barangs,
+            'title'      => 'Tambah Peminjaman',
+            'ruangan'    => $ruangan,
+            'mapRuangan' => $mapRuangan,
+            'status'     => $status,
         ];
 
-
-
-
-        return view('user/pengaduan/ubah_pengaduan', $data);
+        // dd($data);
+        return view('user/Peminjaman/Tambah', $data);
     }
 
-    public function ubahPengaduan($id)
+    public function savePeminjaman()
     {
-        $data['validation'] = \Config\Services::connect();
-        $rules = [
-            'judul_pengaduan' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Perihal pengaduan wajib diisi.'
-                ]
-            ],
-            'isi_pengaduan' => [
-                'rules' => 'required|min_length[30]',
-                'errors' => [
-                    'required' => 'Isi pengaduan wajib diisi.',
-                    'min_length' => 'Minimal 30 karakter.'
-                ]
-            ],
-            'images' => [
-                'rules' => 'max_size[images,1024]|is_image[images]|mime_in[images,image/jpg,image/jpeg,image/png]',
-                'errors' => [
-                    // 'uploaded' => 'Satu file wajib ada.',
-                    'max_size' => 'Anda mengupload file yang melebihi ukuran maksimal.',
-                    'is_image' => 'Anda mengupload file yang bukan gambar.',
-                    'mime_in' => 'Anda mengupload file yang bukan gambar.'
-                ]
-            ],
+        $db = db_connect();
+
+        // Ambil input dari form
+        $barangArr       = $this->request->getPost('barang'); // array: barang[0][kode], barang[0][ruangan_id], barang[0][jumlah]
+        $catatan         = $this->request->getPost('catatan');
+        $ruanganTujuanId = $this->request->getPost('ruangan_id'); // ruangan tujuan pinjam
+        $ruanganSebelum  = isset($barangArr[0]['ruangan_id']) ? $barangArr[0]['ruangan_id'] : null;
+
+        if (empty($barangArr) || ! is_array($barangArr)) {
+            return redirect()->back()->with('error', 'Barang belum dipilih');
+        }
+
+        $db->transStart();
+
+        $headerData = [
+            'kode_transaksi'          => 'PINJAM-' . date('YmdHis'),
+            // 'tanggal_permintaan'      => date('Y-m-d H:i:s'),
+            'tanggal_pinjam'          => date('Y-m-d'),
+            'tanggal_kembali_rencana' => date('Y-m-d', strtotime('+3 days')),
+            'tanggal_kembali_real'    => null,
+            'id_user'                 => user()->id,
+            'approved_by'             => null,
+            'ruangan_id_pinjam'       => $ruanganTujuanId,
+            'ruangan_id_sebelum'      => $ruanganSebelum,
+            'status'                  => 'pengajuan', // <--- default
+            'catatan'                 => $catatan,
         ];
+        $db->table('peminjaman_header')->insert($headerData);
+        $peminjaman_id = $db->insertID();
 
-        if (!$this->validate($rules)) {
-            $validation = \Config\Services::validation();
-            return redirect()->to('/user/ubah/' . $id)->withInput('validation', $validation);
-        }
+        // 2️⃣ Insert detail peminjaman (tanpa update stok)
+        foreach ($barangArr as $barang) {
+            $kode_barang = $barang['kode'];
+            $ruangan_id  = $barang['ruangan_id'];
+            $jumlah      = isset($barang['jumlah']) ? max(1, intval($barang['jumlah'])) : 1;
 
-        $images = $this->request->getFileMultiple('images');
-        $jumlahFile = count($images);
-        if ($jumlahFile > 3) { // jika jumlah file melebihi aturan (3)
-            session()->setFlashdata('err-files', '<span class="text-danger">Jumlah file yang anda upload melebihi aturan.</span>');
-            return redirect()->to('/user/ubah' . $id);
-        }
+            $inventaris = $db->table('inventaris')
+                ->where('id', $kode_barang)
+                ->get()
+                ->getRowArray();
 
-        if ($this->request->getPost('nama_pengadu') == 'anonym') {
-            $nama_pengadu = $this->request->getPost('nama_pengadu');
-        } else {
-            $nama_pengadu = $this->request->getPost('pengadu');
-        }
-        $date = date("Y/m/d h:i:s");
-        // $dataPengaduan = [
-        //     'id_user' => user()->id,
-        //     'perihal' => $this->request->getPost(' '),
-        //     'detail' => $this->request->getPost('isi_pengaduan'),
-        //     'nama_pengadu' => $nama_pengadu,
-        //     'tanggal_pengaduan' => $date,
-        //     'status' => 'belum diproses',
-
-        // ];
-        $this->pengaduan->update($id, [
-            'id_user' => user()->id,
-            'perihal' => $this->request->getPost('judul_pengaduan'),
-            'detail' => $this->request->getPost('isi_pengaduan'),
-            'nama_pengadu' => $nama_pengadu,
-            'tanggal_pengaduan' => $date,
-            'status' => 'belum diproses',
-
-        ]);
-        if ($images[0]->getError() !== 4) {
-            foreach ($images as $i => $img) {
-                if ($img->isValid() && !$img->hasMoved()) {
-                    $files[$i] = 'bukti' . $i . '-' . user()->id . '.' . $img->guessExtension();
-                }
+            if (! $inventaris) {
+                $db->transRollback();
+                return redirect()->back()->with('error', "Barang dengan kode $kode_barang tidak ditemukan");
             }
 
-            // get data bukti
-            $bukti = $this->bukti->getBukti($id);
+            // Insert ke detail (tanpa update stok/mutasi)
+            $db->table('peminjaman_detail')->insert([
+                'id_user'         => user()->id,
+                'peminjaman_id'   => $peminjaman_id,
+                'inventaris_id'   => $kode_barang,
+                'ruangan_id'      => $ruangan_id,
+                'jumlah'          => $jumlah,
+                'jumlah_kembali'  => 0,
+                'kondisi_kembali' => '',
+                'detail'          => "Peminjaman dari ruangan " . ($inventaris['ruangan_id'] ?? '-') . " ke " . $db->table('ruangan')->where('id', $ruangan_id)->get()->getRow()->nama_ruangan,
+            ]);
+        }
 
-            // hapus file lama
-            unlink('uploads/' . $bukti['img_satu']);
-            if ($bukti['img_dua'] != null) {
-                unlink('uploads/' . $bukti['img_dua']);
-            }
-            if ($bukti['img_tiga'] != null) {
-                unlink('uploads/' . $bukti['img_tiga']);
-            }
+        $db->transComplete();
 
-            // update tbl_bukti
-            $img_dua = (array_key_exists(1, $files) ? $files[1] : 'null');
-            $img_tiga = (array_key_exists(2, $files) ? $files[2] : 'null');
+        if ($db->transStatus() === false) {
+            return redirect()->back()->with('error', 'Gagal menyimpan peminjaman');
+        }
 
-            $this->bukti->save([
-                'id' => $this->request->getPost('bukti_id'),
-                'img_satu' => $files[0],
-                'img_dua' => $img_dua,
-                'img_tiga' => $img_tiga,
-                'updated_at' => date('Y-m-d H:i:s'),
+        return redirect()->to('/user/peminjaman')
+            ->with('success', 'Pengajuan peminjaman berhasil disimpan!');
+    }
+
+
+    public function kembalikanPeminjaman($id)
+    {
+        $db     = db_connect();
+        $header = $db->table('peminjaman_header')->where('id', $id)->get()->getRowArray();
+
+        if (! $header) {
+            return redirect()->back()->with('error', 'Data peminjaman tidak ditemukan');
+        }
+        if ($header['status'] != 'approved') {
+            return redirect()->back()->with('error', 'Status peminjaman tidak bisa dikembalikan');
+        }
+
+        $details = $db->table('peminjaman_detail')->where('peminjaman_id', $id)->get()->getResultArray();
+
+        $db->transStart();
+
+        foreach ($details as $det) {
+            $jumlah_kembali = $det['jumlah']; // atau ambil dari input form kalau pengembalian parsial
+            $inv            = $db->table('inventaris')->where('id', $det['inventaris_id'])->get()->getRowArray();
+
+            // Update stok inventaris (tambahkan kembali)
+            $db->table('inventaris')
+                ->where('id', $det['inventaris_id'])
+                ->set('stok', 'stok + ' . $jumlah_kembali, false)
+                ->update();
+
+            // Mutasi masuk transaksi_barang
+            $db->table('transaksi_barang')->insert([
+                'kode_barang'        => $det['inventaris_id'],
+                'id_master_barang'   => $inv['id_master_barang'] ?? null,
+                'tanggal_transaksi'  => date('Y-m-d H:i:s'),
+                'jenis_transaksi'    => 'KEMBALI',
+                'informasi_tambahan' => 'Pengembalian diverifikasi oleh user ' . user()->id,
+                'jumlah_perubahan'   => $jumlah_kembali,
+                'user_id'            => user()->id, // user yang menerima barang kembali
             ]);
 
-            // move file baru
-            foreach ($images as $i => $img) {
-                if ($img->isValid() && !$img->hasMoved()) {
-                    $img->move('uploads', $files[$i]);
-                }
-            }
+            // Update di peminjaman_detail
+            $db->table('peminjaman_detail')->where('id', $det['id'])->update([
+                'jumlah_kembali'  => $jumlah_kembali,
+                'kondisi_kembali' => 'Baik', // atau dari inputan form
+            ]);
         }
 
-        session()->setFlashdata('msg', 'Pengaduan berhasil diubah.');
-        return redirect()->to('user/pengaduan');
+        // Update status header jadi dikembalikan
+        $db->table('peminjaman_header')->where('id', $id)->update([
+            'status'                => 'dikembalikan',
+            'tanggal_kembali_real'  => date('Y-m-d H:i:s'),
+            'user_penerima_kembali' => user()->id, // tambahin di model kalau perlu
+        ]);
+
+        $db->transComplete();
+
+        if ($db->transStatus() === false) {
+            return redirect()->back()->with('error', 'Gagal proses pengembalian');
+        }
+
+        return redirect()->to('/user/peminjaman')->with('success', 'Peminjaman berhasil dikembalikan!');
     }
 
-    public function print()
+    public function detailPeminjaman($id)
     {
+        $db = db_connect();
+       
+        $userid = user()->id;
+        $role = $this->db->table('auth_groups_users')->where('user_id', $userid)->get()->getRow();
+        $role == '1' ? $role_echo = 'user' : $role_echo = 'User';
+        // --- Ambil data header ---
+        $header = $db->table('peminjaman_header')
+            ->select('peminjaman_header.*, u.username, u.fullname, r1.nama_ruangan as ruangan_pinjam, r2.nama_ruangan as ruangan_sebelum')
+            ->join('users u', 'u.id = peminjaman_header.id_user', 'left')
+            ->join('ruangan r1', 'r1.id = peminjaman_header.ruangan_id_pinjam', 'left')
+            ->join('ruangan r2', 'r2.id = peminjaman_header.ruangan_id_sebelum', 'left')
+            ->where('peminjaman_header.peminjaman_id', $id)
+            ->get()
+            ->getRowArray();
+
+        if (! $header) {
+            return redirect()->back()->with('error', 'Data peminjaman tidak ditemukan!');
+        }
+
+        // --- Ambil data detail barang yang dipinjam ---
+        $details = $db->table('peminjaman_detail')
+            ->select('peminjaman_detail.*, i.*, m.*, r.*')
+            ->join('inventaris i', 'i.id = peminjaman_detail.inventaris_id', 'left')
+            ->join('master_barang m', 'm.kode_brg = i.id_master_barang', 'left')
+            ->join('ruangan r', 'r.id = peminjaman_detail.ruangan_id', 'left')
+            ->where('peminjaman_detail.peminjaman_id', $id)
+            ->get()
+            ->getResultArray();
+
+
+        // --- (Optional) Mutasi pengembalian barang, untuk riwayat audit ---
+        $mutasi = [];
+        if (! empty($details)) {
+            $inventarisIds = array_column($details, 'inventaris_id');
+            $mutasi        = $db->table('transaksi_barang')
+                ->whereIn('kode_barang', $inventarisIds)
+                ->where('jenis_transaksi', 'KEMBALI')
+                ->orderBy('tanggal_transaksi', 'desc')
+                ->get()
+                ->getResultArray();
+        }
+
         $data = [
-            'pengaduan' => $this->pengaduan->getAll(),
-            'title' => 'Cetak Data'
+            'header'  => $header,
+            'details' => $details,
+            'mutasi'  => $mutasi,
+            'role' => $role_echo,
+            'title'   => 'Detail Peminjaman Barang',
         ];
 
-        $dompdf = new \Dompdf\Dompdf();
-        $options = new \Dompdf\Options();
-        $options->setIsRemoteEnabled(true);
-
-        $dompdf->setOptions($options);
-        $dompdf->output();
-        $dompdf->loadHtml(view('user/pengaduan/print', $data));
-        $dompdf->setPaper('A4', 'portrait');
-        $dompdf->render();
-        ini_set('max_execution_time', 0);
-        $dompdf->stream('Data.pdf', array("Attachment" => false));
-    }
-    public function ekspor($id)
-    {
-        // $aduan = $this->pengaduan->where(['id' => $id])->first();
-        // $id = $id;
-        // $data['detail']   = $aduan;
-        $data['title']   = 'cetak';
-        $data['detail'] = $this->pengaduan->where(['id' => $id])->first();
-
-
-
-        //Cetak dengan dompdf
-        $dompdf = new \Dompdf\Dompdf();
-        ini_set('max_execution_time', 0);
-        $options = new \Dompdf\Options();
-        $options->setIsRemoteEnabled(true);
-
-        $dompdf->setOptions($options);
-        $dompdf->output();
-        $dompdf->loadHtml(view('user/pengaduan/cetak', $data));
-        $dompdf->setPaper('A4', 'portrait');
-        $dompdf->render();
-        $dompdf->stream('Detail Pengaduan.pdf', array("Attachment" => false));
+        // dd($data);
+        return view('user/Peminjaman/Detail', $data);
     }
 }
