@@ -29,9 +29,14 @@ use Kenjis\CI3Compatible\Core\CI_Input;
 use Myth\Auth\Models\GroupModel;
 use Myth\Auth\Models\UserModel;
 
+/**
+ * @property Home_model $home_model
+ * @property Ciqrcode $ciqrcode
+ * @property CI_Input $input
+ */
 class User extends BaseController
 {
-   protected $db;
+    protected $db;
     protected $builder;
     protected $BarangModel;
     protected $validation;
@@ -73,7 +78,7 @@ class User extends BaseController
         $this->builder                 = $this->db->table('users');
         $this->validation              = \Config\Services::validation();
         $this->session                 = \Config\Services::session();
-        // $this->ciqrcode                = new \App\Libraries\Ciqrcode();
+        $this->ciqrcode                = new \App\Libraries\Ciqrcode();
         $this->masterBarangModel       = new masterBarangModel();
         $this->KategoriBarangModel     = new KategoriBarangModel();
         $this->MerkBarangModel         = new MerkBarangModel();
@@ -82,8 +87,11 @@ class User extends BaseController
     public function index()
     {
 
+
+
        
         $data = [
+
             'title' => 'Home'
         ];
         // dd($data);
@@ -96,7 +104,7 @@ class User extends BaseController
         $konfirm = $this->request->getPost('konfirm');
         if ($passwordbaru != $konfirm) {
             session()->setFlashdata('error-msg', 'Password Baru tidak sesuai');
-            return redirect()->to(base_url('admin/tentang/' . $id));
+            return redirect()->to(base_url('user/tentang/' . $id));
         }
 
         $builder = $this->db->table('users');
@@ -125,11 +133,11 @@ class User extends BaseController
         $userlogin = user()->username;
         $userid = user()->id;
         $role = $this->db->table('auth_groups_users')->where('user_id', $userid)->get()->getRow();
-        $role == '1' ? $role_echo = 'Admin' : $role_echo = 'User';
+        $role == '1' ? $role_echo = 'user' : $role_echo = 'User';
 
 
 
-        $data = $this->db->table('pengaduan');
+        $data = $this->db->table('peminjaman_header');
         $query1 = $data->where('id_user', $userid)->get()->getResult();
         $builder = $this->db->table('users');
         $builder->select('id,username,email,created_at,foto');
@@ -155,8 +163,8 @@ class User extends BaseController
         $query = $builder->where('username', $userlogin)->get()->getRowArray();
         $data = [
 
-            'user' => $query,
-            'validation' => $this->validation,
+            // 'user' => $query,
+            // 'validation' => $this->validation,
             'title' => 'Update Profile'
         ];
         // dd($data['user']);
@@ -204,15 +212,17 @@ class User extends BaseController
         return view('user/pengguna');
     }
 
- public function peminjaman()
+    public function peminjaman()
     {
         $status = $this->request->getGet('status') ?? 'all'; // ambil dari query param
 
         $builder = $this->PeminjamanHeaderModel
-            ->select('peminjaman_header.*, users.username as peminjam, r.nama_ruangan as lokasi_pinjam')
+            ->select('peminjaman_header.*, users.username as peminjam, users.fullname as nama_lengkap, r.nama_ruangan as lokasi_pinjam')
             ->join('users', 'users.id = peminjaman_header.id_user', 'left')
             ->join('ruangan r', 'r.id = peminjaman_header.ruangan_id_pinjam', 'left')
-            ->orderBy('peminjaman_header.tanggal_pinjam', 'desc');
+            ->orderBy('peminjaman_header.tanggal_pinjam', 'desc')
+            ->where('peminjaman_header.id_user', user()->id);
+
 
         if ($status && $status != 'all') {
             $builder->where('peminjaman_header.status', $status);
@@ -227,11 +237,221 @@ class User extends BaseController
         ];
 
         // dd($data);
-        return view('User/Peminjaman/Index', $data);
+        return view('user/Peminjaman/Index', $data);
+    }
+
+    public function tambahPeminjaman()
+    {
+        $status  = $this->request->getGet('status') ?? 'all';
+        $users   = $this->Profil->findAll();
+        $barangs = $this->InventarisModel
+            ->join('master_barang', 'master_barang.kode_brg = inventaris.id_master_barang', 'left')
+            ->where('inventaris.stok >', 0)
+            ->findAll();
+
+        $ruangan    = $this->RuanganModel->findAll();
+        $mapRuangan = [];
+        foreach ($ruangan as $r) {
+            $mapRuangan[$r['id']] = $r['nama_ruangan'];
+        }
+        $data = [
+            'users'      => $users,
+            'barangs'    => $barangs,
+            'title'      => 'Tambah Peminjaman',
+            'ruangan'    => $ruangan,
+            'mapRuangan' => $mapRuangan,
+            'status'     => $status,
+        ];
+
+        // dd($data);
+        return view('user/Peminjaman/Tambah', $data);
+    }
+
+    public function savePeminjaman()
+    {
+        $db = db_connect();
+
+        // Ambil input dari form
+        $barangArr       = $this->request->getPost('barang'); // array: barang[0][kode], barang[0][ruangan_id], barang[0][jumlah]
+        $catatan         = $this->request->getPost('catatan');
+        $ruanganTujuanId = $this->request->getPost('ruangan_id'); // ruangan tujuan pinjam
+        $ruanganSebelum  = isset($barangArr[0]['ruangan_id']) ? $barangArr[0]['ruangan_id'] : null;
+
+        if (empty($barangArr) || ! is_array($barangArr)) {
+            return redirect()->back()->with('error', 'Barang belum dipilih');
+        }
+
+        $db->transStart();
+
+        $headerData = [
+            'kode_transaksi'          => 'PINJAM-' . date('YmdHis'),
+            // 'tanggal_permintaan'      => date('Y-m-d H:i:s'),
+            'tanggal_pinjam'          => date('Y-m-d'),
+            'tanggal_kembali_rencana' => date('Y-m-d', strtotime('+3 days')),
+            'tanggal_kembali_real'    => null,
+            'id_user'                 => user()->id,
+            'approved_by'             => null,
+            'ruangan_id_pinjam'       => $ruanganTujuanId,
+            'ruangan_id_sebelum'      => $ruanganSebelum,
+            'status'                  => 'pengajuan', // <--- default
+            'catatan'                 => $catatan,
+        ];
+        $db->table('peminjaman_header')->insert($headerData);
+        $peminjaman_id = $db->insertID();
+
+        // 2️⃣ Insert detail peminjaman (tanpa update stok)
+        foreach ($barangArr as $barang) {
+            $kode_barang = $barang['kode'];
+            $ruangan_id  = $barang['ruangan_id'];
+            $jumlah      = isset($barang['jumlah']) ? max(1, intval($barang['jumlah'])) : 1;
+
+            $inventaris = $db->table('inventaris')
+                ->where('id', $kode_barang)
+                ->get()
+                ->getRowArray();
+
+            if (! $inventaris) {
+                $db->transRollback();
+                return redirect()->back()->with('error', "Barang dengan kode $kode_barang tidak ditemukan");
+            }
+
+            // Insert ke detail (tanpa update stok/mutasi)
+            $db->table('peminjaman_detail')->insert([
+                'id_user'         => user()->id,
+                'peminjaman_id'   => $peminjaman_id,
+                'inventaris_id'   => $kode_barang,
+                'ruangan_id'      => $ruangan_id,
+                'jumlah'          => $jumlah,
+                'jumlah_kembali'  => 0,
+                'kondisi_kembali' => '',
+                'detail'          => "Peminjaman dari ruangan " . ($inventaris['ruangan_id'] ?? '-') . " ke " . $db->table('ruangan')->where('id', $ruangan_id)->get()->getRow()->nama_ruangan,
+            ]);
+        }
+
+        $db->transComplete();
+
+        if ($db->transStatus() === false) {
+            return redirect()->back()->with('error', 'Gagal menyimpan peminjaman');
+        }
+
+        return redirect()->to('/user/peminjaman')
+            ->with('success', 'Pengajuan peminjaman berhasil disimpan!');
     }
 
 
+    public function kembalikanPeminjaman($id)
+    {
+        $db     = db_connect();
+        $header = $db->table('peminjaman_header')->where('id', $id)->get()->getRowArray();
+
+        if (! $header) {
+            return redirect()->back()->with('error', 'Data peminjaman tidak ditemukan');
+        }
+        if ($header['status'] != 'approved') {
+            return redirect()->back()->with('error', 'Status peminjaman tidak bisa dikembalikan');
+        }
+
+        $details = $db->table('peminjaman_detail')->where('peminjaman_id', $id)->get()->getResultArray();
+
+        $db->transStart();
+
+        foreach ($details as $det) {
+            $jumlah_kembali = $det['jumlah']; // atau ambil dari input form kalau pengembalian parsial
+            $inv            = $db->table('inventaris')->where('id', $det['inventaris_id'])->get()->getRowArray();
+
+            // Update stok inventaris (tambahkan kembali)
+            $db->table('inventaris')
+                ->where('id', $det['inventaris_id'])
+                ->set('stok', 'stok + ' . $jumlah_kembali, false)
+                ->update();
+
+            // Mutasi masuk transaksi_barang
+            $db->table('transaksi_barang')->insert([
+                'kode_barang'        => $det['inventaris_id'],
+                'id_master_barang'   => $inv['id_master_barang'] ?? null,
+                'tanggal_transaksi'  => date('Y-m-d H:i:s'),
+                'jenis_transaksi'    => 'KEMBALI',
+                'informasi_tambahan' => 'Pengembalian diverifikasi oleh user ' . user()->id,
+                'jumlah_perubahan'   => $jumlah_kembali,
+                'user_id'            => user()->id, // user yang menerima barang kembali
+            ]);
+
+            // Update di peminjaman_detail
+            $db->table('peminjaman_detail')->where('id', $det['id'])->update([
+                'jumlah_kembali'  => $jumlah_kembali,
+                'kondisi_kembali' => 'Baik', // atau dari inputan form
+            ]);
+        }
+
+        // Update status header jadi dikembalikan
+        $db->table('peminjaman_header')->where('id', $id)->update([
+            'status'                => 'dikembalikan',
+            'tanggal_kembali_real'  => date('Y-m-d H:i:s'),
+            'user_penerima_kembali' => user()->id, // tambahin di model kalau perlu
+        ]);
+
+        $db->transComplete();
+
+        if ($db->transStatus() === false) {
+            return redirect()->back()->with('error', 'Gagal proses pengembalian');
+        }
+
+        return redirect()->to('/user/peminjaman')->with('success', 'Peminjaman berhasil dikembalikan!');
+    }
+
+    public function detailPeminjaman($id)
+    {
+        $db = db_connect();
+       
+        $userid = user()->id;
+        $role = $this->db->table('auth_groups_users')->where('user_id', $userid)->get()->getRow();
+        $role == '1' ? $role_echo = 'user' : $role_echo = 'User';
+        // --- Ambil data header ---
+        $header = $db->table('peminjaman_header')
+            ->select('peminjaman_header.*, u.username, u.fullname, r1.nama_ruangan as ruangan_pinjam, r2.nama_ruangan as ruangan_sebelum')
+            ->join('users u', 'u.id = peminjaman_header.id_user', 'left')
+            ->join('ruangan r1', 'r1.id = peminjaman_header.ruangan_id_pinjam', 'left')
+            ->join('ruangan r2', 'r2.id = peminjaman_header.ruangan_id_sebelum', 'left')
+            ->where('peminjaman_header.peminjaman_id', $id)
+            ->get()
+            ->getRowArray();
+
+        if (! $header) {
+            return redirect()->back()->with('error', 'Data peminjaman tidak ditemukan!');
+        }
+
+        // --- Ambil data detail barang yang dipinjam ---
+        $details = $db->table('peminjaman_detail')
+            ->select('peminjaman_detail.*, i.*, m.*, r.*')
+            ->join('inventaris i', 'i.id = peminjaman_detail.inventaris_id', 'left')
+            ->join('master_barang m', 'm.kode_brg = i.id_master_barang', 'left')
+            ->join('ruangan r', 'r.id = peminjaman_detail.ruangan_id', 'left')
+            ->where('peminjaman_detail.peminjaman_id', $id)
+            ->get()
+            ->getResultArray();
 
 
-   
+        // --- (Optional) Mutasi pengembalian barang, untuk riwayat audit ---
+        $mutasi = [];
+        if (! empty($details)) {
+            $inventarisIds = array_column($details, 'inventaris_id');
+            $mutasi        = $db->table('transaksi_barang')
+                ->whereIn('kode_barang', $inventarisIds)
+                ->where('jenis_transaksi', 'KEMBALI')
+                ->orderBy('tanggal_transaksi', 'desc')
+                ->get()
+                ->getResultArray();
+        }
+
+        $data = [
+            'header'  => $header,
+            'details' => $details,
+            'mutasi'  => $mutasi,
+            'role' => $role_echo,
+            'title'   => 'Detail Peminjaman Barang',
+        ];
+
+        // dd($data);
+        return view('user/Peminjaman/Detail', $data);
+    }
 }
