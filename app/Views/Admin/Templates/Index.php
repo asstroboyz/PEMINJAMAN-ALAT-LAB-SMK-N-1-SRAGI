@@ -215,12 +215,16 @@
 
   <?php echo $this->renderSection('additional-js') ?>
   <script>
-    $('.btn-change-group').on('click', function() {
-      const id = $(this).data('id');
+$('.btn-change-group').on('click', function() {
+    const id = $(this).data('id');
+    const group = $(this).data('group');
+    console.log("GROUP:", group); // Debug
+    $('.id').val(id);
+    $('select[name="group"]').val(group);
+    $('#changeGroupModal').modal('show');
+});
 
-      $('.id').val(id);
-      $('#changeGroupModal').modal('show');
-    });
+
 
     $('.btn-change-password').on('click', function() {
 

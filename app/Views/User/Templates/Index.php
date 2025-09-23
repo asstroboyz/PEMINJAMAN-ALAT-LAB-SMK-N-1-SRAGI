@@ -119,7 +119,7 @@
   <div id="wrapper">
 
         <!-- Sidebar -->
-        <?=$this->include('User/Templates/Sidebar');?>
+        <?php echo $this->include('User/Templates/Sidebar');?>
         <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
@@ -129,7 +129,7 @@
       <div id="content">
 
                 <!-- Topbar -->
-                <?=$this->include('User/Templates/Topbar');?>
+                <?php echo $this->include('User/Templates/Topbar');?>
                 <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
@@ -215,12 +215,15 @@
 
   <?php echo $this->renderSection('additional-js') ?>
   <script>
-    $('.btn-change-group').on('click', function() {
-      const id = $(this).data('id');
+   $('.btn-change-group').on('click', function() {
+  const id = $(this).data('id');
+  const group = $(this).data('group');
 
-      $('.id').val(id);
-      $('#changeGroupModal').modal('show');
-    });
+  $('.id').val(id);
+  $('#changeGroupModal select[name="group"]').val(group);
+  $('#changeGroupModal').modal('show');
+});
+
 
     $('.btn-change-password').on('click', function() {
 

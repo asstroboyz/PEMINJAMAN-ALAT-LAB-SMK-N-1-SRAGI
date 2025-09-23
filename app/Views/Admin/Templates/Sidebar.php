@@ -89,6 +89,13 @@ hr.sidebar-divider {
             <span>Dashboard</span>
         </a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link"  href="<?php echo base_url('Admin/kelola_user'); ?>">
+            <i class="fas fa-users"></i>
+            <span>Manage Users</span>
+        </a>
+    </li>
+   
     <hr class="sidebar-divider">
     <div class="sidebar-heading">Interface</div>
     <li class="nav-item">
