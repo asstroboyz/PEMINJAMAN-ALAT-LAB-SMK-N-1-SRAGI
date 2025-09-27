@@ -10,19 +10,25 @@ class PeminjamanHeaderModel extends Model
 
     protected $allowedFields = [
         'kode_transaksi',
-        'tanggal_permintaan',
         'tanggal_pinjam',
         'tanggal_kembali_rencana',
         'tanggal_kembali_real',
-        'id_user',           // yang mengajukan pinjam
-        'approved_by',       // yang approval
-        'ruangan_id_pinjam', // FK ke ruangan (tujuan)
-        'ruangan_id_sebelum',// FK ke ruangan (sebelum dipinjam)
-        'status',            // pending, dipinjam, kembali, ditolak
+        'id_user',             // pengaju
+        'approved_by',         // approver
+        'ruangan_id_pinjam',   // FK ruangan tujuan
+        'ruangan_id_sebelum',  // FK ruangan asal
+        'status',              // pending, dipinjam, kembali, ditolak
         'catatan',
         'approved_at',
-        'tgl_proses',
+        'alasan_reject',
+        'user_penerima_kembali',
     ];
+
+    // biar created_at & updated_at auto
+    protected $useTimestamps = true;
+    protected $dateFormat    = 'datetime';
+    protected $createdField  = 'created_at';
+    protected $updatedField  = 'updated_at';
 
     public function withUser($id)
     {
@@ -33,20 +39,24 @@ class PeminjamanHeaderModel extends Model
             ->first();
     }
 
-    public function approvePinjam($peminjaman_id, $approved_by)
+    public function approvePinjam($peminjaman_id, $approved_by, $hariRencana = 3)
     {
         return $this->update($peminjaman_id, [
-            'status' => 'dipinjam',
-            'approved_by' => $approved_by,
-            'tanggal_pinjam' => date('Y-m-d H:i:s'),
+            'status'                  => 'dipinjam',
+            'approved_by'             => $approved_by,
+            'approved_at'             => date('Y-m-d H:i:s'),
+            'tanggal_pinjam'          => date('Y-m-d H:i:s'),
+            'tanggal_kembali_rencana' => date('Y-m-d H:i:s', strtotime("+{$hariRencana} days")),
         ]);
     }
+
     public function rejectPinjam($peminjaman_id, $approved_by, $alasan = null)
     {
         return $this->update($peminjaman_id, [
-            'status' => 'ditolak',
-            'approved_by' => $approved_by,
-            'catatan' => $alasan,
+            'status'        => 'ditolak',
+            'approved_by'   => $approved_by,
+            'approved_at'   => date('Y-m-d H:i:s'),
+            'alasan_reject' => $alasan,
         ]);
     }
 }

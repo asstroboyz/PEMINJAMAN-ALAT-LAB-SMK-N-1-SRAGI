@@ -53,30 +53,13 @@
                                         </span>
                                     </td>
                                     <td><?= $row['catatan'] ?? '-' ?></td>
-                                    <td>
-                                        <div class="btn-group btn-group-sm">
-                                            <a href="<?= base_url('User/detailPeminjaman/' . $row['peminjaman_id']) ?>"
-                                                class="btn btn-outline-primary">
-                                                <i class="fa fa-list"></i> Detail
-                                            </a>
-                                            <?php if ($row['status'] == 'diproses'): ?>
-                                                <a href="<?= base_url('User/approvePeminjaman/' . $row['peminjaman_id']) ?>"
-                                                    class="btn btn-success">
-                                                    <i class="fa fa-check"></i> Approve
-                                                </a>
-                                                <a href="<?= base_url('User/rejectPeminjaman/' . $row['peminjaman_id']) ?>"
-                                                    class="btn btn-danger">
-                                                    <i class="fa fa-times"></i> Reject
-                                                </a>
-                                            <?php elseif ($row['status'] == 'selesai'): ?>
-                                                <span class="text-success"><i class="fa fa-check-circle"></i> Selesai</span>
-                                            <?php elseif ($row['status'] == 'rejected'): ?>
-                                                <span class="text-danger"><i class="fa fa-times-circle"></i> Ditolak</span>
-                                            <?php else: ?>
-                                              
-                                            <?php endif ?>
-                                        </div>
-                                    </td>
+                                 <td>
+  <a href="<?= base_url('User/detailPeminjaman/' . $row['peminjaman_id']) ?>"
+     class="btn btn-outline-primary btn-sm">
+    <i class="fa fa-list"></i> Detail
+  </a>
+</td>
+
                                 </tr>
                             <?php endforeach ?>
                         <?php else: ?>

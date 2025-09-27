@@ -16,49 +16,58 @@
             <a href="/User/peminjaman" class="btn btn-link text-primary font-weight-bold">
                 <i class="fas fa-chevron-left"></i> Kembali ke daftar peminjaman
             </a>
-            <div>
-                <span class="badge badge-<?php
-                                            echo $header['status'] == 'approved' ? 'success'
-                                                : ($header['status'] == 'rejected' ? 'danger'
-                                                    : ($header['status'] == 'dikembalikan' ? 'info' : 'warning'));
-                                            ?> p-2">
-                    <?php echo strtoupper($header['status']) ?>
-                </span>
-                <?php if ($header['status'] == 'pengajuan' && strtolower($role) !== 'user'): ?>
+          <div>
+    <span class="badge badge-<?php
+        echo $header['status'] == 'approved' || $header['status'] == 'dipinjam' ? 'success'
+            : ($header['status'] == 'rejected' ? 'danger'
+            : ($header['status'] == 'dikembalikan' ? 'info' : 'warning'));
+        ?> p-2">
+        <?php echo strtoupper($header['status']) ?>
+    </span>
 
-                    <div class="dropdown d-inline ml-2">
-                        <button class="btn btn-warning btn-sm dropdown-toggle"
-                            type="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Pilih Aksi
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <button type="button" class="dropdown-item" onclick="showApproveSwal()">
-                                    <i class="fas fa-check text-success"></i> Approve
-                                </button>
-                            </li>
-                            <li>
-                                <button type="button" class="dropdown-item text-danger" onclick="showRejectSwal()">
-                                    <i class="fas fa-times"></i> Reject
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- FORM HIDDEN UNTUK APPROVE -->
-                    <form id="formApprove" action="/User/approve/<?php echo $header['peminjaman_id'] ?>" method="post" style="display:none;">
-                        <?php echo csrf_field() ?>
-                    </form>
-                    <!-- FORM HIDDEN UNTUK REJECT -->
-                    <form id="formReject" action="/User/reject/<?php echo $header['peminjaman_id'] ?>" method="post" style="display:none;">
-                        <?php echo csrf_field() ?>
-                        <input type="hidden" name="alasan_reject" id="alasanRejectInput">
-                    </form>
-                <?php endif ?>
-            </div>
+    <?php if ($header['status'] == 'pengajuan'): ?>
+        <div class="dropdown d-inline ml-2">
+            <button class="btn btn-warning btn-sm dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Pilih Aksi
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <button type="button" class="dropdown-item" onclick="showApproveSwal()">
+                        <i class="fas fa-check text-success"></i> Approve
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="dropdown-item text-danger" onclick="showRejectSwal()">
+                        <i class="fas fa-times"></i> Reject
+                    </button>
+                </li>
+            </ul>
+        </div>
 
+        <!-- FORM HIDDEN UNTUK APPROVE -->
+        <form id="formApprove" action="/User/approve/<?php echo $header['peminjaman_id'] ?>" method="post" style="display:none;">
+            <?php echo csrf_field() ?>
+        </form>
 
+        <!-- FORM HIDDEN UNTUK REJECT -->
+        <form id="formReject" action="/User/reject/<?php echo $header['peminjaman_id'] ?>" method="post" style="display:none;">
+            <?php echo csrf_field() ?>
+            <input type="hidden" name="alasan_reject" id="alasanRejectInput">
+        </form>
+
+    <?php elseif ($header['status'] == 'dipinjam'): ?>
+        <!-- Tombol Kembalikan -->
+        <form id="formKembalikan" action="/User/kembalikanPeminjaman/<?php echo $header['peminjaman_id'] ?>" method="post" class="d-inline">
+            <?php echo csrf_field() ?>
+            <button type="submit" class="btn btn-info btn-sm" onclick="return confirm('Yakin barang sudah kembali?')">
+                <i class="fas fa-undo"></i> Kembalikan
+            </button>
+        </form>
+    <?php endif ?>
+</div>
 
         </div>
         <div class="card-body">

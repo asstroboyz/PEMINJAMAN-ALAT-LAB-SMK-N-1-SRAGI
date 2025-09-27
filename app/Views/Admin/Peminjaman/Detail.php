@@ -18,12 +18,13 @@
             </a>
           <div>
     <span class="badge badge-<?php
-        echo $header['status'] == 'approved' ? 'success'
+        echo $header['status'] == 'approved' || $header['status'] == 'dipinjam' ? 'success'
             : ($header['status'] == 'rejected' ? 'danger'
             : ($header['status'] == 'dikembalikan' ? 'info' : 'warning'));
     ?> p-2">
         <?php echo strtoupper($header['status']) ?>
     </span>
+
     <?php if ($header['status'] == 'pengajuan'): ?>
         <div class="dropdown d-inline ml-2">
             <button class="btn btn-warning btn-sm dropdown-toggle"
@@ -45,6 +46,7 @@
                 </li>
             </ul>
         </div>
+
         <!-- FORM HIDDEN UNTUK APPROVE -->
         <form id="formApprove" action="/admin/approve/<?php echo $header['peminjaman_id'] ?>" method="post" style="display:none;">
             <?php echo csrf_field() ?>
@@ -54,8 +56,20 @@
             <?php echo csrf_field() ?>
             <input type="hidden" name="alasan_reject" id="alasanRejectInput">
         </form>
+
+    <?php elseif ($header['status'] == 'menunggu_kembali'): ?>
+        <!-- Tombol verifikasi pengembalian -->
+        <button type="button" class="btn btn-info btn-sm ml-2" onclick="showVerifikasiSwal()">
+            <i class="fas fa-undo"></i> Verifikasi Pengembalian
+        </button>
+
+        <!-- FORM HIDDEN UNTUK VERIFIKASI -->
+        <form id="formVerifikasi" action="/admin/approvePengembalian/<?php echo $header['peminjaman_id'] ?>" method="post" style="display:none;">
+            <?php echo csrf_field() ?>
+        </form>
     <?php endif ?>
 </div>
+
 
 
 
@@ -132,7 +146,7 @@
                 <tbody>
                     <?php foreach ($details as $det): ?>
                         <tr>
-                            <td><?php echo esc($det['kode_barang'])?></td>
+                            <td><?php echo esc($det['kode_brg'])?></td>
                             <td><?php echo esc($det['nama_brg'])?></td>
                             <td><?php echo esc($det['merk'])?></td>
                             <td><?php echo esc($det['spesifikasi'])?></td>
@@ -282,6 +296,21 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
+function showVerifikasiSwal() {
+    Swal.fire({
+        title: 'Konfirmasi',
+        text: 'Yakin ingin memverifikasi pengembalian ini?',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonText: 'Ya, verifikasi',
+        cancelButtonText: 'Batal'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            document.getElementById('formVerifikasi').submit();
+        }
+    });
+}
+
 function showApproveSwal() {
     Swal.fire({
         title: 'Setujui peminjaman?',

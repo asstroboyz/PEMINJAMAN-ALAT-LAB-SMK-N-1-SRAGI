@@ -134,21 +134,32 @@ hr.sidebar-divider {
             <span>Peminjaman alat</span>
         </a>
         <div id="barang" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-    <div class="collapse-inner rounded">
-        <h6 class="collapse-header">Custom Utilities:</h6>
-        <a class="collapse-item" href="<?= base_url('Admin/peminjaman?status=all'); ?>">
-            <i class="fas fa-arrow-right-arrow-left"></i> Semua Peminjaman
-        </a>
-        <a class="collapse-item" href="<?= base_url('Admin/peminjaman?status=pengajuan  '); ?>">
-            <i class="fas fa-spinner"></i> Diproses
-        </a>
-        <a class="collapse-item" href="<?= base_url('Admin/peminjaman?status=selesai'); ?>">
-            <i class="fas fa-check-double"></i> Selesai
-        </a>
-        <a class="collapse-item" href="<?= base_url('Admin/peminjaman?status=rejected'); ?>">
-            <i class="fas fa-ban"></i> Ditolak
-        </a>
-    </div>
+   <div class="collapse-inner rounded">
+    <h6 class="collapse-header">Custom Utilities:</h6>
+
+    <a class="collapse-item" href="<?= base_url('aDMIN/peminjaman?status=all'); ?>">
+        <i class="fas fa-list"></i> Semua Peminjaman
+    </a>
+
+    <a class="collapse-item" href="<?= base_url('aDMIN/peminjaman?status=pengajuan'); ?>">
+        <i class="fas fa-spinner"></i> Pengajuan
+    </a>
+
+    <a class="collapse-item" href="<?= base_url('aDMIN/peminjaman?status=dipinjam'); ?>">
+        <i class="fas fa-box-open"></i> Sedang Dipinjam
+    </a>
+
+    <a class="collapse-item" href="<?= base_url('aDMIN/peminjaman?status=menunggu_kembali'); ?>">
+        <i class="fas fa-undo-alt"></i> Menunggu Pengembalian
+    </a>
+
+    <a class="collapse-item" href="<?= base_url('aDMIN/peminjaman?status=dikembalikan'); ?>">
+        <i class="fas fa-check-double"></i> Dikembalikan
+    </a>
+
+    <a class="collapse-item" href="<?= base_url('aDMIN/peminjaman?status=rejected'); ?>">
+        <i class="fas fa-ban"></i> Ditolak
+    </a>
 </div>
 
     </li>

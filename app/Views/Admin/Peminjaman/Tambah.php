@@ -1,10 +1,10 @@
-<?= $this->extend('Admin/Templates/Index'); ?>
-<?= $this->section('page-content'); ?>
+<?php echo $this->extend('Admin/Templates/Index'); ?>
+<?php echo $this->section('page-content'); ?>
 <div class="container-fluid">
     <h1 class="h3 mb-4 text-gray-900">Form Tambah Barang</h1>
 
     <?php if (session()->getFlashdata('msg')): ?>
-        <div class="alert alert-success"><?= session()->getFlashdata('msg'); ?></div>
+        <div class="alert alert-success"><?php echo session()->getFlashdata('msg'); ?></div>
     <?php endif; ?>
 
     <div class="card shadow">
@@ -12,8 +12,8 @@
             <a href="/Admin/peminjaman?status=all">&laquo; Kembali ke daftar peminjaman</a>
         </div>
         <div class="card-body">
-            <form action="<?= base_url('/Admin/savePeminjaman') ?>" method="post" id="form">
-                <?= csrf_field(); ?>
+            <form action="<?php echo base_url('/Admin/savePeminjaman') ?>" method="post" id="form">
+                <?php echo csrf_field(); ?>
 
                 <!-- Pilih Ruangan Tujuan -->
                 <div class="mb-3">
@@ -21,32 +21,53 @@
                     <select id="select-ruangan-tujuan" name="ruangan_id" class="form-control">
                         <option value="">-- Pilih Ruangan --</option>
                         <?php foreach ($ruangan as $r): ?>
-                            <option value="<?= $r['id'] ?>"><?= $r['nama_ruangan'] ?></option>
+                            <option value="<?php echo $r['id'] ?>"><?php echo $r['nama_ruangan'] ?></option>
                         <?php endforeach; ?>
                     </select>
                 </div>
+                <div class="form-group">
+    <label for="id_user">Pilih Peminjam</label>
+
+    <!-- Checkbox admin sendiri -->
+    <div class="form-check mb-2">
+        <input class="form-check-input" type="checkbox" id="adminSendiri" name="admin_sendiri" value="1">
+        <label class="form-check-label" for="adminSendiri">
+            Gunakan Admin (saya sendiri)
+        </label>
+    </div>
+
+    <!-- Dropdown user -->
+    <select name="id_user" id="id_user" class="form-control">
+        <option value="">-- Pilih User Peminjam --</option>
+        <?php foreach ($users as $u): ?>
+            <option value="<?php echo $u['id'];?>"><?php echo $u['username'];?></option>
+        <?php endforeach; ?>
+    </select>
+</div>
+
+
                 <div class="mb-3">
                     <label for="select-ruangan-tujuan">Pilih Barang</label>
-                     <select id="select-barang" class="form-control me-2 flex-grow-1">
+                    <select id="select-barang" class="form-control me-2 flex-grow-1">
                         <option value="">-- Pilih Barang --</option>
                         <?php foreach ($barangs as $b): ?>
-                            <option value="<?= $b['id'] ?>"
-                                data-kode-brg="<?= $b['kode_brg'] ?>"
-                                data-nama="<?= $b['nama_brg'] ?>"
-                                data-merk="<?= $b['merk'] ?>"
-                                data-kondisi="<?= $b['kondisi'] ?>"
-                                data-ruangan-id="<?= $b['ruangan_id'] ?>"
-                                data-nama-ruangan="<?= $mapRuangan[$b['ruangan_id']] ?? '' ?>"
-                                data-stok="<?= $b['stok'] ?>">
-                                <?= $b['nama_brg'] ?> - <?= $b['merk'] ?> (<?= $b['kondisi'] ?>) - <?= $mapRuangan[$b['ruangan_id']] ?? '' ?>
+                            <option value="<?php echo $b['id'] ?>"
+                                data-kode-brg="<?php echo $b['kode_brg'] ?>"
+                                data-nama="<?php echo $b['nama_brg'] ?>"
+                                data-merk="<?php echo $b['merk'] ?>"
+                                data-kondisi="<?php echo $b['kondisi'] ?>"
+                                data-ruangan-id="<?php echo $b['ruangan_id'] ?>"
+                                data-nama-ruangan="<?php echo $mapRuangan[$b['ruangan_id']] ?? '' ?>"
+                                data-stok="<?php echo $b['stok'] ?>">
+                                <?php echo $b['nama_brg'] ?> -<?php echo $b['merk'] ?> (<?php echo $b['kondisi'] ?>) -<?php echo $mapRuangan[$b['ruangan_id']] ?? '' ?>
                             </option>
-                        <?php endforeach ?>
+                        <?php endforeach?>
                     </select>
                     <button type="button" class="btn btn-primary mt-3" id="tambah_barang">Tambah</button>
 
                 </div>
 
-               
+
                 <!-- Table Barang -->
                 <div class="table-responsive">
                     <table class="table table-bordered table-hover align-middle" id="table-barang">
@@ -79,8 +100,8 @@
     </div>
 </div>
 
-<?= $this->endSection(); ?>
-<?= $this->section('additional-js'); ?>
+<?php echo $this->endSection(); ?>
+<?php echo $this->section('additional-js'); ?>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <link href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -125,6 +146,16 @@
         `);
         });
     }
+
+//admin
+$('#adminSendiri').on('change', function() {
+    if ($(this).is(':checked')) {
+        $('#id_user').prop('disabled', true).val(''); // disable & reset value
+    } else {
+        $('#id_user').prop('disabled', false);
+    }
+});
+
 
     // Tambah barang
     $('#tambah_barang').on('click', function() {
@@ -223,4 +254,4 @@
 
     renderBarangDipilih();
 </script>
-<?= $this->endSection(); ?>
+<?php echo $this->endSection(); ?>

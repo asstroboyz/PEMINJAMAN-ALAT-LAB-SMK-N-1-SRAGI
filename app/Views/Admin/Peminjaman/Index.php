@@ -43,17 +43,30 @@
                                     <span class="font-monospace"><?= $row['kode_transaksi'] ?></span>
                                 </td>
                                 <td><?= $row['peminjam'] ?? '-' ?></td>
-                                <td><?= date('d-m-Y', strtotime($row['tanggal_pinjam'] ?? $row['tanggal_permintaan'])) ?></td>
+                                <td><?= date('d-m-Y', strtotime($row['tanggal_pinjam'] ?? $row['created_at'])) ?></td>
                                 <td><?= $row['lokasi_pinjam'] ?? '-' ?></td>
-                                <td>
-                                    <span class="badge badge-pill
-                                        <?= $row['status']=='diproses' ? 'badge-info'
-                                        : ($row['status']=='selesai' ? 'badge-success'
-                                        : ($row['status']=='rejected' ? 'badge-danger'
-                                        : 'badge-secondary')) ?>">
-                                        <?= ucfirst($row['status']) ?>
-                                    </span>
-                                </td>
+                               <td>
+    <?php
+        $status = $row['status'];
+        $mapColor = [
+            'pengajuan'        => 'badge-warning',
+            'dipinjam'         => 'badge-info',
+            'menunggu_kembali' => 'badge-primary',
+            'dikembalikan'     => 'badge-success',
+            'rejected'         => 'badge-danger',
+        ];
+
+        // default warna kalau tidak ada di map
+        $badgeClass = $mapColor[$status] ?? 'badge-secondary';
+
+        // ubah underscore jadi spasi + kapital awal
+        $statusText = ucwords(str_replace('_', ' ', $status));
+    ?>
+    <span class="badge badge-pill <?= $badgeClass ?>">
+        <?= $statusText ?>
+    </span>
+</td>
+
                                 <td><?= $row['catatan'] ?? '-' ?></td>
                                 <td>
                                     <div class="btn-group btn-group-sm">
