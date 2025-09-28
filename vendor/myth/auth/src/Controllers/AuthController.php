@@ -136,68 +136,79 @@ class AuthController extends Controller
      * Attempt to register a new user.
      */
     public function attemptRegister()
-    {
-        // Check if registration is allowed
-        if (! $this->config->allowRegistration) {
-            return redirect()->back()->withInput()->with('error', lang('Auth.registerDisabled'));
-        }
-
-        $users = model(UserModel::class);
-
-        // Validate basics first since some password rules rely on these fields
-        $rules = config('Validation')->registrationRules ?? [
-            'username' => 'required|alpha_numeric_space|min_length[3]|max_length[30]|is_unique[users.username]',
-            'email'    => 'required|valid_email|is_unique[users.email]',
-        ];
-
-        if (! $this->validate($rules)) {
-            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
-        }
-
-        // Validate passwords since they can only be validated properly here
-        // $rules = [
-        //     'password'     => 'required|strong_password',
-        //     'pass_confirm' => 'required|matches[password]',
-        // ];
-        $rules = [
-            'password'     => 'required|numeric|exact_length[6]',
-            'pass_confirm' => 'required|matches[password]',
-        ];
-
-        if (! $this->validate($rules)) {
-            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
-        }
-
-        // Save the user
-        $allowedPostFields = array_merge(['password'], $this->config->validFields, $this->config->personalFields);
-        $user              = new User($this->request->getPost($allowedPostFields));
-
-        $this->config->requireActivation === null ? $user->activate() : $user->generateActivateHash();
-
-        // Ensure default group gets assigned if set
-        if (! empty($this->config->defaultUserGroup)) {
-            $users = $users->withGroup($this->config->defaultUserGroup);
-        }
-
-        if (! $users->save($user)) {
-            return redirect()->back()->withInput()->with('errors', $users->errors());
-        }
-
-        if ($this->config->requireActivation !== null) {
-            $activator = service('activator');
-            $sent      = $activator->send($user);
-
-            if (! $sent) {
-                return redirect()->back()->withInput()->with('error', $activator->error() ?? lang('Auth.unknownError'));
-            }
-
-            // Success!
-            return redirect()->route('login')->with('message', lang('Auth.activationSuccess'));
-        }
-
-        // Success!
-        return redirect()->route('login')->with('message', lang('Auth.registerSuccess'));
+{
+    if (! $this->config->allowRegistration) {
+        return redirect()->back()->withInput()->with('error', lang('Auth.registerDisabled'));
     }
+
+    $users = model(UserModel::class);
+
+    // Validasi field dasar
+    $rules = [
+        'fullname' => 'required|min_length[3]|max_length[100]',
+        'username' => 'required|alpha_numeric_space|min_length[3]|max_length[30]|is_unique[users.username]',
+        'email'    => 'required',
+    ];
+
+    if (! $this->validate($rules)) {
+        return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+    }
+
+    // Validasi password
+    $rules = [
+        'password'     => 'required|numeric|exact_length[6]',
+        'pass_confirm' => 'required|matches[password]',
+    ];
+
+    if (! $this->validate($rules)) {
+        return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+    }
+
+    // Upload Foto
+    $fotoFile = $this->request->getFile('foto');
+    $fotoName = null;
+
+    if ($fotoFile && $fotoFile->isValid() && ! $fotoFile->hasMoved()) {
+        $fotoName = $fotoFile->getRandomName();
+        $fotoFile->move('uploads/profile', $fotoName);
+    }
+
+    // Ambil semua data input
+    $allowedPostFields = array_merge(['password'], $this->config->validFields, $this->config->personalFields);
+    $postData          = $this->request->getPost($allowedPostFields);
+
+    // Tambahkan foto jika ada
+    if ($fotoName) {
+        $postData['foto'] = $fotoName;
+    }
+
+    $user = new User($postData);
+
+    $this->config->requireActivation === null ? $user->activate() : $user->generateActivateHash();
+
+    if (! empty($this->config->defaultUserGroup)) {
+        $users = $users->withGroup($this->config->defaultUserGroup);
+    }
+
+    if (! $users->save($user)) {
+        return redirect()->back()->withInput()->with('errors', $users->errors());
+    }
+
+    if ($this->config->requireActivation !== null) {
+        $activator = service('activator');
+        $sent      = $activator->send($user);
+
+        if (! $sent) {
+            return redirect()->back()->withInput()->with('error', $activator->error() ?? lang('Auth.unknownError'));
+        }
+
+        return redirect()->route('login')->with('message', lang('Auth.activationSuccess'));
+    }
+  return redirect()->to('admin/kelola_user')->with('message', 'User berhasil ditambahkan!');
+
+    // return redirect()->route('login')->with('message', lang('Auth.registerSuccess'));
+}
+
 
     //--------------------------------------------------------------------
     // Forgot Password

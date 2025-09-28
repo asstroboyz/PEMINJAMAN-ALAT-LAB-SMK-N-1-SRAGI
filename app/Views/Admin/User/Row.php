@@ -1,7 +1,7 @@
 <tr>
-    <td><?php echo $row->id; ?></td>
+    <td><?= $no ?></td>
     <td><?php echo $row->username; ?></td>
-    <td><?php echo empty($group) ? '' : $group[0]['name']; ?></td>
+    <!-- <td><?php echo empty($group) ? '' : $group[0]['name']; ?></td> -->
     <td><?php echo $row->email; ?></td>
     <td align="center">
         <a href="#" class="btn btn-warning btn-circle btn-change-password"

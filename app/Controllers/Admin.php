@@ -139,55 +139,43 @@ class Admin extends BaseController
 }
 
 
-    public function profil()
-    {
-        $data['title']            = 'User Profile ';
-        $userlogin                = user()->username;
-        $userid                   = user()->id;
-        $role                     = $this->db->table('auth_groups_users')->where('user_id', $userid)->get()->getRow();
-        $role == '1' ? $role_echo = 'Admin' : $role_echo = 'Pegawai'; // $data['title'] = 'User Profile ';
-        $userlogin                = user()->username;
-        $userid                   = user()->id;
+  public function profil()
+{
+    $userlogin = user()->username;
+    $userid    = user()->id;
 
-        // Mengambil data role dari tabel auth_groups_users
-        $roleData = $this->db->table('auth_groups_users')->where('user_id', $userid)->get()->getRow();
+    // Ambil role user
+    $roleData = $this->db->table('auth_groups_users')
+        ->where('user_id', $userid)
+        ->get()
+        ->getRow();
 
-        // Memeriksa apakah data role ditemukan
-        if ($roleData) {
-
-            $adminRoleId      = 1;
-            $petugasPengadaan = 2;
-
-            // Menentukan status role berdasarkan ID role
-            if ($roleData->group_id == $adminRoleId) {
-                $role_echo = 'Admin';
-            } elseif ($roleData->group_id == $petugasPengadaan) {
-                $role_echo = 'Petugas Pengadaan';
-            } else {
-                $role_echo = 'Pegawai';
-            }
+    if ($roleData) {
+        if ($roleData->group_id == 1) {
+            $role_echo = 'Admin';
         } else {
-            // Jika data role tidak ditemukan, mengatur nilai default sebagai 'Pegawai'
-            $role_echo = 'Pegawai';
+            $role_echo = 'User';
         }
-
-        $data    = $this->db->table('permintaan_barang');
-        $query1  = $data->where('id_user', $userid)->get()->getResult();
-        $builder = $this->db->table('users');
-        $builder->select('id,username,email,created_at,foto');
-        $builder->where('username', $userlogin);
-        $query = $builder->get();
-        $semua = count($query1);
-        $data  = [
-            'semua' => $semua,
-            'user'  => $query->getRow(),
-            'title' => 'Profil - BPS',
-            'role'  => $role_echo,
-
-        ];
-
-        return view('Admin/Home/Profil', $data);
+    } else {
+        $role_echo = 'User';
     }
+
+    // Ambil data user
+    $builder = $this->db->table('users');
+    $builder->select('id, username, email, created_at, foto');
+    $builder->where('username', $userlogin);
+    $query = $builder->get();
+
+    // Susun data untuk dikirim ke view
+    $data = [
+        'user'  => $query->getRow(),
+        'title' => 'Profil - SMK N - 1 SRAGI',
+        'role'  => $role_echo,
+    ];
+
+    return view('Admin/Home/Profil', $data);
+}
+
 
     public function simpanProfile($id)
     {
@@ -198,7 +186,7 @@ class Admin extends BaseController
 
         $foto = $this->request->getFile('foto');
         if ($foto->getError() == 4) {
-            $this->profil->update($id, [
+            $this->Profil->update($id, [
                 'email'    => $this->request->getPost('email'),
                 'username' => $this->request->getPost('username'),
             ]);
@@ -210,7 +198,7 @@ class Admin extends BaseController
             }
             $foto->move('uploads/profile', $nama_foto);
 
-            $this->profil->update($id, [
+            $this->Profil->update($id, [
                 'email'    => $this->request->getPost('email'),
                 'username' => $this->request->getPost('username'),
                 'foto'     => $nama_foto,
@@ -819,7 +807,7 @@ class Admin extends BaseController
 
         session();
         $data = [
-            'title'         => "BPS Ubah Data inventaris",
+            'title'         => "SMK N - 1 SRAGI Ubah Data inventaris",
             'validation'    => \Config\Services::validation(),
             'inventaris'    => $this->InventarisModel->getInventaris($id),
             'satuan'        => $this->satuanModel->findAll(),
@@ -2044,8 +2032,9 @@ class Admin extends BaseController
         $data['users'] = $userModel->findAll();
 
         $groupModel = new GroupModel();
-
+ $no = 1;
         foreach ($data['users'] as $row) {
+         $dataRow['no']          = $no++;
             $dataRow['group']       = $groupModel->getGroupsForUser($row->id);
             $dataRow['row']         = $row;
             $data['row' . $row->id] = view('Admin/User/Row', $dataRow);
