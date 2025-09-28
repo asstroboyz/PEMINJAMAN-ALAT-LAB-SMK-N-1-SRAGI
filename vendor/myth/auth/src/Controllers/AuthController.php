@@ -1,5 +1,4 @@
 <?php
-
 namespace Myth\Auth\Controllers;
 
 use CodeIgniter\Controller;
@@ -156,8 +155,12 @@ class AuthController extends Controller
         }
 
         // Validate passwords since they can only be validated properly here
+        // $rules = [
+        //     'password'     => 'required|strong_password',
+        //     'pass_confirm' => 'required|matches[password]',
+        // ];
         $rules = [
-            'password'     => 'required|strong_password',
+            'password'     => 'required|numeric|exact_length[6]',
             'pass_confirm' => 'required|matches[password]',
         ];
 

@@ -215,14 +215,14 @@
 
   <?php echo $this->renderSection('additional-js') ?>
   <script>
-$('.btn-change-group').on('click', function() {
-    const id = $(this).data('id');
-    const group = $(this).data('group');
-    console.log("GROUP:", group); // Debug
-    $('.id').val(id);
-    $('select[name="group"]').val(group);
-    $('#changeGroupModal').modal('show');
-});
+    $('.btn-change-group').on('click', function() {
+      const id = $(this).data('id');
+      const group = $(this).data('group');
+      console.log("GROUP:", group); // Debug
+      $('.id').val(id);
+      $('select[name="group"]').val(group);
+      $('#changeGroupModal').modal('show');
+    });
 
 
 
@@ -234,31 +234,64 @@ $('.btn-change-group').on('click', function() {
       // Tampilkan modal untuk mengubah password
       $('#ubah_password').modal('show');
     });
-    $('.btn-detail').on('click', function(e) {
-      e.preventDefault(); // Menghentikan perilaku default tautan
+    $(document).on('click', '.btn-detail', function(e) {
+      e.preventDefault();
 
-      const id = $(this).data('id');
-      const url = $(this).data('url');
+      const url = $(this).data('url'); // pastikan diarahkan ke /Admin/detailAjax/{id}
 
-      // Lakukan permintaan AJAX
       $.ajax({
         type: 'GET',
         url: url,
-        data: {
-          id: id
-        },
         success: function(response) {
-          // Lakukan sesuatu dengan data yang diterima dari server
-          console.log(response);
-
-          // Pindahkan pengguna ke halaman detail
-          window.location.href = url;
+          if (response.status === 'success') {
+            Swal.fire({
+              title: 'Detail User',
+              html: `
+                <div style="
+                    border: 2px solid #4e73df;
+                    border-radius: 15px;
+                    padding: 20px;
+                    max-width: 400px;
+                    margin: auto;
+                    text-align: left;
+                    font-family: Arial, sans-serif;
+                    background: #f9f9f9;
+                ">
+                    <div style="text-align: center; margin-bottom: 15px;">
+                        <img src="${response.foto ? '/uploads/' + response.foto : 'https://cdn-icons-png.flaticon.com/512/149/149071.png'}"
+                             alt="Foto User"
+                             style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid #4e73df;">
+                    </div>
+                    <table style="width:100%; font-size:14px;">
+                       
+                        <tr>
+                            <td style="font-weight:bold;">Username</td>
+                            <td>: ${response.username}</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:bold;">Email</td>
+                            <td>: ${response.email}</td>
+                        </tr>
+                       
+                        <tr>
+                            <td style="font-weight:bold;">Dibuat</td>
+                            <td>: ${response.created_at}</td>
+                        </tr>
+                    </table>
+                </div>
+            `,
+              showConfirmButton: true,
+              confirmButtonText: 'Tutup',
+              width: 500
+            });
+          }
         },
-        error: function(error) {
-          console.error('Error:', error);
+        error: function() {
+          Swal.fire('Error', 'Gagal mengambil data user', 'error');
         }
       });
     });
+
 
 
     $('.btn-active-users').on('click', function() {

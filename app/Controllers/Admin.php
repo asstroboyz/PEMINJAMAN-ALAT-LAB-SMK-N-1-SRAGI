@@ -110,24 +110,34 @@ class Admin extends BaseController
         return view('Admin/User_list', $data);
     }
 
-    public function detail($id = 0)
-    {
-        $data['title'] = 'SMK - Detail Pengguna';
+   public function detailAjax($id = 0)
+{
+    $this->builder->select('users.id as userid, username, email, foto, name, created_at');
+    $this->builder->join('auth_groups_users', 'auth_groups_users.user_id = users.id');
+    $this->builder->join('auth_groups', 'auth_groups.id = auth_groups_users.group_id');
+    $this->builder->where('users.id', $id);
+    $query = $this->builder->get();
 
-        $this->builder->select('users.id as userid, username, email, foto, name,created_at');
-        $this->builder->join('auth_groups_users', 'auth_groups_users.user_id = users.id');
-        $this->builder->join('auth_groups', 'auth_groups.id = auth_groups_users.group_id');
-        $this->builder->where('users.id', $id);
-        $query = $this->builder->get();
+    $user = $query->getRow();
 
-        $data['user'] = $query->getRow();
-
-        if (empty($data['user'])) {
-            return redirect()->to('/Admin');
-        }
-
-        return view('Admin/Detail', $data);
+    if (!$user) {
+        return $this->response->setJSON([
+            'status' => 'error',
+            'message' => 'User tidak ditemukan'
+        ])->setStatusCode(404);
     }
+
+    return $this->response->setJSON([
+        'status'     => 'success',
+        'id'         => $user->userid,
+        'username'   => $user->username,
+        'email'      => $user->email,
+        'group'      => $user->name,
+        'foto'       => $user->foto,
+        'created_at' => $user->created_at
+    ]);
+}
+
 
     public function profil()
     {
@@ -2069,19 +2079,27 @@ class Admin extends BaseController
         return redirect()->to(base_url('/Admin/kelola_user'));
     }
 
-    public function changePassword()
-    {
-        $userId = $this->request->getVar('user_id');
+public function changePassword()
+{
+    $userId       = $this->request->getPost('user_id');
+    $passwordBaru = $this->request->getPost('password_baru');
 
-        $password_baru = $this->request->getVar('password_baru');
-        $userModel     = new \App\Models\User();
-        $user          = $userModel->getUsers($userId);
-        // $dataUser->update($userId, ['password_hash' => password_hash($password_baru, PASSWORD_DEFAULT)]);
-        $userEntity           = new User($user);
-        $userEntity->password = $password_baru;
-        $userModel->save($userEntity);
-        return redirect()->to(base_url('Admin/kelola_user'));
+    $userModel = new \Myth\Auth\Models\UserModel();
+    $user      = $userModel->find($userId); // Sudah Entity
+
+    if (! $user) {
+        return redirect()->back()->with('error', 'User tidak ditemukan');
     }
+
+    // langsung set password baru
+    $user->password = $passwordBaru;
+
+    $userModel->save($user); // otomatis hash password
+
+    return redirect()->to(base_url('Admin/kelola_user'))
+                     ->with('message', 'Password berhasil diubah');
+}
+
 
     public function activateUser($id, $active)
     {

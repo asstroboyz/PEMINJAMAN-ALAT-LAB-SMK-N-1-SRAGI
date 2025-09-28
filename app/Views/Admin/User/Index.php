@@ -158,7 +158,9 @@ foreach ($users as $rw) {
 </form>
 
 
-<form action="<?=base_url();?>Admin/changePassword" method="post">
+<form action="<?=site_url('Admin/changePassword')?>" method="post">
+
+ <?=csrf_field()?>
     <div class="modal fade" id="ubah_password" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
