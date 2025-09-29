@@ -1,0 +1,94 @@
+ERROR - 2025-09-29 14:03:52 --> Table 'peminjaman.merk_kategori_barang' doesn't exist
+CRITICAL - 2025-09-29 14:03:52 --> Table 'peminjaman.merk_kategori_barang' doesn't exist
+#0 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `merk_ba...', 0)
+#1 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `merk_ba...')
+#2 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `merk_ba...')
+#3 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `merk_ba...', Array, false)
+#4 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\app\Controllers\Admin.php(347): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(832): App\Controllers\Admin->getMerkByKategori('1')
+#8 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\E-RM7\\...')
+#12 {main}
+ERROR - 2025-09-29 14:03:53 --> Table 'peminjaman.merk_kategori_barang' doesn't exist
+CRITICAL - 2025-09-29 14:03:53 --> Table 'peminjaman.merk_kategori_barang' doesn't exist
+#0 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `merk_ba...', 0)
+#1 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `merk_ba...')
+#2 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `merk_ba...')
+#3 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `merk_ba...', Array, false)
+#4 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\app\Controllers\Admin.php(347): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(832): App\Controllers\Admin->getMerkByKategori('2')
+#8 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\E-RM7\\...')
+#12 {main}
+ERROR - 2025-09-29 14:04:21 --> Table 'peminjaman.merk_kategori_barang' doesn't exist
+CRITICAL - 2025-09-29 14:04:21 --> Table 'peminjaman.merk_kategori_barang' doesn't exist
+#0 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `merk_ba...', 0)
+#1 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `merk_ba...')
+#2 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `merk_ba...')
+#3 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `merk_ba...', Array, false)
+#4 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\app\Controllers\Admin.php(347): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(832): App\Controllers\Admin->getMerkByKategori('2')
+#8 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\E-RM7\\...')
+#12 {main}
+ERROR - 2025-09-29 14:09:27 --> Unknown column 'ph.id_user_kembali' in 'on clause'
+CRITICAL - 2025-09-29 14:09:27 --> Unknown column 'ph.id_user_kembali' in 'on clause'
+#0 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `ph`.*, ...', 0)
+#1 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ph`.*, ...')
+#2 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ph`.*, ...')
+#3 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `ph`.*, ...', Array, false)
+#4 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\app\Controllers\Admin.php(2514): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(832): App\Controllers\Admin->detailPeminjaman('1')
+#6 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\E-RM7\\...')
+#10 {main}
+CRITICAL - 2025-09-29 14:12:10 --> Undefined array key "username"
+#0 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\app\Views\Admin\Peminjaman\Detail.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\Users\\E-RM7\\...', 84)
+#1 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\View\View.php(210): include('C:\\Users\\E-RM7\\...')
+#2 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Peminjama...', Array, true)
+#4 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\app\Controllers\Admin.php(2553): view('Admin/Peminjama...', Array)
+#5 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(832): App\Controllers\Admin->detailPeminjaman('1')
+#6 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\E-RM7\\...')
+#10 {main}
+CRITICAL - 2025-09-29 14:55:23 --> Undefined variable $totalDipinjam
+#0 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\app\Views\Admin\Home\Index.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\E-RM7\\...', 17)
+#1 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\View\View.php(210): include('C:\\Users\\E-RM7\\...')
+#2 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Home/Inde...', Array, true)
+#4 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\app\Controllers\Admin.php(110): view('Admin/Home/Inde...', Array)
+#5 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(832): App\Controllers\Admin->index()
+#6 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\E-RM7\\...')
+#10 {main}
+CRITICAL - 2025-09-29 14:57:04 --> Undefined variable $barang
+#0 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\app\Views\Admin\Home\Index.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\E-RM7\\...', 96)
+#1 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\View\View.php(210): include('C:\\Users\\E-RM7\\...')
+#2 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Home/Inde...', Array, true)
+#4 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\app\Controllers\Admin.php(131): view('Admin/Home/Inde...', Array)
+#5 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(832): App\Controllers\Admin->index()
+#6 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\E-RM7\\...')
+#10 {main}
