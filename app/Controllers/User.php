@@ -89,7 +89,7 @@ class User extends BaseController
 
 
 
-       
+
         $data = [
 
             'title' => 'Home'
@@ -284,18 +284,18 @@ class User extends BaseController
         $db->transStart();
 
         $headerData = [
-             'kode_transaksi'          => 'PINJAM-' . date('YmdHis'),
-        'tanggal_pinjam'          => null, // masih pending
-        'tanggal_kembali_rencana' => null, // isi nanti saat approve
-        'tanggal_kembali_real'    => null,
+            'kode_transaksi'          => 'PINJAM-' . date('YmdHis'),
+            'tanggal_pinjam'          => null, // masih pending
+            'tanggal_kembali_rencana' => null, // isi nanti saat approve
+            'tanggal_kembali_real'    => null,
             'id_user'                 => user()->id,
             'approved_by'             => null,
-        'ruangan_id_pinjam'       => $ruanganTujuanId,
-        'ruangan_id_sebelum'      => $ruanganSebelum,
-         'tanggal_pinjam'          => date('Y-m-d'),
+            'ruangan_id_pinjam'       => $ruanganTujuanId,
+            'ruangan_id_sebelum'      => $ruanganSebelum,
+            'tanggal_pinjam'          => date('Y-m-d'),
             'tanggal_kembali_rencana' => date('Y-m-d'),
-        'status'                  => 'pengajuan',
-        'catatan'                 => $catatan,
+            'status'                  => 'pengajuan',
+            'catatan'                 => $catatan,
         ];
         $db->table('peminjaman_header')->insert($headerData);
         $peminjaman_id = $db->insertID();
@@ -340,44 +340,51 @@ class User extends BaseController
     }
 
 
-  public function kembalikanPeminjaman($id)
-{
-    $db     = db_connect();
-    $header = $db->table('peminjaman_header')->where('peminjaman_id', $id)->get()->getRowArray();
+    public function kembalikanPeminjaman($id)
+    {
+        $db     = db_connect();
+        $header = $db->table('peminjaman_header')->where('peminjaman_id', $id)->get()->getRowArray();
 
-    if (! $header) {
-        return redirect()->back()->with('error', 'Data peminjaman tidak ditemukan');
+        if (! $header) {
+            return redirect()->back()->with('error', 'Data peminjaman tidak ditemukan');
+        }
+
+        // Hanya boleh kembalikan jika status masih dipinjam
+        if ($header['status'] != 'dipinjam') {
+            return redirect()->back()->with('error', 'Status peminjaman tidak bisa dikembalikan');
+        }
+
+        // Update header jadi menunggu verifikasi
+        $db->table('peminjaman_header')->where('peminjaman_id', $id)->update([
+            'status'               => 'menunggu_kembali',
+            'tanggal_kembali_real' => date('Y-m-d H:i:s'), // user sudah mengembalikan secara fisik
+        ]);
+
+        return redirect()->to('/user/peminjaman')->with('success', 'Barang sudah ditandai untuk dikembalikan, menunggu verifikasi admin.');
     }
-
-    // Hanya boleh kembalikan jika status masih dipinjam
-    if ($header['status'] != 'dipinjam') {
-        return redirect()->back()->with('error', 'Status peminjaman tidak bisa dikembalikan');
-    }
-
-    // Update header jadi menunggu verifikasi
-    $db->table('peminjaman_header')->where('peminjaman_id', $id)->update([
-        'status'               => 'menunggu_kembali',
-        'tanggal_kembali_real' => date('Y-m-d H:i:s'), // user sudah mengembalikan secara fisik
-    ]);
-
-    return redirect()->to('/user/peminjaman')->with('success', 'Barang sudah ditandai untuk dikembalikan, menunggu verifikasi admin.');
-}
 
 
     public function detailPeminjaman($id)
     {
         $db = db_connect();
-       
+
         $userid = user()->id;
         $role = $this->db->table('auth_groups_users')->where('user_id', $userid)->get()->getRow();
         $role == '1' ? $role_echo = 'user' : $role_echo = 'User';
         // --- Ambil data header ---
-        $header = $db->table('peminjaman_header')
-            ->select('peminjaman_header.*, u.username, u.fullname, r1.nama_ruangan as ruangan_pinjam, r2.nama_ruangan as ruangan_sebelum')
-            ->join('users u', 'u.id = peminjaman_header.id_user', 'left')
-            ->join('ruangan r1', 'r1.id = peminjaman_header.ruangan_id_pinjam', 'left')
-            ->join('ruangan r2', 'r2.id = peminjaman_header.ruangan_id_sebelum', 'left')
-            ->where('peminjaman_header.peminjaman_id', $id)
+        $header = $db->table('peminjaman_header ph')
+            ->select('ph.*, 
+              u.username as username_peminjam, 
+              u.fullname as fullname_peminjam, 
+              up.username as username_penerima_kembali, 
+              up.fullname as fullname_penerima_kembali, 
+              r1.nama_ruangan as ruangan_pinjam, 
+              r2.nama_ruangan as ruangan_sebelum')
+            ->join('users u', 'u.id = ph.id_user', 'left')                     // user peminjam
+            ->join('users up', 'up.id = ph.user_penerima_kembali', 'left')     // user penerima kembali
+            ->join('ruangan r1', 'r1.id = ph.ruangan_id_pinjam', 'left')
+            ->join('ruangan r2', 'r2.id = ph.ruangan_id_sebelum', 'left')
+            ->where('ph.peminjaman_id', $id)
             ->get()
             ->getRowArray();
 

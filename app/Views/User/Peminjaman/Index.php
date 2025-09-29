@@ -44,14 +44,26 @@
                                     <td><?= $row['peminjam'] ?? '-' ?></td>
                                     <td><?= $row['lokasi_pinjam'] ?? '-' ?></td>
                                     <td>
-                                        <span class="badge badge-pill
-                                        <?= $row['status'] == 'diproses' ? 'badge-info'
-                                            : ($row['status'] == 'selesai' ? 'badge-success'
-                                                : ($row['status'] == 'rejected' ? 'badge-danger'
-                                                    : 'badge-secondary')) ?>">
-                                            <?= ucfirst($row['status']) ?>
-                                        </span>
-                                    </td>
+    <?php
+        $status   = $row['status'];
+        $mapColor = [
+            'pengajuan'        => 'badge-warning',
+            'dipinjam'         => 'badge-info',
+            'menunggu_kembali' => 'badge-primary',
+            'dikembalikan'     => 'badge-success',
+            'rejected'         => 'badge-danger',
+        ];
+
+        // default warna kalau tidak ada di map
+        $badgeClass = $mapColor[$status] ?? 'badge-secondary';
+
+        // ubah underscore jadi spasi + kapital awal
+        $statusText = ucwords(str_replace('_', ' ', $status));
+    ?>
+    <span class="badge badge-pill <?php echo $badgeClass?>">
+        <?php echo $statusText?>
+    </span>
+</td>
                                     <td><?= $row['catatan'] ?? '-' ?></td>
                                  <td>
   <a href="<?= base_url('User/detailPeminjaman/' . $row['peminjaman_id']) ?>"

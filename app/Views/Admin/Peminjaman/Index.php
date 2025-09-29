@@ -83,12 +83,7 @@
                                                 class="btn btn-danger">
                                                 <i class="fa fa-times"></i> Reject
                                             </a>
-                                        <?php elseif ($row['status'] == 'selesai'): ?>
-                                            <span class="text-success"><i class="fa fa-check-circle"></i> Selesai</span>
-                                        <?php elseif ($row['status'] == 'rejected'): ?>
-                                            <span class="text-danger"><i class="fa fa-times-circle"></i> Ditolak</span>
-                                        <?php else: ?>
-                                            <span class="text-secondary">-</span>
+                                 
                                         <?php endif?>
                                     </div>
                                 </td>
