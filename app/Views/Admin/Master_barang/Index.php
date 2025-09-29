@@ -46,7 +46,7 @@
                             <td class="text-start">
                                 <i class="fa fa-box text-primary me-2"></i>
                                 <?php echo $data['nama_brg']; ?>
-                                <small class="text-muted">(<?php echo $data['nama_merk']; ?>)</small>
+                                <small class="text-muted">(<?php echo $data['merk']; ?>)</small>
                             </td>
                        
                             <td>

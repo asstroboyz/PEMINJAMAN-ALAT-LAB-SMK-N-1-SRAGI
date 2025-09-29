@@ -13,7 +13,7 @@ class MasterBarangModel extends Model
         'kode_brg',
         'nama_brg',
         'kategori_id',
-        'merk_id',    // ganti dari merk
+        'merk',       // ganti dari merk
         'tipe_serie', // tambahan untuk model/seri barang
         'jenis_brg',
         'spesifikasi',
@@ -38,14 +38,12 @@ class MasterBarangModel extends Model
     public function getMasterBarang($id = false)
     {
         $builder = $this->select('
-                master_barang.*,
-                satuan.nama_satuan,
-                kategori_barang.nama_kategori,
-                merk_barang.nama_merk
-            ')
+            master_barang.*,
+            satuan.nama_satuan,
+            kategori_barang.nama_kategori
+        ')
             ->join('satuan', 'satuan.satuan_id = master_barang.id_satuan', 'left')
             ->join('kategori_barang', 'kategori_barang.id = master_barang.kategori_id', 'left')
-            ->join('merk_barang', 'merk_barang.id = master_barang.merk_id', 'left')
             ->orderBy('master_barang.jenis_brg', 'ASC');
 
         if ($id === false) {

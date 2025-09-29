@@ -37,4 +37,32 @@ class PeminjamanDetailModel extends Model
             ->where('peminjaman_detail.peminjaman_id', $peminjaman_id)
             ->findAll();
     }
+
+    // Semua data "masuk" (pending)
+public function getPeminjamanMasuk() {
+    return $this->select('peminjaman_detail.*, h.kode_transaksi, h.status, h.tanggal_permintaan')
+        ->join('peminjaman_header h', 'h.peminjaman_id = peminjaman_detail.peminjaman_id', 'left')
+        ->where('h.status', 'pending')
+        ->findAll();
+}
+
+// Semua data "diproses"/"dipinjam"
+public function getPeminjamanProses() {
+    return $this->select('peminjaman_detail.*, h.kode_transaksi, h.status, h.tanggal_permintaan')
+        ->join('peminjaman_header h', 'h.peminjaman_id = peminjaman_detail.peminjaman_id', 'left')
+        ->where('h.status', 'dipinjam')
+        ->findAll();
+}
+
+// Semua data "selesai" (kembali/ditolak)
+public function getPeminjamanSelesai() {
+    return $this->select('peminjaman_detail.*, h.kode_transaksi, h.status, h.tanggal_permintaan')
+        ->join('peminjaman_header h', 'h.peminjaman_id = peminjaman_detail.peminjaman_id', 'left')
+        ->groupStart()
+            ->where('h.status', 'kembali')
+            ->orWhere('h.status', 'ditolak')
+        ->groupEnd()
+        ->findAll();
+}
+
 }

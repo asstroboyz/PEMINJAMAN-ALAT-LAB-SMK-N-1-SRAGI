@@ -24,7 +24,7 @@
                         <div class="form-group">
                             <label for="nama_barang">Nama Barang</label>
                             <input name="nama_barang" type="text"
-                                class="form-control                                                                                                                                                          <?php echo($validation->hasError('nama_barang')) ? 'is-invalid' : ''; ?>"
+                                class="form-control                                                                                                                                                                                                             <?php echo($validation->hasError('nama_barang')) ? 'is-invalid' : ''; ?>"
                                 id="input-nama_barang" placeholder="Masukkan Nama Barang"
                                 value="<?php echo old('nama_barang'); ?>" />
                             <div class="invalid-feedback">
@@ -36,7 +36,7 @@
                         <div class="form-group">
                             <label for="kategori_id">Kategori</label>
                             <select name="kategori_id" id="kategori_id"
-                                class="form-control                                                                                                                                                          <?php echo($validation->hasError('kategori_id')) ? 'is-invalid' : ''; ?>">
+                                class="form-control                                                                                                                                                                                                             <?php echo($validation->hasError('kategori_id')) ? 'is-invalid' : ''; ?>">
                                 <option value="">-- Pilih Kategori --</option>
                                 <?php foreach ($kategori_barang as $k): ?>
                                     <option value="<?php echo $k['id']; ?>"<?php echo old('kategori_id') == $k['id'] ? 'selected' : '' ?>>
@@ -49,23 +49,23 @@
                             </div>
                         </div>
 
-                        <!-- Merk Barang (Dropdown, otomatis terisi oleh JS) -->
-                        <div class="form-group">
-                            <label for="merk_id">Merk</label>
-                            <select name="merk_id" id="merk_id"
-                                class="form-control                                                                                                                                                          <?php echo($validation->hasError('merk_id')) ? 'is-invalid' : ''; ?>">
-                                <option value="">-- Pilih Merk (Pilih kategori dulu) --</option>
-                            </select>
-                            <div class="invalid-feedback">
-                                <?php echo $validation->getError('merk_id'); ?>
-                            </div>
-                        </div>
+<div class="form-group">
+    <label for="merk">Merk</label>
+    <input name="merk" type="text"
+        class="form-control                            <?php echo($validation->hasError('merk')) ? 'is-invalid' : ''; ?>"
+        id="input-merk" placeholder="Masukkan Merk Barang (contoh: Lenovo, Asus, dll)"
+        value="<?php echo old('merk'); ?>" />
+    <div class="invalid-feedback">
+        <?php echo $validation->getError('merk'); ?>
+    </div>
+</div>
+
 
                         <!-- Spesifikasi -->
                         <div class="form-group">
                             <label for="spesifikasi">Spesifikasi</label>
                             <input name="spesifikasi" type="text"
-                                class="form-control                                                                                                                                                          <?php echo($validation->hasError('spesifikasi')) ? 'is-invalid' : ''; ?>"
+                                class="form-control                                                                                                                                                                                                             <?php echo($validation->hasError('spesifikasi')) ? 'is-invalid' : ''; ?>"
                                 id="input-spesifikasi" placeholder="Masukkan Spesifikasi Barang"
                                 value="<?php echo old('spesifikasi'); ?>" />
                             <div class="invalid-feedback">
@@ -80,11 +80,11 @@
                         <div class="form-group">
                             <label for="jenis_brg">Jenis Barang</label>
                             <select name="jenis_brg" id="jenis_brg"
-                                class="form-control                                                                                                                                                          <?php echo($validation->hasError('jenis_brg')) ? 'is-invalid' : ''; ?>">
+                                class="form-control                                                                                                                                                                                                             <?php echo($validation->hasError('jenis_brg')) ? 'is-invalid' : ''; ?>">
                                 <option value="">-- Pilih Jenis Barang --</option>
-                                <option value="hrd"                                                    <?php echo old('jenis_brg') == 'hrd' ? 'selected' : '' ?>>Hardware</option>
-                                <option value="sfw"                                                    <?php echo old('jenis_brg') == 'sfw' ? 'selected' : '' ?>>Software</option>
-                                <option value="tools"                                                      <?php echo old('jenis_brg') == 'tools' ? 'selected' : '' ?>>Tools</option>
+                                <option value="hrd"                                                                                                       <?php echo old('jenis_brg') == 'hrd' ? 'selected' : '' ?>>Hardware</option>
+                                <option value="sfw"                                                                                                       <?php echo old('jenis_brg') == 'sfw' ? 'selected' : '' ?>>Software</option>
+                                <option value="tools"                                                                                                           <?php echo old('jenis_brg') == 'tools' ? 'selected' : '' ?>>Tools</option>
                             </select>
                             <div class="invalid-feedback">
                                 <?php echo $validation->getError('jenis_brg'); ?>
@@ -95,7 +95,7 @@
                         <div class="form-group">
                             <label for="id_satuan">Satuan</label>
                             <select name="id_satuan" id="id_satuan"
-                                class="form-control                                                                                                                                                          <?php echo($validation->hasError('id_satuan')) ? 'is-invalid' : ''; ?>">
+                                class="form-control                                                                                                                                                                                                             <?php echo($validation->hasError('id_satuan')) ? 'is-invalid' : ''; ?>">
                                 <option value="">-- Pilih Satuan --</option>
                                 <?php foreach ($satuan as $s): ?>
                                     <option value="<?php echo $s['satuan_id']; ?>"<?php echo old('id_satuan') == $s['satuan_id'] ? 'selected' : '' ?>>
@@ -111,7 +111,7 @@
 <div class="form-group">
     <label for="tipe_serie">Tipe / Seri Barang</label>
     <input name="tipe_serie" type="text"
-        class="form-control                            <?php echo($validation->hasError('tipe_serie')) ? 'is-invalid' : ''; ?>"
+        class="form-control                                                       <?php echo($validation->hasError('tipe_serie')) ? 'is-invalid' : ''; ?>"
         id="input-tipe_serie" placeholder="Masukkan Tipe/Seri Barang"
         value="<?php echo old('tipe_serie'); ?>" />
     <div class="invalid-feedback">
@@ -123,9 +123,9 @@
                         <div class="form-group">
                             <label for="is_active">Status</label>
                             <select name="is_active" id="is_active"
-                                class="form-control                                                                                                                                                          <?php echo($validation->hasError('is_active')) ? 'is-invalid' : ''; ?>">
-                                <option value="1"                                                  <?php echo old('is_active') == '1' ? 'selected' : '' ?>>Aktif</option>
-                                <option value="0"                                                  <?php echo old('is_active') == '0' ? 'selected' : '' ?>>Nonaktif</option>
+                                class="form-control                                                                                                                                                                                                             <?php echo($validation->hasError('is_active')) ? 'is-invalid' : ''; ?>">
+                                <option value="1"                                                                                                   <?php echo old('is_active') == '1' ? 'selected' : '' ?>>Aktif</option>
+                                <option value="0"                                                                                                   <?php echo old('is_active') == '0' ? 'selected' : '' ?>>Nonaktif</option>
                             </select>
                             <div class="invalid-feedback">
                                 <?php echo $validation->getError('is_active'); ?>
@@ -134,7 +134,7 @@
                         <div class="form-group">
                             <label for="foto">Foto Barang</label>
                             <input name="foto" type="file"
-                                class="form-control-file                                                                                                                         <?php echo($validation->hasError('foto')) ? 'is-invalid' : ''; ?>"
+                                class="form-control-file                                                                                                                                                                                 <?php echo($validation->hasError('foto')) ? 'is-invalid' : ''; ?>"
                                 id="input-foto" accept="image/*"
                                 onchange="previewImage(event)" />
                             <div class="invalid-feedback d-block">
@@ -196,23 +196,7 @@
             }
         });
 
-        // Restore merk_id kalau form gagal dan kembali dari validation
-        <?php if (old('kategori_id') && old('merk_id')): ?>
-            var kategoriIdOld = '<?php echo old('kategori_id') ?>';
-            var merkIdOld = '<?php echo old('merk_id') ?>';
-            $.get('/Admin/getMerkByKategori/' + kategoriIdOld, function(data) {
-                var options = '<option value="">-- Pilih Merk --</option>';
-                if (data.length > 0) {
-                    data.forEach(function(m) {
-                        var selected = m.id == merkIdOld ? 'selected' : '';
-                        options += '<option value="' + m.id + '" ' + selected + '>' + m.nama_merk + '</option>';
-                    });
-                } else {
-                    options += '<option value="">(Tidak ada merk di kategori ini)</option>';
-                }
-                $('#merk_id').html(options);
-            });
-        <?php endif; ?>
+      
 
         // Optional: Fade alert
         window.setTimeout(function() {

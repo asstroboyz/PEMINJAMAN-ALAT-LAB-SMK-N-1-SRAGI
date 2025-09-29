@@ -142,7 +142,12 @@
         <li class="nav-item dropdown no-arrow">
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-300 small"><?php echo user()->fullname;?></span>
+                <span class="mr-2 d-none d-lg-inline text-gray-300 small"><?php if (user()): ?>
+    <span class="mr-2 d-none d-lg-inline text-gray-300 small">
+        <?= esc(user()->fullname ?? user()->username) ?>
+    </span>
+<?php endif; ?>
+</span>
                 <img class="img-profile rounded-circle"
                     src="<?php echo empty(user()->foto) ? '/sbassets/img/undraw_profile.svg' : '/uploads/profile/' . user()->foto;?>"
                     style="width:32px;height:32px;object-fit:cover;border:2px solid #FFC10788;">

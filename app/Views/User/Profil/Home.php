@@ -1,4 +1,4 @@
-<?=$this->extend('Pegawai/Templates/Index');?>
+<?=$this->extend('User/Templates/Index');?>
 
 
 <?=$this->section('page-content');?>
@@ -48,7 +48,7 @@
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                 Total Permintaan Barang </div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                <?=$semua?>
+                               
                             </div>
                         </div>
                         <div class="col-auto">
@@ -68,7 +68,7 @@
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                 Total Permintaan Barang Di-Proses</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                <?=$proses;?>
+                               
                             </div>
                         </div>
                         <div class="col-auto">
@@ -88,7 +88,7 @@
                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                 Permintaan Selesai</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                <?=$selesai;?>
+                               
                             </div>
                         </div>
                         <div class="col-auto">

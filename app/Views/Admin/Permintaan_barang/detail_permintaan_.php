@@ -1,5 +1,5 @@
-<?=$this->extend('admin/templates/index');?>
-<?=$this->section('page-content');?>
+<?php echo $this->extend('admin/templates/index');?>
+<?php echo $this->section('page-content');?>
 <!-- Begin Page Content -->
 <div class="container-fluid">
     <!-- Page Heading -->
@@ -7,9 +7,9 @@
 
     <?php if (session()->has('pesanBerhasil')): ?>
     <div class="alert alert-success" role="alert">
-        <?=session('pesanBerhasil')?>
+        <?php echo session('pesanBerhasil')?>
     </div>
-    <?php endif;?>
+    <?php endif; ?>
 
     <div class="row">
         <div class="col-12">
@@ -24,7 +24,7 @@
                     </button>
                     <?php if ($detail->status == 'belum diproses') {?>
 
-                    <a href="/admin/prosesPermintaan/<?=$detail->id?>"
+                    <a href="/admin/prosesPermintaan/<?php echo $detail->id?>"
                         class="text-light btn btn-warning font-weight-bold float-right"><i class="fa fa-clipboard"></i>
                         Proses Pengajuan</a>
                     <?php } elseif ($detail->status == 'diproses') {?>
@@ -34,8 +34,7 @@
                         </a>
                     </div>
 
-                    <?php }
-                    ;?>
+                    <?php }?>
                 </div>
                 <div class="card-body">
 
@@ -43,7 +42,7 @@
                         <div class="col-md-3">Nama Pengaju</div>
                         <div class="col-md-1 d-none d-md-block">:</div>
                         <div class="col-md-8">
-                            <?=$detail->nama_pengaju?>
+                            <?php echo $detail->nama_pengaju?>
                         </div>
                     </div>
                     <hr>
@@ -51,7 +50,7 @@
                         <div class="col-md-3">Status Pengajuan</div>
                         <div class="col-md-1 d-none d-md-block">:</div>
                         <div class="col-md-8">
-                            <?=$detail->status?>
+                            <?php echo $detail->status?>
 
                         </div>
 
@@ -61,7 +60,7 @@
                         <div class="col-md-3">Tanggal Pengajuan</div>
                         <div class="col-md-1 d-none d-md-block">:</div>
                         <div class="col-md-8">
-                            <?=$detail->tanggal_pengajuan?>
+                            <?php echo $detail->tanggal_pengajuan?>
                         </div>
                     </div>
                     <hr>
@@ -69,7 +68,7 @@
                         <div class="col-md-3">Perihal</div>
                         <div class="col-md-1 d-none d-md-block">:</div>
                         <div class="col-md-8">
-                            <?=$detail->perihal?>
+                            <?php echo $detail->perihal?>
                         </div>
                     </div>
                     <hr>
@@ -77,7 +76,7 @@
                         <div class="col-md-3">Perihal</div>
                         <div class="col-md-1 d-none d-md-block">:</div>
                         <div class="col-md-8">
-                            <?=$detail->detail?>
+                            <?php echo $detail->detail?>
                         </div>
                     </div>
                     <hr>
@@ -98,14 +97,14 @@
                                     <ul class="sessions">
                                         <li class="li-diajukan">
                                             <div class="time">
-                                                <?=$detail->tanggal_pengajuan?>
+                                                <?php echo $detail->tanggal_pengajuan?>
                                             </div>
                                             <p>Permintaan Diajukan</p>
                                         </li>
                                         <?php if ($detail->tanggal_diproses != '0000-00-00 00:00:00') {?>
                                         <li class="li-diproses">
                                             <div class="time">
-                                                <?=$detail->tanggal_diproses?>
+                                                <?php echo $detail->tanggal_diproses?>
                                             </div>
                                             <p>Permintaan Diproses </p>
                                         </li>
@@ -116,7 +115,7 @@
                                             <p>Permintaan Selesai</p>
                                             <p>
                                                 Dengan Status:
-                                                <?=$detail->status_akhir?>
+                                                <?php echo $detail->status_akhir?>
                                             </p>
                                         </li>
                                         <?php }?>
@@ -148,13 +147,13 @@
                     <div class="row">
                         <div class="col-md-3">Kategori</div>
                         <div class="col-md-1 d-none d-md-block">:</div>
-                        <?=$balasan->kategori?>
+                        <?php echo $balasan->kategori?>
                     </div>
                     <hr />
                     <div class="row">
                         <div class="col-md-3">balasan</div>
                         <div class="col-md-1 d-none d-md-block">:</div>
-                        <?=$balasan->balasan_permintaan?>
+                        <?php echo $balasan->balasan_permintaan?>
                     </div>
                 </div>
 
@@ -168,18 +167,15 @@
             <div class="card shadow card-detail">
 
                 <form
-                    action="<?=base_url('/admin/simpanBalasan/' . $detail->id)?> "
+                    action="<?php echo base_url('/admin/simpanBalasan/' . $detail->id)?> "
                     method="post" enctype="multipart/form-data">
-                    <?=csrf_field();?>
+                    <?php echo csrf_field();?>
                     <div class="card-body">
                         <div class="mb-3">
                             <div class="btn font-weight-bold display-1  text-dark ml-n3 ">Balasan Permintaan Ditolak
                             </div>
-
-
                             <button class="btn btn-primary float-right ml-2 text-white font-weight-bold"><i
                                     class="fa fa-paper-plane rounded-cyrcle"></i> Kirim Balasan</button>
-
                             <button class="btn btn-danger float-right" onclick="hideBalasan()"><i
                                     class="fas fa-times-circle"></i> Batal</button>
                         </div>
@@ -189,10 +185,10 @@
                             <div class="col-md-1 d-none d-md-block">:</div>
                             <div class="col-md-5">
                                 <input type="text" name="kategori" id="kategori"
-                                    class="form-control ml-n5  <?=$validation->hasError('kategori') ? 'is-invalid' : '';?>"
-                                    value="<?=old('kategori');?>">
+                                    class="form-control ml-n5  <?php echo $validation->hasError('kategori') ? 'is-invalid' : '';?>"
+                                    value="<?php echo old('kategori');?>">
                                 <div class="invalid-feedback ml-n5">
-                                    <?=$validation->getError('kategori');?>
+                                    <?php echo $validation->getError('kategori');?>
                                 </div>
                             </div>
 
@@ -203,10 +199,10 @@
                             <div class="col-md-1 d-none d-md-block">:</div>
                             <div class="col-md-5">
                                 <textarea name="balasan_permintaan" id="isi" cols="30" rows="13"
-                                    class="form-control ml-n5  <?=$validation->hasError('balasan_permintaan') ? 'is-invalid' : '';?>"><?=old('balasan_permintaan');?></textarea>
+                                    class="form-control ml-n5  <?php echo $validation->hasError('balasan_permintaan') ? 'is-invalid' : '';?>"><?php echo old('balasan_permintaan');?></textarea>
                                 <div class="invalid-feedback ml-n5">
-                                    <?php dd($validation) ?>
-                                    <?=$validation->getError('balasan_permintaan');?>
+                                    <?php dd($validation)?>
+                                    <?php echo $validation->getError('balasan_permintaan');?>
                                 </div>
                             </div>
 
@@ -232,13 +228,13 @@
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                 <a class="btn btn-success"
-                    href="/admin/terimaPermintaan/<?=$detail->id?>">Terima</a>
+                    href="/admin/terimaPermintaan/<?php echo $detail->id?>">Terima</a>
             </div>
         </div>
     </div>
 </div>
-<?=$this->endSection();?>
-<?=$this->section('additional-js');?>
+<?php echo $this->endSection();?>
+<?php echo $this->section('additional-js');?>
 <script>
     window.setTimeout(function() {
         $(".alert")
@@ -262,4 +258,4 @@
         $(".balasan").hide("slow");
     }
 </script>
-<?=$this->endSection();?>
+<?php echo $this->endSection();?>

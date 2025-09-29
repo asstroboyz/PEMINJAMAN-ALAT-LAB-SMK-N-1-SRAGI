@@ -1,8 +1,7 @@
 <?= $this->extend('Admin/Templates/Index') ?>
 
-<?=$this->section('page-content')?>
+<?= $this->section('page-content') ?>
 
-<?=view('Myth\Auth\Views\_message_block')?>
 
 <section class="content">
     <div class="container-fluid">
@@ -10,13 +9,10 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <!-- <a href="/admin/tambah_user" class="btn btn-primary " data-id="<?=$row->id;?>"
-                        title="tambah data">
-                        <i class="fas fa-plus"> Tambah</i>
-                        </a> -->
+
                         <h3>Daftar Pengguna</h3>
                         <a href="#" class="btn btn-primary"
-                            data-id="<?=$row->id;?>"
+                            data-id="<?= $row->id; ?>"
                             data-toggle="modal" data-target="#tambahUserModal">
                             <i class="fas fa-plus"> Tambah</i>
                         </a>
@@ -26,12 +22,10 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr style="text-align:center;">
-                                    <th>Id User66666666666666</th>
+                                    <th>Id User</th>
                                     <th>Username</th>
-                                    <th>Role</th>
                                     <th>Email</th>
-                                    <!-- activasi user berfungsi hanya saja di nonaktifkan -->
-                                    <!-- <th>Active User</th> -->
+
                                     <th>Opsi</th>
                                 </tr>
                             </thead>
@@ -39,19 +33,18 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Username</th>
-                                    <th>Role</th>
+
                                     <th>Email</th>
-                                    <!-- <th>Active User</th> -->
                                     <th>Opsi</th>
                                 </tr>
                             </tfoot>
                             <tbody>
                                 <?php
-foreach ($users as $rw) {
-    $row = "row" . $rw->id;
-    echo $$row;
-}
-?>
+                                foreach ($users as $rw) {
+                                    $row = "row" . $rw->id;
+                                    echo $$row;
+                                }
+                                ?>
                             </tbody>
                         </table>
                     </div>
@@ -72,37 +65,69 @@ foreach ($users as $rw) {
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-primary text-white">
                 <h5 class="modal-title" id="tambahUserModalLabel">Tambah User</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <!-- Isi modal (formulir tambah user) -->
                 <form class="user"
-                    action="<?=url_to('register')?>"
-                    method="post">
-                    <?=csrf_field()?>
-                    <!-- Isian formulir tambah user -->
+                    action="<?= url_to('register') ?>"
+                    method="post"
+                    enctype="multipart/form-data">
+
+                    <?= csrf_field() ?>
+
+                    <!-- Fullname -->
                     <div class="form-group">
-                        <input type="text" class="form-control form-control-user" name="username" placeholder="Username"
-                            value="<?=old('username')?>">
+                        <input type="text" class="form-control form-control-user"
+                            name="fullname"
+                            placeholder="Nama Lengkap"
+                            value="<?= old('fullname') ?>">
                     </div>
+
+                    <!-- Username -->
                     <div class="form-group">
-                        <input type="email" class="form-control form-control-user" name="email" placeholder="Email"
-                            value="<?=old('email')?>">
+                        <input type="text" class="form-control form-control-user"
+                            name="username"
+                            placeholder="Username"
+                            value="<?= old('username') ?>">
                     </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <input type="email" class="form-control form-control-user"
+                            name="email"
+                            placeholder="Email"
+                            value="<?= old('email') ?>">
+                    </div>
+
+                    <!-- Foto -->
+                    <div class="form-group">
+                        <label for="foto" class="small">Foto Profil</label>
+                        <input type="file" class="form-control-file"
+                            name="foto" id="foto">
+                    </div>
+
+                    <!-- Password -->
                     <div class="form-group row">
                         <div class="col-sm-6 mb-3 mb-sm-0">
-                            <input type="password" class="form-control form-control-user" name="password"
-                                placeholder="Password" autocomplete="off">
+                            <input type="password" class="form-control form-control-user"
+                                name="password"
+                                placeholder="Password"
+                                autocomplete="off">
                         </div>
                         <div class="col-sm-6">
-                            <input type="password" name="pass_confirm" class="form-control form-control-user"
-                                placeholder="Repeat Password" autocomplete="off">
+                            <input type="password" name="pass_confirm"
+                                class="form-control form-control-user"
+                                placeholder="Repeat Password"
+                                autocomplete="off">
                         </div>
                     </div>
+
+                    <!-- Tombol -->
                     <button type="submit" class="btn btn-dark btn-user btn-block">
                         Tambah User
                     </button>
@@ -111,9 +136,10 @@ foreach ($users as $rw) {
         </div>
     </div>
 </div>
+
 <!-- Modal for Ubah Grup -->
-<form action="<?=base_url();?>/Admin/changeGroup" method="post">
-    <?=csrf_field()?>
+<form action="<?= base_url(); ?>/Admin/changeGroup" method="post">
+    <?= csrf_field() ?>
     <div class="modal fade" id="changeGroupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -135,17 +161,14 @@ foreach ($users as $rw) {
                                 </div>
                             </div>
                             <div class="col mb-8pt mb-md-0">
+
                                 <select name="group" class="form-control" data-toggle="select">
-                                    <?php
-foreach ($groups as $key => $row) {
-    ?>
-                                    <option value="<?=$row->id;?>">
-                                        <?=$row->name;?>
-                                    </option>
-                                    <?php
-}
-?>
+                                    <?php foreach ($groups as $row) { ?>
+                                        <option value="<?= $row['id']; ?>"><?= $row['name']; ?></option>
+                                    <?php } ?>
                                 </select>
+
+
                             </div>
                         </div>
                     </div>
@@ -161,7 +184,9 @@ foreach ($groups as $key => $row) {
 </form>
 
 
-<form action="<?=base_url();?>Admin/changePassword" method="post">
+<form action="<?= site_url('Admin/changePassword') ?>" method="post">
+
+    <?= csrf_field() ?>
     <div class="modal fade" id="ubah_password" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -212,5 +237,43 @@ foreach ($groups as $key => $row) {
         </div>
     </div>
 </form>
+<?php if (session()->getFlashdata('message')): ?>
+<script>
+    Swal.fire({
+        icon: 'success',
+        title: 'Berhasil',
+        text: '<?= session()->getFlashdata('message'); ?>',
+        showConfirmButton: false,
+        timer: 2500
+    })
+</script>
+<?php endif; ?>
 
-<?=$this->endSection()?>
+<?php if (session()->getFlashdata('error')): ?>
+<script>
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: '<?= session()->getFlashdata('error'); ?>',
+        showConfirmButton: true
+    })
+</script>
+<?php endif; ?>
+
+<?php if (session()->getFlashdata('errors')): ?>
+<script>
+    Swal.fire({
+        icon: 'warning',
+        title: 'Validasi Gagal',
+        html: `
+            <ul style="text-align:left;">
+                <?php foreach (session()->getFlashdata('errors') as $err): ?>
+                    <li><?= esc($err) ?></li>
+                <?php endforeach ?>
+            </ul>
+        `,
+    })
+</script>
+<?php endif; ?>
+
+<?= $this->endSection() ?>

@@ -1,0 +1,151 @@
+ERROR - 2025-09-22 07:56:52 --> Invalid default value for 'created_at'
+CRITICAL - 2025-09-22 08:55:06 --> Class "App\Models\Pengaduan" not found
+#0 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(809): App\Controllers\User->__construct()
+#1 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#2 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\E-RM7\\...')
+#5 {main}
+CRITICAL - 2025-09-22 08:56:57 --> Undefined variable $semua
+#0 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\app\Views\User\Profil\Home.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\E-RM7\\...', 51)
+#1 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\View\View.php(210): include('C:\\Users\\E-RM7\\...')
+#2 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Common.php(1089): CodeIgniter\View\View->render('user/profil/hom...', Array, true)
+#4 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\app\Controllers\User.php(98): view('user/profil/hom...', Array)
+#5 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(832): App\Controllers\User->index()
+#6 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\E-RM7\\...')
+#10 {main}
+CRITICAL - 2025-09-22 08:57:28 --> Invalid file: Pegawai/Templates/Index.php
+#0 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Pegawai/Templat...')
+#1 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\View\View.php(226): CodeIgniter\View\View->render('Pegawai/Templat...', Array, true)
+#2 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Common.php(1089): CodeIgniter\View\View->render('user/profil/hom...', Array, true)
+#3 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\app\Controllers\User.php(98): view('user/profil/hom...', Array)
+#4 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(832): App\Controllers\User->index()
+#5 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\E-RM7\\...')
+#9 {main}
+CRITICAL - 2025-09-22 08:57:47 --> Invalid file: Pegawai/Templates/Index.php
+#0 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Pegawai/Templat...')
+#1 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\View\View.php(226): CodeIgniter\View\View->render('Pegawai/Templat...', Array, true)
+#2 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Common.php(1089): CodeIgniter\View\View->render('user/profil/hom...', Array, true)
+#3 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\app\Controllers\User.php(98): view('user/profil/hom...', Array)
+#4 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(832): App\Controllers\User->index()
+#5 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\E-RM7\\...')
+#9 {main}
+CRITICAL - 2025-09-22 08:58:00 --> Invalid file: Pegawai/Templates/Index.php
+#0 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Pegawai/Templat...')
+#1 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\View\View.php(226): CodeIgniter\View\View->render('Pegawai/Templat...', Array, true)
+#2 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Common.php(1089): CodeIgniter\View\View->render('user/profil/hom...', Array, true)
+#3 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\app\Controllers\User.php(98): view('user/profil/hom...', Array)
+#4 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(832): App\Controllers\User->index()
+#5 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\E-RM7\\...')
+#9 {main}
+CRITICAL - 2025-09-22 08:58:29 --> Invalid file: Pegawai/Templates/Index.php
+#0 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Pegawai/Templat...')
+#1 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\View\View.php(226): CodeIgniter\View\View->render('Pegawai/Templat...', Array, true)
+#2 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Common.php(1089): CodeIgniter\View\View->render('user/profil/hom...', Array, true)
+#3 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\app\Controllers\User.php(98): view('user/profil/hom...', Array)
+#4 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(832): App\Controllers\User->index()
+#5 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\E-RM7\\...')
+#9 {main}
+CRITICAL - 2025-09-22 08:58:59 --> Invalid file: Pegawai/Templates/Index.php
+#0 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Pegawai/Templat...')
+#1 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\View\View.php(226): CodeIgniter\View\View->render('Pegawai/Templat...', Array, true)
+#2 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Common.php(1089): CodeIgniter\View\View->render('user/profil/hom...', Array, true)
+#3 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\app\Controllers\User.php(98): view('user/profil/hom...', Array)
+#4 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(832): App\Controllers\User->index()
+#5 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\E-RM7\\...')
+#9 {main}
+ERROR - 2025-09-22 16:18:57 --> Table 'peminjaman.permintaan_barang' doesn't exist
+CRITICAL - 2025-09-22 16:18:57 --> Table 'peminjaman.permintaan_barang' doesn't exist
+#0 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\app\Controllers\Pegawai.php(154): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(832): App\Controllers\Pegawai->profil('23')
+#6 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#7 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\E-RM7\\...')
+#10 {main}
+ERROR - 2025-09-22 16:19:11 --> Table 'peminjaman.permintaan_barang' doesn't exist
+CRITICAL - 2025-09-22 16:19:11 --> Table 'peminjaman.permintaan_barang' doesn't exist
+#0 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\app\Controllers\Pegawai.php(154): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(832): App\Controllers\Pegawai->profil('23')
+#6 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#7 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\E-RM7\\...')
+#10 {main}
+ERROR - 2025-09-22 16:20:09 --> Table 'peminjaman.permintaan_barang' doesn't exist
+CRITICAL - 2025-09-22 16:20:09 --> Table 'peminjaman.permintaan_barang' doesn't exist
+#0 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\app\Controllers\Pegawai.php(154): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(832): App\Controllers\Pegawai->profil('23')
+#6 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#7 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\E-RM7\\...')
+#10 {main}
+ERROR - 2025-09-22 16:20:31 --> Table 'peminjaman.permintaan_barang' doesn't exist
+CRITICAL - 2025-09-22 16:20:31 --> Table 'peminjaman.permintaan_barang' doesn't exist
+#0 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\app\Controllers\Pegawai.php(154): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(832): App\Controllers\Pegawai->profil('23')
+#6 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#7 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\E-RM7\\...')
+#10 {main}
+ERROR - 2025-09-22 16:22:18 --> Table 'peminjaman.pengaduan' doesn't exist
+CRITICAL - 2025-09-22 16:22:18 --> Table 'peminjaman.pengaduan' doesn't exist
+#0 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\app\Controllers\User.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(832): App\Controllers\User->tentang('23')
+#6 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\E-RM7\\...')
+#10 {main}
+CRITICAL - 2025-09-22 16:22:40 --> Invalid file: Pegawai/Templates/Index.php
+#0 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Pegawai/Templat...')
+#1 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\View\View.php(226): CodeIgniter\View\View->render('Pegawai/Templat...', Array, true)
+#2 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Common.php(1089): CodeIgniter\View\View->render('user/profil/ind...', Array, true)
+#3 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\app\Controllers\User.php(155): view('user/profil/ind...', Array)
+#4 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(832): App\Controllers\User->tentang('23')
+#5 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\E-RM7\Documents\GitHub\PEMINJAMAN-ALAT-LAB-SMK-N-1-SRAGI\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\E-RM7\\...')
+#9 {main}

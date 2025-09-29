@@ -89,6 +89,13 @@ hr.sidebar-divider {
             <span>Dashboard</span>
         </a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link"  href="<?php echo base_url('Admin/kelola_user'); ?>">
+            <i class="fas fa-users"></i>
+            <span>Manage Users</span>
+        </a>
+    </li>
+   
     <hr class="sidebar-divider">
     <div class="sidebar-heading">Interface</div>
     <li class="nav-item">
@@ -106,14 +113,8 @@ hr.sidebar-divider {
                 <a class="collapse-item" href="<?php echo base_url('Admin/satuan'); ?>">
                     <i class="fas fa-ruler"></i> Master Satuan
                 </a>
-                <a class="collapse-item" href="<?php echo base_url('Admin/merk'); ?>">
-                    <i class="fas fa-ruler"></i> Master Merk
-                </a>
                 <a class="collapse-item" href="<?php echo base_url('Admin/kategori'); ?>">
                     <i class="fas fa-ruler"></i> Master Kategori
-                </a>
-                <a class="collapse-item" href="<?php echo base_url('Admin/KategoriMerk'); ?>">
-                    <i class="fas fa-ruler"></i> Master Kategori-merk
                 </a>
             </div>
         </div>
@@ -133,19 +134,34 @@ hr.sidebar-divider {
             <span>Peminjaman alat</span>
         </a>
         <div id="barang" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-            <div class="collapse-inner rounded">
-                <h6 class="collapse-header">Custom Utilities:</h6>
-                <a class="collapse-item" href="<?php echo base_url('Admin/permintaan_masuk'); ?>">
-                    <i class="fas fa-arrow-right-arrow-left"></i> Peminjaman alat
-                </a>
-                <a class="collapse-item" href="<?php echo base_url('Admin/permintaan_proses'); ?>">
-                    <i class="fas fa-spinner"></i> Diproses
-                </a>
-                <a class="collapse-item" href="<?php echo base_url('Admin/permintaan_selesai'); ?>">
-                    <i class="fas fa-check-double"></i> Selesai
-                </a>
-            </div>
-        </div>
+   <div class="collapse-inner rounded">
+    <h6 class="collapse-header">Custom Utilities:</h6>
+
+    <a class="collapse-item" href="<?= base_url('aDMIN/peminjaman?status=all'); ?>">
+        <i class="fas fa-list"></i> Semua Peminjaman
+    </a>
+
+    <a class="collapse-item" href="<?= base_url('aDMIN/peminjaman?status=pengajuan'); ?>">
+        <i class="fas fa-spinner"></i> Pengajuan
+    </a>
+
+    <a class="collapse-item" href="<?= base_url('aDMIN/peminjaman?status=dipinjam'); ?>">
+        <i class="fas fa-box-open"></i> Sedang Dipinjam
+    </a>
+
+    <a class="collapse-item" href="<?= base_url('aDMIN/peminjaman?status=menunggu_kembali'); ?>">
+        <i class="fas fa-undo-alt"></i> Menunggu Pengembalian
+    </a>
+
+    <a class="collapse-item" href="<?= base_url('aDMIN/peminjaman?status=dikembalikan'); ?>">
+        <i class="fas fa-check-double"></i> Dikembalikan
+    </a>
+
+    <a class="collapse-item" href="<?= base_url('aDMIN/peminjaman?status=rejected'); ?>">
+        <i class="fas fa-ban"></i> Ditolak
+    </a>
+</div>
+
     </li>
     <hr class="sidebar-divider">
     <div class="text-center d-none d-md-inline">

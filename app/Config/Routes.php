@@ -32,9 +32,9 @@ $routes->setAutoRoute(true);
 //  Perbaiki
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Pegawai::index', ['filter' => 'role:pegawai']);
+$routes->get('/', 'User::index', ['filter' => 'role:User']);
 
-$routes->get('/Pegawai', 'Pegawai::index', ['filter' => 'role:pegawai']);
+$routes->get('/User', 'User::index', ['filter' => 'role:User']);
 $routes->post('inventaris/save', 'Inventaris::save', ['filter' => 'role:admin']);
 $routes->post('Admin/save', 'admin::save', ['filter' => 'role:admin']);
 $routes->get('/Admin', 'Admin::index', ['filter' => 'role:admin']);
@@ -56,29 +56,29 @@ $routes->get('Admin/softDelete/(:segment)', 'Admin::softDelete/$1');
 
 
 $routes->put('/Admin/detail_inv/(:num)', 'Admin::detail_inv/$1', ['filter' => 'role:admin']);
-$routes->put('/pegawai/detail_inv/(:num)', 'pegawai::detail_inv/$1', ['filter' => 'role:pegawai']);
+$routes->put('/User/detail_inv/(:num)', 'User::detail_inv/$1', ['filter' => 'role:User']);
 
 // $routes->get('/barang/formTambahStok/(:num)', 'Barang::formTambahStok/$1', ['filter' => 'role:admin']);
 // $routes->post('/barang/formTambahStok/tambahStok/(:num)', 'Barang::tambahStok/$1', ['filter' => 'role:admin']);
 // $routes->get('/barang/formKurangStok/(:num)', 'Barang::formKurangStok/$1', ['filter' => 'role:admin']);
 
-$routes->put('/pegawai/editPengadaan/(:num)', 'pegawai::editPengadaan/$1', ['filter' => 'role:pegawai']);
-$routes->put('/pegawai/editPengadaan/updatePengadaan/(:num)', 'pegawai::updatePengadaan/$1', ['filter' => 'role:pegawai']);
-$routes->put('/pegawai/detailPengadaan/(:num)', 'pegawai::detailPengadaan/$1', ['filter' => 'role:pegawai']);
+$routes->put('/User/editPengadaan/(:num)', 'User::editPengadaan/$1', ['filter' => 'role:User']);
+$routes->put('/User/editPengadaan/updatePengadaan/(:num)', 'User::updatePengadaan/$1', ['filter' => 'role:User']);
+$routes->put('/User/detailPengadaan/(:num)', 'User::detailPengadaan/$1', ['filter' => 'role:User']);
 // app/Config/Routes.php
 
 $routes->get('/Petugas_pengadaan', 'Petugas_pengadaan::index', ['filter' => 'role:petugas_pengadaan']);
 
-$routes->delete('/pegawai/(:num)', 'pegawai::delete/$1', ['filter' => 'role:pegawai']);
+$routes->delete('/User/(:num)', 'User::delete/$1', ['filter' => 'role:User']);
 // routes.php
-$routes->put('/pegawai/ubah/(:num)', 'pegawai::ubah/$1', ['filter' => 'role:pegawai']);
-$routes->post('/pegawai/ubah/update/(:num)', 'pegawai::updatePermin/$1', ['filter' => 'role:pegawai']);
-$routes->get('/pegawai/update/(:num)', 'pegawai::ubah/$1', ['filter' => 'role:pegawai']);
+$routes->put('/User/ubah/(:num)', 'User::ubah/$1', ['filter' => 'role:User']);
+$routes->post('/User/ubah/update/(:num)', 'User::updatePermin/$1', ['filter' => 'role:User']);
+$routes->get('/User/update/(:num)', 'User::ubah/$1', ['filter' => 'role:User']);
 
 
-$routes->put('/pegawai/profile/(:num)', 'pegawai::profile/$1', ['filter' => 'role:pegawai']);
+$routes->put('/User/profile/(:num)', 'User::profile/$1', ['filter' => 'role:User']);
 
-$routes->put('/pegawai/ubah/simpanProfile/(:num)', 'pegawai::simpanProfile/$1', ['filter' => 'role:pegawai']);
+$routes->put('/User/ubah/simpanProfile/(:num)', 'User::simpanProfile/$1', ['filter' => 'role:User']);
 
 $routes->get('cetak', 'Admin::index', ['filter' => 'role:admin']);
 $routes->post('cetak/cetakData', 'Admin::cetakData', ['filter' => 'role:admin']);
@@ -95,7 +95,7 @@ $routes->get('/administrator', 'administrator::index', ['filter' => 'role:admini
 
 // Perbaiki
 
-// $routes->put('/pegawai/detail/(:num)', 'pegawai::detail/$1', ['filter' => 'role:pegawai']);
+// $routes->put('/User/detail/(:num)', 'User::detail/$1', ['filter' => 'role:User']);
 // $routes->put('/user/profile/(:num)', 'user::profile/$1', ['filter' => 'role:user']);
 // $routes->put('/user/tentang/(:num)', 'user::tentang/$1', ['filter' => 'role:user']);
 // $routes->put('/user/ubah/simpanProfile/(:num)', 'user::simpanProfile/$1', ['filter' => 'role:user']);
