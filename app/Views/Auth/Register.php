@@ -3,50 +3,173 @@
 <?= $this->section('content'); ?>
 <div class="container">
     <div class="row justify-content-center align-items-center" style="min-height: 90vh;">
-        <div class="col-md-7 col-lg-6">
-            <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-lg border-0 my-5 rounded-3">
                 <div class="card-body px-5 py-4">
                     <div class="text-center mb-4">
-                        <!-- LOGO TKJ -->
-                        <img src="<?= base_url('assets/media/qrcode/tkj.png') ?>" alt="Logo TKJ" style="width: 80px; height: 80px; object-fit:contain; border-radius:16px; box-shadow:0 2px 8px #e0e0e0;">
-                        <h1 class="h4 text-primary font-weight-bold mt-3 mb-1"><?= lang('Auth.register') ?></h1>
-                        <div class="text-gray-600" style="font-size:14px;">SMK N 1 SRAGI - TKJ</div>
+                        <!-- LOGO -->
+                        <img src="<?= base_url('assets/media/qrcode/tkj.png') ?>" 
+                             alt="Logo TKJ" 
+                             style="width: 80px; height: 80px; object-fit:contain; border-radius:16px; box-shadow:0 2px 8px #e0e0e0;">
+                        <h1 class="h4 text-primary fw-bold mt-3 mb-1"><?= lang('Auth.register') ?></h1>
+                        <div class="text-muted" style="font-size:14px;">SMK N 1 SRAGI - TKJ</div>
                     </div>
+
                     <?= view('Myth\Auth\Views\_message_block') ?>
-                    <form class="user" action="<?= url_to('register') ?>" method="post">
+
+                    <form class="user" action="<?= url_to('register') ?>" method="post" enctype="multipart/form-data">
                         <?= csrf_field() ?>
-                        <div class="form-group mb-3">
-                            <label class="form-label text-gray-700" style="font-weight:600; font-size:15px;">Username</label>
-                            <input type="text" class="form-control <?php if (session('errors.username')) : ?>is-invalid<?php endif ?>" name="username" placeholder="<?= lang('Auth.username') ?>" value="<?= old('username') ?>">
+
+                        <!-- USERNAME -->
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Username <span class="text-danger">*</span></label>
+                            <input type="text" 
+                                   class="form-control <?= session('errors.username') ? 'is-invalid' : '' ?>" 
+                                   name="username" 
+                                   placeholder="Masukkan username"
+                                   value="<?= old('username') ?>" 
+                                   required>
                         </div>
-                        <div class="form-group mb-3">
-                            <label class="form-label text-gray-700" style="font-weight:600; font-size:15px;">Email</label>
-                            <input type="email" class="form-control <?php if (session('errors.email')) : ?>is-invalid<?php endif ?>" name="email" placeholder="<?= lang('Auth.email') ?>" value="<?= old('email') ?>">
+
+                        <!-- EMAIL OPSIONAL -->
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Email <small class="text-muted">(opsional)</small></label>
+                            <input type="email" 
+                                   class="form-control <?= session('errors.email') ? 'is-invalid' : '' ?>" 
+                                   name="email" 
+                                   placeholder="Masukkan email (opsional)"
+                                   value="<?= old('email') ?>">
                         </div>
-                        <div class="form-group row mb-3">
-                            <div class="col-sm-6 mb-3 mb-sm-0">
-                                <label class="form-label text-gray-700" style="font-weight:600; font-size:15px;">Password</label>
-                                <input type="password" class="form-control <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" name="password" placeholder="<?= lang('Auth.password') ?>" autocomplete="off">
+
+                        <!-- FOTO -->
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Foto Profil</label>
+                            <input type="file" 
+                                   class="form-control <?= session('errors.foto') ? 'is-invalid' : '' ?>" 
+                                   name="foto" 
+                                   accept="image/*">
+                            <small class="text-muted">Format: JPG, PNG. Max 2MB.</small>
+                        </div>
+
+                        <!-- ROLE -->
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Tipe User <span class="text-danger">*</span></label>
+                            <select name="is_siswa" id="is_siswa" class="form-control" required>
+                                <option value="0" <?= old('is_siswa') == '0' ? 'selected' : '' ?>>Guru / Admin</option>
+                                <option value="1" <?= old('is_siswa') == '1' ? 'selected' : '' ?>>Siswa</option>
+                            </select>
+                        </div>
+
+                        <!-- SISWA FIELDS -->
+                        <div class="siswa-field" style="display:none;">
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Nama Lengkap</label>
+                                <input type="text" 
+                                       name="fullname" 
+                                       class="form-control <?= session('errors.fullname') ? 'is-invalid' : '' ?>" 
+                                       placeholder="Masukkan nama lengkap"
+                                       value="<?= old('fullname') ?>">
                             </div>
-                            <div class="col-sm-6">
-                                <label class="form-label text-gray-700" style="font-weight:600; font-size:15px;">Ulangi Password</label>
-                                <input type="password" name="pass_confirm" class="form-control <?php if (session('errors.pass_confirm')) : ?>is-invalid<?php endif ?>" placeholder="<?= lang('Auth.repeatPassword') ?>" autocomplete="off">
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">NISN</label>
+                                <input type="text"
+                                       name="nisn"
+                                       class="form-control <?= session('errors.nisn') ? 'is-invalid' : '' ?>"
+                                       placeholder="Masukkan NISN (10 digit)"
+                                       value="<?= old('nisn') ?>"
+                                       maxlength="10"
+                                       pattern="\d{10}"
+                                       title="NISN harus 10 digit angka">
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block font-weight-bold" style="letter-spacing: 1px;">
-                            <i class="fa fa-user-plus mr-1"></i> <?= lang('Auth.register') ?>
+
+                        <!-- PASSWORD -->
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Password <span class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <input type="password"
+                                       name="password"
+                                       id="password"
+                                       class="form-control <?= session('errors.password') ? 'is-invalid' : '' ?>"
+                                       placeholder="Password (6 digit angka)"
+                                       maxlength="6"
+                                       pattern="\d{6}"
+                                       required>
+                                <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                    <i class="fa fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- PASSWORD CONFIRM -->
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Ulangi Password <span class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <input type="password"
+                                       name="pass_confirm"
+                                       id="pass_confirm"
+                                       class="form-control <?= session('errors.pass_confirm') ? 'is-invalid' : '' ?>"
+                                       placeholder="Ulangi password"
+                                       maxlength="6"
+                                       pattern="\d{6}"
+                                       required>
+                                <button class="btn btn-outline-secondary" type="button" id="togglePassConfirm">
+                                    <i class="fa fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- SUBMIT -->
+                        <button type="submit" class="btn btn-primary w-100 fw-bold py-2">
+                            <i class="fa fa-user-plus me-2"></i> Daftar
                         </button>
+
                         <hr class="my-3">
                     </form>
+
                     <div class="text-center">
-                        <a class="small" href="<?= url_to('login') ?>"><?= lang('Auth.alreadyRegistered') ?> <?= lang('Auth.signIn') ?></a>
+                        <a class="small" href="<?= url_to('login') ?>">
+                            <?= lang('Auth.alreadyRegistered') ?> <?= lang('Auth.signIn') ?>
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="text-center text-muted mt-2" style="font-size:13px;">
-                &copy; <?= date('Y') ?> | <span class="text-primary font-weight-bold">SMK N 1 SRAGI - TKJ</span>
+                &copy; <?= date('Y') ?> | <span class="text-primary fw-bold">SMK N 1 SRAGI - TKJ</span>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const roleSelect = document.getElementById('is_siswa');
+        const siswaFields = document.querySelector('.siswa-field');
+
+        function toggleFields() {
+            siswaFields.style.display = roleSelect.value === "1" ? "block" : "none";
+        }
+
+        roleSelect.addEventListener('change', toggleFields);
+        toggleFields();
+
+        // Toggle password
+        const togglePassword = document.querySelector("#togglePassword");
+        const password = document.querySelector("#password");
+        togglePassword.addEventListener("click", function() {
+            const type = password.type === "password" ? "text" : "password";
+            password.type = type;
+            this.querySelector("i").classList.toggle("fa-eye-slash");
+        });
+
+        const togglePassConfirm = document.querySelector("#togglePassConfirm");
+        const passConfirm = document.querySelector("#pass_confirm");
+        togglePassConfirm.addEventListener("click", function() {
+            const type = passConfirm.type === "password" ? "text" : "password";
+            passConfirm.type = type;
+            this.querySelector("i").classList.toggle("fa-eye-slash");
+        });
+    });
+</script>
+
 <?= $this->endSection(); ?>

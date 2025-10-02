@@ -10,7 +10,24 @@ class User extends Model
     protected $table = 'users';
     // protected $useTimestamps = true;
     protected $primarykey = 'id';
-    protected $allowedFields = ['username', 'email', 'foto', 'password_hash'];
+    protected $allowedFields = [
+        'email',
+        'username',
+        'fullname',
+        'foto',
+        'password_hash',
+        'reset_hash',
+        'reset_at',
+        'reset_expires',
+        'activate_hash',
+        'status',
+        'status_message',
+        'active',
+        'force_pass_reset',
+        // custom field
+        'nisn',
+        'is_siswa'
+    ];
 
     public function getUsers($id = false)
     {

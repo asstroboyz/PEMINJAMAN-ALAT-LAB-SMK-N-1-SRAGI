@@ -106,6 +106,7 @@ class Auth extends BaseConfig
     public $validFields = [
         'email',
         'username',
+        'nisn'
     ];
 
     /**
