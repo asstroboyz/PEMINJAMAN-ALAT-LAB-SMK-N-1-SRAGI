@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use CodeIgniter\Model;
@@ -39,30 +40,44 @@ class PeminjamanDetailModel extends Model
     }
 
     // Semua data "masuk" (pending)
-public function getPeminjamanMasuk() {
-    return $this->select('peminjaman_detail.*, h.kode_transaksi, h.status, h.tanggal_permintaan')
-        ->join('peminjaman_header h', 'h.peminjaman_id = peminjaman_detail.peminjaman_id', 'left')
-        ->where('h.status', 'pending')
-        ->findAll();
-}
+    public function getPeminjamanMasuk()
+    {
+        return $this->select('peminjaman_detail.*, h.kode_transaksi, h.status, h.tanggal_permintaan')
+            ->join('peminjaman_header h', 'h.peminjaman_id = peminjaman_detail.peminjaman_id', 'left')
+            ->where('h.status', 'pending')
+            ->findAll();
+    }
 
-// Semua data "diproses"/"dipinjam"
-public function getPeminjamanProses() {
-    return $this->select('peminjaman_detail.*, h.kode_transaksi, h.status, h.tanggal_permintaan')
-        ->join('peminjaman_header h', 'h.peminjaman_id = peminjaman_detail.peminjaman_id', 'left')
-        ->where('h.status', 'dipinjam')
-        ->findAll();
-}
+    // Semua data "diproses"/"dipinjam"
+    public function getPeminjamanProses()
+    {
+        return $this->select('peminjaman_detail.*, h.kode_transaksi, h.status, h.tanggal_permintaan')
+            ->join('peminjaman_header h', 'h.peminjaman_id = peminjaman_detail.peminjaman_id', 'left')
+            ->where('h.status', 'dipinjam')
+            ->findAll();
+    }
 
-// Semua data "selesai" (kembali/ditolak)
-public function getPeminjamanSelesai() {
-    return $this->select('peminjaman_detail.*, h.kode_transaksi, h.status, h.tanggal_permintaan')
-        ->join('peminjaman_header h', 'h.peminjaman_id = peminjaman_detail.peminjaman_id', 'left')
-        ->groupStart()
+    // Semua data "selesai" (kembali/ditolak)
+    public function getPeminjamanSelesai()
+    {
+        return $this->select('peminjaman_detail.*, h.kode_transaksi, h.status, h.tanggal_permintaan')
+            ->join('peminjaman_header h', 'h.peminjaman_id = peminjaman_detail.peminjaman_id', 'left')
+            ->groupStart()
             ->where('h.status', 'kembali')
             ->orWhere('h.status', 'ditolak')
-        ->groupEnd()
-        ->findAll();
-}
-
+            ->groupEnd()
+            ->findAll();
+    }
+    public function getTopBarangDipinjam($limit = 5)
+    {
+        return $this->select('m.kode_brg, m.nama_brg, COUNT(*) as total')
+            ->join('peminjaman_header h', 'h.peminjaman_id = peminjaman_detail.peminjaman_id', 'left')
+            ->join('inventaris i', 'i.id = peminjaman_detail.inventaris_id', 'left')
+            ->join('master_barang m', 'm.kode_brg = i.id_master_barang', 'left')
+            ->where('h.tanggal_pinjam IS NOT NULL')
+            ->groupBy('m.kode_brg, m.nama_brg')
+            ->orderBy('total', 'DESC')
+            ->limit($limit)
+            ->findAll();
+    }
 }

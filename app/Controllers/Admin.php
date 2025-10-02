@@ -86,65 +86,49 @@ class Admin extends BaseController
         $this->MerkKategoriBarangModel = new MerkKategoriBarangModel();
     }
 
-   public function index()
-{
-    $db = db_connect();
+    public function index()
+    {
+        $db = db_connect();
 
-    // total summary
-    $totalDipinjam = $db->table('peminjaman_header')->where('status', 'dipinjam')->countAllResults();
-    $totalDikembalikan = $db->table('peminjaman_header')->where('status', 'dikembalikan')->countAllResults();
-    $totalRusak = $db->table('peminjaman_detail')->where('kondisi_kembali', 'rusak')->countAllResults();
-    $totalHilang = $db->table('peminjaman_detail')->where('kondisi_kembali', 'hilang')->countAllResults();
+        $peminjamanDetailModel = new \App\Models\PeminjamanDetailModel();
 
-    // ambil data asli dari DB
-    $result = $db->query("
-        SELECT DATE(tanggal_pinjam) as tgl, COUNT(*) as total
-        FROM peminjaman_header
-        WHERE tanggal_pinjam IS NOT NULL
-          AND MONTH(tanggal_pinjam) = MONTH(CURDATE())
-          AND YEAR(tanggal_pinjam) = YEAR(CURDATE())
-        GROUP BY DATE(tanggal_pinjam)
-    ")->getResultArray();
+        // total summary
+        $totalDipinjam     = $db->table('peminjaman_header')->where('status', 'dipinjam')->countAllResults();
+        $totalDikembalikan = $db->table('peminjaman_header')->where('status', 'dikembalikan')->countAllResults();
+        $totalRusak        = $db->table('peminjaman_detail')->where('kondisi_kembali', 'rusak')->countAllResults();
+        $totalHilang       = $db->table('peminjaman_detail')->where('kondisi_kembali', 'hilang')->countAllResults();
 
-    // ubah ke associative array [tgl => total]
-    $map = [];
-    foreach ($result as $row) {
-        $map[$row['tgl']] = (int)$row['total'];
-    }
+        // 🔹 top 5 barang paling sering dipinjam
+        $topBarang = $peminjamanDetailModel->getTopBarangDipinjam(5);
 
-    // generate semua tanggal bulan ini
-    $start = new \DateTime(date('Y-m-01'));               // awal bulan
-    $end   = new \DateTime(date('Y-m-t'));                // akhir bulan
-    $period = new \DatePeriod($start, new \DateInterval('P1D'), $end->modify('+1 day'));
-
-    $grafik = [];
-    foreach ($period as $dt) {
-        $tgl = $dt->format('Y-m-d');
-        $grafik[] = [
-            'tgl'   => $tgl,
-            'total' => $map[$tgl] ?? 0  // isi 0 kalau tidak ada transaksi
+        $bulanIndo = [
+            1 => 'Januari',
+            'Februari',
+            'Maret',
+            'April',
+            'Mei',
+            'Juni',
+            'Juli',
+            'Agustus',
+            'September',
+            'Oktober',
+            'November',
+            'Desember'
         ];
+        $bulanSekarang = $bulanIndo[(int)date('m')] . ' ' . date('Y');
+        $data = [
+            'title'             => 'Dashboard Peminjaman',
+            'totalDipinjam'     => $totalDipinjam,
+            'totalDikembalikan' => $totalDikembalikan,
+            'totalRusak'        => $totalRusak,
+            'totalHilang'       => $totalHilang,
+            'topBarang'         => $topBarang,     // array top 5 barang
+            'bulanSekarang'     => $bulanSekarang
+        ];
+
+        // dd($data);
+        return view('Admin/Home/Index', $data);
     }
-
-    // nama bulan sekarang
-    $bulanIndo = [
-        1=>'Januari','Februari','Maret','April','Mei','Juni',
-        'Juli','Agustus','September','Oktober','November','Desember'
-    ];
-    $bulanSekarang = $bulanIndo[(int)date('m')] . ' ' . date('Y');
-
-    $data = [
-        'title'             => 'Dashboard Peminjaman',
-        'totalDipinjam'     => $totalDipinjam,
-        'totalDikembalikan' => $totalDikembalikan,
-        'totalRusak'        => $totalRusak,
-        'totalHilang'       => $totalHilang,
-        'grafik'            => $grafik,
-        'bulanSekarang'     => $bulanSekarang
-    ];
-
-    return view('Admin/Home/Index', $data);
-}
 
 
     public function user_list()
@@ -1157,147 +1141,6 @@ class Admin extends BaseController
     }
     //Akhir ATK
 
-    // Permintaan Barang
-    public function permintaan()
-    {
-
-        $this->builder = $this->db->table('permintaan_barang');
-        $this->builder->select('*');
-        $this->query        = $this->builder->get();
-        $data['permintaan'] = $this->query->getResultArray();
-        // dd(  $data['inventaris']);
-        $data['title'] = 'Permintaan Barang';
-        return view('Admin/Permintaan_barang/Index', $data);
-    }
-    public function list_permintaan($id)
-    {
-        $data['detail']     = $this->PermintaanModel->getPermintaan($id);
-        $data['permintaan'] = $this->detailPermintaanModel
-            ->select('peminjaman_detail.*, master_barang.nama_brg, satuan.nama_satuan,permintaan_barang.tanggal_permintaan, master_barang.merk,detail_master.tipe_barang')
-            ->join('barang', 'barang.kode_barang = peminjaman_detail.kode_barang')
-            ->join('satuan', 'satuan.satuan_id = barang.id_satuan')
-            ->join('detail_master', 'detail_master.detail_master_id = barang.id_master_barang')
-            ->join('master_barang', 'master_barang.kode_brg = detail_master.master_barang')
-            ->join('permintaan_barang', 'permintaan_barang.permintaan_barang_id = peminjaman_detail.id_permintaan_barang')
-            ->where('id_permintaan_barang', $id)->findAll();
-        // dd(  $data['permintaan']);
-
-        $data['title'] = 'Permintaan Barang';
-        return view('Admin/Permintaan_barang/list_permintaan', $data);
-    }
-    public function permintaan_masuk()
-    {
-        $permintaan = $this->detailPermintaanModel->getDetailPermintaan();
-        $data       = [
-            'permintaan' => $permintaan,
-            'title'      => 'Daftar permintaan - Masuk',
-        ];
-        return view('Admin/Permintaan_barang/Permintaan_masuk', $data);
-    }
-    public function permintaan_proses()
-    {
-        $permintaan = $this->detailPermintaanModel->getPermintaanProses();
-        $data       = [
-            'permintaan' => $permintaan,
-            'title'      => 'Daftar permintaan - Masuk',
-        ];
-        return view('Admin/Permintaan_barang/Permintaan_masuk', $data);
-    }
-    public function permintaan_selesai()
-    {
-        $permintan = $this->detailPermintaanModel->getPermintaanSelesai();
-        $data      = [
-            'permintaan' => $permintan,
-            'title'      => 'Daftar permintaan - Masuk',
-        ];
-        return view('Admin/Permintaan_barang/Permintaan_masuk', $data);
-    }
-    public function prosesPermintaan($id)
-    {
-        $date =
-            $this->detailPermintaanModel->update($id, [
-                'tanggal_diproses' => date("Y-m-d h:i:s"),
-                'status'           => 'diproses',
-
-            ]);
-        session()->setFlashdata('msg', 'Status permintaan berhasil Diubah');
-        return redirect()->to('Admin/detailpermin/' . $id);
-    }
-
-    public function terimaPermintaan($id)
-    {
-
-        $this->detailPermintaanModel->update($id, [
-            'tanggal_selesai' => date("Y-m-d h:i:s"),
-            'status'          => 'selesai',
-            'status_akhir'    => 'diterima',
-
-        ]);
-        session()->setFlashdata('msg', 'Status permntaan berhasil Diubah');
-        return redirect()->to('Admin/detailpermin/' . $id);
-    }
-    public function simpanBalasan($id)
-    {
-        $rules = [
-            'kategori'           => [
-                'rules'  => 'required',
-                'errors' => [
-                    'required' => 'Kategori  wajib diisi.',
-                ],
-            ],
-            'balasan_permintaan' => [
-                'rules'  => 'required',
-                'errors' => [
-                    'required' => 'Isi Balasan wajib diisi.',
-
-                ],
-            ],
-
-        ];
-
-        if (! $this->validate($rules)) {
-            $validation = \Config\Services::validation();
-            return redirect()->to('/Admin/detail/' . $id)->withInput('validation', $validation);
-        }
-        $this->PermintaanModel->update($id, [
-            'tanggal_selesai' => date("Y-m-d h:i:s"),
-            'status'          => 'selesai',
-            'status_akhir'    => 'ditolak',
-
-        ]);
-        $data = [
-            'id_permintaan_barang' => $id,
-            'kategori'             => $this->request->getPost('kategori'),
-            'balasan_permintaan'   => $this->request->getPost('balasan_permintaan'),
-
-        ];
-        $this->BalasanModel->save($data);
-        session()->setFlashdata('msg', 'Status Permintaan berhasil Diubah');
-        return redirect()->to('Admin/detailpermin/' . $id);
-    }
-    public function detailpermin($id)
-    {
-        $barangList = $this->BarangModel->findAll();
-        $data       = $this->detailPermintaanModel->getDetailPermintaan($id);
-
-        $d = $this->db->table('balasan_permintaan');
-        $d->select('*');
-        $d->where('id_permintaan_barang', $id);
-        $balasan = $d->get()->getRow();
-
-        // dd($query1);
-        $ex = [
-
-            'detail'     => $data,
-            'title'      => 'Detail permintaan',
-            'balasan'    => $balasan,
-            'barangList' => $barangList,
-            'validation' => \Config\Services::validation(),
-
-        ];
-
-        return view('Admin/Permintaan_barang/Detail_permintaan', $ex);
-    }
 
     public function cetakDataPdf() //permintaan
     {
@@ -1362,226 +1205,8 @@ class Admin extends BaseController
     // }
     //Akhir Permintaan
 
-    //Pengadaan Barang
-    public function pengadaan()
-    {
 
-        $this->builder = $this->db->table('pengadaan_barang');
-        $this->builder->select('*');
-        $this->builder->where('id_user', user()->id);
-        $this->query       = $this->builder->get();
-        $data['pengadaan'] = $this->query->getResultArray();
-        // dd(  $data['inventaris']);
-        $data['title'] = 'Pengadaan Barang';
 
-        return view('Admin/Pengadaan/Index', $data);
-    }
-
-    public function tambah_pengadaan()
-    {
-        $data = [
-            'validation' => $this->validation,
-            'title'      => 'Tambah Pengadaan Barang',
-
-        ];
-        return view('Admin/Pengadaan/Tambah_pengadaan', $data);
-    }
-    public function simpanPengadaan()
-    {
-        // get data post add data post
-        $data = $this->request->getPost();
-        // dd($data);
-        // post to pengadaan
-        $id_pengadaan = 'PG-' . date('Ymdhis') . rand(100, 999);
-        $this->PengadaanModel->save([
-            'id_user'             => user()->id,
-            'pengadaan_barang_id' => $id_pengadaan,
-            'tanggal_pengadaan'   => date("Y/m/d"),
-            'tahun_periode'       => $data['tahun_periode'],
-
-        ]);
-        // get id_pengadaan
-        for ($i = 0; $i < count($data['nama_barang']); $i++) {
-            $this->detailPengadaanModel->save([
-                'id_pengadaan_barang' => $id_pengadaan,
-                'nama_barang'         => $data['nama_barang'][$i],
-                'jumlah'              => $data['jumlah'][$i],
-                'spesifikasi'         => $data['spesifikasi'][$i],
-                'alasan_pengadaan'    => $data['alasan_pengadaan'][$i],
-                'nama_pengaju'        => user()->username,
-                'tgl_pengajuan'       => date("Y/m/d h:i:s"),
-
-                'status'              => 'belum diproses',
-            ]);
-            // dd($data);
-        }
-
-        // Flashdata pesan disimpan
-        session()->setFlashdata(
-            'pesanBerhasil',
-            'Data Pengadaan Berhasil Ditambahkan'
-        );
-        return redirect()->to('/Admin/pengadaan');
-
-        // Flashdata pesan disimpan
-        session()->setFlashdata(
-            'pesanBerhasil',
-            'Data Pengadaan Berhasil Ditambahkan'
-        );
-        return redirect()->to('/Admin/pengadaan');
-    }
-
-    public function editPengadaan($id)
-    {
-        $validation = \Config\Services::validation();
-
-        $data['pengadaan']  = $this->detailPengadaanModel->getDetailPengadaan($id);
-        $data['validation'] = $validation;      // Pass the validation service to the view
-        $data['title']      = 'Ubah Pengadaan'; // Pass the validation service to the view
-
-        // Cek apakah pengadaan dengan id tersebut ditemukan
-        if (! $data['pengadaan']) {
-            // Redirect atau tampilkan pesan error jika tidak ditemukan
-            return redirect()->to('/Admin/pengadaan')->with('pesanError', 'Pengadaan tidak ditemukan');
-        }
-
-        // Tampilkan formulir edit dengan data pengadaan
-        return view('Admin/Pengadaan/Edit_pengadaan', $data);
-    }
-
-    public function updatePengadaan($id)
-    {
-        // Validasi input
-        if (! $this->validate([
-            'alasan_pengadaan' => [
-                'rules'  => 'required',
-                'errors' => [
-                    'required' => 'alasan_pengadaan wajib di isi',
-                ],
-            ],
-
-        ])) {
-            $validation = \Config\Services::validation();
-            return redirect()->to("/Admin/editPengadaan/$id")->withInput()->with('validation', $validation);
-        }
-
-        // Dapatkan data pengadaan dari database
-        $pengadaan = $this->detailPengadaanModel->getDetailPengadaan($id);
-
-        // Cek apakah pengadaan dengan id tersebut ditemukan
-        if (! $pengadaan) {
-            // Redirect atau tampilkan pesan error jika tidak ditemukan
-            return redirect()->to('/Admin/pengadaan')->with('pesanError', 'Pengadaan tidak ditemukan');
-        }
-
-        // Persiapkan data untuk disimpan
-        $dataPengadaan = [
-            'nama_barang'      => $this->request->getPost('nama_barang'),
-            'jumlah'           => $this->request->getPost('jumlah'),
-            'spesifikasi'      => $this->request->getPost('spesifikasi'),
-            'alasan_pengadaan' => $this->request->getPost('alasan_pengadaan'),
-            'nama_pengaju'     => user()->username,
-        ];
-
-        // Update data ke database
-        $this->detailPengadaanModel->update($id, $dataPengadaan);
-
-        // Flashdata pesan berhasil diupdate
-        session()->setFlashdata('pesanBerhasil', 'Data Pengadaan Berhasil Diupdate');
-        return redirect()->to('/Admin/detailPengadaan/' . $this->request->getPost('id_pengadaan_barang'));
-    }
-
-    public function detailPengadaanBarang($id)
-    {
-
-        $data = $this->detailPengadaanModel->getDetailPengadaan($id);
-
-        $d = $this->db->table('balasan_pengadaan');
-        $d->select('*');
-        $d->where('id_pengadaan', $id);
-        $balasan = $d->get()->getRow();
-
-        // dd($query1);
-        $ex = [
-
-            'detail'     => $data,
-            'title'      => 'Detail Pengadaan',
-            'balasan'    => $balasan,
-            'validation' => \Config\Services::validation(),
-
-        ];
-
-        return view('Admin/Pengadaan/detail', $ex);
-    }
-
-    public function detailPengadaan($id)
-    {
-
-        $dataPengadaan     = $this->PengadaanModel->getPengadaan($id);
-        $detail_pengadaaan = $this->detailPengadaanModel->where('id_pengadaan_barang', $id)->findAll();
-
-        $ex = [
-
-            'title'             => 'Detail Pengadaan Barang',
-            'detail'            => $dataPengadaan,
-            'detail_pengadaaan' => $detail_pengadaaan,
-
-        ];
-
-        return view('Admin/Pengadaan/Detail_pengadaan', $ex);
-    }
-    public function deletePengadaan($id)
-    {
-        // dd($id);
-        $this->PengadaanModel->hapusPengadaan($id);
-        session()->setFlashdata('pesanBerhasil', 'Data Berhasil Dihapus');
-
-        // Redirect ke halaman index
-        return redirect()->to('/Admin/pengadaan');
-    }
-
-    public function printPB() // all data
-    {
-        $data = [
-            'pengadaan' => $this->PengadaanModel->getAll(),
-            'title'     => 'Cetak Data',
-        ];
-
-        $dompdf  = new \Dompdf\Dompdf();
-        $options = new \Dompdf\Options();
-        $options->setIsRemoteEnabled(true);
-
-        $dompdf->setOptions($options);
-        $dompdf->output();
-        $dompdf->loadHtml(view('user/pengadaan/print', $data));
-        $dompdf->setPaper('A4', 'portrait');
-        $dompdf->render();
-        ini_set('max_execution_time', 0);
-        $dompdf->stream('Data.pdf', ["Attachment" => false]);
-    }
-    public function eksporPB($id) //detail permintaan
-    {
-        // $aduan = $this->pengaduan->where(['id' => $id])->first();
-        // $id = $id;
-        // $data['detail']   = $aduan;
-        $data['title']  = 'cetak';
-        $data['detail'] = $this->PengadaanModel->where(['id' => $id])->first();
-
-        //Cetak dengan dompdf
-        $dompdf = new \Dompdf\Dompdf();
-        ini_set('max_execution_time', 0);
-        $options = new \Dompdf\Options();
-        $options->setIsRemoteEnabled(true);
-
-        $dompdf->setOptions($options);
-        $dompdf->output();
-        $dompdf->loadHtml(view('user/pengadaan/cetakid', $data));
-        $dompdf->setPaper('A4', 'portrait');
-        $dompdf->render();
-        $dompdf->stream('Detail Pengadaan.pdf', ["Attachment" => false]);
-    }
-    //Akhir Pengadaan
-    // AKhir
 
     //Laporan
 
@@ -1616,64 +1241,7 @@ class Admin extends BaseController
 
         return view('Admin/Laporan/Home_transaksikeluar', $data);
     }
-    //Pengadaan
-    public function lap_pengadaan()
-    {
-        $data = [
-            // 'user'=> $query->getResult(),
-            'title' => 'SMK - Laporan Pengadaan Barang',
 
-        ];
-
-        return view('Admin/Laporan/Home_pengadaan', $data);
-    }
-
-    public function cetakDataPengadaan()
-    {
-
-        $tanggalMulai = $this->request->getGet('tanggal_mulai');
-        $tanggalAkhir = $this->request->getGet('tanggal_akhir');
-
-        // Validasi tanggal
-        if (empty($tanggalMulai) || empty($tanggalAkhir)) {
-            return redirect()->to(base_url('Admin'))->with('error', 'Tanggal mulai dan tanggal akhir harus diisi.');
-        }
-
-        $dateMulai = strtotime($tanggalMulai);
-        $dateAkhir = strtotime($tanggalAkhir);
-
-        if ($dateMulai === false || $dateAkhir === false || $dateMulai > $dateAkhir) {
-            return redirect()->to(base_url('Admin'))->with('error', 'Format tanggal tidak valid atau tanggal mulai melebihi tanggal akhir.');
-        }
-
-        $pengadaanModel    = new PengadaanModel();
-        $data['pengadaan'] = $pengadaanModel
-            ->select('id, id_user, id_balasan_pengadaan, nama_pengaju, nama_barang, spesifikasi, jumlah, tahun_periode, alasan_pengadaan, tgl_pengajuan, tgl_proses, tgl_selesai, status, status_akhir')
-            ->where('tgl_pengajuan >=', $tanggalMulai . ' 00:00:00')
-            ->where('tgl_pengajuan <=', $tanggalAkhir . ' 23:59:59')
-            ->findAll();
-        $data['tanggalMulai'] = $tanggalMulai; // Add this line
-        $data['tanggalAkhir'] = $tanggalAkhir;
-
-        $mpdf                  = new \Mpdf\Mpdf();
-        $mpdf->showImageErrors = true;
-        $html                  = view('Admin/Laporan/Lap_pengadaan', $data);
-
-        $mpdf->setAutoPageBreak(true);
-
-        $options = [
-            'curl' => [
-                CURLOPT_SSL_VERIFYPEER => false,
-                CURLOPT_SSL_VERIFYHOST => false,
-            ],
-        ];
-
-        $mpdf->AddPageByArray(['orientation' => 'L'] + $options);
-
-        $mpdf->WriteHtml($html);
-        $this->response->setHeader('Content-Type', 'application/pdf');
-        $mpdf->Output('Lap Pengadaan Barang.pdf', 'I');
-    }
     // Pengadaan
 
     //laporan_inventaris
@@ -1694,141 +1262,6 @@ class Admin extends BaseController
         return view('Admin/Laporan/Home_qr', $data);
     }
 
-    // public function cetakDataInventaris()
-    // {
-    //     //     $tanggalMulai = $this->request->getGet('tanggal_mulai');
-    //     //     $tanggalAkhir = $this->request->getGet('tanggal_akhir');
-
-    //     //     // Validasi tanggal
-    //     //     if (empty($tanggalMulai) || empty($tanggalAkhir)) {
-    //     //         return redirect()->to(base_url('admin'))->with('error', 'Tanggal mulai dan tanggal akhir harus diisi.');
-    //     //     }
-
-    //     //     $dateMulai = strtotime($tanggalMulai);
-    //     //     $dateAkhir = strtotime($tanggalAkhir);
-
-    //     //     if ($dateMulai === false || $dateAkhir === false || $dateMulai > $dateAkhir) {
-    //     //         return redirect()->to(base_url('admin'))->with('error', 'Format tanggal tidak valid atau tanggal mulai melebihi tanggal akhir.');
-    //     //     }
-
-    //     //     $inventarisModel = new InventarisModel(); // Change to your actual model name
-    //     //     $data['inventaris'] = $inventarisModel
-    //     //         ->select('id, kode_barang, nama_barang, kondisi, merk, tipe, satuan_barang, jumlah_barang, tgl_perolehan, qrcode, file, created_at, updated_at, deleted_at')
-    //     //         ->where('tgl_perolehan >=', $tanggalMulai . ' 00:00:00')
-    //     //         ->where('tgl_perolehan <=', $tanggalAkhir . ' 23:59:59')
-    //     //         ->findAll();
-
-    //     //     // Load library DomPDF
-    //     //     $dompdf = new \Dompdf\Dompdf();
-    //     //     $options = new \Dompdf\Options();
-    //     //     $options->setIsHtml5ParserEnabled(true);
-    //     //     $options->setIsPhpEnabled(true);
-    //     //     // $options->setIsRemoteEnabled(true);
-    //     //     $dompdf->setOptions($options);
-
-    //     //     // Buat halaman PDF dengan data
-    //     //     return view('admin/laporan/lap_inventaris', $data); // Update view path accordingly
-    //     //     $dompdf->loadHtml($html);
-    //     //     $dompdf->setPaper('A4', 'landscape');
-
-    //     //     // Render PDF
-    //     //     $dompdf->render();
-
-    //     //     // Tampilkan atau unduh PDF
-    //     //     $dompdf->stream('Data_Inventaris.pdf', array('Attachment' => true));
-
-    //     // }
-
-    //     $tanggalMulai = $this->request->getGet('tanggal_mulai');
-    //     $tanggalAkhir = $this->request->getGet('tanggal_akhir');
-
-    //     // Validasi tanggal
-    //     if (empty($tanggalMulai) || empty($tanggalAkhir)) {
-    //         return redirect()->to(base_url('admin'))->with('error', 'Tanggal mulai dan tanggal akhir harus diisi.');
-    //     }
-
-    //     $dateMulai = strtotime($tanggalMulai);
-    //     $dateAkhir = strtotime($tanggalAkhir);
-
-    //     if ($dateMulai === false || $dateAkhir === false || $dateMulai > $dateAkhir) {
-    //         return redirect()->to(base_url('admin'))->with('error', 'Format tanggal tidak valid atau tanggal mulai melebihi tanggal akhir.');
-    //     }
-
-    //     $inventarisModel = new InventarisModel();
-    //     $inventaris = $inventarisModel
-    //         ->select('id, kode_barang, nama_barang, kondisi, merk, tipe, satuan_barang, jumlah_barang, tgl_perolehan, qrcode, file, created_at, updated_at, deleted_at')
-    //         ->where('tgl_perolehan >=', $tanggalMulai . ' 00:00:00')
-    //         ->where('tgl_perolehan <=', $tanggalAkhir . ' 23:59:59')
-    //         ->findAll();
-
-    //     // Load library FPDF
-    //     require_once ROOTPATH . 'vendor/setasign/fpdf/fpdf.php';
-
-    //     $pdf = new \FPDF();
-
-    //     // Buat halaman PDF dengan data
-    //     $pdf->AddPage();
-    //     $pdf->SetFont('Arial', 'B', 16);
-
-    //     // Tambahkan header
-    //     $pdf->Ln(10);
-    //     $pdf->Cell(20, 10, 'No', 1);
-    //     $pdf->Cell(40, 10, 'Gambar', 1);
-    //     $pdf->Cell(40, 10, 'Created At', 1);
-    //     $pdf->Cell(40, 10, 'Updated At', 1);
-    //     $pdf->Cell(40, 10, 'Deleted At', 1);
-
-    //     // Tambahkan data inventaris ke PDF
-    //     // $x_awal = 0;
-
-    //     // foreach ($inventaris as $row) {
-    //     //     $pdf->Ln();
-    //     //     $pdf->Cell(20, 10, $row['id'], 1);
-    //     //     // $n= $pdf->Image($row['file'], $x_awal, $x_awal, -300);
-
-    //     //     // $pdf->Cell(40, 10, $n, 1); // Placeholder for image, adjust as needed
-    //     //     $x_awal = $x_awal+300;
-    //     //     // Tambahkan gambar ke PDF jika ada
-    //     //     if (!empty($row['file'])) {
-    //     //         $gambarPath = FCPATH  . $row['file'];
-    //     //         if (file_exists($gambarPath)) {
-    //     //             $pdf->Image($gambarPath, $pdf->GetX() + 1, $pdf->GetY() + 20, 38, 38);
-    //     //         }
-    //     //     } else {
-    //     //         $pdf->Cell(40, 10, 'Gambar tidak tersedia', 1);
-    //     //     }
-
-    //     //     $pdf->Cell(40, 10, $row['created_at'], 1);
-    //     //     $pdf->Cell(40, 10, $row['updated_at'], 1);
-    //     //     $pdf->Cell(40, 10, $row['deleted_at'], 1);
-    //     // }
-    //     $x_awal = 0;
-
-    //     foreach ($inventaris as $row) {
-    //         $pdf->Ln();
-    //         $pdf->Cell(20, 10, $row['id'], 1);
-    //         $x_awal = $x_awal + 300;
-
-    //         // Tambahkan gambar ke PDF jika ada
-    //         if (!empty($row['file'])) {
-    //             $gambarPath = FCPATH . $row['file'];
-    //             if (file_exists($gambarPath)) {
-    //                 $pdf->Image($gambarPath, $pdf->GetX() + 1, $pdf->GetY() + 20, 38, 38);
-    //             }
-    //         } else {
-    //             $pdf->Cell(40, 10, 'Gambar tidak tersedia', 1);
-    //         }
-
-    //         $pdf->Cell(40, 10, $row['created_at'], 1);
-    //         $pdf->Cell(40, 10, $row['updated_at'], 1);
-    //         $pdf->Cell(40, 10, $row['deleted_at'], 1);
-    //     }
-
-    //     // Simpan atau keluarkan PDF
-    //     $pdf->Output('Data_Inventaris.pdf', 'I');
-    //     exit;
-
-    // }
 
     public function cetak_qr()
     {
@@ -2000,8 +1433,6 @@ class Admin extends BaseController
         $this->response->setHeader('Content-Type', 'application/pdf');
         $mpdf->Output('Lap Inventaris Barang.pdf', 'I');
     }
-
-    //laporan inventaris
 
     //Laporan Barang
     public function lap_barang()

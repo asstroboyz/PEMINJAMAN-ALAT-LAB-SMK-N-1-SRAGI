@@ -426,4 +426,6 @@ class User extends BaseController
         // dd($data);
         return view('user/Peminjaman/Detail', $data);
     }
+
+    
 }

@@ -88,7 +88,7 @@
     </div>
 
     <!-- Grafik Line -->
-    <div class="row mt-4">
+    <!-- <div class="row mt-4">
         <div class="col-xl-12">
             <div class="card shadow mb-4">
                 <div class="card-header">
@@ -101,7 +101,23 @@
                 </div>
             </div>
         </div>
+    </div> -->
+
+    <div class="row mt-4">
+        <div class="col-xl-12">
+            <div class="card shadow mb-4">
+                <div class="card-header">
+                    <h6 class="m-0 font-weight-bold text-success">
+                        Top 5 Barang yang Sering Dipinjam - <?= $bulanSekarang ?>
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <canvas id="barChartTopBarang" height="100"></canvas>
+                </div>
+            </div>
+        </div>
     </div>
+
 </div>
 <?php
 date_default_timezone_set("Asia/Jakarta");
@@ -133,54 +149,43 @@ function format_tanggal($tanggal)
 <?= $this->section('additional-js'); ?>
 <script src="<?= base_url('assets/js/chart.umd.js') ?>"></script>
 <script>
-    const ctx = document.getElementById('lineChart').getContext('2d');
+    
+    const ctxBar = document.getElementById('barChartTopBarang').getContext('2d');
 
-    // gradient area biru
-    const gradient = ctx.createLinearGradient(0, 0, 0, 200);
-    gradient.addColorStop(0, 'rgba(0,123,255,0.5)');
-    gradient.addColorStop(1, 'rgba(0,123,255,0)');
+    const topBarang = <?= json_encode($topBarang) ?>;
+    const labelsBarang = topBarang.map(item => item.nama_brg);
+    const dataBarang = topBarang.map(item => parseInt(item.total));
 
-    new Chart(ctx, {
-        type: 'line',
+    new Chart(ctxBar, {
+        type: 'bar',
         data: {
-            labels: <?= json_encode(array_column($grafik, 'tgl')) ?>, // tanggal harian bulan ini
+            labels: labelsBarang,
             datasets: [{
-                label: 'Jumlah Peminjaman',
-                data: <?= json_encode(array_column($grafik, 'total')) ?>,
-                borderColor: '#007bff',
-                backgroundColor: gradient,
-                tension: 0.4,
-                fill: true,
-                pointBackgroundColor: '#007bff',
-                pointRadius: 5
+                label: 'Jumlah Dipinjam',
+                data: dataBarang,
+                backgroundColor: [
+                    '#207c5c', '#17a364', '#65cc9e', '#95dcbc', '#0e623d'
+                ],
+                borderRadius: 6
             }]
         },
         options: {
             responsive: true,
             plugins: {
                 legend: {
-                    position: 'top'
+                    display: false
                 },
                 tooltip: {
                     callbacks: {
-                        label: function(context) {
-                            return context.parsed.y + ' transaksi';
-                        }
+                        label: (context) => context.parsed.y + ' kali dipinjam'
                     }
                 }
             },
             scales: {
-                x: {
-                    title: {
-                        display: true,
-                        text: 'Tanggal'
-                    }
-                },
                 y: {
                     beginAtZero: true,
-                    title: {
-                        display: true,
-                        text: 'Jumlah Transaksi'
+                    ticks: {
+                        precision: 0
                     }
                 }
             }
