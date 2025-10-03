@@ -9,8 +9,5 @@ class Auth extends BaseController
         return view('login');
     }
 
-    // public function user()
-    // {
-    //     return view('auth/index');
-    // }
+ 
 }

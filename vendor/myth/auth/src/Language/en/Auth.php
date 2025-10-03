@@ -89,6 +89,8 @@ return [
     'emailOrUsername'           => 'Email or username',
     'username'                  => 'Username',
     'register'                  => 'Register',
+    'registerGuru'                  => 'Register Guru',
+    'registerSiswa'                  => 'Register Siswa',
     'signIn'                    => 'Sign In',
     'alreadyRegistered'         => 'Already registered?',
     'weNeverShare'              => 'We\'ll never share your email with anyone else.',

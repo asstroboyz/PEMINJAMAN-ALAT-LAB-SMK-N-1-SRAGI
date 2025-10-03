@@ -124,6 +124,21 @@ class AuthController extends Controller
     /**
      * Displays the user registration page.
      */
+
+
+
+    public function registerSiswa()
+    {
+        if ($this->auth->check()) {
+            return redirect()->back();
+        }
+
+        // Check if registration is allowed
+        if (! $this->config->allowRegistration) {
+            return redirect()->back()->withInput()->with('error', lang('Auth.registerDisabled'));
+        }
+        return view(config('Auth')->views['registerSiswa'], ['config' => config('Auth')]);
+    }
     public function register()
     {
         // check if already logged in.
@@ -138,6 +153,8 @@ class AuthController extends Controller
 
         return $this->_render($this->config->views['register'], ['config' => $this->config]);
     }
+
+
 
     /**
      * Attempt to register a new user.

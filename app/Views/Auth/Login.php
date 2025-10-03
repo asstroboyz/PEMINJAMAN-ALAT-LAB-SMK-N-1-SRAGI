@@ -12,33 +12,33 @@
                         <h1 class="h4 text-primary font-weight-bold mt-3 mb-0">PEMINJAMAN ALAT LAB</h1>
                         <div class="text-gray-600 mb-2" style="font-size:14px;">SMK N 1 SRAGI - TKJ</div>
                     </div>
-                    
+
                     <?= view('Myth\Auth\Views\_message_block') ?>
-                    
+
                     <form action="<?= url_to('login') ?>" method="post" class="user">
                         <?= csrf_field() ?>
                         <?php if ($config->validFields === ['email']) : ?>
-                        <div class="form-group mb-3">
-                            <label class="form-label text-gray-700" style="font-weight:600; font-size:15px;">Email</label>
-                            <input type="email"
-                                class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>"
-                                name="login"
-                                placeholder="<?= lang('Auth.email') ?>">
-                            <div class="invalid-feedback">
-                                <?= session('errors.login') ?>
+                            <div class="form-group mb-3">
+                                <label class="form-label text-gray-700" style="font-weight:600; font-size:15px;">Email</label>
+                                <input type="email"
+                                    class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>"
+                                    name="login"
+                                    placeholder="<?= lang('Auth.email') ?>">
+                                <div class="invalid-feedback">
+                                    <?= session('errors.login') ?>
+                                </div>
                             </div>
-                        </div>
                         <?php else : ?>
-                        <div class="form-group mb-3">
-                            <label class="form-label text-gray-700" style="font-weight:600; font-size:15px;">Email / Username</label>
-                            <input type="text"
-                                class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>"
-                                name="login"
-                                placeholder="<?= lang('Auth.emailOrUsername') ?>">
-                            <div class="invalid-feedback">
-                                <?= session('errors.login') ?>
+                            <div class="form-group mb-3">
+                                <label class="form-label text-gray-700" style="font-weight:600; font-size:15px;">Email / Username</label>
+                                <input type="text"
+                                    class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>"
+                                    name="login"
+                                    placeholder="<?= lang('Auth.emailOrUsername') ?>">
+                                <div class="invalid-feedback">
+                                    <?= session('errors.login') ?>
+                                </div>
                             </div>
-                        </div>
                         <?php endif; ?>
                         <div class="form-group mb-3">
                             <label class="form-label text-gray-700" style="font-weight:600; font-size:15px;">Password</label>
@@ -48,13 +48,13 @@
                                 placeholder="<?= lang('Auth.password') ?>">
                         </div>
                         <?php if ($config->allowRemembering) : ?>
-                        <div class="form-group form-check mb-3">
-                            <input type="checkbox" class="form-check-input" name="remembering" id="rememberme"
-                                <?php if (old('remember')) : ?> checked <?php endif ?>>
-                            <label class="form-check-label text-gray-700" for="rememberme" style="font-size:14px;">
-                                <?= lang('Auth.rememberMe') ?>
-                            </label>
-                        </div>
+                            <div class="form-group form-check mb-3">
+                                <input type="checkbox" class="form-check-input" name="remembering" id="rememberme"
+                                    <?php if (old('remember')) : ?> checked <?php endif ?>>
+                                <label class="form-check-label text-gray-700" for="rememberme" style="font-size:14px;">
+                                    <?= lang('Auth.rememberMe') ?>
+                                </label>
+                            </div>
                         <?php endif; ?>
                         <button type="submit" class="btn btn-primary btn-block font-weight-bold" style="letter-spacing: 1px;">
                             <i class="fa fa-sign-in-alt mr-1"></i> <?= lang('Auth.loginAction') ?>
@@ -65,9 +65,19 @@
                         <?php if ($config->activeResetter) : ?>
                             <a class="small" href="<?= url_to('forgot') ?>"><?= lang('Auth.forgotYourPassword') ?></a>
                         <?php endif; ?>
-                        <?php if ($config->allowRegistration) : ?>
+                        <!-- <?php if ($config->allowRegistration) : ?>
                             <a class="small" href="<?= url_to('register') ?>"><?= lang('Auth.needAnAccount') ?></a>
+                        <?php endif; ?> -->
+                        <?php if ($config->allowRegistration) : ?>
+                            <div class="d-flex flex-column text-end">
+                                <div class="d-flex flex-column text-end">
+                                    <a class="small" href="<?= url_to('registerSiswa') ?>">Daftar sebagai Siswa</a>
+                                    <a class="small mt-1" href="<?= url_to('registerGuru') ?>">Daftar sebagai Guru/Admin</a>
+                                </div>
+                            </div>
                         <?php endif; ?>
+
+
                     </div>
                 </div>
             </div>

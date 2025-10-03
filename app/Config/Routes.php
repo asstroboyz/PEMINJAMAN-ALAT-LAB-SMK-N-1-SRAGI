@@ -2,6 +2,7 @@
 
 namespace Config;
 
+use Myth\Auth\Config\Auth as AuthConfig;
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
 
@@ -16,6 +17,10 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
  * Router Setup
  * --------------------------------------------------------------------
  */
+
+
+$reservedRoutes = (new AuthConfig())->reservedRoutes;
+
 $routes->setDefaultNamespace('App\Controllers');
 $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
@@ -68,6 +73,11 @@ $routes->group('Admin', ['filter' => 'role:admin'], function ($routes) {
     // Soft delete
     $routes->get('softDelete/(:segment)', 'Admin::softDelete/$1');
 });
+
+
+$routes->get($reservedRoutes['registerGuru'], '\Myth\Auth\Controllers\AuthController::register', ['as' => 'registerGuru']);
+$routes->get($reservedRoutes['registerSiswa'], '\Myth\Auth\Controllers\AuthController::registerSiswa', ['as' => 'registerSiswa']);
+
 // $routes->get('/User', 'User::index', ['filter' => 'role:User']);
 // $routes->post('inventaris/save', 'Inventaris::save', ['filter' => 'role:admin']);
 // $routes->post('Admin/save', 'admin::save', ['filter' => 'role:admin']);

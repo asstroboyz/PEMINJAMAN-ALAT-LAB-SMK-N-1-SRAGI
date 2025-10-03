@@ -20,6 +20,8 @@ $routes->group('', ['namespace' => 'Myth\Auth\Controllers'], static function ($r
 
     // Registration
     $routes->get($reservedRoutes['register'], 'AuthController::register', ['as' => $reservedRoutes['register']]);
+    $routes->get($reservedRoutes['registerGuru'], 'AuthController::registerGuru', ['as' => $reservedRoutes['registerGuru']]);
+    $routes->get($reservedRoutes['registerSiswa'], 'AuthController::registerSiswa', ['as' => $reservedRoutes['registerSiswa']]);
     $routes->post($reservedRoutes['register'], 'AuthController::attemptRegister');
 
     // Activation
