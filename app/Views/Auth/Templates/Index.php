@@ -34,32 +34,41 @@
 
 </head>
 
-<body class="bg-gradient-light">
+<body style="
+    background-image: url('<?= base_url('assets/img/Batik.jpg'); ?>');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+">
 
-    <?= $this->renderSection('content'); ?>
+    <div class="content-wrapper" style="
+        background-color: rgba(255, 255, 255, 0.88);
+        border-radius: 12px;
+        margin: 30px auto;
+        padding: 25px;
+        max-width: 1200px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    ">
+        <?= $this->renderSection('content'); ?>
+    </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <!-- Bootstrap core JavaScript-->
+    <!-- Bootstrap core JavaScript -->
     <script src="<?= base_url() ?>/vendor/jquery/jquery.min.js"></script>
-    <script src="<?= base_url() ?>/vendor/bootstrap/js/bootstrap.bundle.min.js">
-    </script>
+    <script src="<?= base_url() ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="<?= base_url() ?>/vendor/jquery-easing/jquery.easing.min.js">
-    </script>
+    <!-- Core plugin JavaScript -->
+    <script src="<?= base_url() ?>/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
+    <!-- Custom scripts for all pages -->
     <script src="<?= base_url() ?>/js/sb-admin-2.min.js"></script>
-    <script src="<?= base_url(); ?>/vendor/datatables/jquery.dataTables.min.js">
-    </script>
-    <script
-        src="<?= base_url(); ?>/vendor/datatables/dataTables.bootstrap4.min.js">
-    </script>
+    <script src="<?= base_url(); ?>/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="<?= base_url(); ?>/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="<?=base_url();?>/assets/js/demo/datatables-demo.js"></script>
+    <script src="<?= base_url(); ?>/assets/js/demo/datatables-demo.js"></script>
     <?= $this->renderSection('additional-js') ?>
-
 </body>
+
 
 </html>
