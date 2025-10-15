@@ -545,11 +545,20 @@ class Admin extends BaseController
 
     public function detail_master_brg($id)
     {
-        $data['title']        = 'Detail Master Barang';
-        $data['master_brg']   = $this->masterBarangModel->getMasterBarang($id); // sudah join ke satuan
-        $data['inventaris']   = $this->InventarisModel->where('id_master_barang', $id)->findAll();
-        $data['barang_model'] = $this->BarangModel;
+        // $data['title']        = 'Detail Master Barang';
+        // $data['master_brg']   = $this->masterBarangModel->getMasterBarang($id); // sudah join ke satuan
+        // $data['inventaris']   = $this->InventarisModel->where('id_master_barang', $id)->findAll();
+        // $data['barang_model'] = $this->BarangModel;
         // dd($data['master_brg']);
+        $data['title'] = 'Detail Master Barang';
+        $data['master_brg'] = $this->masterBarangModel->getMasterBarang($id);
+
+        // 🔥 join ke ruangan biar tau nama ruangnya
+        $data['inventaris'] = $this->InventarisModel
+            ->select('inventaris.*, ruangan.nama_ruangan, ruangan.keterangan AS nama_lab')
+            ->join('ruangan', 'ruangan.id = inventaris.ruangan_id', 'left')
+            ->where('inventaris.id_master_barang', $id)
+            ->findAll();
         return view('Admin/Master_barang/Detail_brg', $data);
     }
     public function detail_tipe_barang($id)
