@@ -25,25 +25,47 @@
                         <?php endforeach; ?>
                     </select>
                 </div>
-                <div class="form-group">
-    <label for="id_user">Pilih Peminjam</label>
 
-    <!-- Checkbox admin sendiri -->
-    <div class="form-check mb-2">
-        <input class="form-check-input" type="checkbox" id="adminSendiri" name="admin_sendiri" value="1">
-        <label class="form-check-label" for="adminSendiri">
-            Gunakan Admin (saya sendiri)
-        </label>
-    </div>
-
-    <!-- Dropdown user -->
-    <select name="id_user" id="id_user" class="form-control">
-        <option value="">-- Pilih User Peminjam --</option>
-        <?php foreach ($users as $u): ?>
-            <option value="<?php echo $u['id'];?>"><?php echo $u['username'];?></option>
-        <?php endforeach; ?>
+         <div class="form-group">
+    <label for="kelas">Pilih Kelas</label>
+    <select name="kelas" id="kelas" class="form-control" style="width:100%;">
+        <option value="">-- Pilih Kelas --</option>
+        <?php
+            $kelasList = array_unique(array_column($users, 'kelas'));
+            foreach ($kelasList as $k) {
+                if (! empty($k)) {
+                    echo "<option value='" . htmlspecialchars($k) . "'>" . htmlspecialchars($k) . "</option>";
+                }
+            }
+        ?>
     </select>
 </div>
+
+<div class="form-group">
+    <label for="id_user">Pilih Peminjam</label>
+    <div class="form-check mb-2">
+        <input class="form-check-input" type="checkbox" id="adminSendiri" name="admin_sendiri" value="1">
+        <label class="form-check-label" for="adminSendiri">Gunakan Admin (saya sendiri)</label>
+    </div>
+
+ <select name="id_user" id="id_user" class="form-control" style="width:100%;">
+    <option value="">-- Pilih User Peminjam --</option>
+    <?php foreach ($users as $u): ?>
+        <?php
+            $kelas = strtolower(trim($u['kelas'] ?? '')); // handle NULL, spasi, uppercase
+        ?>
+        <option
+            value="<?php echo $u['id'];?>"
+            data-kelas="<?php echo $kelas?>">
+            <?php echo htmlspecialchars($u['username']);?>
+        </option>
+    <?php endforeach; ?>
+</select>
+
+
+
+</div>
+
 
 
                 <div class="mb-3">
@@ -51,15 +73,13 @@
                     <select id="select-barang" class="form-control me-2 flex-grow-1">
                         <option value="">-- Pilih Barang --</option>
                         <?php foreach ($barangs as $b): ?>
-                            <option value="<?php echo $b['id'] ?>"
-                                data-kode-brg="<?php echo $b['kode_brg'] ?>"
-                                data-nama="<?php echo $b['nama_brg'] ?>"
-                                data-merk="<?php echo $b['merk'] ?>"
-                                data-kondisi="<?php echo $b['kondisi'] ?>"
-                                data-ruangan-id="<?php echo $b['ruangan_id'] ?>"
+                            <option value="<?php echo $b['id'] ?>" data-kode-brg="<?php echo $b['kode_brg'] ?>"
+                                data-nama="<?php echo $b['nama_brg'] ?>" data-merk="<?php echo $b['merk'] ?>"
+                                data-kondisi="<?php echo $b['kondisi'] ?>" data-ruangan-id="<?php echo $b['ruangan_id'] ?>"
                                 data-nama-ruangan="<?php echo $mapRuangan[$b['ruangan_id']] ?? '' ?>"
                                 data-stok="<?php echo $b['stok'] ?>">
-                                <?php echo $b['nama_brg'] ?> -<?php echo $b['merk'] ?> (<?php echo $b['kondisi'] ?>) -<?php echo $mapRuangan[$b['ruangan_id']] ?? '' ?>
+                                <?php echo $b['nama_brg'] ?> -<?php echo $b['merk'] ?> (<?php echo $b['kondisi'] ?>)
+                                -<?php echo $mapRuangan[$b['ruangan_id']] ?? '' ?>
                             </option>
                         <?php endforeach?>
                     </select>
@@ -106,6 +126,60 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <link href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css" rel="stylesheet" />
 <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script>
+$(document).ready(function() {
+
+    // Aktifkan Select2
+    $('#id_user').select2({
+        placeholder: "-- Pilih User Peminjam --",
+        allowClear: true,
+        width: '100%'
+    });
+
+ $('#kelas').on('change', function() {
+    const selectedKelas = ($(this).val() || '').toLowerCase();
+    console.log("🔍 kelas dipilih:", selectedKelas);
+
+    // reset pilihan
+    $('#id_user').val('').trigger('change');
+
+    // tampil/hide option
+    $('#id_user option').each(function() {
+        const userKelas = ($(this).data('kelas') || '').toLowerCase();
+        if (!selectedKelas || $(this).val() === '') {
+            $(this).show();
+        } else if (userKelas === selectedKelas) {
+            $(this).show();
+        } else {
+            $(this).hide();
+        }
+    });
+
+    // 💥 tambahkan ini supaya Select2 rebuild list dari DOM
+    $('#id_user').select2('destroy');
+    $('#id_user').html($('#id_user').html());
+    $('#id_user').select2({
+        placeholder: "-- Pilih User Peminjam --",
+        allowClear: true,
+        width: '100%'
+    });
+});
+
+
+    // Checkbox "Gunakan Admin (saya sendiri)"
+    $('#adminSendiri').on('change', function() {
+        if ($(this).is(':checked')) {
+            $('#id_user').prop('disabled', true).val('').trigger('change');
+        } else {
+            $('#id_user').prop('disabled', false);
+        }
+    });
+
+});
+</script>
+
 
 <script>
     let dataBarangDipilih = [];
@@ -147,14 +221,14 @@
         });
     }
 
-//admin
-$('#adminSendiri').on('change', function() {
-    if ($(this).is(':checked')) {
-        $('#id_user').prop('disabled', true).val(''); // disable & reset value
-    } else {
-        $('#id_user').prop('disabled', false);
-    }
-});
+    //admin
+    $('#adminSendiri').on('change', function() {
+        if ($(this).is(':checked')) {
+            $('#id_user').prop('disabled', true).val(''); // disable & reset value
+        } else {
+            $('#id_user').prop('disabled', false);
+        }
+    });
 
 
     // Tambah barang
@@ -168,7 +242,8 @@ $('#adminSendiri').on('change', function() {
             return;
         }
 
-        if (dataBarangDipilih.some(i => i.kode == val && i.namaRuangan == option.getAttribute('data-nama-ruangan'))) {
+        if (dataBarangDipilih.some(i => i.kode == val && i.namaRuangan == option.getAttribute(
+                'data-nama-ruangan'))) {
             Swal.fire('Info', 'Barang sudah ada di ruangan ini', 'info');
             return;
         }
@@ -214,7 +289,8 @@ $('#adminSendiri').on('change', function() {
     $(document).on('click', '.hapus-barang', function() {
         let kode = parseInt($(this).data('kode'));
         let namaRuangan = $(this).data('nama-ruangan').trim();
-        dataBarangDipilih = dataBarangDipilih.filter(i => !(parseInt(i.kode) === kode && i.namaRuangan.trim() === namaRuangan));
+        dataBarangDipilih = dataBarangDipilih.filter(i => !(parseInt(i.kode) === kode && i.namaRuangan
+            .trim() === namaRuangan));
         renderBarangDipilih();
     });
 
@@ -244,13 +320,16 @@ $('#adminSendiri').on('change', function() {
                     cancelButtonText: 'Lewati'
                 }).then(c => {
                     if ($('#catatan-hidden').length === 0)
-                        $('#form').append('<input type="hidden" name="catatan" id="catatan-hidden">');
+                        $('#form').append(
+                            '<input type="hidden" name="catatan" id="catatan-hidden">');
                     $('#catatan-hidden').val(c.isConfirmed ? c.value : '');
                     $('#form')[0].submit(); // submit final
                 });
             }
         });
     });
+
+
 
     renderBarangDipilih();
 </script>
