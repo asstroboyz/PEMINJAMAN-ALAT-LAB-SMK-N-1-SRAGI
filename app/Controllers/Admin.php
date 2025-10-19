@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Controllers;
 
 use App\Libraries\Ciqrcode;
@@ -113,23 +112,22 @@ class Admin extends BaseController
             'September',
             'Oktober',
             'November',
-            'Desember'
+            'Desember',
         ];
-        $bulanSekarang = $bulanIndo[(int)date('m')] . ' ' . date('Y');
-        $data = [
+        $bulanSekarang = $bulanIndo[(int) date('m')] . ' ' . date('Y');
+        $data          = [
             'title'             => 'Dashboard Peminjaman',
             'totalDipinjam'     => $totalDipinjam,
             'totalDikembalikan' => $totalDikembalikan,
             'totalRusak'        => $totalRusak,
             'totalHilang'       => $totalHilang,
-            'topBarang'         => $topBarang,     // array top 5 barang
-            'bulanSekarang'     => $bulanSekarang
+            'topBarang'         => $topBarang, // array top 5 barang
+            'bulanSekarang'     => $bulanSekarang,
         ];
 
         // dd($data);
         return view('Admin/Home/Index', $data);
     }
-
 
     public function user_list()
     {
@@ -157,10 +155,10 @@ class Admin extends BaseController
 
         $user = $query->getRow();
 
-        if (!$user) {
+        if (! $user) {
             return $this->response->setJSON([
-                'status' => 'error',
-                'message' => 'User tidak ditemukan'
+                'status'  => 'error',
+                'message' => 'User tidak ditemukan',
             ])->setStatusCode(404);
         }
 
@@ -171,10 +169,9 @@ class Admin extends BaseController
             'email'      => $user->email,
             'group'      => $user->name,
             'foto'       => $user->foto,
-            'created_at' => $user->created_at
+            'created_at' => $user->created_at,
         ]);
     }
-
 
     public function profil()
     {
@@ -212,7 +209,6 @@ class Admin extends BaseController
 
         return view('Admin/Home/Profil', $data);
     }
-
 
     public function simpanProfile($id)
     {
@@ -550,7 +546,7 @@ class Admin extends BaseController
         // $data['inventaris']   = $this->InventarisModel->where('id_master_barang', $id)->findAll();
         // $data['barang_model'] = $this->BarangModel;
         // dd($data['master_brg']);
-        $data['title'] = 'Detail Master Barang';
+        $data['title']      = 'Detail Master Barang';
         $data['master_brg'] = $this->masterBarangModel->getMasterBarang($id);
 
         // 🔥 join ke ruangan biar tau nama ruangnya
@@ -1150,7 +1146,6 @@ class Admin extends BaseController
     }
     //Akhir ATK
 
-
     public function cetakDataPdf() //permintaan
     {
         $tanggalMulai = $this->request->getGet('tanggal_mulai');
@@ -1214,9 +1209,6 @@ class Admin extends BaseController
     // }
     //Akhir Permintaan
 
-
-
-
     //Laporan
 
     public function lap_permintaan()
@@ -1270,7 +1262,6 @@ class Admin extends BaseController
 
         return view('Admin/Laporan/Home_qr', $data);
     }
-
 
     public function cetak_qr()
     {
@@ -1419,7 +1410,7 @@ class Admin extends BaseController
             // ->where('inventaris.tgl_perolehan <=', $tanggalAkhir . ' 23:59:59')
             // tangal peminjaman
             ->findAll();
-        // dd($data['inventaris']);
+                                               // dd($data['inventaris']);
         $data['tanggalMulai'] = $tanggalMulai; // Add this line
         $data['tanggalAkhir'] = $tanggalAkhir;
 
@@ -1525,7 +1516,7 @@ class Admin extends BaseController
         $data['users'] = $userModel->findAll();
 
         $groupModel = new GroupModel();
-        $no = 1;
+        $no         = 1;
         foreach ($data['users'] as $row) {
             $dataRow['no']          = $no++;
             $dataRow['group']       = $groupModel->getGroupsForUser($row->id);
@@ -1581,7 +1572,6 @@ class Admin extends BaseController
         return redirect()->to(base_url('Admin/kelola_user'))
             ->with('message', 'Password berhasil diubah');
     }
-
 
     public function activateUser($id, $active)
     {
@@ -1740,30 +1730,78 @@ class Admin extends BaseController
         return view('Admin/Peminjaman/Index', $data);
     }
 
+    public function getSiswaByKelas($kelas)
+    {
+        $users = $this->Profil
+            ->where('kelas', $kelas)
+            ->where('is_siswa', 1)
+            ->findAll();
+
+        return $this->response->setJSON($users);
+    }
 
     public function tambahPeminjaman()
     {
-        $status  = $this->request->getGet('status') ?? 'all';
-        $users   = $this->Profil->findAll();
-        $barangs = $this->InventarisModel
-            ->join('master_barang', 'master_barang.kode_brg = inventaris.id_master_barang', 'left')
-            ->where('inventaris.stok >', 0)
-            ->findAll();
+        // $status = $this->request->getGet('status') ?? 'all';
+        // $kelasList = $this->Profil
+        //     ->select('DISTINCT(kelas) as kelas')
+        //     ->where('kelas !=', '') 
+        //     ->where('is_siswa', 1)
+        //     ->findAll();
 
-        $ruangan    = $this->RuanganModel->findAll();
-        $mapRuangan = [];
-        foreach ($ruangan as $r) {
-            $mapRuangan[$r['id']] = $r['nama_ruangan'];
-        }
-        $data = [
-            'users'      => $users,
-            'barangs'    => $barangs,
-            'title'      => 'Tambah Peminjaman',
-            'ruangan'    => $ruangan,
-            'mapRuangan' => $mapRuangan,
-            'status'     => $status,
-        ];
+        // $barangs = $this->InventarisModel
+        //     ->join('master_barang', 'master_barang.kode_brg = inventaris.id_master_barang', 'left')
+        //     ->where('inventaris.stok >', 0)
+        //     ->findAll();
 
+        // $ruangan    = $this->RuanganModel->findAll();
+        // $mapRuangan = [];
+        // foreach ($ruangan as $r) {
+        //     $mapRuangan[$r['id']] = $r['nama_ruangan'];
+        // }
+
+        // $data = [
+        //     'title'      => 'Tambah Peminjaman',
+        //     'kelasList'  => $kelasList,
+        //     'barangs'    => $barangs,
+        //     'ruangan'    => $ruangan,
+        //     'mapRuangan' => $mapRuangan,
+        //     'status'     => $status,
+        // ];
+          $status = $this->request->getGet('status') ?? 'all';
+
+    // Ambil daftar kelas (khusus siswa)
+    $kelasList = $this->Profil
+        ->select('DISTINCT(kelas) as kelas')
+        ->where('kelas !=', '')
+        ->where('is_siswa', 1)
+        ->findAll();
+
+    // Ambil semua user guru/admin (non-siswa)
+    $guruAdmin = $this->Profil
+        ->where('is_siswa', 0)
+        ->findAll();
+
+    $barangs = $this->InventarisModel
+        ->join('master_barang', 'master_barang.kode_brg = inventaris.id_master_barang', 'left')
+        ->where('inventaris.stok >', 0)
+        ->findAll();
+
+    $ruangan = $this->RuanganModel->findAll();
+    $mapRuangan = [];
+    foreach ($ruangan as $r) {
+        $mapRuangan[$r['id']] = $r['nama_ruangan'];
+    }
+
+    $data = [
+        'title'       => 'Tambah Peminjaman',
+        'kelasList'   => $kelasList,
+        'guruAdmin'   => $guruAdmin,
+        'barangs'     => $barangs,
+        'ruangan'     => $ruangan,
+        'mapRuangan'  => $mapRuangan,
+        'status'      => $status,
+    ];
         // dd($data);
         return view('Admin/Peminjaman/Tambah', $data);
     }
@@ -1799,7 +1837,7 @@ class Admin extends BaseController
             'tanggal_pinjam'          => null, // masih pending
             'tanggal_kembali_rencana' => null, // isi nanti saat approve
             'tanggal_kembali_real'    => null,
-            'id_user'                 => $idUser,   // <--- dinamis
+            'id_user'                 => $idUser, // <--- dinamis
             'approved_by'             => null,
             'ruangan_id_pinjam'       => $ruanganTujuanId,
             'ruangan_id_sebelum'      => $ruanganSebelum,
@@ -1827,7 +1865,7 @@ class Admin extends BaseController
             }
 
             $db->table('peminjaman_detail')->insert([
-                'id_user'         => $idUser,  // <--- user peminjam konsisten
+                'id_user'         => $idUser, // <--- user peminjam konsisten
                 'peminjaman_id'   => $peminjaman_id,
                 'inventaris_id'   => $kode_barang,
                 'ruangan_id'      => $ruangan_id,
@@ -1835,7 +1873,7 @@ class Admin extends BaseController
                 'jumlah_kembali'  => 0,
                 'kondisi_kembali' => '',
                 'detail'          => "Peminjaman dari ruangan " . ($inventaris['ruangan_id'] ?? '-') .
-                    " ke " . $db->table('ruangan')->where('id', $ruangan_id)->get()->getRow()->nama_ruangan,
+                " ke " . $db->table('ruangan')->where('id', $ruangan_id)->get()->getRow()->nama_ruangan,
             ]);
         }
 
@@ -1848,7 +1886,6 @@ class Admin extends BaseController
         return redirect()->to('/admin/peminjaman')
             ->with('success', 'Pengajuan peminjaman berhasil disimpan!');
     }
-
 
     public function approve($peminjaman_id)
     {
@@ -1942,7 +1979,7 @@ class Admin extends BaseController
 
         foreach ($details as $det) {
             $jumlah_kembali = $det['jumlah']; // bisa diganti jika mau parsial
-            $inv = $db->table('inventaris')->where('id', $det['inventaris_id'])->get()->getRowArray();
+            $inv            = $db->table('inventaris')->where('id', $det['inventaris_id'])->get()->getRowArray();
 
             // tambah stok
             $db->table('inventaris')
@@ -1984,29 +2021,26 @@ class Admin extends BaseController
         return redirect()->to('/admin/peminjaman')->with('success', 'Pengembalian berhasil diverifikasi oleh admin!');
     }
 
-
     public function detailPeminjaman($id)
     {
         $db = db_connect();
 
         // --- Ambil data header ---
         $header = $db->table('peminjaman_header ph')
-            ->select('ph.*, 
-              u.username as username_peminjam, 
-              u.fullname as fullname_peminjam, 
-              up.username as username_penerima_kembali, 
-              up.fullname as fullname_penerima_kembali, 
-              r1.nama_ruangan as ruangan_pinjam, 
+            ->select('ph.*,
+              u.username as username_peminjam,
+              u.fullname as fullname_peminjam,
+              up.username as username_penerima_kembali,
+              up.fullname as fullname_penerima_kembali,
+              r1.nama_ruangan as ruangan_pinjam,
               r2.nama_ruangan as ruangan_sebelum')
-            ->join('users u', 'u.id = ph.id_user', 'left')                     // user peminjam
-            ->join('users up', 'up.id = ph.user_penerima_kembali', 'left')     // user penerima kembali
+            ->join('users u', 'u.id = ph.id_user', 'left')                 // user peminjam
+            ->join('users up', 'up.id = ph.user_penerima_kembali', 'left') // user penerima kembali
             ->join('ruangan r1', 'r1.id = ph.ruangan_id_pinjam', 'left')
             ->join('ruangan r2', 'r2.id = ph.ruangan_id_sebelum', 'left')
             ->where('ph.peminjaman_id', $id)
             ->get()
             ->getRowArray();
-
-
 
         if (! $header) {
             return redirect()->back()->with('error', 'Data peminjaman tidak ditemukan!');

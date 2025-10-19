@@ -51,6 +51,9 @@ $routes->group('User', ['filter' => 'role:User'], function ($routes) {
     $routes->put('ubah/simpanProfile/(:num)', 'User::simpanProfile/$1');
 });
 
+
+$routes->get('/getSiswaByKelas/(:any)', 'Admin\Admin::getSiswaByKelas/$1');
+
 // ========================= ADMIN ROUTES =========================
 $routes->group('Admin', ['filter' => 'role:admin'], function ($routes) {
     $routes->get('/', 'Admin::index');

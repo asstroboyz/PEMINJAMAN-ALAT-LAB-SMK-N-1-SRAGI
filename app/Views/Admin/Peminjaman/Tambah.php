@@ -1,5 +1,44 @@
 <?php echo $this->extend('Admin/Templates/Index'); ?>
 <?php echo $this->section('page-content'); ?>
+<style>
+    .radio-box-group {
+        display: flex;
+        gap: 8px;
+        justify-content: flex-start;
+    }
+
+    .radio-box {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        padding: 6px 14px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #555;
+        background: #fff;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        user-select: none;
+    }
+
+    .radio-box input {
+        display: none;
+    }
+
+    .radio-box:hover {
+        border-color: #a855f7;
+        color: #9333ea;
+    }
+
+    .radio-box.active {
+        border-color: #9333ea;
+        background-color: #9333ea;
+        color: #fff;
+        box-shadow: 0 0 5px rgba(147, 51, 234, 0.3);
+    }
+</style>
 <div class="container-fluid">
     <h1 class="h3 mb-4 text-gray-900">Form Tambah Barang</h1>
 
@@ -26,46 +65,69 @@
                     </select>
                 </div>
 
-         <div class="form-group">
-    <label for="kelas">Pilih Kelas</label>
-    <select name="kelas" id="kelas" class="form-control" style="width:100%;">
-        <option value="">-- Pilih Kelas --</option>
-        <?php
-            $kelasList = array_unique(array_column($users, 'kelas'));
-            foreach ($kelasList as $k) {
-                if (! empty($k)) {
-                    echo "<option value='" . htmlspecialchars($k) . "'>" . htmlspecialchars($k) . "</option>";
-                }
-            }
-        ?>
-    </select>
-</div>
 
-<div class="form-group">
-    <label for="id_user">Pilih Peminjam</label>
-    <div class="form-check mb-2">
-        <input class="form-check-input" type="checkbox" id="adminSendiri" name="admin_sendiri" value="1">
-        <label class="form-check-label" for="adminSendiri">Gunakan Admin (saya sendiri)</label>
-    </div>
+                <!-- <div class="form-group mb-3">
+            <label for="kelas">Pilih Kelas</label>
+            <select id="kelas" name="kelas" class="form-control" required>
+                <option value="">-- Pilih Kelas --</option>
+                <?php foreach ($kelasList as $k): ?>
+                    <option value="<?= esc($k['kelas']); ?>"><?= strtoupper($k['kelas']); ?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
 
- <select name="id_user" id="id_user" class="form-control" style="width:100%;">
-    <option value="">-- Pilih User Peminjam --</option>
-    <?php foreach ($users as $u): ?>
-        <?php
-            $kelas = strtolower(trim($u['kelas'] ?? '')); // handle NULL, spasi, uppercase
-        ?>
-        <option
-            value="<?php echo $u['id'];?>"
-            data-kelas="<?php echo $kelas?>">
-            <?php echo htmlspecialchars($u['username']);?>
-        </option>
-    <?php endforeach; ?>
-</select>
+        <div class="form-group mb-3">
+            <label for="siswa">Pilih Siswa</label>
+            <select id="siswa" name="siswa_id" class="form-control" required>
+                <option value="">-- Pilih Siswa --</option>
+            </select>
+        </div> -->
+                <div class="form-group mb-3">
+                    <label class="fw-bold mb-2 d-block">Jenis Peminjam</label>
+                    <div class="radio-box-group" id="jenisPeminjamGroup">
+                        <label class="radio-box active">
+                            <input type="radio" name="jenis_peminjam" value="siswa" checked>
+                            Siswa
+                        </label>
+                        <label class="radio-box">
+                            <input type="radio" name="jenis_peminjam" value="guru_admin">
+                            Guru / Admin
+                        </label>
+                    </div>
+                </div>
 
+                <!-- Pilih Kelas & Siswa -->
+                <div id="form-siswa">
+                    <div class="form-group mb-3">
+                        <label for="kelas">Pilih Kelas</label>
+                        <select id="kelas" name="kelas" class="form-control">
+                            <option value="">-- Pilih Kelas --</option>
+                            <?php foreach ($kelasList as $k): ?>
+                                <option value="<?= esc($k['kelas']); ?>"><?= strtoupper($k['kelas']); ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
 
+                    <div class="form-group mb-3">
+                        <label for="siswa">Pilih Siswa</label>
+                        <select id="siswa" name="siswa_id" class="form-control">
+                            <option value="">-- Pilih Siswa --</option>
+                        </select>
+                    </div>
+                </div>
 
-</div>
-
+                <!-- Pilih Guru/Admin -->
+                <div id="form-guru-admin" style="display:none;">
+                    <div class="form-group mb-3">
+                        <label for="guru_admin">Pilih Guru / Admin</label>
+                        <select id="guru_admin" name="guru_admin_id" class="form-control">
+                            <option value="">-- Pilih Guru/Admin --</option>
+                            <?php foreach ($guruAdmin as $ga): ?>
+                                <option value="<?= esc($ga['id']); ?>"><?= esc($ga['username']); ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                </div>
 
 
                 <div class="mb-3">
@@ -81,7 +143,7 @@
                                 <?php echo $b['nama_brg'] ?> -<?php echo $b['merk'] ?> (<?php echo $b['kondisi'] ?>)
                                 -<?php echo $mapRuangan[$b['ruangan_id']] ?? '' ?>
                             </option>
-                        <?php endforeach?>
+                        <?php endforeach ?>
                     </select>
                     <button type="button" class="btn btn-primary mt-3" id="tambah_barang">Tambah</button>
 
@@ -129,55 +191,136 @@
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script>
-$(document).ready(function() {
+    // document.getElementById('kelas').addEventListener('change', function() {
+    //     const kelas = this.value;
+    //     const siswaSelect = document.getElementById('siswa');
+    //     siswaSelect.innerHTML = '<option value="">Memuat...</option>';
 
-    // Aktifkan Select2
-    $('#id_user').select2({
-        placeholder: "-- Pilih User Peminjam --",
-        allowClear: true,
-        width: '100%'
+    //     if (kelas) {
+    //         fetch('<?= base_url('Admin/getSiswaByKelas'); ?>/' + kelas)
+    //             .then(res => res.json())
+    //             .then(data => {
+    //                 siswaSelect.innerHTML = '<option value="">-- Pilih Siswa --</option>';
+    //                 if (!Array.isArray(data) || data.length === 0) {
+    //                     siswaSelect.innerHTML += '<option value="">Tidak ada siswa di kelas ini</option>';
+    //                 } else {
+    //                     data.forEach(user => {
+    //                         siswaSelect.innerHTML += `<option value="${user.id}">${user.username}</option>`;
+    //                     });
+    //                 }
+    //             })
+    //             .catch(err => {
+    //                 siswaSelect.innerHTML = '<option value="">Gagal memuat siswa</option>';
+    //                 console.error('Fetch error:', err);
+    //             });
+    //     } else {
+    //         siswaSelect.innerHTML = '<option value="">-- Pilih Siswa --</option>';
+    //     }
+    // });
+    document.querySelectorAll('input[name="jenis_peminjam"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+            if (this.value === 'siswa') {
+                document.getElementById('form-siswa').style.display = 'block';
+                document.getElementById('form-guru-admin').style.display = 'none';
+            } else {
+                document.getElementById('form-siswa').style.display = 'none';
+                document.getElementById('form-guru-admin').style.display = 'block';
+            }
+        });
     });
 
- $('#kelas').on('change', function() {
-    const selectedKelas = ($(this).val() || '').toLowerCase();
-    console.log("🔍 kelas dipilih:", selectedKelas);
+    // update URL fetch jadi sesuai route Admin
+    document.getElementById('kelas').addEventListener('change', function() {
+        const kelas = this.value;
+        const siswaSelect = document.getElementById('siswa');
+        siswaSelect.innerHTML = '<option value="">Memuat...</option>';
 
-    // reset pilihan
-    $('#id_user').val('').trigger('change');
-
-    // tampil/hide option
-    $('#id_user option').each(function() {
-        const userKelas = ($(this).data('kelas') || '').toLowerCase();
-        if (!selectedKelas || $(this).val() === '') {
-            $(this).show();
-        } else if (userKelas === selectedKelas) {
-            $(this).show();
+        if (kelas) {
+            fetch('<?= base_url('Admin/getSiswaByKelas'); ?>/' + kelas)
+                .then(res => res.json())
+                .then(data => {
+                    siswaSelect.innerHTML = '<option value="">-- Pilih Siswa --</option>';
+                    data.forEach(user => {
+                        siswaSelect.innerHTML += `<option value="${user.id}">${user.username}</option>`;
+                    });
+                })
+                .catch(err => {
+                    siswaSelect.innerHTML = '<option value="">Gagal memuat siswa</option>';
+                    console.error(err);
+                });
         } else {
-            $(this).hide();
+            siswaSelect.innerHTML = '<option value="">-- Pilih Siswa --</option>';
         }
     });
+</script>
 
-    // 💥 tambahkan ini supaya Select2 rebuild list dari DOM
-    $('#id_user').select2('destroy');
-    $('#id_user').html($('#id_user').html());
-    $('#id_user').select2({
-        placeholder: "-- Pilih User Peminjam --",
-        allowClear: true,
-        width: '100%'
+<script>
+    document.querySelectorAll('.radio-box').forEach(box => {
+        box.addEventListener('click', function() {
+            document.querySelectorAll('.radio-box').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+
+            const value = this.querySelector('input').value;
+            if (value === 'siswa') {
+                document.getElementById('form-siswa').style.display = 'block';
+                document.getElementById('form-guru-admin').style.display = 'none';
+            } else {
+                document.getElementById('form-siswa').style.display = 'none';
+                document.getElementById('form-guru-admin').style.display = 'block';
+            }
+        });
     });
-});
+</script>
+<script>
+    $(document).ready(function() {
+
+        // Aktifkan Select2
+        $('#id_user').select2({
+            placeholder: "-- Pilih User Peminjam --",
+            allowClear: true,
+            width: '100%'
+        });
+
+        $('#kelas').on('change', function() {
+            const selectedKelas = ($(this).val() || '').toLowerCase();
+            console.log("🔍 kelas dipilih:", selectedKelas);
+
+            // reset pilihan
+            $('#id_user').val('').trigger('change');
+
+            // tampil/hide option
+            $('#id_user option').each(function() {
+                const userKelas = ($(this).data('kelas') || '').toLowerCase();
+                if (!selectedKelas || $(this).val() === '') {
+                    $(this).show();
+                } else if (userKelas === selectedKelas) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+
+            // 💥 tambahkan ini supaya Select2 rebuild list dari DOM
+            $('#id_user').select2('destroy');
+            $('#id_user').html($('#id_user').html());
+            $('#id_user').select2({
+                placeholder: "-- Pilih User Peminjam --",
+                allowClear: true,
+                width: '100%'
+            });
+        });
 
 
-    // Checkbox "Gunakan Admin (saya sendiri)"
-    $('#adminSendiri').on('change', function() {
-        if ($(this).is(':checked')) {
-            $('#id_user').prop('disabled', true).val('').trigger('change');
-        } else {
-            $('#id_user').prop('disabled', false);
-        }
+        // Checkbox "Gunakan Admin (saya sendiri)"
+        $('#adminSendiri').on('change', function() {
+            if ($(this).is(':checked')) {
+                $('#id_user').prop('disabled', true).val('').trigger('change');
+            } else {
+                $('#id_user').prop('disabled', false);
+            }
+        });
+
     });
-
-});
 </script>
 
 
