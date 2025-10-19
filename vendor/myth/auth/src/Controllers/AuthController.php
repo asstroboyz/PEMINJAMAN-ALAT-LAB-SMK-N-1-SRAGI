@@ -222,6 +222,10 @@ class AuthController extends Controller
             $this->config->personalFields
         );
         $postData          = $this->request->getPost($allowedPostFields);
+        if (isset($postData['email']) && trim($postData['email']) === '') {
+    $postData['email'] = null;
+}
+
         // dd($postData);
         if ($fotoName) {
             $postData['foto'] = $fotoName;
