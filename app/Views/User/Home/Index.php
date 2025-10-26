@@ -1,11 +1,10 @@
 <?= $this->extend('User/Templates/Index') ?>
 
-
-<?=$this->section('page-content');?>
+<?= $this->section('page-content'); ?>
 
 <div class="container-fluid">
     <div class="row">
- 
+
         <!-- Hari Ini -->
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-black shadow h-100 py-2">
@@ -27,20 +26,43 @@
             </div>
         </div>
 
+        <!-- 7 Kebiasaan Anak Indonesia Hebat -->
+        <div class="col-xl-9 col-md-12 mb-4">
+            <div class="card border-left-black shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-start">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-black text-uppercase mb-2">
+                                7 Kebiasaan Anak Indonesia Hebat
+                            </div>
+                            <ol class="mb-0 text-black" style="line-height: 1.8;">
+                                <li>1.Berdoa sebelum dan sesudah melakukan sesuatu</li>
+                                <li>2.Disiplin dan bertanggung jawab</li>
+                                <li>3.Jujur dalam perkataan dan perbuatan</li>
+                                <li>4.Saling menghargai dan menghormati sesama</li>
+                                <li>5.Peduli terhadap lingkungan</li>
+                                <li>6.Rajin belajar dan berprestasi</li>
+                                <li>7.Mencintai dan bangga terhadap bangsa Indonesia</li>
+                            </ol>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-star fa-2x text-warning"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
-
-
 </div>
 
 <?php
 date_default_timezone_set("Asia/Jakarta");
-$tanggalEcho = format_tanggal(date('Y-m-d'));
 
 function format_tanggal($tanggal)
 {
-    $bulan = array(
-        1 =>   'Januari',
+    $bulan = [
+        1 => 'Januari',
         'Februari',
         'Maret',
         'April',
@@ -52,11 +74,11 @@ function format_tanggal($tanggal)
         'Oktober',
         'November',
         'Desember'
-    );
-    $pecahkan = explode('-', $tanggal);
+    ];
 
+    $pecahkan = explode('-', $tanggal);
     return $pecahkan[2] . ' ' . $bulan[(int)$pecahkan[1]] . ' ' . $pecahkan[0];
 }
 ?>
 
-<?=$this->endSection();?>
+<?= $this->endSection(); ?>
