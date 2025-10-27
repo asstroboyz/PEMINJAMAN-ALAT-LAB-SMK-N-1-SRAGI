@@ -36,13 +36,13 @@
                                 7 Kebiasaan Anak Indonesia Hebat
                             </div>
                             <ol class="mb-0 text-black" style="line-height: 1.8;">
-                                <li>1.Berdoa sebelum dan sesudah melakukan sesuatu</li>
-                                <li>2.Disiplin dan bertanggung jawab</li>
-                                <li>3.Jujur dalam perkataan dan perbuatan</li>
-                                <li>4.Saling menghargai dan menghormati sesama</li>
-                                <li>5.Peduli terhadap lingkungan</li>
-                                <li>6.Rajin belajar dan berprestasi</li>
-                                <li>7.Mencintai dan bangga terhadap bangsa Indonesia</li>
+                                <li>1.Bangun pagi</li>
+                                <li>2.Beribadah</li>
+                                <li>3.Berolaharaga</li>
+                                <li>4.Makan makanan sehat & bergizi</li>
+                                <li>5.Gemar Belajar</li>
+                                <li>6.Bermasyarakat</li>
+                                <li>7.Tidur lebih awal</li>
                             </ol>
                         </div>
                         <div class="col-auto">
