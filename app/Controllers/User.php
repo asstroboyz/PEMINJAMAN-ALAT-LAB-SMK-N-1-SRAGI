@@ -129,31 +129,43 @@ class User extends BaseController
 
     public function tentang()
     {
+        $user = user();
+        $userId = $user->id;
 
-        $userlogin = user()->username;
-        $userid = user()->id;
-        $role = $this->db->table('auth_groups_users')->where('user_id', $userid)->get()->getRow();
-        $role == '1' ? $role_echo = 'user' : $role_echo = 'User';
+        // Ambil role user dari join auth_groups
+        $role = $this->db->table('auth_groups_users agu')
+            ->select('ag.name as role_name')
+            ->join('auth_groups ag', 'ag.id = agu.group_id', 'left')
+            ->where('agu.user_id', $userId)
+            ->get()
+            ->getRow('role_name') ?? 'user';
 
+        // Hitung total dan status peminjaman
+        $peminjaman = $this->db->table('peminjaman_header')
+            ->select("COUNT(*) as total,
+                  SUM(CASE WHEN status = 'dipinjam' THEN 1 ELSE 0 END) as aktif,
+                  SUM(CASE WHEN status = 'selesai' THEN 1 ELSE 0 END) as selesai")
+            ->where('id_user', $userId)
+            ->get()
+            ->getRow();
 
+        // Ambil data user
+        $userData = $this->db->table('users')
+            ->select('id, username, email, fullname, foto, created_at')
+            ->where('id', $userId)
+            ->get()
+            ->getRow();
 
-        $data = $this->db->table('peminjaman_header');
-        $query1 = $data->where('id_user', $userid)->get()->getResult();
-        $builder = $this->db->table('users');
-        $builder->select('id,username,email,created_at,foto');
-        $builder->where('username', $userlogin);
-        $query = $builder->get();
-        $semua = count($query1);
         $data = [
-            'semua' => $semua,
-            'user' => $query->getRow(),
-            'title' => 'Home',
-            'role' => $role_echo
-
-
+            'title'       => 'Profil Pengguna',
+            'user'        => $userData,
+            'role'        => ucfirst($role),
+            'peminjaman'  => $peminjaman,
         ];
+
         return view('user/profil/index', $data);
     }
+
 
     public function profile($id)
     {
@@ -426,6 +438,4 @@ class User extends BaseController
         // dd($data);
         return view('user/Peminjaman/Detail', $data);
     }
-
-    
 }

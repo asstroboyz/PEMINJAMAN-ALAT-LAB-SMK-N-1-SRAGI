@@ -31,50 +31,105 @@
         </div>
     <?php endif; ?>
 
-    <div class="row">
-        <div class="col-lg">
-            <div class="card shadow px-5 py-4">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <img class="card-img-top p-2"
-                            src="<?= empty(user()->foto) ? '/sbassets/img/undraw_profile.svg' : '/uploads/profile/' . user()->foto; ?>"
-                            alt="Image profile" height="290">
-                    </div>
-                    <div class="col-lg-8 col-md-8 col-sm-12">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><span class="badge badge-info">
-                                    <?= $role; ?></span></li>
-                            <li class="list-group-item "><i
-                                    class="fa fa-user mr-2 "></i><?= user()->username; ?>
-                            </li>
-                            <li class="list-group-item"><i class="fa fa-envelope mr-1"></i>
-                                <?= $user->email ?>
-                            </li>
-                            <li class="list-group-item"><i class="fa fa-calendar mr-1"></i> terdaftar sejak. <?php $date = date_create($user->created_at);
-                                                                                                                echo (date_format($date, "d F Y H:i:s")) ?>
-                            </li>
-                            <li class="list-group-item"><i class="fa fa-chart-bar mr-1"></i> Jumlah Peminjaman Barang :
-                                <?= $semua ?>
-                            </li>
-                        </ul>
+   <div class="row">
+    <div class="col-lg">
+        <div class="card shadow px-5 py-4">
+            <div class="row">
+                <!-- FOTO PROFIL -->
+                <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+                    <img class="card-img-top rounded p-2"
+                        src="<?= empty($user->foto) ? '/sbassets/img/undraw_profile.svg' : '/uploads/profile/' . $user->foto; ?>"
+                        alt="Image profile" height="290">
+                </div>
 
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                <button data-toggle="modal" data-target="#edit-profile" type="button"
-                                    class="d-inline btn btn-success btn-block edit-password" data-id="<"><i
-                                        class="fas fa-key"></i> Ubah Profile</button>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                <button data-toggle="modal" data-target="#edit-password" type="button"
-                                    class="d-inline btn btn-primary btn-block edit-password" data-id="<"><i
-                                        class="fas fa-key"></i> Ubah Password</button>
-                            </div>
+                <!-- DATA PROFIL -->
+                <div class="col-lg-8 col-md-8 col-sm-12">
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item">
+                            <span class="badge badge-info text-capitalize">
+                                <?= $role ?>
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-user mr-2"></i>
+                            <?= esc($user->fullname ?? user()->username) ?>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-envelope mr-2"></i>
+                            <?= esc($user->email ?? '-') ?>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-calendar mr-2"></i>
+                            Terdaftar sejak
+                            <?= date('d F Y H:i:s', strtotime($user->created_at)) ?>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-chart-bar mr-2"></i>
+                            Jumlah Peminjaman Barang:
+                            <strong><?= $peminjaman->total ?? 0 ?></strong> total
+                            (<span class="text-success"><?= $peminjaman->aktif ?? 0 ?></span> aktif,
+                            <span class="text-secondary"><?= $peminjaman->selesai ?? 0 ?></span> selesai)
+                        </li>
+                    </ul>
+
+                    <!-- TOMBOL AKSI -->
+                    <div class="row">
+                        <div class="col-md-6 mb-2">
+                            <button data-toggle="modal" data-target="#edit-profile"
+                                class="btn btn-success btn-block">
+                                <i class="fas fa-user-edit"></i> Ubah Profil
+                            </button>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <button data-toggle="modal" data-target="#edit-password"
+                                class="btn btn-primary btn-block">
+                                <i class="fas fa-key"></i> Ubah Password
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- DAFTAR PEMINJAMAN TERAKHIR -->
+    <?php if (!empty($riwayat)): ?>
+    <div class="col-lg-12 mt-4">
+        <div class="card shadow-sm p-3">
+            <h5 class="mb-3"><i class="fa fa-history mr-2"></i> Riwayat Peminjaman Terbaru</h5>
+            <div class="table-responsive">
+                <table class="table table-sm table-hover">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Kode</th>
+                            <th>Tanggal Pinjam</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($riwayat as $r): ?>
+                        <tr>
+                            <td><?= esc($r->kode_peminjaman) ?></td>
+                            <td><?= date('d M Y', strtotime($r->tanggal_pinjam)) ?></td>
+                            <td>
+                                <?php if ($r->status == 'dipinjam'): ?>
+                                    <span class="badge badge-success">Dipinjam</span>
+                                <?php elseif ($r->status == 'selesai'): ?>
+                                    <span class="badge badge-secondary">Selesai</span>
+                                <?php else: ?>
+                                    <span class="badge badge-warning"><?= ucfirst($r->status) ?></span>
+                                <?php endif; ?>
+                            </td>
+                        </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <?php endif; ?>
+</div>
+
 
     <div class="modal fade" id="edit-profile" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
         aria-hidden="true">

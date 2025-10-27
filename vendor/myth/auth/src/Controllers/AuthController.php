@@ -168,6 +168,7 @@ class AuthController extends Controller
         $users = model(UserModel::class);
         $is_siswa = $this->request->getPost('is_siswa');
         // Validasi field dasar
+        // dd($is_siswa);
         $rules = [
             // 'fullname' => 'required|min_length[3]|max_length[100]',
             'username' => 'required|alpha_numeric_space|min_length[3]|max_length[30]|is_unique[users.username]',
@@ -223,8 +224,12 @@ class AuthController extends Controller
         );
         $postData          = $this->request->getPost($allowedPostFields);
         if (isset($postData['email']) && trim($postData['email']) === '') {
-    $postData['email'] = null;
-}
+            $postData['email'] = null;
+        }
+        // Normalisasi nilai kosong
+        if (empty($postData['nisn'])) {
+            $postData['nisn'] = null; // ini penting biar MySQL gak nganggap '' sebagai duplikat
+        }
 
         // dd($postData);
         if ($fotoName) {
@@ -235,8 +240,16 @@ class AuthController extends Controller
 
         $this->config->requireActivation === null ? $user->activate() : $user->generateActivateHash();
 
-        if (! empty($this->config->defaultUserGroup)) {
-            $users = $users->withGroup($this->config->defaultUserGroup);
+        // if (! empty($this->config->defaultUserGroup)) {
+        //     $users = $users->withGroup($this->config->defaultUserGroup);
+        // }
+        // === Tentukan grup berdasarkan is_siswa ===
+        if ($is_siswa == 1) {
+            // siswa = group "user"
+            $users = $users->withGroup('user');
+        } else {
+            // guru/admin = group "admin"
+            $users = $users->withGroup('admin');
         }
 
         if (! $users->save($user)) {
