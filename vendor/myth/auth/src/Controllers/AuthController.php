@@ -176,9 +176,9 @@ class AuthController extends Controller
         ];
 
         if ($is_siswa == 1) {
-            $rules['nisn'] = 'required|numeric|exact_length[10]|is_unique[users.nisn]';
+            $rules['nisn'] = 'required|numeric|exact_length[6]|is_unique[users.nisn]';
         } else {
-            $rules['nisn'] = 'permit_empty|numeric|exact_length[10]|is_unique[users.nisn]';
+            $rules['nisn'] = 'permit_empty|numeric|exact_length[6]|is_unique[users.nisn]';
         }
 
         if (! $this->validate($rules)) {

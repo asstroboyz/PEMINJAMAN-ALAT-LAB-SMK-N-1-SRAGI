@@ -45,7 +45,7 @@
                             <input type="password"
                                 class="form-control <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>"
                                 name="password"
-                                placeholder="<?= lang('Auth.password') ?>">
+                                placeholder="<?= lang('Auth.password') ?>"    maxlength="6">
                         </div>
                         <?php if ($config->allowRemembering) : ?>
                             <div class="form-group form-check mb-3">

@@ -61,7 +61,7 @@
                     <!-- NISN -->
                     <div class="col-md-6">
                         <label class="form-label">NISN</label>
-                        <input type="text" name="nisn" maxlength="10" pattern="\d{10}"
+                        <input type="text" name="nisn" maxlength="6" pattern="\d{6}"
                             class="form-control <?= session('errors.nisn') ? 'is-invalid' : '' ?>"
                             value="<?= old('nisn') ?>">
                     </div>
