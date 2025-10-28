@@ -503,8 +503,8 @@
 
                         <!-- NISN (khusus siswa) -->
                         <div class="col-md-6 siswa-only" style="display:none;">
-                            <label class="form-label fw-semibold">NISN</label>
-                            <input type="text" name="nisn" maxlength="6" pattern="\d{6}" class="form-control" placeholder="6 digit NISN">
+                            <label class="form-label fw-semibold">NIS</label>
+                            <input type="text" name="nisn" maxlength="6" pattern="\d{6}" class="form-control" placeholder="6 digit NIS">
                         </div>
 
                         <!-- FOTO PROFIL -->
