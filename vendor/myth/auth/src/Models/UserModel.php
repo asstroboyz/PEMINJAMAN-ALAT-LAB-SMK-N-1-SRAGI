@@ -25,6 +25,7 @@ class UserModel extends Model
         'reset_expires',
         'activate_hash',
         'status',
+        "kelas",
         'status_message',
         'active',
         'force_pass_reset',

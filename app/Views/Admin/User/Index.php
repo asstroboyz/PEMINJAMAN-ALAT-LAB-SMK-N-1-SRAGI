@@ -269,63 +269,63 @@
             font-size: 0.85rem;
         }
     }
+
     /* ====== USER CELL STYLING ====== */
-.user-cell {
-  padding: 12px 18px !important;
-}
+    .user-cell {
+        padding: 12px 18px !important;
+    }
 
-.user-info {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
+    .user-info {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
 
-.user-avatar {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
-  box-shadow: 0 0 0 2px #fff, 0 0 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+    .user-avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+        box-shadow: 0 0 0 2px #fff, 0 0 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
 
-.user-avatar:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
-}
+    .user-avatar:hover {
+        transform: scale(1.08);
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
 
-.user-text {
-  line-height: 1.2;
-}
+    .user-text {
+        line-height: 1.2;
+    }
 
-.user-name {
-  font-weight: 600;
-  color: #222;
-  font-size: 0.95rem;
-}
+    .user-name {
+        font-weight: 600;
+        color: #222;
+        font-size: 0.95rem;
+    }
 
-.user-subtext {
-  font-size: 0.82rem;
-  color: #6b7280;
-}
+    .user-subtext {
+        font-size: 0.82rem;
+        color: #6b7280;
+    }
 
-/* ====== RESPONSIVE ====== */
-@media (max-width: 768px) {
-  .user-avatar {
-    width: 36px;
-    height: 36px;
-  }
+    /* ====== RESPONSIVE ====== */
+    @media (max-width: 768px) {
+        .user-avatar {
+            width: 36px;
+            height: 36px;
+        }
 
-  .user-name {
-    font-size: 0.9rem;
-  }
+        .user-name {
+            font-size: 0.9rem;
+        }
 
-  .user-subtext {
-    font-size: 0.78rem;
-  }
-}
-
+        .user-subtext {
+            font-size: 0.78rem;
+        }
+    }
 </style>
 
 <section class="content">
@@ -505,6 +505,17 @@
                         <div class="col-md-6 siswa-only" style="display:none;">
                             <label class="form-label fw-semibold">NIS</label>
                             <input type="text" name="nisn" maxlength="6" pattern="\d{6}" class="form-control" placeholder="6 digit NIS">
+                        </div>
+                        <!-- KELAS (khusus siswa) -->
+                        <div class="col-md-6 siswa-only" style="display:none;">
+                            <label class="form-label fw-semibold">Kelas</label>
+                            <input
+                                type="text"
+                                name="kelas"
+                                class="form-control text-uppercase"
+                                placeholder="Contoh: X IPA 1"
+                                style="text-transform: uppercase;"
+                                required>
                         </div>
 
                         <!-- FOTO PROFIL -->
@@ -686,6 +697,12 @@
             const isSiswa = radioSiswa.checked;
             siswaFields.forEach(f => f.style.display = isSiswa ? 'block' : 'none');
         }
+        // Auto-uppercase untuk field kelas
+        document.addEventListener("input", function(e) {
+            if (e.target.name === "kelas") {
+                e.target.value = e.target.value.toUpperCase();
+            }
+        });
 
         radioGuru.addEventListener('change', toggleFields);
         radioSiswa.addEventListener('change', toggleFields);

@@ -176,9 +176,12 @@ class AuthController extends Controller
         ];
 
         if ($is_siswa == 1) {
-            $rules['nisn'] = 'required|numeric|exact_length[6]|is_unique[users.nisn]';
+            // khusus siswa
+            $rules['nisn']  = 'required|numeric|exact_length[6]|is_unique[users.nisn]';
+            $rules['kelas'] = 'required|min_length[2]|max_length[50]';
         } else {
-            $rules['nisn'] = 'permit_empty|numeric|exact_length[6]|is_unique[users.nisn]';
+            $rules['nisn']  = 'permit_empty|numeric|exact_length[6]|is_unique[users.nisn]';
+            $rules['kelas'] = 'permit_empty';
         }
 
         if (! $this->validate($rules)) {
@@ -218,7 +221,7 @@ class AuthController extends Controller
         // Ambil semua data input
         // $allowedPostFields = array_merge(['password'], $this->config->validFields, $this->config->personalFields);
         $allowedPostFields = array_merge(
-            ['password', 'nisn', 'is_siswa', 'fullname'],
+            ['password', 'nisn', 'kelas', 'is_siswa', 'fullname'],
             $this->config->validFields,
             $this->config->personalFields
         );
@@ -230,11 +233,13 @@ class AuthController extends Controller
         if (empty($postData['nisn'])) {
             $postData['nisn'] = null; // ini penting biar MySQL gak nganggap '' sebagai duplikat
         }
-
-        // dd($postData);
+        if (! empty($postData['kelas'])) {
+            $postData['kelas'] = strtoupper($postData['kelas']);
+        }
         if ($fotoName) {
             $postData['foto'] = $fotoName;
         }
+        // dd($postData);
 
         $user = new User($postData);
 
