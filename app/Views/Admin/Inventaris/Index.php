@@ -25,7 +25,48 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                      <table id="rekapTable" class="table table-bordered">
+                        <!-- <table id="rekapTable" class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Kode Barang</th>
+                                    <th>Nama Barang</th>
+                                    <th>Merk</th>
+                                    <th>Tipe</th>
+                                    <th>Jenis</th>
+                                    <th></th> 
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php $no = 1;
+                                foreach ($grouped_rekap as $kode_barang => $g): ?>
+                                    <tr data-kode="<?php echo $kode_barang ?>">
+                                        <td><?php echo $no++; ?></td>
+                                        <td><b><?php echo esc($kode_barang) ?></b></td>
+                                        <td><?php echo esc($g['nama_brg']) ?></td>
+                                        <td><?php echo esc($g['merk']) ?></td>
+                                        <td><?php echo esc($g['tipe_serie']) ?></td>
+                                        <td>
+                                            <?php
+                                            $jenis = $g['jenis_brg'];
+                                            if ($jenis === 'hrd') {
+                                                echo 'Hardware';
+                                            } elseif ($jenis === 'sfw') {
+                                                echo 'Software';
+                                            } else {
+                                                echo 'Tools';
+                                            }
+                                            ?>
+                                        </td>
+                                        <td class="details-control" style="text-align:center;cursor:pointer;">
+                                            <i class="fa fa-plus"></i>
+                                        </td>
+                                    </tr>
+                                <?php endforeach ?>
+                            </tbody>
+                        </table> -->
+
+<table id="rekapTable" class="table table-bordered">
     <thead>
         <tr>
             <th>No</th>
@@ -34,17 +75,18 @@
             <th>Merk</th>
             <th>Tipe</th>
             <th>Jenis</th>
-            <th></th> <!-- Expand/collapse -->
+            <th>Ruangan</th>
+            <th>Stok</th>
         </tr>
     </thead>
     <tbody>
         <?php $no = 1; foreach ($grouped_rekap as $kode_barang => $g): ?>
-            <tr data-kode="<?php echo $kode_barang ?>">
-                <td><?php echo $no++; ?></td>
-                <td><b><?php echo esc($kode_barang) ?></b></td>
-                <td><?php echo esc($g['nama_brg']) ?></td>
-                <td><?php echo esc($g['merk']) ?></td>
-                <td><?php echo esc($g['tipe_serie']) ?></td>
+            <tr>
+                <td><?= $no++; ?></td>
+                <td><b><?= esc($kode_barang) ?></b></td>
+                <td><?= esc($g['nama_brg']) ?></td>
+                <td><?= esc($g['merk']) ?></td>
+                <td><?= esc($g['tipe_serie']) ?></td>
                 <td>
                     <?php
                         $jenis = $g['jenis_brg'];
@@ -57,14 +99,21 @@
                         }
                     ?>
                 </td>
-                <td class="details-control" style="text-align:center;cursor:pointer;">
-                    <i class="fa fa-plus"></i>
-                </td>
+            <td>
+    <?php
+        $ruangan_list = [];
+        foreach ($g['ruangan'] as $nama_ruangan => $stok) {
+            $ruangan_list[] = $nama_ruangan;
+        }
+        echo implode(', ', $ruangan_list);
+    ?>
+</td>
+
+                <td><?= $g['total_stok'] ?></td>
             </tr>
         <?php endforeach ?>
     </tbody>
 </table>
-
 
                     </div>
                 </div>
@@ -77,7 +126,7 @@
 <?php echo $this->section('additional-js'); ?>
 <script>
     $(document).ready(function() {
-        var groupedData =                                                                            <?php echo json_encode($grouped_rekap) ?>;
+        var groupedData = <?php echo json_encode($grouped_rekap) ?>;
 
         var table = $('#rekapTable').DataTable({
             "pageLength": 10,

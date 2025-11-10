@@ -5,7 +5,7 @@
     <div class="card shadow-lg border-0 rounded-3" style="max-width: 600px; width:100%;">
         <div class="card-body p-5">
 
-         
+
             <div class="text-center mb-4">
                 <img src="<?= base_url('assets/media/qrcode/tkj.png') ?>" alt="Logo TKJ"
                     class="rounded-3 " style="width: 80px; height: 80px; object-fit: contain;">
@@ -15,18 +15,18 @@
 
             <?= view('Myth\Auth\Views\_message_block') ?>
 
-    
+
             <form action="<?= url_to('register') ?>" method="post" enctype="multipart/form-data">
                 <?= csrf_field() ?>
                 <input type="hidden" name="is_siswa" value="1">
                 <input type="hidden" id="croppedData" name="croppedData">
 
-           
+
                 <div class="text-center mb-4">
                     <div id="avatar-crop" style="width:200px; height:200px; margin:0 auto;"></div>
                     <input type="file" id="foto" name="foto" class="d-none" accept="image/*">
 
-                  
+
                     <button type="button" id="applyAvatar" class="btn btn-sm btn-success mt-2" style="display:none;">
                         Apply Avatar
                     </button>
@@ -65,7 +65,16 @@
                             class="form-control <?= session('errors.nisn') ? 'is-invalid' : '' ?>"
                             value="<?= old('nisn') ?>">
                     </div>
-
+                    <div class="col-md-6 siswa-only">
+                        <label class="form-label fw-semibold">Kelas</label>
+                        <input
+                            type="text"
+                            name="kelas"
+                            class="form-control text-uppercase"
+                            placeholder="Contoh: X IPA 1"
+                            style="text-transform: uppercase;"
+                            required>
+                    </div>
                     <!-- PASSWORD -->
                     <div class="col-md-6">
                         <label class="form-label">Password</label>
@@ -188,7 +197,7 @@
             circle: true
         });
 
-        setPreview(dataUrl); 
+        setPreview(dataUrl);
         document.getElementById('croppedData').value = dataUrl;
     });
 

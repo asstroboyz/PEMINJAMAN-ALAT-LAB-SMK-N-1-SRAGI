@@ -686,7 +686,62 @@ class Admin extends BaseController
     // // dd($data);
     //         return view('Admin/Inventaris/Index', $data);
     //     }
-    public function adm_inventaris()
+ public function adm_inventaris()
+{
+    $rekap = $this->InventarisModel
+        ->select('
+            master_barang.kode_brg,
+            master_barang.nama_brg,
+            master_barang.merk,
+            master_barang.tipe_serie,
+            master_barang.jenis_brg,
+            ruangan.nama_ruangan,
+            inventaris.stok
+        ')
+        ->join('master_barang', 'master_barang.kode_brg = inventaris.id_master_barang')
+        ->join('ruangan', 'ruangan.id = inventaris.ruangan_id', 'left')
+        ->where('master_barang.is_active', 1)
+        ->orderBy('master_barang.kode_brg, ruangan.nama_ruangan')
+        ->findAll();
+
+    $grouped = [];
+
+    foreach ($rekap as $row) {
+        $kode_barang = $row['kode_brg'];
+        $ruangan = $row['nama_ruangan'] ?? 'Tidak diketahui';
+        $stok = (int)$row['stok'];
+
+        // Inisialisasi data utama per barang
+        if (!isset($grouped[$kode_barang])) {
+            $grouped[$kode_barang] = [
+                'nama_brg'   => $row['nama_brg'],
+                'merk'       => $row['merk'],
+                'tipe_serie' => $row['tipe_serie'] ?? '-',
+                'jenis_brg'  => $row['jenis_brg'],
+                'ruangan'    => [],
+                'total_stok' => 0,
+            ];
+        }
+
+        // Jika ruangan sudah ada, tambahkan stoknya
+        if (isset($grouped[$kode_barang]['ruangan'][$ruangan])) {
+            $grouped[$kode_barang]['ruangan'][$ruangan] += $stok;
+        } else {
+            $grouped[$kode_barang]['ruangan'][$ruangan] = $stok;
+        }
+
+        // Tambah total stok keseluruhan
+        $grouped[$kode_barang]['total_stok'] += $stok;
+    }
+
+    $data['grouped_rekap'] = $grouped;
+    $data['title'] = 'Rekap Inventaris';
+
+    return view('Admin/Inventaris/Index', $data);
+}
+
+
+    public function adm_inventaris1()
     {
         // 1. Ambil data flat: per kode_barang + ruangan, stok langsung dari field
         $rekap = $this->InventarisModel
@@ -726,7 +781,7 @@ class Admin extends BaseController
 
         $data['grouped_rekap'] = $grouped;
         $data['title']         = 'Rekap Inventaris';
-
+ dd($data);
         return view('Admin/Inventaris/Index', $data);
     }
 
@@ -817,7 +872,7 @@ class Admin extends BaseController
                 $this->InventarisModel->insert([
                     'id_master_barang' => $id_master_barang,
                     'spesifikasi'      => $spesifikasi,
-                    'ruangan_id'       => $lokasi_list[$i],
+                    'ruangan_id'       => 1,
                     'kondisi'          => $kondisi_list[$i],
                     'stok'             => $jumlah_list[$i],
                     'status'           => 'tersedia',
