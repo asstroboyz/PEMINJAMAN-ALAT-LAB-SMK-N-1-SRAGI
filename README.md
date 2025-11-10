@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Logo_SMK_Kesehatan.png" width="120" alt="SMK Logo" />
+  <img src="<?= base_url('assets/img/smk.png'); ?>" width="120" alt="SMK Logo" />
 </p>
 <h1 align="center">🧪 PEMINJAMAN ALAT LAB SMK N 1 SRAGI</h1>
 <p align="center">
