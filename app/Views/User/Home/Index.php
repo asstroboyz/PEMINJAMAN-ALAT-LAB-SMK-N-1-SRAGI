@@ -111,7 +111,7 @@
             <div class="card-body text-center">
                 <h4 class="font-weight-bold text-warning text-uppercase mb-4">Tentang SMK Negeri 1 Sragi</h4>
 
-                <img src="<?= base_url('assets/img/sekolah.jpeg'); ?>" 
+                <img src="<?= base_url('assets/img/sekolah.jpg'); ?>" 
                      class="img-fluid rounded shadow mb-4" 
                      style="max-height: 300px; object-fit: cover;">
 

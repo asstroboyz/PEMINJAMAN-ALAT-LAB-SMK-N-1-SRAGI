@@ -66,6 +66,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- Card Tanggal -->
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-black shadow h-100 py-2">
                 <div class="card-body">
@@ -85,26 +87,12 @@
                 </div>
             </div>
         </div>
+
     </div>
 
-    <!-- Grafik Line -->
-    <!-- <div class="row mt-4">
-        <div class="col-xl-12">
-            <div class="card shadow mb-4">
-                <div class="card-header">
-                    <h6 class="m-0 font-weight-bold text-primary">
-                        Trend Peminjaman Bulan <?= $bulanSekarang ?>
-                    </h6>
-                </div>
-                <div class="card-body">
-                    <canvas id="lineChart" height="100"></canvas>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
+    <!-- BAR + PIE CHART -->
     <div class="row mt-4">
-        <div class="col-xl-12">
+        <div class="col-xl-6">
             <div class="card shadow mb-4">
                 <div class="card-header">
                     <h6 class="m-0 font-weight-bold text-success">
@@ -112,13 +100,27 @@
                     </h6>
                 </div>
                 <div class="card-body">
-                    <canvas id="barChartTopBarang" height="100"></canvas>
+                    <canvas id="barChartTopBarang" height="90"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-6">
+            <div class="card shadow mb-4">
+                <div class="card-header">
+                    <h6 class="m-0 font-weight-bold text-primary">
+                        Persentase Peminjaman Barang - <?= $bulanSekarang ?>
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <canvas id="pieChartTopBarang" height="90"></canvas>
                 </div>
             </div>
         </div>
     </div>
 
 </div>
+
 <?php
 date_default_timezone_set("Asia/Jakarta");
 $tanggalEcho = format_tanggal(date('Y-m-d'));
@@ -126,35 +128,26 @@ $tanggalEcho = format_tanggal(date('Y-m-d'));
 function format_tanggal($tanggal)
 {
     $bulan = array(
-        1 =>   'Januari',
-        'Februari',
-        'Maret',
-        'April',
-        'Mei',
-        'Juni',
-        'Juli',
-        'Agustus',
-        'September',
-        'Oktober',
-        'November',
-        'Desember'
+        1 => 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
+        'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'
     );
     $pecahkan = explode('-', $tanggal);
-
     return $pecahkan[2] . ' ' . $bulan[(int)$pecahkan[1]] . ' ' . $pecahkan[0];
 }
 ?>
+
 <?= $this->endSection(); ?>
 
 <?= $this->section('additional-js'); ?>
 <script src="<?= base_url('assets/js/chart.umd.js') ?>"></script>
-<script>
-    
-    const ctxBar = document.getElementById('barChartTopBarang').getContext('2d');
 
+<script>
     const topBarang = <?= json_encode($topBarang) ?>;
     const labelsBarang = topBarang.map(item => item.nama_brg);
     const dataBarang = topBarang.map(item => parseInt(item.total));
+
+    // ===================== BAR CHART =======================
+    const ctxBar = document.getElementById('barChartTopBarang').getContext('2d');
 
     new Chart(ctxBar, {
         type: 'bar',
@@ -163,33 +156,59 @@ function format_tanggal($tanggal)
             datasets: [{
                 label: 'Jumlah Dipinjam',
                 data: dataBarang,
-                backgroundColor: [
-                    '#207c5c', '#17a364', '#65cc9e', '#95dcbc', '#0e623d'
-                ],
+                backgroundColor: ['#060771', '#FFE08F', '#FF6C0C', '#BF1A1A', '#8CA9FF'],
                 borderRadius: 6
             }]
         },
         options: {
             responsive: true,
             plugins: {
-                legend: {
-                    display: false
-                },
+                legend: { display: false },
                 tooltip: {
                     callbacks: {
-                        label: (context) => context.parsed.y + ' kali dipinjam'
+                        label: context => context.parsed.y + ' kali dipinjam'
                     }
                 }
             },
             scales: {
                 y: {
                     beginAtZero: true,
-                    ticks: {
-                        precision: 0
+                    ticks: { precision: 0 }
+                }
+            }
+        }
+    });
+
+    // ===================== PIE CHART =======================
+    const ctxPie = document.getElementById('pieChartTopBarang').getContext('2d');
+    const totalAll = dataBarang.reduce((a, b) => a + b, 0);
+
+    new Chart(ctxPie, {
+        type: 'pie',
+        data: {
+            labels: labelsBarang,
+            datasets: [{
+                data: dataBarang,
+                backgroundColor: ['#313647', '#4A70A9', '#0046FF', '#A3B087', '#FE6244'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { position: 'bottom' },
+                tooltip: {
+                    callbacks: {
+                        label: context => {
+                            const value = context.parsed;
+                            const percent = ((value / totalAll) * 100).toFixed(1);
+                            return `${value} kali (${percent}%)`;
+                        }
                     }
                 }
             }
         }
     });
 </script>
+
 <?= $this->endSection(); ?>
