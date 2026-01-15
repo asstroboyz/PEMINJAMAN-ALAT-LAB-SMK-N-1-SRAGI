@@ -44,7 +44,7 @@
                             <td><?php echo $num + 1; ?></td>
                             <td><span class="fw-bold"><?php echo $data['kode_brg']; ?></span></td>
                             <td class="text-start">
-                                <i class="fa fa-box text-primary me-2"></i>
+                              <i class="fas fa-shipping-fast"></i>
                                 <?php echo $data['nama_brg']; ?>
                                 <small class="text-muted">(<?php echo $data['merk']; ?>)</small>
                             </td>

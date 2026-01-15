@@ -10,6 +10,10 @@
         box-shadow: 0 2px 10px #ffc10733, 0 0.5px 2px #222a3520;
     }
 
+    .span {
+       color: #1b222d; 
+    }
+
     .custom-dropdown-menu {
         border-radius: 16px !important;
         min-width: 210px;
